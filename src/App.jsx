@@ -28,7 +28,7 @@ function App() {
 
   const filteredCars = () => {
     const regexSearch = new RegExp(search, 'ig')
-    return smallCarData.filter(car => {
+    return carData.filter(car => {
       // console.log(regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make))
       return regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make) && (car.model === select || select === 'all')
     })
