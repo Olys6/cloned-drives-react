@@ -12,6 +12,8 @@ import {
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
+import Logo from './assets/logoblack.webp'
+
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -86,7 +88,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Box style={{ width: "100%", backgroundColor: "white", marginBottom: "5rem", borderRadius: "10px" }}>
-        <img src="src/assets/logoblack.webp" style={{ width: "90%", backgroundColor: "white", border: "5px solid white" }} />
+        <img src={Logo} style={{ width: "90%", backgroundColor: "white", border: "5px solid white" }} />
       </Box>
       <Box id="searchBox">
         
