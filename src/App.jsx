@@ -117,7 +117,7 @@ function App() {
               getAriaValueText={valuetext}
               valueLabelFormat={valuetext}
               disableSwap
-              max={120}
+              max={125}
             />
           </Stack>
         </Box>
