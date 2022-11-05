@@ -40,11 +40,11 @@ function App() {
 
 
   const filteredCars = () => {
-    const regexSearch = new RegExp(search, 'ig')
+    const regexSearch = new RegExp(`\\b${search}`, 'ig')
     return carData.filter(car => {
-      // console.log(regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make))
-      return regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make) &&
-        car.rq <= rqValue[1] && car.rq >= rqValue[0]
+      return regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make) || 
+      regexSearch.exec(car.model) &&
+      car.rq <= rqValue[1] && car.rq >= rqValue[0]
     })
   }
 
