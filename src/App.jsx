@@ -31,7 +31,7 @@ function App() {
   const [page, setPage] = useState(1)
   const [rqValue, setRqValue] = useState([80, 110]);
   // { Array.isArray(car.make) ? car.make[0] : car.make }
-  const numOfCars = 30
+  const numOfCars = 20
   // const smallCarData = carData.map((car, i) => (i < 20 ? car : <></>))
 
   const handlePageChange = (event, value) => {
