@@ -3,7 +3,8 @@ import {
   Card, TextField, Select,
   MenuItem, Box, Pagination,
   Stack, Accordion, AccordionSummary,
-  Typography, AccordionDetails, Slider
+  Typography, AccordionDetails, Slider,
+  Link
 } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -12,6 +13,8 @@ function valuetext(rqValue) {
 }
 
 const minDistance = 10;
+
+const maxRQ = 125
 
 // const ITEM_HEIGHT = 48;
 // const ITEM_PADDING_TOP = 8;
@@ -37,7 +40,7 @@ const minDistance = 10;
 //   'Kelly Snyder',
 // ];
 
-const CarFilter = ({ setSearch, search, setRqValue, rqValue, setPage }) => {
+const CarFilter = ({ setSearch, search, setRqValue, rqValue, setPage, setRqOrder, rqOrder }) => {
   const [personName, setPersonName] = useState([]);
 
   const handleSearch = event => {
@@ -60,7 +63,7 @@ const CarFilter = ({ setSearch, search, setRqValue, rqValue, setPage }) => {
 
     if (rqValue[1] - rqValue[0] < minDistance) {
       if (activeThumb === 0) {
-        const clamped = Math.min(rqValue[0], 100 - minDistance);
+        const clamped = Math.min(rqValue[0], maxRQ - minDistance);
         setRqValue([clamped, clamped + minDistance]);
       } else {
         const clamped = Math.max(rqValue[1], minDistance);
@@ -98,17 +101,20 @@ const CarFilter = ({ setSearch, search, setRqValue, rqValue, setPage }) => {
               {[...Array(12)].map((_, i) => (<MenuItem value={(i + 1) * 10}>{'<'} {(i + 1) * 10} RQ</MenuItem>))}
             </Select> */}
         <Stack spacing={2} direction="row" sx={{ width: 400 }} alignItems="center">
-          <Typography sx={{ wordBreak: "keep-all" }} variant="p">RQ</Typography>
+
+          {rqOrder ? <Link color="secondary" href="#" sx={{ wordBreak: "keep-all" }} onClick={() => setRqOrder(false)}variant="p">RQ Up</Link>
+          :
+            <Link color="secondary" href="#" sx={{ wordBreak: "keep-all" }} onClick={() => setRqOrder(true)}variant="p">RQ Down</Link>}
 
           <Slider
             getAriaLabel={() => 'RQ'}
             value={rqValue}
             onChange={handleRQSliderChange}
-            valueLabelDisplay="on"
+            valueLabelDisplay="auto"
             getAriaValueText={valuetext}
             valueLabelFormat={valuetext}
             disableSwap
-            max={125}
+            max={maxRQ}
           />
         </Stack>
 

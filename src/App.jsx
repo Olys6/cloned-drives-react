@@ -30,6 +30,7 @@ function App() {
   const [select, setSelect] = useState("all")
   const [page, setPage] = useState(1)
   const [rqValue, setRqValue] = useState([80, 110]);
+  const [rqOrder, setRqOrder] = useState(false)
   // { Array.isArray(car.make) ? car.make[0] : car.make }
   const numOfCars = 20
   // const smallCarData = carData.map((car, i) => (i < 20 ? car : <></>))
@@ -42,8 +43,10 @@ function App() {
   const filteredCars = () => {
     const regexSearch = new RegExp(`\\b${search}`, 'ig')
     return carData.filter(car => {
-      return regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make) || 
-      regexSearch.exec(car.model) &&
+      return (
+      regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make) || 
+      regexSearch.exec(car.model)
+      ) &&
       car.rq <= rqValue[1] && car.rq >= rqValue[0]
     })
   }
@@ -54,9 +57,9 @@ function App() {
         <img src={Logo} style={{ width: "90%", backgroundColor: "white", border: "5px solid white" }} />
       </Box>
 
-      <CarFilter setSearch={setSearch} search={search} setRqValue={setRqValue} rqValue={rqValue} setPage={setPage} />
+      <CarFilter setRqOrder={setRqOrder} rqOrder={rqOrder} setSearch={setSearch} search={search} setRqValue={setRqValue} rqValue={rqValue} setPage={setPage} />
 
-      <Cards filteredCars={filteredCars} page={page} numOfCars={numOfCars} />
+      <Cards rqOrder={rqOrder} filteredCars={filteredCars} page={page} numOfCars={numOfCars} />
 
       <Stack>
         <Pagination 
