@@ -3,7 +3,8 @@ import {
   Card, TextField, Select,
   MenuItem, Box, Pagination,
   Stack, Accordion, AccordionSummary,
-  Typography, AccordionDetails, Slider, Modal, Chip
+  Typography, AccordionDetails, Slider, Modal, Chip,
+  Button
 } from '@mui/material'
 
 import CloseIcon from '@mui/icons-material/Close';
@@ -18,7 +19,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: {md: "60%", xs: "80%"},
+  width: {md: 500, xs: "80%"},
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -33,6 +34,7 @@ const Cards = ({ filteredCars, page, numOfCars, rqOrder }) => {
   const [modalCar, setModalCar] = useState(filteredCars()[0])
   const [open, setOpen] = useState(false);
   const handleOpen = car => {
+    console.log(car)
     setOpen(true);
     setModalCar(car)
   }
@@ -42,10 +44,10 @@ const Cards = ({ filteredCars, page, numOfCars, rqOrder }) => {
     <>
       <Card style={{ display: "flex", flexWrap: "wrap", gap: "0.71rem", justifyContent: "center", backgroundColor: "#242424", padding: "20px" }}>
         {filteredCars().sort((a, b) => rqOrder ? b.rq - a.rq : a.rq - b.rq).map((car, i) => (
-          i >= (numOfCars * page - numOfCars) && i <= (numOfCars * page ) && (
-              <a key={i} onClick={() => handleOpen(car)} className="carCard" href="#">
+          i >= (numOfCars * page - numOfCars) && i < (numOfCars * page ) && (
+              <Button key={i} onClick={() => handleOpen(car)} className="carCard">
                 <LazyLoadImage effect="blur" src={car.card} style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />
-              </a>
+              </Button>
         )))}
       </Card>
       <Modal
@@ -130,7 +132,9 @@ const Cards = ({ filteredCars, page, numOfCars, rqOrder }) => {
               </Typography>
             </Box>
           </Box>
-          
+          <Typography id="modal-modal-description" sx={{ mt: 0 }} variant="h6">
+            Creator: {modalCar.creator}
+          </Typography>
         </Box>
       </Modal>
     </>

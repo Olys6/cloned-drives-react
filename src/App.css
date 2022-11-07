@@ -11,18 +11,18 @@
 }
 
 .carCard {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.25) !important;
     /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    padding: 8px;
-    transition: .2s;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    padding: 8px !important;
+    transition: .2s !important;
 }
 
 .carCard:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
   z-index: 1;
 }
 
