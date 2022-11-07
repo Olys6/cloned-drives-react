@@ -580,7 +580,7 @@ const CarFilter = ({ carCountryValue, setCarCountryValue, setSearch, search, set
               renderValue={(selected) => (
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
                   {selected.map((value) => (
-                    <Chip sx={{ fontWeight: "bold" }} key={value} label={value} />
+                    <Chip color="success" sx={{ fontWeight: "bold" }} key={value} label={value} />
                   ))}
                 </Box>
               )}
