@@ -544,7 +544,7 @@ const CarFilter = ({ carCountryValue, setCarCountryValue, setSearch, search, set
               <MenuItem value="all">All</MenuItem>
               {[...Array(12)].map((_, i) => (<MenuItem value={(i + 1) * 10}>{'<'} {(i + 1) * 10} RQ</MenuItem>))}
             </Select> */}
-        <Stack spacing={2} direction="row" sx={{ width: {xs: "100%", md: "80%"} }} alignItems="center">
+      <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
           <TextField sx={{ minWidth: "30%" }} color="secondary"  id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
           {rqOrder ?
             <Link color="secondary" href="#" sx={{ display: "flex", alignItems: "center" }} onClick={() => setRqOrder(false)} variant="p">
@@ -566,9 +566,9 @@ const CarFilter = ({ carCountryValue, setCarCountryValue, setSearch, search, set
             max={maxRQ}
           />
 
-        </Stack>
-        <Stack spacing={2} direction="row" sx={{ width: { xs: "100%", md: "80%" } }} alignItems="center" justifyContent="center">
-          <FormControl sx={{ m: 1, width: "40%" }} color="secondary">
+        </Box>
+      <Box sx={{ width: { xs: "100%", md: "81%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: {xs: "column", md: "row"}, gap: 2 }}>
+          <FormControl sx={{ m: 1, width: "100%" }} color="secondary">
             <InputLabel id="demo-multiple-chip-label">Tags</InputLabel>
             <Select
               labelId="demo-multiple-chip-label"
@@ -602,13 +602,13 @@ const CarFilter = ({ carCountryValue, setCarCountryValue, setSearch, search, set
           multiple
           value={carCountryValue}
           id="country-select-demo"
-          sx={{ width: 300 }}
+          sx={{ width: "100%" }}
           options={countries}
           autoHighlight
           onChange={(event, newValue) => {
             setCarCountryValue(newValue);
           }}
-          getOptionLabel={(option) => option.code}
+          getOptionLabel={(option) => option.label}
           renderOption={(props, option) => (
             <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
               <img
@@ -632,7 +632,7 @@ const CarFilter = ({ carCountryValue, setCarCountryValue, setSearch, search, set
             />
           )}
                 />
-        </Stack>
+        </Box>
       {/* <FormControl sx={{ m: 1, width: 300 }} color="secondary">
         <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
         <Select
