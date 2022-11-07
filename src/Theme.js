@@ -15,7 +15,7 @@ export const themeOptions = {
       paper: '#242424',
     },
     success: {
-      main: '#ff0f8b',
+      main: '#fcbc4e',
     },
     text: {
       primary: 'rgba(255,255,255,0.87)',
