@@ -5,14 +5,14 @@ export const themeOptions = {
   palette: {
     type: 'dark',
     primary: {
-      main: '#000',
+      main: '#ffffff',
     },
     secondary: {
       main: '#ffffff',
     },
     background: {
       default: '#ffffff',
-      paper: '#000',
+      paper: '#242424',
     },
     success: {
       main: '#ff0f8b',

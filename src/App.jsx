@@ -26,13 +26,15 @@ const theme = createTheme(themeOptions);
 
 function App() {
   
-  const [search, setSearch] = useState("")
-  const [select, setSelect] = useState("all")
-  const [page, setPage] = useState(1)
+  const [search, setSearch] = useState("");
+  const [select, setSelect] = useState("all");
+  const [page, setPage] = useState(1);
   const [rqValue, setRqValue] = useState([80, 110]);
-  const [rqOrder, setRqOrder] = useState(false)
+  const [rqOrder, setRqOrder] = useState(true);
+  const [carTag, setCarTag] = useState([]);
   // { Array.isArray(car.make) ? car.make[0] : car.make }
-  const numOfCars = 20
+  const numOfCars = 20;
+  const carTags = [];
   // const smallCarData = carData.map((car, i) => (i < 20 ? car : <></>))
 
   const handlePageChange = (event, value) => {
@@ -47,9 +49,31 @@ function App() {
       regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make) || 
       regexSearch.exec(car.model)
       ) &&
-      car.rq <= rqValue[1] && car.rq >= rqValue[0]
+      car.rq <= rqValue[1] && car.rq >= rqValue[0] &&
+      (carTag.length > 0 ? carTag.some(elem => car.tags.includes(elem)) : true)
     })
   }
+
+
+  const getAllTags = () => (
+    carData.forEach((car) => {
+      if (Array.isArray(car.tags) && car.tags.length > 0) {
+        car.tags.forEach((tag) => {
+          if (!carTags.includes(tag)) {
+            carTags.push(tag);
+          }
+          if(car.tags.includes("Unqiue")) {
+            console.log(`CAR THAT HAS TYPOS ${car.make}| ${car.model}`)
+          }
+        })
+      }
+    })
+  )
+
+  useEffect(() => {
+    getAllTags()
+    console.log("CAR TAGS --->", carTags)
+  }, [])
 
   return (
     <ThemeProvider theme={theme}>
@@ -57,7 +81,7 @@ function App() {
         <img src={Logo} style={{ width: "90%", backgroundColor: "white", border: "5px solid white" }} />
       </Box>
 
-      <CarFilter setRqOrder={setRqOrder} rqOrder={rqOrder} setSearch={setSearch} search={search} setRqValue={setRqValue} rqValue={rqValue} setPage={setPage} />
+      <CarFilter carTag={carTag} setCarTag={setCarTag} carTags={carTags} setRqOrder={setRqOrder} rqOrder={rqOrder} setSearch={setSearch} search={search} setRqValue={setRqValue} rqValue={rqValue} setPage={setPage} />
 
       <Cards rqOrder={rqOrder} filteredCars={filteredCars} page={page} numOfCars={numOfCars} />
 
