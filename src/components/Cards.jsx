@@ -34,7 +34,7 @@ const Cards = ({ filteredCars, page, numOfCars, rqOrder }) => {
   const [modalCar, setModalCar] = useState(filteredCars()[0])
   const [open, setOpen] = useState(false);
   const handleOpen = car => {
-    console.log(car)
+    console.log("CAR ID =>", car.id)
     setOpen(true);
     setModalCar(car)
   }

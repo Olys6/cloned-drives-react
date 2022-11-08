@@ -1,0 +1,11 @@
+{
+  "name": "carsmerge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "carsmerge.js",
+  "scripts": {
+    "start": "node carsmerge.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
