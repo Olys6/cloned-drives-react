@@ -13,18 +13,17 @@ async function mergeJson() {
             try {
                 // console.log(file)
             const output = fs.readFileSync(`./cars/${file}`, { encoding: 'utf8'});
-
-                const entry = {
-                    id: file,
-                    ...output,
-                };
-
-                const json = JSON.parse(entry)
+            const json = JSON.parse(output)
             
+            const entry = {
+                id: file,
+                ...json,
+            };
 
-            if (json) {
+
+            if (entry) {
                 // console.log(JSON.stringify(json))
-                carsData.push(json)
+                carsData.push(entry)
                 // fs.writeFileSync(`combine.json`, JSON.stringify(output), { flag: "a" });
             }
         }

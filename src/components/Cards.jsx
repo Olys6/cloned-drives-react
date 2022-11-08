@@ -35,6 +35,7 @@ const Cards = ({ filteredCars, page, numOfCars, rqOrder }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = car => {
     console.log("CAR ID =>", car.id)
+    console.log("CAR ==>", car)
     setOpen(true);
     setModalCar(car)
   }
@@ -132,9 +133,14 @@ const Cards = ({ filteredCars, page, numOfCars, rqOrder }) => {
               </Typography>
             </Box>
           </Box>
-          <Typography id="modal-modal-description" sx={{ mt: 0 }} variant="h6">
-            Creator: {modalCar.creator}
-          </Typography>
+          <Box sx={{ display: "flex", justifyContent: "space-between" }} >
+            <Typography id="modal-modal-description" sx={{ mt: 0 }} variant="h6">
+              Creator: {modalCar.creator}
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 0 }} variant="h6">
+              Id: {modalCar.id.split(".")[0]}
+            </Typography>
+          </Box>
         </Box>
       </Modal>
     </>

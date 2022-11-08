@@ -60,7 +60,16 @@ function getStyles(name, carTag, theme) {
 }
 
 
-const CarFilter = ({ carCountryValue, setCarCountryValue, setSearch, search, setRqValue, rqValue, setPage, setRqOrder, rqOrder, carTag, setCarTag }) => {
+const CarFilter = ({ 
+  carTyre, setCarTyre,
+  carMake, setCarMake,
+  carCountryValue, setCarCountryValue, 
+  setSearch, search, 
+  setRqValue, rqValue, 
+  setPage, setRqOrder, 
+  rqOrder, carTag, 
+  setCarTag 
+  }) => {
   const theme = useTheme();
 
   const carCountries = [];
@@ -74,10 +83,43 @@ const CarFilter = ({ carCountryValue, setCarCountryValue, setSearch, search, set
   )
 
   getCountries()
-  // useEffect(() => {
-  //   getCountries()
-  //   console.log(carCountries)
-  // }, [])
+
+  const carMakes = [];
+
+  const getCarMakes = () => (
+    carData.forEach((car) => {
+      if(Array.isArray(car.make)) {
+        car.make.forEach((make) => {
+          if (!carMakes.includes(make)) {
+            carMakes.push(make);
+          }
+        })
+      } else {
+        if (!carMakes.includes(car.make)) {
+          carMakes.push(car.make);
+        }
+      }
+    })
+  )
+
+  getCarMakes()
+
+  const carTyres = [];
+
+  const getCarTyres = () => (
+    carData.forEach((car) => {
+      // car.tyreType === undefined ? console.log("UNDEFINED CAR TYRE TYPE", car.id) : null
+      if (!carTyres.includes(car.tyreType) && car.tyreType !== undefined) {
+        carTyres.push(car.tyreType);
+      }
+    })
+  )
+
+  getCarTyres()
+  useEffect(() => {
+    // getCarMakes()
+    console.log(carTyres)
+  }, [])
 
   const countries = [
     // { code: 'AD', label: 'Andorra', phone: '376' },
@@ -516,6 +558,16 @@ const CarFilter = ({ carCountryValue, setCarCountryValue, setSearch, search, set
     );
   };
 
+  const handleSelectTyreChange = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setCarTyre(
+      // On autofill we get a stringified value.
+      typeof value === 'string' ? value.split(',') : value,
+    );
+  };
+
   const handleSearch = event => {
     setSearch(event.target.value)
     setPage(1)
@@ -585,6 +637,40 @@ const CarFilter = ({ carCountryValue, setCarCountryValue, setSearch, search, set
           />
 
         </Box>
+
+
+
+      <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: {xs: "column", md: "row"}, gap: 2 }}>
+        <Autocomplete
+          limitTags={3}
+          multiple
+          value={carMake}
+          sx={{ width: "100%" }}
+          options={carMakes}
+          autoHighlight
+          onChange={(event, newValue) => {
+            setCarMake(newValue);
+          }}
+          getOptionLabel={(option) => option}
+          renderOption={(props, option) => (
+            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+              {option}
+            </Box>
+          )}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              label="Choose a make"
+              inputProps={{
+                ...params.inputProps,
+                autoComplete: 'new-password', // disable autocomplete and autofill
+              }}
+            />
+          )}
+        />
+          
+        
+        </Box>
       <Box sx={{ width: { xs: "100%", md: "81%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: {xs: "column", md: "row"}, gap: 2 }}>
           <FormControl sx={{ m: 1, width: "100%" }} color="secondary">
             <InputLabel id="demo-multiple-chip-label">Tags</InputLabel>
@@ -616,7 +702,29 @@ const CarFilter = ({ carCountryValue, setCarCountryValue, setSearch, search, set
             </Select>
           </FormControl>
           
+        <FormControl sx={{ m: 1, width: "100%" }}>
+          <InputLabel id="demo-multiple-checkbox-label">Tyre Type</InputLabel>
+          <Select
+            labelId="demo-multiple-checkbox-label"
+            id="demo-multiple-checkbox"
+            multiple
+            value={carTyre}
+            onChange={handleSelectTyreChange}
+            input={<OutlinedInput label="Tag" />}
+            renderValue={(selected) => selected.join(', ')}
+            MenuProps={MenuProps}
+          >
+            {carTyres.map((name) => (
+              <MenuItem key={name} value={name}>
+                <Checkbox checked={carTyre.indexOf(name) > -1} />
+                <ListItemText primary={name} />
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+
           <Autocomplete
+          limitTags={4}
           multiple
           value={carCountryValue}
           id="country-select-demo"

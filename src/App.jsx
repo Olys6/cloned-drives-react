@@ -33,6 +33,8 @@ function App() {
   const [rqOrder, setRqOrder] = useState(true);
   const [carTag, setCarTag] = useState([]);
   const [carCountryValue, setCarCountryValue] = useState([]);
+  const [carMake, setCarMake] = useState([]);
+  const [carTyre, setCarTyre] = useState([]);
   // { Array.isArray(car.make) ? car.make[0] : car.make }
   const numOfCars = 20;
   const carTags = [];
@@ -47,12 +49,14 @@ function App() {
     const regexSearch = new RegExp(`\\b${search}`, 'ig')
     return carData.filter(car => {
       return (
-      regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make) || 
+      // regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make) || 
       regexSearch.exec(car.model)
       ) &&
       car.rq <= rqValue[1] && car.rq >= rqValue[0] &&
+        (carMake.length > 0 ? carMake.some(elem => car.make.includes(elem)) : true) &&
       (carTag.length > 0 ? carTag.some(elem => car.tags.includes(elem)) : true) &&
-        (carCountryValue.length > 0 ? carCountryValue.some(elem => elem.code === car.country) : true)
+      (carCountryValue.length > 0 ? carCountryValue.some(elem => elem.code === car.country) : true) &&
+        (carTyre.length > 0 ? carTyre.some(elem => elem === car.tyreType) : true)
     })
   }
 
@@ -80,7 +84,24 @@ function App() {
         <img src={Logo} style={{ width: "90%", backgroundColor: "white", border: "5px solid white" }} />
       </Box>
 
-      <CarFilter carCountryValue={carCountryValue} setCarCountryValue={setCarCountryValue} carTag={carTag} setCarTag={setCarTag} carTags={carTags} setRqOrder={setRqOrder} rqOrder={rqOrder} setSearch={setSearch} search={search} setRqValue={setRqValue} rqValue={rqValue} setPage={setPage} />
+      <CarFilter 
+        carTyre={carTyre}
+        setCarTyre={setCarTyre}
+        carMake={carMake}
+        setCarMake={setCarMake}
+        carCountryValue={carCountryValue} 
+        setCarCountryValue={setCarCountryValue} 
+        carTag={carTag} 
+        setCarTag={setCarTag} 
+        carTags={carTags} 
+        setRqOrder={setRqOrder} 
+        rqOrder={rqOrder} 
+        setSearch={setSearch} 
+        search={search} 
+        setRqValue={setRqValue} 
+        rqValue={rqValue} 
+        setPage={setPage} 
+      />
 
       <Cards rqOrder={rqOrder} filteredCars={filteredCars} page={page} numOfCars={numOfCars} />
 
