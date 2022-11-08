@@ -61,6 +61,7 @@ function getStyles(name, carTag, theme) {
 
 
 const CarFilter = ({
+  topSpeed, setTopSpeed,
   carDriveType, setCarDriveType,
   carTyre, setCarTyre,
   carMake, setCarMake,
@@ -136,7 +137,7 @@ const CarFilter = ({
   // }, [])
 
   const countries = [
-    // { code: 'AD', label: 'Andorra', phone: '376' },
+    { code: 'AD', label: 'Andorra', phone: '376' },
     {
       code: 'AE',
       label: 'United Arab Emirates',
@@ -622,6 +623,25 @@ const CarFilter = ({
     }
   };
 
+  // const handleTPSliderChange = (event, newValue, activeThumb) => {
+  //   setTopSpeed(newValue);
+  //   if (!Array.isArray(newValue)) {
+  //     return;
+  //   }
+
+  //   if (topSpeed[1] - topSpeed[0] < minDistance) {
+  //     if (activeThumb === 0) {
+  //       const clamped = Math.min(topSpeed[0], maxRQ - minDistance);
+  //       setTopSpeed([clamped, clamped + minDistance]);
+  //     } else {
+  //       const clamped = Math.max(topSpeed[1], minDistance);
+  //       setTopSpeed([clamped - minDistance, clamped]);
+  //     }
+  //   } else {
+  //     setTopSpeed(newValue);
+  //   }
+  // };
+
   return (
     <Box id="searchBox">
       {/* <Box sx={{ width: "90%", display: "flex", alignItems: "center", justifyContent: "space-evenly", flexDirection: "column" }}> */}
@@ -659,6 +679,8 @@ const CarFilter = ({
           disableSwap
           max={maxRQ}
         />
+        <TextField placeholder="Min RQ" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setRqValue([e.target.value, rqValue[1]])} value={rqValue[0]} />
+        <TextField placeholder="Max RQ" onChange={(e) => setRqValue([rqValue[0], e.target.value])} value={rqValue[1]} />
 
       </Box>
 
@@ -806,6 +828,16 @@ const CarFilter = ({
             ))}
           </Select>
         </FormControl>
+        {/* <Slider
+          getAriaLabel={() => 'Top Speed'}
+          value={topSpeed}
+          onChange={handleTPSliderChange}
+          valueLabelDisplay="auto"
+          getAriaValueText={valuetext}
+          valueLabelFormat={valuetext}
+          disableSwap
+          max={maxRQ}
+        /> */}
       </Box>
       {/* <FormControl sx={{ m: 1, width: 300 }} color="secondary">
         <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>

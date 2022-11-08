@@ -36,6 +36,7 @@ function App() {
   const [carMake, setCarMake] = useState([]);
   const [carTyre, setCarTyre] = useState([]);
   const [carDriveType, setCarDriveType] = useState([]);
+  const [topSpeed, setTopSpeed] = useState();
   // { Array.isArray(car.make) ? car.make[0] : car.make }
   const numOfCars = 20;
   const carTags = [];
@@ -62,6 +63,10 @@ function App() {
     })
   }
 
+  useEffect(() => {
+    filteredCars()
+  }, [rqValue])
+
 
   const getAllTags = () => (
     carData.forEach((car) => {
@@ -87,6 +92,8 @@ function App() {
       </Box>
 
       <CarFilter 
+        topSpeed={topSpeed}
+        setTopSpeed={setTopSpeed}
         carDriveType={carDriveType}
         setCarDriveType={setCarDriveType}
         carTyre={carTyre}
