@@ -29,7 +29,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [select, setSelect] = useState("all");
   const [page, setPage] = useState(1);
-  const [rqValue, setRqValue] = useState([80, 110]);
+  const [rqValue, setRqValue] = useState([40, 110]);
   const [rqOrder, setRqOrder] = useState(true);
   const [carTag, setCarTag] = useState([]);
   const [carCountryValue, setCarCountryValue] = useState([]);
