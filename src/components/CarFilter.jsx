@@ -7,7 +7,7 @@ import {
   Typography, AccordionDetails, Slider,
   Link, OutlinedInput, InputLabel,
   Chip, FormControl, Checkbox, ListItemText,
-  Autocomplete
+  Autocomplete, Button
 } from '@mui/material'
 
 import carData from '../data/data.js'
@@ -37,7 +37,7 @@ const MenuProps = {
 };
 
 const carTags = []
-  function getCarTags() {
+function getCarTags() {
   carData.forEach((car) => {
     if (Array.isArray(car.tags) && car.tags.length > 0) {
       car.tags.forEach((tag) => {
@@ -60,16 +60,17 @@ function getStyles(name, carTag, theme) {
 }
 
 
-const CarFilter = ({ 
+const CarFilter = ({
+  carDriveType, setCarDriveType,
   carTyre, setCarTyre,
   carMake, setCarMake,
-  carCountryValue, setCarCountryValue, 
-  setSearch, search, 
-  setRqValue, rqValue, 
-  setPage, setRqOrder, 
-  rqOrder, carTag, 
-  setCarTag 
-  }) => {
+  carCountryValue, setCarCountryValue,
+  setSearch, search,
+  setRqValue, rqValue,
+  setPage, setRqOrder,
+  rqOrder, carTag,
+  setCarTag
+}) => {
   const theme = useTheme();
 
   const carCountries = [];
@@ -78,7 +79,7 @@ const CarFilter = ({
     carData.forEach((car) => {
       if (!carCountries.includes(car.country)) {
         carCountries.push(car.country);
-          }
+      }
     })
   )
 
@@ -88,7 +89,7 @@ const CarFilter = ({
 
   const getCarMakes = () => (
     carData.forEach((car) => {
-      if(Array.isArray(car.make)) {
+      if (Array.isArray(car.make)) {
         car.make.forEach((make) => {
           if (!carMakes.includes(make)) {
             carMakes.push(make);
@@ -116,10 +117,23 @@ const CarFilter = ({
   )
 
   getCarTyres()
-  useEffect(() => {
-    // getCarMakes()
-    console.log(carTyres)
-  }, [])
+
+  const carDriveTypes = [];
+
+  const getDriveType = () => (
+    carData.forEach((car) => {
+      // car.tyreType === undefined ? console.log("UNDEFINED CAR TYRE TYPE", car.id) : null
+      if (!carDriveTypes.includes(car.driveType) && car.driveType !== undefined) {
+        carDriveTypes.push(car.driveType);
+      }
+    })
+  )
+
+  getDriveType()
+  // useEffect(() => {
+  //   // getCarMakes()
+  //   console.log(carTyres)
+  // }, [])
 
   const countries = [
     // { code: 'AD', label: 'Andorra', phone: '376' },
@@ -568,6 +582,16 @@ const CarFilter = ({
     );
   };
 
+  const handleSelectDriveTypeChange = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setCarDriveType(
+      // On autofill we get a stringified value.
+      typeof value === 'string' ? value.split(',') : value,
+    );
+  };
+
   const handleSearch = event => {
     setSearch(event.target.value)
     setPage(1)
@@ -577,7 +601,7 @@ const CarFilter = ({
     setSelect(event.target.value)
     setPage(1)
   }
-  
+
 
   const handleRQSliderChange = (event, newValue, activeThumb) => {
     setRqValue(newValue);
@@ -601,8 +625,8 @@ const CarFilter = ({
   return (
     <Box id="searchBox">
       {/* <Box sx={{ width: "90%", display: "flex", alignItems: "center", justifyContent: "space-evenly", flexDirection: "column" }}> */}
-  
-        {/* <Select
+
+      {/* <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={select}
@@ -615,32 +639,32 @@ const CarFilter = ({
               {[...Array(12)].map((_, i) => (<MenuItem value={(i + 1) * 10}>{'<'} {(i + 1) * 10} RQ</MenuItem>))}
             </Select> */}
       <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
-          <TextField sx={{ minWidth: "30%" }} color="secondary"  id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
-          {rqOrder ?
-            <Link color="secondary" href="#" sx={{ display: "flex", alignItems: "center" }} onClick={() => setRqOrder(false)} variant="p">
-              <KeyboardArrowDownIcon/> RQ
-            </Link>
-            :
-            <Link color="secondary" href="#" sx={{ display: "flex", alignItems: "center" }} onClick={() => setRqOrder(true)} variant="p">
-              <KeyboardArrowUpIcon /> RQ
-            </Link>}
+        <TextField sx={{ minWidth: "30%" }} color="secondary" id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
+        {rqOrder ?
+          <Button sx={{ fontSize: "20px" }} onClick={() => setRqOrder(false)}>
+            <KeyboardArrowDownIcon /> RQ
+          </Button>
+          :
+          <Button color="secondary" sx={{ fontSize: "20px" }} onClick={() => setRqOrder(true)}>
+            <KeyboardArrowUpIcon /> RQ
+          </Button>}
 
-          <Slider
-            getAriaLabel={() => 'RQ'}
-            value={rqValue}
-            onChange={handleRQSliderChange}
-            valueLabelDisplay="auto"
-            getAriaValueText={valuetext}
-            valueLabelFormat={valuetext}
-            disableSwap
-            max={maxRQ}
-          />
+        <Slider
+          getAriaLabel={() => 'RQ'}
+          value={rqValue}
+          onChange={handleRQSliderChange}
+          valueLabelDisplay="auto"
+          getAriaValueText={valuetext}
+          valueLabelFormat={valuetext}
+          disableSwap
+          max={maxRQ}
+        />
 
-        </Box>
+      </Box>
 
 
 
-      <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: {xs: "column", md: "row"}, gap: 2 }}>
+      <Box sx={{ mb: 1, mt: 1, width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
         <Autocomplete
           limitTags={3}
           multiple
@@ -668,62 +692,41 @@ const CarFilter = ({
             />
           )}
         />
-          
-        
-        </Box>
-      <Box sx={{ width: { xs: "100%", md: "81%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: {xs: "column", md: "row"}, gap: 2 }}>
-          <FormControl sx={{ m: 1, width: "100%" }} color="secondary">
-            <InputLabel id="demo-multiple-chip-label">Tags</InputLabel>
-            <Select
-              labelId="demo-multiple-chip-label"
-              id="demo-multiple-chip"
-              multiple
+
+        <FormControl sx={{ width: "100%" }} color="secondary">
+          <InputLabel id="demo-multiple-chip-label">Tags</InputLabel>
+          <Select
+            labelId="demo-multiple-chip-label"
+            id="demo-multiple-chip"
+            multiple
             value={carTag}
             onChange={handleSelectTagChange}
-              input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
-              renderValue={(selected) => (
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                  {selected.map((value) => (
-                    <Chip color="success" sx={{ fontWeight: "bold" }} key={value} label={value} />
-                  ))}
-                </Box>
-              )}
-              MenuProps={MenuProps}
-            >
+            input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
+            renderValue={(selected) => (
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                {selected.map((value) => (
+                  <Chip color="success" sx={{ fontWeight: "bold" }} key={value} label={value} />
+                ))}
+              </Box>
+            )}
+            MenuProps={MenuProps}
+          >
             {carTags.map((tag) => (
-                <MenuItem
+              <MenuItem
                 key={tag}
                 value={tag}
                 style={getStyles(tag, carTag, theme)}
-                >
+              >
                 {tag}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-          
-        <FormControl sx={{ m: 1, width: "100%" }}>
-          <InputLabel id="demo-multiple-checkbox-label">Tyre Type</InputLabel>
-          <Select
-            labelId="demo-multiple-checkbox-label"
-            id="demo-multiple-checkbox"
-            multiple
-            value={carTyre}
-            onChange={handleSelectTyreChange}
-            input={<OutlinedInput label="Tag" />}
-            renderValue={(selected) => selected.join(', ')}
-            MenuProps={MenuProps}
-          >
-            {carTyres.map((name) => (
-              <MenuItem key={name} value={name}>
-                <Checkbox checked={carTyre.indexOf(name) > -1} />
-                <ListItemText primary={name} />
               </MenuItem>
             ))}
           </Select>
         </FormControl>
 
-          <Autocomplete
+      </Box>
+      <Box sx={{ mb: 1, width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+
+        <Autocomplete
           limitTags={4}
           multiple
           value={carCountryValue}
@@ -757,8 +760,53 @@ const CarFilter = ({
               }}
             />
           )}
-                />
-        </Box>
+        />
+
+        <FormControl sx={{ width: "100%" }}>
+          <InputLabel id="demo-multiple-checkbox-label">Tyre Type</InputLabel>
+          <Select
+            labelId="demo-multiple-checkbox-label"
+            id="demo-multiple-checkbox"
+            multiple
+            value={carTyre}
+            onChange={handleSelectTyreChange}
+            input={<OutlinedInput label="Tyre Type" />}
+            renderValue={(selected) => selected.join(', ')}
+            MenuProps={MenuProps}
+          >
+            {carTyres.map((name) => (
+              <MenuItem key={name} value={name}>
+                <Checkbox checked={carTyre.indexOf(name) > -1} />
+                <ListItemText primary={name} />
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+
+      </Box>
+
+      <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+        <FormControl sx={{ m: 0, width: "100%" }}>
+          <InputLabel id="demo-multiple-checkbox-label">Drive Type</InputLabel>
+          <Select
+            labelId="demo-multiple-checkbox-label"
+            id="demo-multiple-checkbox"
+            multiple
+            value={carDriveType}
+            onChange={handleSelectDriveTypeChange}
+            input={<OutlinedInput label="Drive Type" />}
+            renderValue={(selected) => selected.join(', ')}
+            MenuProps={MenuProps}
+          >
+            {carDriveTypes.map((name) => (
+              <MenuItem key={name} value={name}>
+                <Checkbox color="success" checked={carDriveType.indexOf(name) > -1} />
+                <ListItemText primary={name} />
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </Box>
       {/* <FormControl sx={{ m: 1, width: 300 }} color="secondary">
         <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
         <Select

@@ -35,6 +35,7 @@ function App() {
   const [carCountryValue, setCarCountryValue] = useState([]);
   const [carMake, setCarMake] = useState([]);
   const [carTyre, setCarTyre] = useState([]);
+  const [carDriveType, setCarDriveType] = useState([]);
   // { Array.isArray(car.make) ? car.make[0] : car.make }
   const numOfCars = 20;
   const carTags = [];
@@ -56,7 +57,8 @@ function App() {
         (carMake.length > 0 ? carMake.some(elem => car.make.includes(elem)) : true) &&
       (carTag.length > 0 ? carTag.some(elem => car.tags.includes(elem)) : true) &&
       (carCountryValue.length > 0 ? carCountryValue.some(elem => elem.code === car.country) : true) &&
-        (carTyre.length > 0 ? carTyre.some(elem => elem === car.tyreType) : true)
+        (carTyre.length > 0 ? carTyre.some(elem => elem === car.tyreType) : true) &&
+        (carDriveType.length > 0 ? carDriveType.some(elem => elem === car.driveType) : true)
     })
   }
 
@@ -85,6 +87,8 @@ function App() {
       </Box>
 
       <CarFilter 
+        carDriveType={carDriveType}
+        setCarDriveType={setCarDriveType}
         carTyre={carTyre}
         setCarTyre={setCarTyre}
         carMake={carMake}

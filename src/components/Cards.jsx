@@ -43,7 +43,7 @@ const Cards = ({ filteredCars, page, numOfCars, rqOrder }) => {
 
   return (
     <>
-      <Card style={{ display: "flex", flexWrap: "wrap", gap: "0.71rem", justifyContent: "center", backgroundColor: "#242424", padding: "20px" }}>
+      <Card sx={{ display: "flex", flexWrap: "wrap", gap: "0.71rem", justifyContent: "center", backgroundColor: "#242424", padding: "20px" }}>
         {filteredCars().sort((a, b) => rqOrder ? b.rq - a.rq : a.rq - b.rq).map((car, i) => (
           i >= (numOfCars * page - numOfCars) && i < (numOfCars * page ) && (
               <Button key={i} onClick={() => handleOpen(car)} className="carCard">
