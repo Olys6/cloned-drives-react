@@ -22,7 +22,15 @@ import Cards from './components/Cards';
 
 const theme = createTheme(themeOptions);
 
+let highestCarSpeed = 0;
 
+const getHighestSpeed = () => {
+  carData.forEach((car) => {
+    highestCarSpeed < car.topSpeed ? highestCarSpeed = car.topSpeed : null
+  })
+}
+
+getHighestSpeed()
 
 function App() {
   
@@ -30,29 +38,30 @@ function App() {
   const [select, setSelect] = useState("all");
   const [page, setPage] = useState(1);
   const [rqValue, setRqValue] = useState([40, 110]);
-  const [carsSortType, setCarsSortType] = useState(true);
+  const [carsSortType, setCarsSortType] = useState(2);
   const [carTag, setCarTag] = useState([]);
   const [carCountryValue, setCarCountryValue] = useState([]);
   const [carMake, setCarMake] = useState([]);
   const [carTyre, setCarTyre] = useState([]);
   const [carDriveType, setCarDriveType] = useState([]);
-  const [topSpeed, setTopSpeed] = useState([20, 100]);
+  const [topSpeed, setTopSpeed] = useState([0, highestCarSpeed]);
   // { Array.isArray(car.make) ? car.make[0] : car.make }
   const numOfCars = 20;
   const carTags = [];
+
   // const smallCarData = carData.map((car, i) => (i < 20 ? car : <></>))
 
   const handlePageChange = (event, value) => {
     setPage(value);
   };
 
-
   const filteredCars = () => {
-    const regexSearch = new RegExp(`\\b${search}`, 'ig')
+    const regexSearch = new RegExp(`\\b${search}`, 'i')
     return carData.filter(car => {
       return (
-      // regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make) || 
-      regexSearch.exec(car.model)
+      regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make) || 
+      regexSearch.exec(car.model) || 
+      regexSearch.exec(Array.isArray(car.make) ? `${car.make[0]} ${car.model}` : `${car.make} ${car.model}`)
       ) &&
       car.rq <= rqValue[1] && car.rq >= rqValue[0] &&
       car.topSpeed <= topSpeed[1] && car.topSpeed >= topSpeed[0] &&
@@ -93,6 +102,7 @@ function App() {
       </Box>
 
       <CarFilter 
+        highestCarSpeed={highestCarSpeed}
         topSpeed={topSpeed}
         setTopSpeed={setTopSpeed}
         carDriveType={carDriveType}

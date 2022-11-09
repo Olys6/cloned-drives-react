@@ -45,7 +45,19 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
   return (
     <>
       <Card sx={{ display: "flex", flexWrap: "wrap", gap: "0.71rem", justifyContent: "center", backgroundColor: "#242424", padding: "20px" }}>
-        {filteredCars().sort((a, b) => carsSortType[1] === "descend" ? b.rq - a.rq : a.rq - b.rq).map((car, i) => (
+        {filteredCars().sort(
+          (a, b) => {
+            if (carsSortType === 1) {
+              return a.rq - b.rq
+            } else if (carsSortType === 2) {
+              return b.rq - a.rq
+            } else if (carsSortType === 3) {
+              return a.topSpeed - b.topSpeed
+            } else if (carsSortType === 4) {
+              return b.topSpeed - a.topSpeed
+            }
+            }
+          ).map((car, i) => (
           i >= (numOfCars * page - numOfCars) && i < (numOfCars * page) && (
             <Button key={i} onClick={() => handleOpen(car)} className="carCard">
               <LazyLoadImage effect="blur" src={car.card} style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />

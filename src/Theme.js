@@ -13,6 +13,7 @@ export const themeOptions = {
     background: {
       default: '#ffffff',
       paper: '#242424',
+      paper2: "#b8860b",
       prize: '#b8860b',
     },
     success: {

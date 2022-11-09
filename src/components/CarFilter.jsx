@@ -7,7 +7,7 @@ import {
   Typography, AccordionDetails, Slider,
   Link, OutlinedInput, InputLabel,
   Chip, FormControl, Checkbox, ListItemText,
-  Autocomplete, Button
+  Autocomplete, Button, ListSubheader
 } from '@mui/material'
 
 import carData from '../data/data.js'
@@ -65,6 +65,7 @@ function getStyles(name, carTag, theme) {
 
 
 const CarFilter = ({
+  highestCarSpeed,
   topSpeed, setTopSpeed,
   carDriveType, setCarDriveType,
   carTyre, setCarTyre,
@@ -665,25 +666,27 @@ const CarFilter = ({
             </Select> */}
       <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
         <TextField sx={{ minWidth: "30%" }} color="secondary" id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
-        {carsSortType[1] === "ascend" ?
+        {/* {carsSortType[1] === "ascend" ?
           <Button sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "descend"])}>
             <KeyboardArrowDownIcon /> RQ
           </Button>
           :
           <Button color="secondary" sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "ascend"])}>
             <KeyboardArrowUpIcon /> RQ
-          </Button>}
-
-        <Slider
-          getAriaLabel={() => 'RQ'}
-          value={rqValue}
-          onChange={handleRQSliderChange}
-          valueLabelDisplay="auto"
-          getAriaValueText={rqSliderValuetext}
-          valueLabelFormat={rqSliderValuetext}
-          disableSwap
-          max={maxRQ}
-        />
+          </Button>} */}
+        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%"}}>
+          <Typography sx={{ mr: 1 }}> RQ </Typography>
+          <Slider
+            getAriaLabel={() => 'RQ'}
+            value={rqValue}
+            onChange={handleRQSliderChange}
+            valueLabelDisplay="auto"
+            getAriaValueText={rqSliderValuetext}
+            valueLabelFormat={rqSliderValuetext}
+            disableSwap
+            max={maxRQ}
+          />
+        </Stack>
         <TextField placeholder="Min RQ" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setRqValue([e.target.value, rqValue[1]])} value={rqValue[0]} />
         <TextField placeholder="Max RQ" onChange={(e) => setRqValue([rqValue[0], e.target.value])} value={rqValue[1]} />
 
@@ -833,6 +836,8 @@ const CarFilter = ({
             ))}
           </Select>
         </FormControl>
+        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
+          <Typography sx={{ mr: 1 }}> TP </Typography>
         <Slider
           getAriaLabel={() => 'Top Speed'}
           value={topSpeed}
@@ -841,8 +846,23 @@ const CarFilter = ({
           getAriaValueText={tpSliderValuetext}
           valueLabelFormat={tpSliderValuetext}
           disableSwap
-          max={130}
+          max={highestCarSpeed}
         />
+        </Stack>
+      </Box>
+      <Box sx={{width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2}} >
+
+        <FormControl sx={{ width: "100%" }}>
+          <InputLabel htmlFor="grouped-select">Sort</InputLabel>
+          <Select defaultValue={2} value={carsSortType} onChange={(e) => setCarsSortType(e.target.value)} label="Sort">
+            <ListSubheader sx={{ bgcolor: "background.paper2" }} color="primary">RQ Sort</ListSubheader>
+            <MenuItem value={1}>RQ: Ascending order {"<"}</MenuItem>
+            <MenuItem value={2}>RQ: Descending order {">"}</MenuItem>
+            <ListSubheader sx={{ bgcolor: "background.paper2" }}>Top Speed Sort</ListSubheader>
+            <MenuItem value={3}>TP: Ascending order {"<"}</MenuItem>
+            <MenuItem value={4}>TP: Descending order {">"}</MenuItem>
+          </Select>
+        </FormControl>
       </Box>
       {/* <FormControl sx={{ m: 1, width: 300 }} color="secondary">
         <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
