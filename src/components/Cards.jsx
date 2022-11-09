@@ -44,7 +44,7 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
 
   return (
     <>
-      <Card sx={{ display: "flex", flexWrap: "wrap", gap: "0.71rem", justifyContent: "center", backgroundColor: "#242424", padding: "20px" }}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", gap: "0.71rem", justifyContent: "center", backgroundColor: "", padding: "20px" }}>
         {filteredCars().sort(
           (a, b) => {
             if (carsSortType === 1) {
@@ -63,7 +63,7 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
               <LazyLoadImage effect="blur" src={car.card} style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />
             </Button>
           )))}
-      </Card>
+      </Box>
       <Modal
         open={open}
         onClose={handleClose}

@@ -10,7 +10,7 @@ import {
 
 
 
-import Logo from './logoblack.webp'
+import Logo from './logowhite.png'
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -97,8 +97,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box style={{ width: "100%", backgroundColor: "white", marginBottom: "5rem", borderRadius: "10px" }}>
-        <img src={Logo} style={{ width: "90%", backgroundColor: "white", border: "5px solid white" }} />
+      <Box style={{ position: {md: "absolute", xs: "inherit"}, top: 10, left: 0, width: {md: 500, xs: "100%"}, marginBottom: "5rem", borderRadius: "10px" }}>
+        <img src={Logo} style={{ width: "80%" }} />
       </Box>
 
       <CarFilter 
