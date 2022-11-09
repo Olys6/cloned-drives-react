@@ -816,7 +816,7 @@ const CarFilter = ({
       </Box>
 
       <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
-        <FormControl sx={{ m: 0, width: "100%" }}>
+        <FormControl sx={{ mb: 1, width: "100%" }}>
           <InputLabel id="demo-multiple-checkbox-label">Drive Type</InputLabel>
           <Select
             labelId="demo-multiple-checkbox-label"
