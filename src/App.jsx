@@ -30,13 +30,13 @@ function App() {
   const [select, setSelect] = useState("all");
   const [page, setPage] = useState(1);
   const [rqValue, setRqValue] = useState([40, 110]);
-  const [rqOrder, setRqOrder] = useState(true);
+  const [carsSortType, setCarsSortType] = useState(true);
   const [carTag, setCarTag] = useState([]);
   const [carCountryValue, setCarCountryValue] = useState([]);
   const [carMake, setCarMake] = useState([]);
   const [carTyre, setCarTyre] = useState([]);
   const [carDriveType, setCarDriveType] = useState([]);
-  const [topSpeed, setTopSpeed] = useState();
+  const [topSpeed, setTopSpeed] = useState([20, 100]);
   // { Array.isArray(car.make) ? car.make[0] : car.make }
   const numOfCars = 20;
   const carTags = [];
@@ -55,6 +55,7 @@ function App() {
       regexSearch.exec(car.model)
       ) &&
       car.rq <= rqValue[1] && car.rq >= rqValue[0] &&
+      car.topSpeed <= topSpeed[1] && car.topSpeed >= topSpeed[0] &&
         (carMake.length > 0 ? carMake.some(elem => car.make.includes(elem)) : true) &&
       (carTag.length > 0 ? carTag.some(elem => car.tags.includes(elem)) : true) &&
       (carCountryValue.length > 0 ? carCountryValue.some(elem => elem.code === car.country) : true) &&
@@ -105,8 +106,8 @@ function App() {
         carTag={carTag} 
         setCarTag={setCarTag} 
         carTags={carTags} 
-        setRqOrder={setRqOrder} 
-        rqOrder={rqOrder} 
+        setCarsSortType={setCarsSortType} 
+        carsSortType={carsSortType} 
         setSearch={setSearch} 
         search={search} 
         setRqValue={setRqValue} 
@@ -114,7 +115,7 @@ function App() {
         setPage={setPage} 
       />
 
-      <Cards rqOrder={rqOrder} filteredCars={filteredCars} page={page} numOfCars={numOfCars} />
+      <Cards carsSortType={carsSortType} filteredCars={filteredCars} page={page} numOfCars={numOfCars} />
 
       <Stack>
         <Pagination 

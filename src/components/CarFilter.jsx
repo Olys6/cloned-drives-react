@@ -17,11 +17,15 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { ContactPageSharp } from '@mui/icons-material';
 
-function valuetext(rqValue) {
-  return `${rqValue} RQ`;
+function rqSliderValuetext(value) {
+  return `${value} RQ`;
 }
 
-const minDistance = 10;
+function tpSliderValuetext(value) {
+  return `${value} Top Speed`;
+}
+
+const minDistance = 0;
 
 const maxRQ = 125
 
@@ -68,10 +72,11 @@ const CarFilter = ({
   carCountryValue, setCarCountryValue,
   setSearch, search,
   setRqValue, rqValue,
-  setPage, setRqOrder,
-  rqOrder, carTag,
+  setPage, setCarsSortType,
+  carsSortType, carTag,
   setCarTag
 }) => {
+
   const theme = useTheme();
 
   const carCountries = [];
@@ -623,24 +628,24 @@ const CarFilter = ({
     }
   };
 
-  // const handleTPSliderChange = (event, newValue, activeThumb) => {
-  //   setTopSpeed(newValue);
-  //   if (!Array.isArray(newValue)) {
-  //     return;
-  //   }
+  const handleTPSliderChange = (event, newValue, activeThumb) => {
+    setTopSpeed(newValue);
+    if (!Array.isArray(newValue)) {
+      return;
+    }
 
-  //   if (topSpeed[1] - topSpeed[0] < minDistance) {
-  //     if (activeThumb === 0) {
-  //       const clamped = Math.min(topSpeed[0], maxRQ - minDistance);
-  //       setTopSpeed([clamped, clamped + minDistance]);
-  //     } else {
-  //       const clamped = Math.max(topSpeed[1], minDistance);
-  //       setTopSpeed([clamped - minDistance, clamped]);
-  //     }
-  //   } else {
-  //     setTopSpeed(newValue);
-  //   }
-  // };
+    if (topSpeed[1] - topSpeed[0] < minDistance) {
+      if (activeThumb === 0) {
+        const clamped = Math.min(topSpeed[0], maxRQ - minDistance);
+        setTopSpeed([clamped, clamped + minDistance]);
+      } else {
+        const clamped = Math.max(topSpeed[1], minDistance);
+        setTopSpeed([clamped - minDistance, clamped]);
+      }
+    } else {
+      setTopSpeed(newValue);
+    }
+  };
 
   return (
     <Box id="searchBox">
@@ -660,12 +665,12 @@ const CarFilter = ({
             </Select> */}
       <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
         <TextField sx={{ minWidth: "30%" }} color="secondary" id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
-        {rqOrder ?
-          <Button sx={{ fontSize: "20px" }} onClick={() => setRqOrder(false)}>
+        {carsSortType[1] === "ascend" ?
+          <Button sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "descend"])}>
             <KeyboardArrowDownIcon /> RQ
           </Button>
           :
-          <Button color="secondary" sx={{ fontSize: "20px" }} onClick={() => setRqOrder(true)}>
+          <Button color="secondary" sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "ascend"])}>
             <KeyboardArrowUpIcon /> RQ
           </Button>}
 
@@ -674,8 +679,8 @@ const CarFilter = ({
           value={rqValue}
           onChange={handleRQSliderChange}
           valueLabelDisplay="auto"
-          getAriaValueText={valuetext}
-          valueLabelFormat={valuetext}
+          getAriaValueText={rqSliderValuetext}
+          valueLabelFormat={rqSliderValuetext}
           disableSwap
           max={maxRQ}
         />
@@ -828,16 +833,16 @@ const CarFilter = ({
             ))}
           </Select>
         </FormControl>
-        {/* <Slider
+        <Slider
           getAriaLabel={() => 'Top Speed'}
           value={topSpeed}
           onChange={handleTPSliderChange}
           valueLabelDisplay="auto"
-          getAriaValueText={valuetext}
-          valueLabelFormat={valuetext}
+          getAriaValueText={tpSliderValuetext}
+          valueLabelFormat={tpSliderValuetext}
           disableSwap
-          max={maxRQ}
-        /> */}
+          max={130}
+        />
       </Box>
       {/* <FormControl sx={{ m: 1, width: 300 }} color="secondary">
         <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>

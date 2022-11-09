@@ -21,7 +21,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: {md: 500, xs: "80%"},
   bgcolor: 'background.paper',
-  border: '2px solid #000',
+  border: '2px solid #fff',
   boxShadow: 24,
   p: 2,
   display: "flex",
@@ -30,7 +30,7 @@ const style = {
   borderRadius: "10px"
 };
 
-const Cards = ({ filteredCars, page, numOfCars, rqOrder }) => {
+const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
   const [modalCar, setModalCar] = useState(filteredCars()[0])
   const [open, setOpen] = useState(false);
   const handleOpen = car => {
@@ -44,7 +44,7 @@ const Cards = ({ filteredCars, page, numOfCars, rqOrder }) => {
   return (
     <>
       <Card sx={{ display: "flex", flexWrap: "wrap", gap: "0.71rem", justifyContent: "center", backgroundColor: "#242424", padding: "20px" }}>
-        {filteredCars().sort((a, b) => rqOrder ? b.rq - a.rq : a.rq - b.rq).map((car, i) => (
+        {filteredCars().sort((a, b) => carsSortType[1] === "descend" ? b.rq - a.rq : a.rq - b.rq).map((car, i) => (
           i >= (numOfCars * page - numOfCars) && i < (numOfCars * page ) && (
               <Button key={i} onClick={() => handleOpen(car)} className="carCard">
                 <LazyLoadImage effect="blur" src={car.card} style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />
@@ -90,7 +90,7 @@ const Cards = ({ filteredCars, page, numOfCars, rqOrder }) => {
                   </Typography>
                   :
                   <Typography id="modal-modal-description" sx={{ mt: 0 }} variant="h6">
-                    This is not a prize car
+                    Not a prize car
                   </Typography>
                 }
               </Typography>
