@@ -63,6 +63,10 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
               return a.handling - b.handling
             } else if (carsSortType === 8) {
               return b.handling - a.handling
+            } else if (carsSortType === 9) {
+              return b.modelYear - a.modelYear
+            } else if (carsSortType === 10) {
+              return a.modelYear - b.modelYear
             }
             }
           ).map((car, i) => (

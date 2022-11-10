@@ -73,6 +73,8 @@ function getStyles(name, carTag, theme) {
 
 
 const CarFilter = ({
+  year, setYear,
+  highestYear, lowestYear,
   highestHandling, lowestHandling,
   handling, setHandling,
   zeroTo60, setZeroTo60,
@@ -685,16 +687,38 @@ const CarFilter = ({
 
     if (handling[1] - handling[0] < minDistance) {
       if (activeThumb === 0) {
-        const clamped = Math.min(handling[0], maxRQ - 1);
+        const clamped = Math.min(handling[0], maxRQ - minDistance);
         setHandling([clamped, clamped + minDistance]);
       } else {
-        const clamped = Math.max(handling[1], 1);
+        const clamped = Math.max(handling[1], minDistance);
         setHandling([clamped - minDistance, clamped]);
       }
     } else {
       setHandling(newValue);
     }
   };
+  const handleYearSliderChange = (event, newValue, activeThumb) => {
+    setYear(newValue);
+    if (!Array.isArray(newValue)) {
+      return;
+    }
+
+    if (year[1] - year[0] < minDistance) {
+      if (activeThumb === 0) {
+        const clamped = Math.min(year[0], maxRQ - minDistance);
+        setYear([clamped, clamped + minDistance]);
+      } else {
+        const clamped = Math.max(year[1], 1);
+        setYear([clamped - minDistance, clamped]);
+      }
+    } else {
+      setYear(newValue);
+    }
+  };
+
+  useEffect(() => {
+    console.log(lowestHandling)
+  }, [])
 
   return (
     <Box id="searchBox">
@@ -713,7 +737,7 @@ const CarFilter = ({
               {[...Array(12)].map((_, i) => (<MenuItem value={(i + 1) * 10}>{'<'} {(i + 1) * 10} RQ</MenuItem>))}
             </Select> */}
       
-      //? SEARCH AND RQ SLIDER
+      {/* //? SEARCH AND RQ SLIDER */}
       <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
         <TextField sx={{ minWidth: "30%" }} color="secondary" id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
         {/* {carsSortType[1] === "ascend" ?
@@ -734,7 +758,8 @@ const CarFilter = ({
             getAriaValueText={rqSliderValuetext}
             valueLabelFormat={rqSliderValuetext}
             disableSwap
-            max={maxRQ}
+            min={lowestRqValue}
+            max={highestRqValue}
           />
         </Stack>
         <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
@@ -744,7 +769,7 @@ const CarFilter = ({
 
       </Box>
 
-      //? MAKE AND TAGS SELECT
+      {/* //? MAKE AND TAGS SELECT */}
       <Box sx={{ mb: 1, mt: 1, width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
         <Autocomplete
           limitTags={3}
@@ -806,7 +831,7 @@ const CarFilter = ({
 
       </Box>
 
-      //? COUNTRY AND TYRE TYPE SELECTS
+      {/* //? COUNTRY AND TYRE TYPE SELECTS */}
       <Box sx={{ mb: 1, width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
 
         <Autocomplete
@@ -868,7 +893,7 @@ const CarFilter = ({
 
       </Box>
 
-      //? DRIVE TYPE AND TOP SPEED SLIDER
+      {/* //? DRIVE TYPE AND TOP SPEED SLIDER */}
       <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
         <FormControl sx={{ mb: 1, width: "100%" }}>
           <InputLabel id="demo-multiple-checkbox-label">Drive Type</InputLabel>
@@ -907,7 +932,7 @@ const CarFilter = ({
         </Stack>
       </Box>
 
-      //? SORT AND 0-60 SLIDER
+      {/* //? SORT AND 0-60 SLIDER */}
       <Box sx={{width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2}} >
 
         <FormControl sx={{ width: "100%" }}>
@@ -924,7 +949,10 @@ const CarFilter = ({
             <MenuItem value={6}>0-60: Descending order {">"}</MenuItem>
             <ListSubheader sx={{ bgcolor: "background.paper2" }}>Handling Sort</ListSubheader>
             <MenuItem value={7}>Handling: Ascending order {"<"}</MenuItem>
-            <MenuItem value={8}>Habdling: Descending order {">"}</MenuItem>
+            <MenuItem value={8}>Handling: Descending order {">"}</MenuItem>
+            <ListSubheader sx={{ bgcolor: "background.paper2" }}>Year Sort</ListSubheader>
+            <MenuItem value={9}>Year: Ascending order {"<"}</MenuItem>
+            <MenuItem value={10}>Year: Descending order {">"}</MenuItem>
           </Select>
         </FormControl>
         <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
@@ -948,7 +976,7 @@ const CarFilter = ({
         </Stack>
       </Box>
 
-      //? HANDLING AND YEAR SLIDERS
+      {/* //? HANDLING AND YEAR SLIDERS */}
       <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
         <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
           <Typography sx={{ width: "5rem", mr: 1 }}> Handling </Typography>
@@ -965,18 +993,19 @@ const CarFilter = ({
             max={highestHandling}
           />
         </Stack>
-        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
-          <Typography sx={{ width: "3rem", mr: 1 }}> 0-60 </Typography>
+        <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
+          <Typography sx={{ mr: 1 }}> Year </Typography>
           <Slider
+            sx={{ mr: 1 }}
             getAriaLabel={() => 'Top Speed'}
-            value={zeroTo60}
-            onChange={handle0to60SliderChange}
+            value={year}
+            onChange={handleYearSliderChange}
             valueLabelDisplay="auto"
-            getAriaValueText={zero60SliderValuetext}
-            valueLabelFormat={zero60SliderValuetext}
+            getAriaValueText={handlingSliderValuetext}
+            valueLabelFormat={handlingSliderValuetext}
             disableSwap
-            min={lowest0To60}
-            max={60}
+            min={lowestYear}
+            max={highestYear}
           />
         </Stack>
       </Box>
