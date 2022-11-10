@@ -55,6 +55,10 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
               return a.topSpeed - b.topSpeed
             } else if (carsSortType === 4) {
               return b.topSpeed - a.topSpeed
+            } else if (carsSortType === 5) {
+              return b["0to60"] - a["0to60"]
+            } else if (carsSortType === 6) {
+              return a["0to60"] - b["0to60"]
             }
             }
           ).map((car, i) => (

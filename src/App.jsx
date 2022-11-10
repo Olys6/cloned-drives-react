@@ -22,31 +22,55 @@ import Cards from './components/Cards';
 
 const theme = createTheme(themeOptions);
 
+let highestRqValue = 0;
 let highestCarSpeed = 0;
+let highest0To60 = 0;
+let highestHandling = 0;
 
-const getHighestSpeed = () => {
+const getHighestValues = () => {
   carData.forEach((car) => {
+    highestRqValue < car.rq ? highestRqValue = car.rq : null
     highestCarSpeed < car.topSpeed ? highestCarSpeed = car.topSpeed : null
+    highest0To60 < car["0to60"] ? highest0To60 = car["0to60"] : null
+    highestHandling < car.handling ? highestHandling = car.handling : null
   })
 }
 
-getHighestSpeed()
+getHighestValues()
+
+let lowestRqValue = 1000;
+let lowestCarSpeed = 1000;
+let lowest0To60 = 1000;
+let lowestHandling = 1000;
+
+const getLowestValues = () => {
+  carData.forEach((car) => {
+    lowestRqValue > car.rq ? lowestRqValue = car.rq : null
+    lowestCarSpeed > car.topSpeed ? lowestCarSpeed = car.topSpeed : null
+    lowest0To60 > car["0to60"] ? lowest0To60 = car["0to60"] : null
+    lowestHandling > car.handling ? lowestHandling = car.handling : null
+  })
+}
+
+getLowestValues()
 
 function App() {
   
   const [search, setSearch] = useState("");
   const [select, setSelect] = useState("all");
   const [page, setPage] = useState(1);
-  const [rqValue, setRqValue] = useState([40, 110]);
+  const [rqValue, setRqValue] = useState([lowestRqValue, highestRqValue]);
   const [carsSortType, setCarsSortType] = useState(2);
   const [carTag, setCarTag] = useState([]);
   const [carCountryValue, setCarCountryValue] = useState([]);
   const [carMake, setCarMake] = useState([]);
   const [carTyre, setCarTyre] = useState([]);
   const [carDriveType, setCarDriveType] = useState([]);
-  const [topSpeed, setTopSpeed] = useState([0, highestCarSpeed]);
+  const [topSpeed, setTopSpeed] = useState([lowestCarSpeed, highestCarSpeed]);
+  const [zeroTo60, setZeroTo60] = useState([lowest0To60, highest0To60])
+  const [handling, setHandling] = useState([lowestHandling, highestHandling])
   // { Array.isArray(car.make) ? car.make[0] : car.make }
-  const numOfCars = 20;
+  const numOfCars = 12;
   const carTags = [];
 
   // const smallCarData = carData.map((car, i) => (i < 20 ? car : <></>))
@@ -65,6 +89,8 @@ function App() {
       ) &&
       car.rq <= rqValue[1] && car.rq >= rqValue[0] &&
       car.topSpeed <= topSpeed[1] && car.topSpeed >= topSpeed[0] &&
+        car["0to60"] <= zeroTo60[1] && car["0to60"] >= zeroTo60[0] &&
+        car.handling <= handling[1] && car.handling >= handling[0] &&
         (carMake.length > 0 ? carMake.some(elem => car.make.includes(elem)) : true) &&
       (carTag.length > 0 ? carTag.some(elem => car.tags.includes(elem)) : true) &&
       (carCountryValue.length > 0 ? carCountryValue.some(elem => elem.code === car.country) : true) &&
@@ -97,12 +123,23 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box style={{ position: {md: "absolute", xs: "inherit"}, top: 10, left: 0, width: {md: 500, xs: "100%"}, marginBottom: "5rem", borderRadius: "10px" }}>
+      <Box sx={{ display: 'flex', position: {md: "absolute", xs: "absolute"}, top: 10, left: 10, width: {md: 500, xs: "100%"}, borderRadius: "10px" }}>
         <img src={Logo} style={{ width: "80%" }} />
       </Box>
 
-      <CarFilter 
+      <CarFilter
+        highestHandling={highestHandling}
+        lowestHandling={lowestHandling}
+        handling={handling}
+        setHandling={setHandling}
+        zeroTo60={zeroTo60}
+        setZeroTo60={setZeroTo60}
+        highest0To60={highest0To60}
+        lowest0To60={lowest0To60}
+        highestRqValue={highestRqValue}
+        lowestRqValue={lowestRqValue}
         highestCarSpeed={highestCarSpeed}
+        lowestCarSpeed={lowestCarSpeed}
         topSpeed={topSpeed}
         setTopSpeed={setTopSpeed}
         carDriveType={carDriveType}

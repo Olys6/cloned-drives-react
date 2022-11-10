@@ -22,7 +22,15 @@ function rqSliderValuetext(value) {
 }
 
 function tpSliderValuetext(value) {
-  return `${value} Top Speed`;
+  return `${value} MPH`;
+}
+
+function zero60SliderValuetext(value) {
+  return `0-60 MPH: ${value}s`;
+}
+
+function handlingSliderValuetext(value) {
+  return `${value} Handling`;
 }
 
 const minDistance = 0;
@@ -65,7 +73,12 @@ function getStyles(name, carTag, theme) {
 
 
 const CarFilter = ({
-  highestCarSpeed,
+  highestHandling, lowestHandling,
+  handling, setHandling,
+  zeroTo60, setZeroTo60,
+  highest0To60, lowest0To60,
+  highestRqValue, lowestRqValue,
+  highestCarSpeed, lowestCarSpeed,
   topSpeed, setTopSpeed,
   carDriveType, setCarDriveType,
   carTyre, setCarTyre,
@@ -628,7 +641,6 @@ const CarFilter = ({
       setRqValue(newValue);
     }
   };
-
   const handleTPSliderChange = (event, newValue, activeThumb) => {
     setTopSpeed(newValue);
     if (!Array.isArray(newValue)) {
@@ -645,6 +657,42 @@ const CarFilter = ({
       }
     } else {
       setTopSpeed(newValue);
+    }
+  };
+  const handle0to60SliderChange = (event, newValue, activeThumb) => {
+    setZeroTo60(newValue);
+    if (!Array.isArray(newValue)) {
+      return;
+    }
+
+    if (zeroTo60[1] - zeroTo60[0] < minDistance) {
+      if (activeThumb === 0) {
+        const clamped = Math.min(zeroTo60[0], maxRQ - 1);
+        setZeroTo60([clamped, clamped + minDistance]);
+      } else {
+        const clamped = Math.max(zeroTo60[1], 1);
+        setZeroTo60([clamped - minDistance, clamped]);
+      }
+    } else {
+      setZeroTo60(newValue);
+    }
+  };
+  const handleHandlingSliderChange = (event, newValue, activeThumb) => {
+    setHandling(newValue);
+    if (!Array.isArray(newValue)) {
+      return;
+    }
+
+    if (handling[1] - handling[0] < minDistance) {
+      if (activeThumb === 0) {
+        const clamped = Math.min(handling[0], maxRQ - 1);
+        setHandling([clamped, clamped + minDistance]);
+      } else {
+        const clamped = Math.max(handling[1], 1);
+        setHandling([clamped - minDistance, clamped]);
+      }
+    } else {
+      setHandling(newValue);
     }
   };
 
@@ -837,7 +885,7 @@ const CarFilter = ({
           </Select>
         </FormControl>
         <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
-          <Typography sx={{ mr: 1 }}> TP </Typography>
+          <Typography sx={{ width: "6rem", mr: 1 }}> Top Speed </Typography>
         <Slider
           getAriaLabel={() => 'Top Speed'}
           value={topSpeed}
@@ -846,6 +894,7 @@ const CarFilter = ({
           getAriaValueText={tpSliderValuetext}
           valueLabelFormat={tpSliderValuetext}
           disableSwap
+          min={lowestCarSpeed}
           max={highestCarSpeed}
         />
         </Stack>
@@ -861,8 +910,55 @@ const CarFilter = ({
             <ListSubheader sx={{ bgcolor: "background.paper2" }}>Top Speed Sort</ListSubheader>
             <MenuItem value={3}>TP: Ascending order {"<"}</MenuItem>
             <MenuItem value={4}>TP: Descending order {">"}</MenuItem>
+            <ListSubheader sx={{ bgcolor: "background.paper2" }}>0-60 Sort</ListSubheader>
+            <MenuItem value={5}>0-60: Ascending order {"<"}</MenuItem>
+            <MenuItem value={6}>0-60: Descending order {">"}</MenuItem>
           </Select>
         </FormControl>
+        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
+          <Typography sx={{ width: "3rem", mr: 1 }}> 0-60 </Typography>
+          <Slider
+            getAriaLabel={() => 'Top Speed'}
+            value={zeroTo60}
+            onChange={handle0to60SliderChange}
+            valueLabelDisplay="auto"
+            getAriaValueText={zero60SliderValuetext}
+            valueLabelFormat={zero60SliderValuetext}
+            disableSwap
+            min={lowest0To60}
+            max={highest0To60}
+          />
+        </Stack>
+      </Box>
+      <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
+          <Typography sx={{ width: "5rem", mr: 1 }}> Handling </Typography>
+          <Slider
+            getAriaLabel={() => 'Top Speed'}
+            value={handling}
+            onChange={handleHandlingSliderChange}
+            valueLabelDisplay="auto"
+            getAriaValueText={handlingSliderValuetext}
+            valueLabelFormat={handlingSliderValuetext}
+            disableSwap
+            min={lowestHandling}
+            max={highestHandling}
+          />
+        </Stack>
+        {/* <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
+          <Typography sx={{ width: "3rem", mr: 1 }}> 0-60 </Typography>
+          <Slider
+            getAriaLabel={() => 'Top Speed'}
+            value={zeroTo60}
+            onChange={handle0to60SliderChange}
+            valueLabelDisplay="auto"
+            getAriaValueText={zero60SliderValuetext}
+            valueLabelFormat={zero60SliderValuetext}
+            disableSwap
+            min={lowest0To60}
+            max={60}
+          />
+        </Stack> */}
       </Box>
       {/* <FormControl sx={{ m: 1, width: 300 }} color="secondary">
         <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
