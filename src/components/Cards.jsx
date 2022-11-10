@@ -67,6 +67,14 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
               return b.modelYear - a.modelYear
             } else if (carsSortType === 10) {
               return a.modelYear - b.modelYear
+            } else if (carsSortType === 11) {
+              return a.mra - b.mra
+            } else if (carsSortType === 12) {
+              return a.mra - b.mra
+            } else if (carsSortType === 13) {
+              return a.ola - b.ola
+            } else if (carsSortType === 14) {
+              return a.ola - b.ola
             }
             }
           ).map((car, i) => (

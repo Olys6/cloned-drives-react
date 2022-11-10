@@ -33,6 +33,18 @@ function handlingSliderValuetext(value) {
   return `${value} Handling`;
 }
 
+function yearSliderValuetext(value) {
+  return `${value}`;
+}
+
+function mraSliderValuetext(value) {
+  return `${value} MRA`;
+}
+
+function olaSliderValuetext(value) {
+  return `${value} OLA`;
+}
+
 const minDistance = 0;
 
 const maxRQ = 125
@@ -73,6 +85,10 @@ function getStyles(name, carTag, theme) {
 
 
 const CarFilter = ({
+  ola, setOla,
+  highestOla, lowestOla,
+  mra, setMra,
+  highestMra, lowestMra,
   year, setYear,
   highestYear, lowestYear,
   highestHandling, lowestHandling,
@@ -715,9 +731,45 @@ const CarFilter = ({
       setYear(newValue);
     }
   };
+  const handleMraSliderChange = (event, newValue, activeThumb) => {
+    setMra(newValue);
+    if (!Array.isArray(newValue)) {
+      return;
+    }
+
+    if (mra[1] - mra[0] < minDistance) {
+      if (activeThumb === 0) {
+        const clamped = Math.min(mra[0], maxRQ - minDistance);
+        setMra([clamped, clamped + minDistance]);
+      } else {
+        const clamped = Math.max(mra[1], 1);
+        setMra([clamped - minDistance, clamped]);
+      }
+    } else {
+      setMra(newValue);
+    }
+  };
+  const handleOlaSliderChange = (event, newValue, activeThumb) => {
+    setOla(newValue);
+    if (!Array.isArray(newValue)) {
+      return;
+    }
+
+    if (ola[1] - ola[0] < minDistance) {
+      if (activeThumb === 0) {
+        const clamped = Math.min(ola[0], maxRQ - minDistance);
+        setOla([clamped, clamped + minDistance]);
+      } else {
+        const clamped = Math.max(ola[1], 1);
+        setOla([clamped - minDistance, clamped]);
+      }
+    } else {
+      setOla(newValue);
+    }
+  };
 
   useEffect(() => {
-    console.log(lowestHandling)
+    // console.log(lowestMra)
   }, [])
 
   return (
@@ -738,7 +790,7 @@ const CarFilter = ({
             </Select> */}
       
       {/* //? SEARCH AND RQ SLIDER */}
-      <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
         <TextField sx={{ minWidth: "30%" }} color="secondary" id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
         {/* {carsSortType[1] === "ascend" ?
           <Button sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "descend"])}>
@@ -770,7 +822,7 @@ const CarFilter = ({
       </Box>
 
       {/* //? MAKE AND TAGS SELECT */}
-      <Box sx={{ mb: 1, mt: 1, width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+      <Box sx={{ mb: 1, mt: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
         <Autocomplete
           limitTags={3}
           multiple
@@ -832,7 +884,7 @@ const CarFilter = ({
       </Box>
 
       {/* //? COUNTRY AND TYRE TYPE SELECTS */}
-      <Box sx={{ mb: 1, width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
 
         <Autocomplete
           limitTags={4}
@@ -894,7 +946,7 @@ const CarFilter = ({
       </Box>
 
       {/* //? DRIVE TYPE AND TOP SPEED SLIDER */}
-      <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
         <FormControl sx={{ mb: 1, width: "100%" }}>
           <InputLabel id="demo-multiple-checkbox-label">Drive Type</InputLabel>
           <Select
@@ -933,7 +985,7 @@ const CarFilter = ({
       </Box>
 
       {/* //? SORT AND 0-60 SLIDER */}
-      <Box sx={{width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2}} >
+      <Box sx={{width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2}} >
 
         <FormControl sx={{ width: "100%" }}>
           <InputLabel htmlFor="grouped-select">Sort</InputLabel>
@@ -953,6 +1005,12 @@ const CarFilter = ({
             <ListSubheader sx={{ bgcolor: "background.paper2" }}>Year Sort</ListSubheader>
             <MenuItem value={9}>Year: Ascending order {"<"}</MenuItem>
             <MenuItem value={10}>Year: Descending order {">"}</MenuItem>
+            <ListSubheader sx={{ bgcolor: "background.paper2" }}>MRA Sort</ListSubheader>
+            <MenuItem value={11}>MRA: Ascending order {"<"}</MenuItem>
+            <MenuItem value={12}>MRA: Descending order {">"}</MenuItem>
+            <ListSubheader sx={{ bgcolor: "background.paper2" }}>OLA Sort</ListSubheader>
+            <MenuItem value={13}>OLA: Ascending order {"<"}</MenuItem>
+            <MenuItem value={14}>OLA: Descending order {">"}</MenuItem>
           </Select>
         </FormControl>
         <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
@@ -977,7 +1035,7 @@ const CarFilter = ({
       </Box>
 
       {/* //? HANDLING AND YEAR SLIDERS */}
-      <Box sx={{ width: { xs: "100%", md: "80%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
         <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
           <Typography sx={{ width: "5rem", mr: 1 }}> Handling </Typography>
           <Slider
@@ -1001,12 +1059,54 @@ const CarFilter = ({
             value={year}
             onChange={handleYearSliderChange}
             valueLabelDisplay="auto"
-            getAriaValueText={handlingSliderValuetext}
-            valueLabelFormat={handlingSliderValuetext}
+            getAriaValueText={yearSliderValuetext}
+            valueLabelFormat={yearSliderValuetext}
             disableSwap
             min={lowestYear}
             max={highestYear}
           />
+        </Stack>
+      </Box>
+
+      {/* //? MRA AND OLA SLIDERS */}
+      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+        <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
+          <Typography sx={{ mr: 1 }}> MRA </Typography>
+          <Slider
+            sx={{ mr: 1 }}
+            getAriaLabel={() => 'Top Speed'}
+            value={mra}
+            onChange={handleMraSliderChange}
+            valueLabelDisplay="auto"
+            getAriaValueText={mraSliderValuetext}
+            valueLabelFormat={mraSliderValuetext}
+            disableSwap
+            min={lowestMra}
+            max={highestMra}
+          />
+        </Stack>
+        <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
+          <TextField placeholder="Min MRA" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setMra([e.target.value, mra[1]])} value={mra[0]} />
+          <TextField placeholder="Max MRA" onChange={(e) => setMra([mra[0], e.target.value])} value={mra[1]} />
+        </Stack>
+        <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
+          <Typography sx={{ mr: 1 }}> OLA </Typography>
+          <Slider
+            sx={{ mr: 1 }}
+            getAriaLabel={() => 'Top Speed'}
+            value={ola}
+            onChange={handleOlaSliderChange}
+            valueLabelDisplay="auto"
+            getAriaValueText={olaSliderValuetext}
+            valueLabelFormat={olaSliderValuetext}
+            disableSwap
+            min={lowestOla}
+            max={highestOla}
+          />
+        </Stack>
+        <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
+          <TextField placeholder="Min OLA" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setOla([e.target.value, ola[1]])} value={ola[0]} />
+          <TextField placeholder="Max OLA" onChange={(e) => setOla([ola[0], e.target.value])} value={ola[1]} />
         </Stack>
       </Box>
       {/* <FormControl sx={{ m: 1, width: 300 }} color="secondary">

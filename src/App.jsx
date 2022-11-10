@@ -28,6 +28,7 @@ let highest0To60 = 0;
 let highestHandling = 0;
 let highestYear = 0;
 let highestMra = 0;
+let highestOla = 0;
 
 let lowestRqValue = 10000;
 let lowestCarSpeed = 10000;
@@ -35,6 +36,7 @@ let lowest0To60 = 10000;
 let lowestHandling = 10000;
 let lowestYear = 10000;
 let lowestMra = 10000;
+let lowestOla = 10000;
 
 const getHighestAndLowestValues = () => {
   carData.forEach((car) => {
@@ -43,14 +45,16 @@ const getHighestAndLowestValues = () => {
     highest0To60 < car["0to60"] ? highest0To60 = car["0to60"] : null
     highestHandling < car.handling ? highestHandling = car.handling : null
     highestYear < car.modelYear ? highestYear = car.modelYear : null
-    highestMra < car.mra ? highestYear = car.mra : null
+    highestMra < car.mra ? highestMra = car.mra : null
+    highestOla < car.ola ? highestOla = car.ola : null
 
     lowestRqValue > car.rq ? lowestRqValue = car.rq : null
     lowestCarSpeed > car.topSpeed ? lowestCarSpeed = car.topSpeed : null
     lowest0To60 > car["0to60"] ? lowest0To60 = car["0to60"] : null
     lowestHandling > car.handling ? lowestHandling = car.handling : null
     lowestYear > car.modelYear ? lowestYear = car.modelYear : null
-    lowestMra > car.mra ? lowestYear = car.mra : null
+    lowestMra > car.mra ? lowestMra = car.mra : null
+    lowestOla > car.ola ? lowestOla = car.ola : null
   })
 }
 
@@ -73,6 +77,7 @@ function App() {
   const [handling, setHandling] = useState([lowestHandling, highestHandling])
   const [year, setYear] = useState([lowestYear, highestYear])
   const [mra, setMra] = useState([lowestMra, highestMra])
+  const [ola, setOla] = useState([lowestOla, highestOla])
   // { Array.isArray(car.make) ? car.make[0] : car.make }
   const numOfCars = 12;
   const carTags = [];
@@ -96,6 +101,8 @@ function App() {
         car["0to60"] <= zeroTo60[1] && car["0to60"] >= zeroTo60[0] &&
         car.handling <= handling[1] && car.handling >= handling[0] &&
         car.modelYear <= year[1] && car.modelYear >= year[0] &&
+        car.mra <= mra[1] && car.mra >= mra[0] &&
+        car.ola <= ola[1] && car.ola >= ola[0] &&
         (carMake.length > 0 ? carMake.some(elem => car.make.includes(elem)) : true) &&
         (carTag.length > 0 ? carTag.some(elem => car.tags.includes(elem)) : true) &&
         (carCountryValue.length > 0 ? carCountryValue.some(elem => elem.code === car.country) : true) &&
@@ -133,6 +140,10 @@ function App() {
       </Box>
 
       <CarFilter
+        highestOla={highestOla}
+        lowestOla={lowestOla}
+        ola={ola}
+        setOla={setOla}
         highestMra={highestMra}
         lowestMra={lowestMra}
         mra={mra}
