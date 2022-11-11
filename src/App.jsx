@@ -78,6 +78,8 @@ function App() {
   const [year, setYear] = useState([lowestYear, highestYear])
   const [mra, setMra] = useState([lowestMra, highestMra])
   const [ola, setOla] = useState([lowestOla, highestOla])
+  const [bodyStyle, setBodyStyle] = useState([])
+  const [creator, setCreator] = useState([])
   // { Array.isArray(car.make) ? car.make[0] : car.make }
   const numOfCars = 12;
   const carTags = [];
@@ -107,7 +109,8 @@ function App() {
         (carTag.length > 0 ? carTag.some(elem => car.tags.includes(elem)) : true) &&
         (carCountryValue.length > 0 ? carCountryValue.some(elem => elem.code === car.country) : true) &&
         (carTyre.length > 0 ? carTyre.some(elem => elem === car.tyreType) : true) &&
-        (carDriveType.length > 0 ? carDriveType.some(elem => elem === car.driveType) : true)
+        (carDriveType.length > 0 ? carDriveType.some(elem => elem === car.driveType) : true) &&
+        (bodyStyle.length > 0 ? bodyStyle.some(elem => elem === car.bodyStyle) : true)
     })
   }
 
@@ -140,6 +143,10 @@ function App() {
       </Box>
 
       <CarFilter
+        creator={creator}
+        setCreator={setCreator}
+        bodyStyle={bodyStyle}
+        setBodyStyle={setBodyStyle}
         highestOla={highestOla}
         lowestOla={lowestOla}
         ola={ola}

@@ -85,6 +85,8 @@ function getStyles(name, carTag, theme) {
 
 
 const CarFilter = ({
+  creator, setCreator,
+  bodyStyle, setBodyStyle,
   ola, setOla,
   highestOla, lowestOla,
   mra, setMra,
@@ -113,19 +115,20 @@ const CarFilter = ({
 
   const carCountries = [];
 
-  const getCountries = () => (
+  const getCountries = () => {
     carData.forEach((car) => {
       if (!carCountries.includes(car.country)) {
         carCountries.push(car.country);
       }
     })
-  )
+    carCountries.sort((a, b) => a.label - b.label);
+  }
 
   getCountries()
 
   const carMakes = [];
 
-  const getCarMakes = () => (
+  const getCarMakes = () => {
     carData.forEach((car) => {
       if (Array.isArray(car.make)) {
         car.make.forEach((make) => {
@@ -139,33 +142,61 @@ const CarFilter = ({
         }
       }
     })
-  )
+    carMakes.sort()
+  }
 
   getCarMakes()
 
+  const bodyStyles = [];
+
+  const getAllBodyStyles = () => {
+    carData.forEach((car) => {
+      if (!bodyStyles.includes(car.bodyStyle)) {
+        bodyStyles.push(car.bodyStyle);
+        }
+    })
+    bodyStyles.sort()
+  }
+
+  getAllBodyStyles()
+
+  const creators = [].sort();
+
+  const getAllCreators = () => {
+    carData.forEach((car) => {
+      if (!creators.includes(car.creator)) {
+        creators.push(car.creator);
+        }
+    })
+    creators.sort()
+  }
+
+  getAllCreators()
+
   const carTyres = [];
 
-  const getCarTyres = () => (
+  const getCarTyres = () => {
     carData.forEach((car) => {
       // car.tyreType === undefined ? console.log("UNDEFINED CAR TYRE TYPE", car.id) : null
       if (!carTyres.includes(car.tyreType) && car.tyreType !== undefined) {
         carTyres.push(car.tyreType);
       }
     })
-  )
+  }
 
   getCarTyres()
 
   const carDriveTypes = [];
 
-  const getDriveType = () => (
+  const getDriveType = () => {
     carData.forEach((car) => {
       // car.tyreType === undefined ? console.log("UNDEFINED CAR TYRE TYPE", car.id) : null
       if (!carDriveTypes.includes(car.driveType) && car.driveType !== undefined) {
         carDriveTypes.push(car.driveType);
       }
     })
-  )
+    carDriveTypes.sort()
+  }
 
   getDriveType()
   // useEffect(() => {
@@ -630,6 +661,16 @@ const CarFilter = ({
     );
   };
 
+  const handleSelectBodyStyleChange = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setBodyStyle(
+      // On autofill we get a stringified value.
+      typeof value === 'string' ? value.split(',') : value,
+    );
+  };
+
   const handleSearch = event => {
     setSearch(event.target.value)
     setPage(1)
@@ -862,7 +903,7 @@ const CarFilter = ({
             input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
             renderValue={(selected) => (
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                {selected.map((value) => (
+                {selected.sort().map((value) => (
                   <Chip color="success" sx={{ fontWeight: "bold" }} key={value} label={value} />
                 ))}
               </Box>
@@ -934,9 +975,9 @@ const CarFilter = ({
             renderValue={(selected) => selected.join(', ')}
             MenuProps={MenuProps}
           >
-            {carTyres.map((name) => (
+            {carTyres.sort().map((name) => (
               <MenuItem key={name} value={name}>
-                <Checkbox checked={carTyre.indexOf(name) > -1} />
+                <Checkbox color="success" checked={carTyre.indexOf(name) > -1} />
                 <ListItemText primary={name} />
               </MenuItem>
             ))}
@@ -1108,6 +1149,57 @@ const CarFilter = ({
           <TextField placeholder="Min OLA" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setOla([e.target.value, ola[1]])} value={ola[0]} />
           <TextField placeholder="Max OLA" onChange={(e) => setOla([ola[0], e.target.value])} value={ola[1]} />
         </Stack>
+      </Box>
+
+      {/* //? BODYSTYLE AND CREATOR SELECTS */}
+      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+        <FormControl sx={{ width: "100%" }}>
+          <InputLabel id="demo-multiple-checkbox-label">Body Styles</InputLabel>
+          <Select
+            labelId="demo-multiple-checkbox-label"
+            id="demo-multiple-checkbox"
+            multiple
+            value={bodyStyle}
+            onChange={handleSelectBodyStyleChange}
+            input={<OutlinedInput label="Body Styles" />}
+            renderValue={(selected) => selected.join(', ')}
+            MenuProps={MenuProps}
+          >
+            {bodyStyles.map((name) => (
+              <MenuItem key={name} value={name}>
+                <Checkbox color="success" checked={bodyStyle.indexOf(name) > -1} />
+                <ListItemText primary={name} />
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+        <Autocomplete
+          limitTags={3}
+          multiple
+          value={creator}
+          sx={{ width: "100%" }}
+          options={creators}
+          autoHighlight
+          onChange={(event, newValue) => {
+            setCreator(newValue);
+          }}
+          getOptionLabel={(option) => option}
+          renderOption={(props, option) => (
+            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+              {option}
+            </Box>
+          )}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              label="Creators"
+              inputProps={{
+                ...params.inputProps,
+                autoComplete: 'new-password', // disable autocomplete and autofill
+              }}
+            />
+          )}
+        />
       </Box>
       {/* <FormControl sx={{ m: 1, width: 300 }} color="secondary">
         <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
