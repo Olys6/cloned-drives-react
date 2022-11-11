@@ -110,7 +110,8 @@ function App() {
         (carCountryValue.length > 0 ? carCountryValue.some(elem => elem.code === car.country) : true) &&
         (carTyre.length > 0 ? carTyre.some(elem => elem === car.tyreType) : true) &&
         (carDriveType.length > 0 ? carDriveType.some(elem => elem === car.driveType) : true) &&
-        (bodyStyle.length > 0 ? bodyStyle.some(elem => elem === car.bodyStyle) : true)
+        (bodyStyle.length > 0 ? bodyStyle.some(elem => elem === car.bodyStyle) : true) &&
+        (creator.length > 0 ? creator.some(elem => elem === car.creator) : true)
     })
   }
 

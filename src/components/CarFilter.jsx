@@ -815,21 +815,7 @@ const CarFilter = ({
 
   return (
     <Box id="searchBox">
-      {/* <Box sx={{ width: "90%", display: "flex", alignItems: "center", justifyContent: "space-evenly", flexDirection: "column" }}> */}
 
-      {/* <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={select}
-              // label="Age"
-              onChange={handleSelectChange}
-              color="secondary"
-              sx={{ minWidth: "10rem"}}
-            >
-              <MenuItem value="all">All</MenuItem>
-              {[...Array(12)].map((_, i) => (<MenuItem value={(i + 1) * 10}>{'<'} {(i + 1) * 10} RQ</MenuItem>))}
-            </Select> */}
-      
       {/* //? SEARCH AND RQ SLIDER */}
       <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
         <TextField sx={{ minWidth: "30%" }} color="secondary" id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
@@ -903,14 +889,14 @@ const CarFilter = ({
             input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
             renderValue={(selected) => (
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                {selected.sort().map((value) => (
+                {selected.map((value) => (
                   <Chip color="success" sx={{ fontWeight: "bold" }} key={value} label={value} />
                 ))}
               </Box>
             )}
             MenuProps={MenuProps}
           >
-            {carTags.map((tag) => (
+            {carTags.sort().map((tag) => (
               <MenuItem
                 key={tag}
                 value={tag}
@@ -1110,7 +1096,7 @@ const CarFilter = ({
       </Box>
 
       {/* //? MRA AND OLA SLIDERS */}
-      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
         <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
           <Typography sx={{ mr: 1 }}> MRA </Typography>
           <Slider
@@ -1165,14 +1151,15 @@ const CarFilter = ({
             renderValue={(selected) => selected.join(', ')}
             MenuProps={MenuProps}
           >
-            {bodyStyles.map((name) => (
-              <MenuItem key={name} value={name}>
+            {bodyStyles.map((name, i) => (
+              <MenuItem key={i} value={name}>
                 <Checkbox color="success" checked={bodyStyle.indexOf(name) > -1} />
                 <ListItemText primary={name} />
               </MenuItem>
             ))}
           </Select>
         </FormControl>
+
         <Autocomplete
           limitTags={3}
           multiple

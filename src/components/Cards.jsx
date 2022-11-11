@@ -19,8 +19,8 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
   const [modalCar, setModalCar] = useState(filteredCars()[0])
   const [open, setOpen] = useState(false);
   const handleOpen = car => {
-    console.log("CAR ID =>", car.id)
-    console.log("CAR ==>", car)
+    // console.log("CAR ID =>", car.id)
+    // console.log("CAR ==>", car)
     setOpen(true);
     setModalCar(car)
   }
@@ -100,8 +100,8 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
           <LazyLoadImage src={modalCar.card} style={{ width: "100%" }} />
 
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", fontWeight: "bold" }}>
-            {modalCar.tags.map((tag) => (
-              <Chip color="success" label={tag} />
+            {modalCar.tags.map((tag, i) => (
+              <Chip key={i} color="success" label={tag} />
             ))}
           </Box>
 
@@ -126,16 +126,14 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
 
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Box>
-              <Typography id="modal-modal-description" sx={{ mt: 0 }} variant="h6">
                 {modalCar.isPrize === true ?
-                  <Typography id="modal-modal-description" sx={{ mt: 0, color: "yellow", display: "flex", alignItems: "center", gap: 0.5 }} variant="h6">
+                  <Typography id="modal-modal-description" sx={{ mt: 0, color: "yellow", display: "flex", alignItems: "center", gap: 0.5 }}>
                     <EmojiEventsIcon /> Prize car
                   </Typography>
                   :
                   <></>
                 }
-              </Typography>
-              <Typography id="modal-modal-description" sx={{ mt: 0 }} variant="h6">
+              <Typography sx={{ mt: 0 }}>
                 {modalCar.bodyStyle}
               </Typography>
               <Typography id="modal-modal-description" sx={{ mt: 0 }} variant="h6">
