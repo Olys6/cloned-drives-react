@@ -5,17 +5,19 @@ export const themeOptions = {
   palette: {
     type: 'dark',
     primary: {
-      main: '#000',
+      main: '#ffffff',
     },
     secondary: {
       main: '#ffffff',
     },
     background: {
       default: '#ffffff',
-      paper: '#000',
+      paper: '#242424',
+      paper2: "#b8860b",
+      prize: '#b8860b',
     },
     success: {
-      main: '#ff0f8b',
+      main: '#fcbc4e',
     },
     text: {
       primary: 'rgba(255,255,255,0.87)',
