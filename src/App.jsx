@@ -80,8 +80,9 @@ function App() {
   const [ola, setOla] = useState([lowestOla, highestOla])
   const [bodyStyle, setBodyStyle] = useState([])
   const [creator, setCreator] = useState([])
+  const [numOfCars, setNumOfCars] = useState(10)
+  const [prize, setPrize] = useState(1)
   // { Array.isArray(car.make) ? car.make[0] : car.make }
-  const numOfCars = 12;
   const carTags = [];
 
   // const smallCarData = carData.map((car, i) => (i < 20 ? car : <></>))
@@ -111,7 +112,8 @@ function App() {
         (carCountryValue.length > 0 ? carCountryValue.some(elem => elem.code === car.country) : true) &&
         (carTyre.length > 0 ? carTyre.some(elem => elem === car.tyreType) : true) &&
         (carDriveType.length > 0 ? carDriveType.some(elem => elem === car.driveType) : true) &&
-        (creator.length > 0 ? creator.some(elem => elem === car.creator) : true)
+        (creator.length > 0 ? creator.some(elem => elem === car.creator) : true) && 
+        (prize > 1 ? (prize === 2 ? car.isPrize : car.isPrize === false) : true)
     })
   }
 
@@ -144,6 +146,10 @@ function App() {
       </Box>
 
       <CarFilter
+        setPrize={setPrize}
+        prize={prize}
+        setNumOfCars={setNumOfCars}
+        numofCars={numOfCars}
         creator={creator}
         setCreator={setCreator}
         bodyStyle={bodyStyle}

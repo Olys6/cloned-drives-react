@@ -85,6 +85,8 @@ function getStyles(name, carTag, theme) {
 
 
 const CarFilter = ({
+  setPrize, prize,
+  setNumOfCars, numOfCars,
   creator, setCreator,
   bodyStyle, setBodyStyle,
   ola, setOla,
@@ -1144,7 +1146,7 @@ const CarFilter = ({
       </Box>
 
       {/* //? BODYSTYLE AND CREATOR SELECTS */}
-      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
 
         <Autocomplete
           limitTags={3}
@@ -1202,43 +1204,42 @@ const CarFilter = ({
           )}
         />
       </Box>
-      {/* <FormControl sx={{ m: 1, width: 300 }} color="secondary">
-        <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
-        <Select
-          labelId="demo-multiple-checkbox-label"
-          id="demo-multiple-checkbox"
-          multiple
-          value={personName}
-          onChange={handleChange}
-          input={<OutlinedInput label="Tag" />}
-          renderValue={(selected) => selected.join(', ')}
-          MenuProps={MenuProps}
-        >
-          {names.map((name) => (
-            <MenuItem key={name} value={name}>
-              <Checkbox checked={personName.indexOf(name) > -1} />
-              <ListItemText primary={name} />
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl> */}
-      {/* </Box> */}
 
-      {/* <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography>More Filters</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
-              </Typography>
-            </AccordionDetails>
-          </Accordion> */}
+      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Cars per page</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={numOfCars}
+            label="Cars per page"
+            onChange={(e) => setNumOfCars(e.target.value * 5)}
+            defaultValue={2}
+          >
+            <MenuItem value={1}>5</MenuItem>
+            <MenuItem value={2}>10</MenuItem>
+            <MenuItem value={3}>15</MenuItem>
+            <MenuItem value={4}>20</MenuItem>
+            <MenuItem value={8}>50</MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Prize cars</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={prize}
+            label="Prize cars"
+            onChange={(e) => setPrize(e.target.value)}
+            defaultValue={1}
+          >
+            <MenuItem value={1}>All</MenuItem>
+            <MenuItem value={2}>Prize</MenuItem>
+            <MenuItem value={3}>Non-Prize</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
     </Box >
   )
 }

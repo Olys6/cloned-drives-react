@@ -106,7 +106,7 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
           </Box>
 
 
-          {modalCar.description !== "None." ?
+          {modalCar.description !== "None." && modalCar.description !== "" ?
             <Accordion>
               <AccordionSummary
                 aria-controls="panel1a-content"
