@@ -84,7 +84,7 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
           ).map((car, i) => (
           i >= (numOfCars * page - numOfCars) && i < (numOfCars * page) && (
             <Button key={i} onClick={() => handleOpen(car)} className="carCard">
-              <LazyLoadImage effect="blur" src={`data:image/png;base64,${car.card}`} style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />
+              <LazyLoadImage effect="blur" src={car.card} style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />
             </Button>
           )))}
       </Box>

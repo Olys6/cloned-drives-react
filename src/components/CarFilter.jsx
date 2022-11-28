@@ -1323,22 +1323,6 @@ const CarFilter = ({
             max={highestWeight}
           />
         </Stack>
-
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Prize cars</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={prize}
-            label="Prize cars"
-            onChange={(e) => setPrize(e.target.value)}
-            defaultValue={1}
-          >
-            <MenuItem value={1}>All</MenuItem>
-            <MenuItem value={2}>Prize</MenuItem>
-            <MenuItem value={3}>Non-Prize</MenuItem>
-          </Select>
-        </FormControl>
       </Box>
 
 
