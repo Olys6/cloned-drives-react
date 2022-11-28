@@ -75,12 +75,16 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
               return a.ola - b.ola
             } else if (carsSortType === 14) {
               return a.ola - b.ola
+            } else if (carsSortType === 15) {
+              return a.weight - b.weight
+            } else if (carsSortType === 16) {
+              return b.weight - a.weight
             }
             }
           ).map((car, i) => (
           i >= (numOfCars * page - numOfCars) && i < (numOfCars * page) && (
             <Button key={i} onClick={() => handleOpen(car)} className="carCard">
-              <LazyLoadImage effect="blur" src={car.card} style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />
+              <LazyLoadImage effect="blur" src={`data:image/png;base64,${car.card}`} style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />
             </Button>
           )))}
       </Box>
@@ -106,7 +110,7 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
           </Box>
 
 
-          {modalCar.description !== "None." ?
+          {modalCar.description !== "None." && modalCar.description !== "" ?
             <Accordion>
               <AccordionSummary
                 aria-controls="panel1a-content"
@@ -134,7 +138,7 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
                   <></>
                 }
               <Typography sx={{ mt: 0 }} variant="h6">
-                {modalCar.bodyStyle}
+                {Array.isArray(modalCar.bodyStyle) ? modalCar.bodyStyle.join(" / ") : modalCar.bodyStyle}
               </Typography>
               <Typography id="modal-modal-description" sx={{ mt: 0 }} variant="h6">
                 {modalCar.fuelType}

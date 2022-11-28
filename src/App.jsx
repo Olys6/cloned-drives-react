@@ -29,6 +29,7 @@ let highestHandling = 0;
 let highestYear = 0;
 let highestMra = 0;
 let highestOla = 0;
+let highestWeight = 0;
 
 let lowestRqValue = 10000;
 let lowestCarSpeed = 10000;
@@ -37,6 +38,7 @@ let lowestHandling = 10000;
 let lowestYear = 10000;
 let lowestMra = 10000;
 let lowestOla = 10000;
+let lowestWeight = 10000;
 
 const getHighestAndLowestValues = () => {
   carData.forEach((car) => {
@@ -47,6 +49,7 @@ const getHighestAndLowestValues = () => {
     highestYear < car.modelYear ? highestYear = car.modelYear : null
     highestMra < car.mra ? highestMra = car.mra : null
     highestOla < car.ola ? highestOla = car.ola : null
+    highestWeight < car.weight ? highestWeight = car.weight : null
 
     lowestRqValue > car.rq ? lowestRqValue = car.rq : null
     lowestCarSpeed > car.topSpeed ? lowestCarSpeed = car.topSpeed : null
@@ -55,6 +58,8 @@ const getHighestAndLowestValues = () => {
     lowestYear > car.modelYear ? lowestYear = car.modelYear : null
     lowestMra > car.mra ? lowestMra = car.mra : null
     lowestOla > car.ola ? lowestOla = car.ola : null
+    lowestWeight > car.weight ? lowestWeight = car.weight : null
+    lowestWeight > car.weight ? lowestWeight = car.weight : null
   })
 }
 
@@ -80,10 +85,12 @@ function App() {
   const [ola, setOla] = useState([lowestOla, highestOla])
   const [bodyStyle, setBodyStyle] = useState([])
   const [creator, setCreator] = useState([])
+  const [numOfCars, setNumOfCars] = useState(10)
+  const [prize, setPrize] = useState(1)
   const [fuelType, setFuelType] = useState([])
   const [gc, setGc] = useState([])
+  const [weight, setWeight] = useState([lowestWeight, highestWeight])
   // { Array.isArray(car.make) ? car.make[0] : car.make }
-  const numOfCars = 12;
   const carTags = [];
 
   // const smallCarData = carData.map((car, i) => (i < 20 ? car : <></>))
@@ -107,6 +114,7 @@ function App() {
         car.modelYear <= year[1] && car.modelYear >= year[0] &&
         car.mra <= mra[1] && car.mra >= mra[0] &&
         car.ola <= ola[1] && car.ola >= ola[0] &&
+        car.weight <= weight[1] && car.weight >= weight[0] &&
         (carMake.length > 0 ? carMake.some(elem => car.make.includes(elem)) : true) &&
         (carTag.length > 0 ? carTag.some(elem => car.tags.includes(elem)) : true) &&
         (carCountryValue.length > 0 ? carCountryValue.some(elem => elem.code === car.country) : true) &&
@@ -115,7 +123,8 @@ function App() {
         (bodyStyle.length > 0 ? bodyStyle.some(elem => elem === car.bodyStyle) : true) &&
         (creator.length > 0 ? creator.some(elem => elem === car.creator) : true) &&
         (fuelType.length > 0 ? fuelType.some(elem => elem === car.fuelType) : true) &&
-        (gc.length > 0 ? gc.some(elem => elem === car.gc) : true) 
+        (gc.length > 0 ? gc.some(elem => elem === car.gc) : true)  &&
+        (prize > 1 ? (prize === 2 ? car.isPrize : car.isPrize === false) : true)
     })
   }
 
@@ -148,10 +157,16 @@ function App() {
       </Box>
 
       <CarFilter
+        weight={weight} lowestWeight={lowestWeight} highestWeight={highestWeight}
+        setWeight={setWeight}
         gc={gc}
         setGc={setGc}
         fuelType={fuelType}
         setFuelType={setFuelType}
+        prize={prize}
+        setPrize={setPrize}
+        numOfCars={numOfCars}
+        setNumOfCars={setNumOfCars}
         creator={creator}
         setCreator={setCreator}
         bodyStyle={bodyStyle}

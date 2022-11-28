@@ -45,6 +45,10 @@ function olaSliderValuetext(value) {
   return `${value} OLA`;
 }
 
+function weightSliderValuetext(value) {
+  return `${value} KG`;
+}
+
 const minDistance = 0;
 
 const maxRQ = 125
@@ -85,8 +89,11 @@ function getStyles(name, carTag, theme) {
 
 
 const CarFilter = ({
+  weight, setWeight, lowestWeight, highestWeight,
   gc, setGc,
   fuelType, setFuelType,
+  setPrize, prize,
+  setNumOfCars, numOfCars,
   creator, setCreator,
   bodyStyle, setBodyStyle,
   ola, setOla,
@@ -653,7 +660,7 @@ const CarFilter = ({
       typeof value === 'string' ? value.split(',') : value,
     );
   };
-  
+
   const handleSelectGcChange = (event) => {
     const {
       target: { value },
@@ -683,7 +690,7 @@ const CarFilter = ({
 
     if (rqValue[1] - rqValue[0] < minDistance) {
       if (activeThumb === 0) {
-        const clamped = Math.min(rqValue[0], maxRQ - minDistance);
+        const clamped = Math.min(rqValue[0], highestRqValue - minDistance);
         setRqValue([clamped, clamped + minDistance]);
       } else {
         const clamped = Math.max(rqValue[1], minDistance);
@@ -701,7 +708,7 @@ const CarFilter = ({
 
     if (topSpeed[1] - topSpeed[0] < minDistance) {
       if (activeThumb === 0) {
-        const clamped = Math.min(topSpeed[0], maxRQ - minDistance);
+        const clamped = Math.min(topSpeed[0], highestCarSpeed - minDistance);
         setTopSpeed([clamped, clamped + minDistance]);
       } else {
         const clamped = Math.max(topSpeed[1], minDistance);
@@ -710,7 +717,26 @@ const CarFilter = ({
     } else {
       setTopSpeed(newValue);
     }
-  };
+  }
+    const handleWeightSliderChange = (event, newValue, activeThumb) => {
+      setWeight(newValue);
+      if (!Array.isArray(newValue)) {
+        return;
+      }
+
+      if (weight[1] - weight[0] < minDistance) {
+        if (activeThumb === 0) {
+          const clamped = Math.min(weight[0], highestWeight - minDistance);
+          setWeight([clamped, clamped + minDistance]);
+        } else {
+          const clamped = Math.max(weight[1], minDistance);
+          setWeight([clamped - minDistance, clamped]);
+        }
+      } else {
+        setWeight(newValue);
+      }
+    };
+
   const handle0to60SliderChange = (event, newValue, activeThumb) => {
     setZeroTo60(newValue);
     if (!Array.isArray(newValue)) {
@@ -719,7 +745,7 @@ const CarFilter = ({
 
     if (zeroTo60[1] - zeroTo60[0] < minDistance) {
       if (activeThumb === 0) {
-        const clamped = Math.min(zeroTo60[0], maxRQ - 1);
+        const clamped = Math.min(zeroTo60[0], highest0To60 - 1);
         setZeroTo60([clamped, clamped + minDistance]);
       } else {
         const clamped = Math.max(zeroTo60[1], 1);
@@ -737,7 +763,7 @@ const CarFilter = ({
 
     if (handling[1] - handling[0] < minDistance) {
       if (activeThumb === 0) {
-        const clamped = Math.min(handling[0], maxRQ - minDistance);
+        const clamped = Math.min(handling[0], highestHandling - minDistance);
         setHandling([clamped, clamped + minDistance]);
       } else {
         const clamped = Math.max(handling[1], minDistance);
@@ -755,7 +781,7 @@ const CarFilter = ({
 
     if (year[1] - year[0] < minDistance) {
       if (activeThumb === 0) {
-        const clamped = Math.min(year[0], maxRQ - minDistance);
+        const clamped = Math.min(year[0], highestYear - minDistance);
         setYear([clamped, clamped + minDistance]);
       } else {
         const clamped = Math.max(year[1], 1);
@@ -773,7 +799,7 @@ const CarFilter = ({
 
     if (mra[1] - mra[0] < minDistance) {
       if (activeThumb === 0) {
-        const clamped = Math.min(mra[0], maxRQ - minDistance);
+        const clamped = Math.min(mra[0], highestMra - minDistance);
         setMra([clamped, clamped + minDistance]);
       } else {
         const clamped = Math.max(mra[1], 1);
@@ -791,7 +817,7 @@ const CarFilter = ({
 
     if (ola[1] - ola[0] < minDistance) {
       if (activeThumb === 0) {
-        const clamped = Math.min(ola[0], maxRQ - minDistance);
+        const clamped = Math.min(ola[0], highestOla - minDistance);
         setOla([clamped, clamped + minDistance]);
       } else {
         const clamped = Math.max(ola[1], 1);
@@ -820,7 +846,7 @@ const CarFilter = ({
           <Button color="secondary" sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "ascend"])}>
             <KeyboardArrowUpIcon /> RQ
           </Button>} */}
-        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%"}}>
+        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
           <Typography sx={{ mr: 1 }}> RQ </Typography>
           <Slider
             getAriaLabel={() => 'RQ'}
@@ -862,7 +888,7 @@ const CarFilter = ({
           renderInput={(params) => (
             <TextField
               {...params}
-              label="Choose a make"
+              label="Make"
               inputProps={{
                 ...params.inputProps,
                 autoComplete: 'new-password', // disable autocomplete and autofill
@@ -871,35 +897,33 @@ const CarFilter = ({
           )}
         />
 
-        <FormControl sx={{ width: "100%" }} color="secondary">
-          <InputLabel id="demo-multiple-chip-label">Tags</InputLabel>
-          <Select
-            labelId="demo-multiple-chip-label"
-            id="demo-multiple-chip"
-            multiple
-            value={carTag}
-            onChange={handleSelectTagChange}
-            input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
-            renderValue={(selected) => (
-              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                {selected.map((value) => (
-                  <Chip color="success" sx={{ fontWeight: "bold" }} key={value} label={value} />
-                ))}
-              </Box>
-            )}
-            MenuProps={MenuProps}
-          >
-            {carTags.sort().map((tag) => (
-              <MenuItem
-                key={tag}
-                value={tag}
-                style={getStyles(tag, carTag, theme)}
-              >
-                {tag}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+        <Autocomplete
+          limitTags={3}
+          multiple
+          value={carTag}
+          sx={{ width: "100%" }}
+          options={carTags}
+          autoHighlight
+          onChange={(event, newValue) => {
+            setCarTag(newValue);
+          }}
+          getOptionLabel={(option) => option}
+          renderOption={(props, option) => (
+            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+              {option}
+            </Box>
+          )}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              label="Tags"
+              inputProps={{
+                ...params.inputProps,
+                autoComplete: 'new-password', // disable autocomplete and autofill
+              }}
+            />
+          )}
+        />
 
       </Box>
 
@@ -933,7 +957,7 @@ const CarFilter = ({
           renderInput={(params) => (
             <TextField
               {...params}
-              label="Choose a country"
+              label="Country"
               inputProps={{
                 ...params.inputProps,
                 autoComplete: 'new-password', // disable autocomplete and autofill
@@ -989,23 +1013,23 @@ const CarFilter = ({
         </FormControl>
         <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
           <Typography sx={{ width: "6rem", mr: 1 }}> Top Speed </Typography>
-        <Slider
-          sx={{ mr: 1 }}
-          getAriaLabel={() => 'Top Speed'}
-          value={topSpeed}
-          onChange={handleTPSliderChange}
-          valueLabelDisplay="auto"
-          getAriaValueText={tpSliderValuetext}
-          valueLabelFormat={tpSliderValuetext}
-          disableSwap
-          min={lowestCarSpeed}
-          max={highestCarSpeed}
-        />
+          <Slider
+            sx={{ mr: 1 }}
+            getAriaLabel={() => 'Top Speed'}
+            value={topSpeed}
+            onChange={handleTPSliderChange}
+            valueLabelDisplay="auto"
+            getAriaValueText={tpSliderValuetext}
+            valueLabelFormat={tpSliderValuetext}
+            disableSwap
+            min={lowestCarSpeed}
+            max={highestCarSpeed}
+          />
         </Stack>
       </Box>
 
       {/* //? SORT AND 0-60 SLIDER */}
-      <Box sx={{width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2}} >
+      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
 
         <FormControl sx={{ width: "100%" }}>
           <InputLabel htmlFor="grouped-select">Sort</InputLabel>
@@ -1031,6 +1055,9 @@ const CarFilter = ({
             <ListSubheader sx={{ bgcolor: "background.paper2" }}>OLA Sort</ListSubheader>
             <MenuItem value={13}>OLA: Ascending order {"<"}</MenuItem>
             <MenuItem value={14}>OLA: Descending order {">"}</MenuItem>
+            <ListSubheader sx={{ bgcolor: "background.paper2" }}>Weight Sort</ListSubheader>
+            <MenuItem value={15}>Weight: Ascending order {"<"}</MenuItem>
+            <MenuItem value={16}>Weight: Descending order {">"}</MenuItem>
           </Select>
         </FormControl>
         <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
@@ -1048,7 +1075,7 @@ const CarFilter = ({
             max={highest0To60}
           />
         </Stack>
-        <Stack direction="row" gap={1} alignItems="center" mt={{md: 0, xs: -3}}>
+        <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
           <TextField placeholder="Min 0-60" onChange={(e) => setZeroTo60([e.target.value, zeroTo60[1]])} value={zeroTo60[0]} />
           <TextField placeholder="Max 0-60" onChange={(e) => setZeroTo60([zeroTo60[0], e.target.value])} value={zeroTo60[1]} />
         </Stack>
@@ -1132,26 +1159,34 @@ const CarFilter = ({
 
       {/* //? BODYSTYLE AND CREATOR SELECTS */}
       <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
-        <FormControl sx={{ width: "100%" }}>
-          <InputLabel id="demo-multiple-checkbox-label">Body Styles</InputLabel>
-          <Select
-            labelId="demo-multiple-checkbox-label"
-            id="demo-multiple-checkbox"
-            multiple
-            value={bodyStyle}
-            onChange={handleSelectBodyStyleChange}
-            input={<OutlinedInput label="Body Styles" />}
-            renderValue={(selected) => selected.join(', ')}
-            MenuProps={MenuProps}
-          >
-            {bodyStyles.map((name, i) => (
-              <MenuItem key={i} value={name}>
-                <Checkbox color="success" checked={bodyStyle.indexOf(name) > -1} />
-                <ListItemText primary={name} />
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+
+        <Autocomplete
+          limitTags={3}
+          multiple
+          value={bodyStyle}
+          sx={{ width: "100%" }}
+          options={bodyStyles}
+          autoHighlight
+          onChange={(event, newValue) => {
+            setBodyStyle(newValue);
+          }}
+          getOptionLabel={(option) => option}
+          renderOption={(props, option) => (
+            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+              {option}
+            </Box>
+          )}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              label="Body Style"
+              inputProps={{
+                ...params.inputProps,
+                autoComplete: 'new-password', // disable autocomplete and autofill
+              }}
+            />
+          )}
+        />
 
         <Autocomplete
           limitTags={3}
@@ -1182,8 +1217,8 @@ const CarFilter = ({
         />
       </Box>
 
-      {/* //? FULTYPE */}
-      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+      {/* //? FUEL TYPE AND GC */}
+      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
         <Autocomplete
           limitTags={3}
           multiple
@@ -1233,43 +1268,80 @@ const CarFilter = ({
           </Select>
         </FormControl>
       </Box>
-      {/* <FormControl sx={{ m: 1, width: 300 }} color="secondary">
-        <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
-        <Select
-          labelId="demo-multiple-checkbox-label"
-          id="demo-multiple-checkbox"
-          multiple
-          value={personName}
-          onChange={handleChange}
-          input={<OutlinedInput label="Tag" />}
-          renderValue={(selected) => selected.join(', ')}
-          MenuProps={MenuProps}
-        >
-          {names.map((name) => (
-            <MenuItem key={name} value={name}>
-              <Checkbox checked={personName.indexOf(name) > -1} />
-              <ListItemText primary={name} />
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl> */}
-      {/* </Box> */}
 
-      {/* <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography>More Filters</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
-              </Typography>
-            </AccordionDetails>
-          </Accordion> */}
+      {/* //? CARS PER PAGE AND PRIZE */}
+      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Cars per page</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={numOfCars / 5}
+            label="Cars per page"
+            onChange={(e) => setNumOfCars(e.target.value * 5)}
+            defaultValue={2}
+          >
+            <MenuItem value={1}>5</MenuItem>
+            <MenuItem value={2}>10</MenuItem>
+            <MenuItem value={3}>15</MenuItem>
+            <MenuItem value={4}>20</MenuItem>
+            <MenuItem value={8}>50</MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Prize cars</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={prize}
+            label="Prize cars"
+            onChange={(e) => setPrize(e.target.value)}
+            defaultValue={1}
+          >
+            <MenuItem value={1}>All</MenuItem>
+            <MenuItem value={2}>Prize</MenuItem>
+            <MenuItem value={3}>Non-Prize</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+
+      {/* //? WEIGHT */}
+      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
+          <Typography sx={{ width: "5rem" }}> Weight </Typography>
+          <Slider
+            sx={{ mr: 1 }}
+            getAriaLabel={() => 'Weight'}
+            value={weight}
+            onChange={handleWeightSliderChange}
+            valueLabelDisplay="auto"
+            getAriaValueText={weightSliderValuetext}
+            valueLabelFormat={weightSliderValuetext}
+            disableSwap
+            min={lowestWeight}
+            max={highestWeight}
+          />
+        </Stack>
+
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Prize cars</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={prize}
+            label="Prize cars"
+            onChange={(e) => setPrize(e.target.value)}
+            defaultValue={1}
+          >
+            <MenuItem value={1}>All</MenuItem>
+            <MenuItem value={2}>Prize</MenuItem>
+            <MenuItem value={3}>Non-Prize</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+
+
     </Box >
   )
 }

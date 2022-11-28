@@ -1,4 +1,4 @@
-﻿{
+{
     "rq": 32,
     "make": "Nissan",
     "model": "Patrol SE Platinum City V6",
@@ -12,10 +12,9 @@
     "tags": [],
     "isPrize": false,
 
-
     "weight": 2500,
     "gc": "High",
-    "seatCount":7,
+    "seatCount": 7,
     "bodyStyle": "SUV",
     "tcs": true,
     "abs": true,
