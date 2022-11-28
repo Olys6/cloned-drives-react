@@ -80,6 +80,8 @@ function App() {
   const [ola, setOla] = useState([lowestOla, highestOla])
   const [bodyStyle, setBodyStyle] = useState([])
   const [creator, setCreator] = useState([])
+  const [fuelType, setFuelType] = useState([])
+  const [gc, setGc] = useState([])
   // { Array.isArray(car.make) ? car.make[0] : car.make }
   const numOfCars = 12;
   const carTags = [];
@@ -111,7 +113,9 @@ function App() {
         (carTyre.length > 0 ? carTyre.some(elem => elem === car.tyreType) : true) &&
         (carDriveType.length > 0 ? carDriveType.some(elem => elem === car.driveType) : true) &&
         (bodyStyle.length > 0 ? bodyStyle.some(elem => elem === car.bodyStyle) : true) &&
-        (creator.length > 0 ? creator.some(elem => elem === car.creator) : true)
+        (creator.length > 0 ? creator.some(elem => elem === car.creator) : true) &&
+        (fuelType.length > 0 ? fuelType.some(elem => elem === car.fuelType) : true) &&
+        (gc.length > 0 ? gc.some(elem => elem === car.gc) : true) 
     })
   }
 
@@ -144,6 +148,10 @@ function App() {
       </Box>
 
       <CarFilter
+        gc={gc}
+        setGc={setGc}
+        fuelType={fuelType}
+        setFuelType={setFuelType}
         creator={creator}
         setCreator={setCreator}
         bodyStyle={bodyStyle}
@@ -203,6 +211,7 @@ function App() {
           onChange={handlePageChange}
           page={page}
           variant="outlined"
+          color="primary"
           shape="rounded" />
       </Stack>
 

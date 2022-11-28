@@ -85,6 +85,8 @@ function getStyles(name, carTag, theme) {
 
 
 const CarFilter = ({
+  gc, setGc,
+  fuelType, setFuelType,
   creator, setCreator,
   bodyStyle, setBodyStyle,
   ola, setOla,
@@ -114,91 +116,72 @@ const CarFilter = ({
   const theme = useTheme();
 
   const carCountries = [];
+  const carMakes = [];
+  const bodyStyles = [];
+  const creators = [];
+  const carTyres = [];
+  const carDriveTypes = [];
+  const carFuelTypes = [];
+  const carGcs = [];
 
-  const getCountries = () => {
+  const getCarOptions = () => {
     carData.forEach((car) => {
+
+      // getting all car countries
       if (!carCountries.includes(car.country)) {
         carCountries.push(car.country);
+        carCountries.sort((a, b) => a.label - b.label);
       }
-    })
-    carCountries.sort((a, b) => a.label - b.label);
-  }
 
-  getCountries()
-
-  const carMakes = [];
-
-  const getCarMakes = () => {
-    carData.forEach((car) => {
+      // getting all car makes
       if (Array.isArray(car.make)) {
         car.make.forEach((make) => {
           if (!carMakes.includes(make)) {
             carMakes.push(make);
           }
         })
-      } else {
-        if (!carMakes.includes(car.make)) {
-          carMakes.push(car.make);
-        }
+      } else if (!carMakes.includes(car.make)) {
+        carMakes.push(car.make);
       }
-    })
-    carMakes.sort()
-  }
 
-  getCarMakes()
-
-  const bodyStyles = [];
-
-  const getAllBodyStyles = () => {
-    carData.forEach((car) => {
+      // getting all car body styles
       if (!bodyStyles.includes(car.bodyStyle)) {
         bodyStyles.push(car.bodyStyle);
-        }
-    })
-    bodyStyles.sort()
-  }
+        bodyStyles.sort()
+      }
 
-  getAllBodyStyles()
-
-  const creators = [].sort();
-
-  const getAllCreators = () => {
-    carData.forEach((car) => {
+      // getting all car creators
       if (!creators.includes(car.creator)) {
         creators.push(car.creator);
-        }
-    })
-    creators.sort()
-  }
+        creators.sort()
+      }
 
-  getAllCreators()
-
-  const carTyres = [];
-
-  const getCarTyres = () => {
-    carData.forEach((car) => {
-      // car.tyreType === undefined ? console.log("UNDEFINED CAR TYRE TYPE", car.id) : null
+      // getting all car tyre types
       if (!carTyres.includes(car.tyreType) && car.tyreType !== undefined) {
         carTyres.push(car.tyreType);
       }
-    })
-  }
 
-  getCarTyres()
-
-  const carDriveTypes = [];
-
-  const getDriveType = () => {
-    carData.forEach((car) => {
-      // car.tyreType === undefined ? console.log("UNDEFINED CAR TYRE TYPE", car.id) : null
+      // getting all car drive types
       if (!carDriveTypes.includes(car.driveType) && car.driveType !== undefined) {
         carDriveTypes.push(car.driveType);
       }
+
+      // getting all car fuel types
+      if (!carFuelTypes.includes(car.fuelType) && car.fuelType !== undefined) {
+        carFuelTypes.push(car.fuelType);
+        carFuelTypes.sort()
+      }
+
+      // getting all car gcs
+      if (!carGcs.includes(car.gc) && car.gc !== undefined) {
+        carGcs.push(car.gc);
+        carFuelTypes.sort()
+      }
+
     })
-    carDriveTypes.sort()
   }
 
-  getDriveType()
+  getCarOptions()
   // useEffect(() => {
   //   // getCarMakes()
   //   console.log(carTyres)
@@ -666,6 +649,16 @@ const CarFilter = ({
       target: { value },
     } = event;
     setBodyStyle(
+      // On autofill we get a stringified value.
+      typeof value === 'string' ? value.split(',') : value,
+    );
+  };
+  
+  const handleSelectGcChange = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setGc(
       // On autofill we get a stringified value.
       typeof value === 'string' ? value.split(',') : value,
     );
@@ -1138,7 +1131,7 @@ const CarFilter = ({
       </Box>
 
       {/* //? BODYSTYLE AND CREATOR SELECTS */}
-      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
         <FormControl sx={{ width: "100%" }}>
           <InputLabel id="demo-multiple-checkbox-label">Body Styles</InputLabel>
           <Select
@@ -1187,6 +1180,58 @@ const CarFilter = ({
             />
           )}
         />
+      </Box>
+
+      {/* //? FULTYPE */}
+      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+        <Autocomplete
+          limitTags={3}
+          multiple
+          value={fuelType}
+          sx={{ width: "100%" }}
+          options={carFuelTypes}
+          autoHighlight
+          onChange={(event, newValue) => {
+            setFuelType(newValue);
+          }}
+          getOptionLabel={(option) => option}
+          renderOption={(props, option) => (
+            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+              {option}
+            </Box>
+          )}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              label="Fuel Type"
+              inputProps={{
+                ...params.inputProps,
+                autoComplete: 'new-password', // disable autocomplete and autofill
+              }}
+            />
+          )}
+        />
+
+        <FormControl sx={{ width: "100%" }}>
+          <InputLabel id="demo-multiple-checkbox-label">Ground Clearances</InputLabel>
+          <Select
+            labelId="demo-multiple-checkbox-label"
+            id="demo-multiple-checkbox"
+            multiple
+            value={gc}
+            onChange={handleSelectGcChange}
+            input={<OutlinedInput label="Ground Clearances" />}
+            renderValue={(selected) => selected.join(', ')}
+            MenuProps={MenuProps}
+          >
+            {carGcs.map((name, i) => (
+              <MenuItem key={i} value={name}>
+                <Checkbox color="success" checked={gc.indexOf(name) > -1} />
+                <ListItemText primary={name} />
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
       </Box>
       {/* <FormControl sx={{ m: 1, width: 300 }} color="secondary">
         <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>

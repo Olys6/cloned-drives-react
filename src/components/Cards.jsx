@@ -20,7 +20,7 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = car => {
     // console.log("CAR ID =>", car.id)
-    // console.log("CAR ==>", car)
+    console.log("CAR ==>", car)
     setOpen(true);
     setModalCar(car)
   }
@@ -68,7 +68,7 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
             } else if (carsSortType === 10) {
               return a.modelYear - b.modelYear
             } else if (carsSortType === 11) {
-              return a.mra - b.mra
+              return b.mra - a.mra
             } else if (carsSortType === 12) {
               return a.mra - b.mra
             } else if (carsSortType === 13) {
@@ -127,13 +127,13 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Box>
                 {modalCar.isPrize === true ?
-                  <Typography id="modal-modal-description" sx={{ mt: 0, color: "yellow", display: "flex", alignItems: "center", gap: 0.5 }}>
+                <Typography id="modal-modal-description" sx={{ mt: 0, color: "yellow", display: "flex", alignItems: "center", gap: 0.5 }} variant="h6">
                     <EmojiEventsIcon /> Prize car
                   </Typography>
                   :
                   <></>
                 }
-              <Typography sx={{ mt: 0 }}>
+              <Typography sx={{ mt: 0 }} variant="h6">
                 {modalCar.bodyStyle}
               </Typography>
               <Typography id="modal-modal-description" sx={{ mt: 0 }} variant="h6">
