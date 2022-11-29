@@ -17,8 +17,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { themeOptions } from './Theme';
 
+import Navbar from './components/Navbar.jsx'
 import CarFilter from './components/CarFilter.jsx';
-import Cards from './components/Cards';
+import Cards from './components/Cards.jsx';
 
 const theme = createTheme(themeOptions);
 
@@ -152,9 +153,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: 'flex', position: { md: "absolute", xs: "absolute" }, top: 10, left: 10, width: { md: 500, xs: "100%" }, borderRadius: "10px" }}>
-        <img src={Logo} style={{ width: "80%" }} />
-      </Box>
+      <Navbar />
 
       <CarFilter
         weight={weight} lowestWeight={lowestWeight} highestWeight={highestWeight}

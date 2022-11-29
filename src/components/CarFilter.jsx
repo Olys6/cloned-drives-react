@@ -17,6 +17,9 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { ContactPageSharp } from '@mui/icons-material';
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 function rqSliderValuetext(value) {
   return `${value} RQ`;
 }
@@ -119,6 +122,8 @@ const CarFilter = ({
   carsSortType, carTag,
   setCarTag
 }) => {
+
+  const [expanded, setExpanded] = useState(false);
 
   const theme = useTheme();
 
@@ -832,100 +837,128 @@ const CarFilter = ({
     // console.log(lowestMra)
   }, [])
 
+  const handleAccordion = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
   return (
     <Box id="searchBox">
 
       {/* //? SEARCH AND RQ SLIDER */}
-      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
-        <TextField sx={{ minWidth: "30%" }} color="secondary" id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
-        {/* {carsSortType[1] === "ascend" ?
-          <Button sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "descend"])}>
-            <KeyboardArrowDownIcon /> RQ
-          </Button>
-          :
-          <Button color="secondary" sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "ascend"])}>
-            <KeyboardArrowUpIcon /> RQ
-          </Button>} */}
-        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
-          <Typography sx={{ mr: 1 }}> RQ </Typography>
-          <Slider
-            getAriaLabel={() => 'RQ'}
-            value={rqValue}
-            onChange={handleRQSliderChange}
-            valueLabelDisplay="auto"
-            getAriaValueText={rqSliderValuetext}
-            valueLabelFormat={rqSliderValuetext}
-            disableSwap
-            min={lowestRqValue}
-            max={highestRqValue}
+      <Accordion TransitionProps={{ unmountOnExit: true }} sx={{ width: { xs: "100%", md: "98%" } }} expanded={expanded === 'panel1'} onChange={handleAccordion('panel1')}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1bh-content"
+          id="panel1bh-header"
+        >
+          <Box sx={{ display: 'flex', justifyContent: "space-evenly", width: "100%", flexWrap: 'wrap'}}>
+            <Typography>
+              Search
+            </Typography>
+            <Typography>
+              RQ
+            </Typography>
+            <Typography>
+              Make
+            </Typography>
+            <Typography>
+              Tags
+            </Typography>
+            <Typography>
+              Country
+            </Typography>
+            <Typography>
+              Tyre Type
+            </Typography>
+          </Box>
+        </AccordionSummary>
+      <AccordionDetails>
+        <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+          <TextField sx={{ minWidth: "30%" }} color="secondary" id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
+          {/* {carsSortType[1] === "ascend" ?
+            <Button sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "descend"])}>
+              <KeyboardArrowDownIcon /> RQ
+            </Button>
+            :
+            <Button color="secondary" sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "ascend"])}>
+              <KeyboardArrowUpIcon /> RQ
+            </Button>} */}
+          <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
+            <Typography sx={{ mr: 1 }}> RQ </Typography>
+            <Slider
+              getAriaLabel={() => 'RQ'}
+              value={rqValue}
+              onChange={handleRQSliderChange}
+              valueLabelDisplay="auto"
+              getAriaValueText={rqSliderValuetext}
+              valueLabelFormat={rqSliderValuetext}
+              disableSwap
+              min={lowestRqValue}
+              max={highestRqValue}
+            />
+          </Stack>
+          <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
+            <TextField placeholder="Min RQ" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setRqValue([e.target.value, rqValue[1]])} value={rqValue[0]} />
+            <TextField placeholder="Max RQ" onChange={(e) => setRqValue([rqValue[0], e.target.value])} value={rqValue[1]} />
+          </Stack>
+        </Box>
+        {/* //? MAKE AND TAGS SELECT */}
+        <Box sx={{ mb: 1, mt: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+          <Autocomplete
+            limitTags={3}
+            multiple
+            value={carMake}
+            sx={{ width: "100%" }}
+            options={carMakes}
+            autoHighlight
+            onChange={(event, newValue) => {
+              setCarMake(newValue);
+            }}
+            getOptionLabel={(option) => option}
+            renderOption={(props, option) => (
+              <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+                {option}
+              </Box>
+            )}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Make"
+                inputProps={{
+                  ...params.inputProps,
+                  autoComplete: 'new-password', // disable autocomplete and autofill
+                }}
+              />
+            )}
           />
-        </Stack>
-        <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
-          <TextField placeholder="Min RQ" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setRqValue([e.target.value, rqValue[1]])} value={rqValue[0]} />
-          <TextField placeholder="Max RQ" onChange={(e) => setRqValue([rqValue[0], e.target.value])} value={rqValue[1]} />
-        </Stack>
-
-      </Box>
-
-      {/* //? MAKE AND TAGS SELECT */}
-      <Box sx={{ mb: 1, mt: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
-        <Autocomplete
-          limitTags={3}
-          multiple
-          value={carMake}
-          sx={{ width: "100%" }}
-          options={carMakes}
-          autoHighlight
-          onChange={(event, newValue) => {
-            setCarMake(newValue);
-          }}
-          getOptionLabel={(option) => option}
-          renderOption={(props, option) => (
-            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-              {option}
-            </Box>
-          )}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label="Make"
-              inputProps={{
-                ...params.inputProps,
-                autoComplete: 'new-password', // disable autocomplete and autofill
-              }}
-            />
-          )}
-        />
-
-        <Autocomplete
-          limitTags={3}
-          multiple
-          value={carTag}
-          sx={{ width: "100%" }}
-          options={carTags}
-          autoHighlight
-          onChange={(event, newValue) => {
-            setCarTag(newValue);
-          }}
-          getOptionLabel={(option) => option}
-          renderOption={(props, option) => (
-            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-              {option}
-            </Box>
-          )}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label="Tags"
-              inputProps={{
-                ...params.inputProps,
-                autoComplete: 'new-password', // disable autocomplete and autofill
-              }}
-            />
-          )}
-        />
-
-      </Box>
+          <Autocomplete
+            limitTags={3}
+            multiple
+            value={carTag}
+            sx={{ width: "100%" }}
+            options={carTags}
+            autoHighlight
+            onChange={(event, newValue) => {
+              setCarTag(newValue);
+            }}
+            getOptionLabel={(option) => option}
+            renderOption={(props, option) => (
+              <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+                {option}
+              </Box>
+            )}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Tags"
+                inputProps={{
+                  ...params.inputProps,
+                  autoComplete: 'new-password', // disable autocomplete and autofill
+                }}
+              />
+            )}
+          />
+        </Box>
 
       {/* //? COUNTRY AND TYRE TYPE SELECTS */}
       <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
@@ -988,9 +1021,39 @@ const CarFilter = ({
         </FormControl>
 
       </Box>
+        </AccordionDetails>
+      </Accordion>
 
       {/* //? DRIVE TYPE AND TOP SPEED SLIDER */}
-      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+      <Accordion TransitionProps={{ unmountOnExit: true }} sx={{ width: { xs: "100%", md: "98%" } }} expanded={expanded === 'panel2'} onChange={handleAccordion('panel2')}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1bh-content"
+          id="panel1bh-header"
+        >
+          <Box sx={{ display: 'flex', justifyContent: "space-evenly", width: "100%", flexWrap: 'wrap' }}>
+            <Typography>
+              Drive Type
+            </Typography>
+            <Typography>
+              Top Speed
+            </Typography>
+            <Typography>
+              Sort
+            </Typography>
+            <Typography>
+              0-60
+            </Typography>
+            <Typography>
+              Handling
+            </Typography>
+            <Typography>
+              Year
+            </Typography>
+          </Box>
+        </AccordionSummary>
+        <AccordionDetails>
+      <Box sx={{mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
         <FormControl sx={{ mb: 1, width: "100%" }}>
           <InputLabel id="demo-multiple-checkbox-label">Drive Type</InputLabel>
           <Select
@@ -1029,7 +1092,7 @@ const CarFilter = ({
       </Box>
 
       {/* //? SORT AND 0-60 SLIDER */}
-      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
 
         <FormControl sx={{ width: "100%" }}>
           <InputLabel htmlFor="grouped-select">Sort</InputLabel>
@@ -1082,7 +1145,7 @@ const CarFilter = ({
       </Box>
 
       {/* //? HANDLING AND YEAR SLIDERS */}
-      <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+      <Box sx={{mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
         <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
           <Typography sx={{ width: "5rem", mr: 1 }}> Handling </Typography>
           <Slider
@@ -1114,8 +1177,38 @@ const CarFilter = ({
           />
         </Stack>
       </Box>
+        </AccordionDetails>
+      </Accordion>
 
       {/* //? MRA AND OLA SLIDERS */}
+      <Accordion TransitionProps={{ unmountOnExit: true }} sx={{ mb: 1, width: { xs: "100%", md: "98%" } }} expanded={expanded === 'panel3'} onChange={handleAccordion('panel3')}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1bh-content"
+          id="panel1bh-header"
+        >
+          <Box sx={{ display: 'flex', justifyContent: "space-evenly", width: "100%", flexWrap: 'wrap' }}>
+            <Typography>
+              MRA
+            </Typography>
+            <Typography>
+              OLA
+            </Typography>
+            <Typography>
+              Body Style
+            </Typography>
+            <Typography>
+              Weight
+            </Typography>
+            <Typography>
+              Fuel Type
+            </Typography>
+            <Typography>
+              Ground Clearance
+            </Typography>
+          </Box>
+        </AccordionSummary>
+        <AccordionDetails>
       <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
         <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
           <Typography sx={{ mr: 1 }}> MRA </Typography>
@@ -1157,6 +1250,7 @@ const CarFilter = ({
         </Stack>
       </Box>
 
+
       {/* //? BODYSTYLE AND CREATOR SELECTS */}
       <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
 
@@ -1188,33 +1282,21 @@ const CarFilter = ({
           )}
         />
 
-        <Autocomplete
-          limitTags={3}
-          multiple
-          value={creator}
-          sx={{ width: "100%" }}
-          options={creators}
-          autoHighlight
-          onChange={(event, newValue) => {
-            setCreator(newValue);
-          }}
-          getOptionLabel={(option) => option}
-          renderOption={(props, option) => (
-            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-              {option}
-            </Box>
-          )}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label="Creators"
-              inputProps={{
-                ...params.inputProps,
-                autoComplete: 'new-password', // disable autocomplete and autofill
-              }}
-            />
-          )}
-        />
+        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
+          <Typography sx={{ width: "5rem" }}> Weight </Typography>
+          <Slider
+            sx={{ mr: 1 }}
+            getAriaLabel={() => 'Weight'}
+            value={weight}
+            onChange={handleWeightSliderChange}
+            valueLabelDisplay="auto"
+            getAriaValueText={weightSliderValuetext}
+            valueLabelFormat={weightSliderValuetext}
+            disableSwap
+            min={lowestWeight}
+            max={highestWeight}
+          />
+        </Stack>
       </Box>
 
       {/* //? FUEL TYPE AND GC */}
@@ -1269,7 +1351,10 @@ const CarFilter = ({
         </FormControl>
       </Box>
 
-      {/* //? CARS PER PAGE AND PRIZE */}
+        </AccordionDetails>
+      </Accordion>
+
+      {/* //? CARS PER PAGE, CREATOR AND PRIZE */}
       <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Cars per page</InputLabel>
@@ -1289,6 +1374,34 @@ const CarFilter = ({
           </Select>
         </FormControl>
 
+        <Autocomplete
+          limitTags={2}
+          multiple
+          value={creator}
+          sx={{ width: "100%" }}
+          options={creators}
+          autoHighlight
+          onChange={(event, newValue) => {
+            setCreator(newValue);
+          }}
+          getOptionLabel={(option) => option}
+          renderOption={(props, option) => (
+            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+              {option}
+            </Box>
+          )}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              label="Creators"
+              inputProps={{
+                ...params.inputProps,
+                autoComplete: 'new-password', // disable autocomplete and autofill
+              }}
+            />
+          )}
+        />
+
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Prize cars</InputLabel>
           <Select
@@ -1306,24 +1419,6 @@ const CarFilter = ({
         </FormControl>
       </Box>
 
-      {/* //? WEIGHT */}
-      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
-        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
-          <Typography sx={{ width: "5rem" }}> Weight </Typography>
-          <Slider
-            sx={{ mr: 1 }}
-            getAriaLabel={() => 'Weight'}
-            value={weight}
-            onChange={handleWeightSliderChange}
-            valueLabelDisplay="auto"
-            getAriaValueText={weightSliderValuetext}
-            valueLabelFormat={weightSliderValuetext}
-            disableSwap
-            min={lowestWeight}
-            max={highestWeight}
-          />
-        </Stack>
-      </Box>
 
 
     </Box >

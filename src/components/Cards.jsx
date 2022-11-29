@@ -15,7 +15,10 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
+// import Compressor from 'compressorjs';
+
 const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
+  const [compressedFile, setCompressedFile] = useState(null);
   const [modalCar, setModalCar] = useState(filteredCars()[0])
   const [open, setOpen] = useState(false);
   const handleOpen = car => {
@@ -41,6 +44,10 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
     gap: '1rem',
     borderRadius: "10px"
   };
+
+  let compressImage
+
+
 
   return (
     <>
@@ -84,7 +91,14 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
           ).map((car, i) => (
           i >= (numOfCars * page - numOfCars) && i < (numOfCars * page) && (
             <Button key={i} onClick={() => handleOpen(car)} className="carCard">
-              <LazyLoadImage effect="blur" src={car.card} style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />
+              <LazyLoadImage 
+              threshhold={200}
+              effect="blur" 
+              // delayMethod="debounce"
+              src={
+                car.card
+              } 
+              style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />
             </Button>
           )))}
       </Box>
