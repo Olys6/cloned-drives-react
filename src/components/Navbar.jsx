@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar color="success" position="fixed">
+    <AppBar  color="success" position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link href="/" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
@@ -96,7 +96,8 @@ const Navbar = () => {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ display: "flex", gap: "1rem", flexGrow: 0 }}>
+
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -124,6 +125,11 @@ const Navbar = () => {
                 </MenuItem>
               ))}
             </Menu>
+            <Tooltip title="Join the Discord server!">
+              <Link id="discordLink" href="https://discord.gg/p3UbVP9BxB" sx={{ display: "flex", justifyContent: "center", alignItems: "center", transition: ".2s" }}>
+                <img alt="" style={{ width: 40, borderRadius: 50 }} src="src/discord-v2-svgrepo-com.svg" />
+              </Link>
+            </Tooltip>
           </Box>
         </Toolbar>
       </Container>

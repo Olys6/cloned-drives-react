@@ -851,7 +851,7 @@ const CarFilter = ({
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Box sx={{ display: 'flex', justifyContent: "space-evenly", width: "100%", flexWrap: 'wrap'}}>
+          <Box sx={{ display: 'flex', justifyContent: "space-around", width: "100%", flexWrap: 'wrap'}}>
             <Typography>
               Search
             </Typography>
@@ -1031,7 +1031,7 @@ const CarFilter = ({
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Box sx={{ display: 'flex', justifyContent: "space-evenly", width: "100%", flexWrap: 'wrap' }}>
+          <Box sx={{ display: 'flex', justifyContent: "space-around", width: "100%", flexWrap: 'wrap' }}>
             <Typography>
               Drive Type
             </Typography>
@@ -1187,7 +1187,7 @@ const CarFilter = ({
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Box sx={{ display: 'flex', justifyContent: "space-evenly", width: "100%", flexWrap: 'wrap' }}>
+          <Box sx={{ display: 'flex', justifyContent: "space-around", width: "100%", flexWrap: 'wrap' }}>
             <Typography>
               MRA
             </Typography>

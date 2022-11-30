@@ -20,6 +20,7 @@ import { themeOptions } from './Theme';
 import Navbar from './components/Navbar.jsx'
 import CarFilter from './components/CarFilter.jsx';
 import Cards from './components/Cards.jsx';
+import Footer from './components/Footer.jsx';
 
 const theme = createTheme(themeOptions);
 
@@ -228,6 +229,8 @@ function App() {
           color="primary"
           shape="rounded" />
       </Stack>
+      
+      {/* <Footer /> */}
 
     </ThemeProvider>
   )

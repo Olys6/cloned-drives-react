@@ -13,6 +13,11 @@
             background-position: left;
             background-repeat: no-repeat;
   width: 100vw;
+  min-height: 100vh;
+}
+
+#discordLink:hover {
+  transform: scale(1.2)
 }
 
 .carCard {
