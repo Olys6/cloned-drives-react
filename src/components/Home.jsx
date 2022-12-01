@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react'
 import carData from '../data/data.js'
 import {
-  Card, TextField, Select,
-  MenuItem, Box, Pagination,
-  Stack, Accordion, AccordionSummary,
-  Typography, AccordionDetails, Slider
+  Pagination, Stack
 } from '@mui/material'
 
 

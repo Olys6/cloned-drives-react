@@ -4,18 +4,19 @@ import { Paper, Typography } from '@mui/material'
 const Footer = () => {
 
 
-  return(
+  return (
     <Paper
-    sx={{ 
-      position: 'absolute',
-      bottom: "0",
-      left: "0",
-      bgcolor: "black", 
-      width: "100%", 
-      display: "flex", 
-      justifyContent: "center", 
-      alignItems: "center",
-      height: "7rem" }}>
+      sx={{
+        position: 'absolute',
+        bottom: "0",
+        left: "0",
+        bgcolor: "black",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "7rem"
+      }}>
       <Typography>
         DISCLAIMER
       </Typography>

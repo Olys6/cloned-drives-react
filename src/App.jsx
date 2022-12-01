@@ -7,6 +7,8 @@ import { themeOptions } from './Theme';
 
 import Navbar from './components/Navbar.jsx'
 import Home from './components/Home.jsx'
+import Creation from './components/Creation.jsx'
+import NoMatch from './components/NoMatch.jsx'
 import Footer from './components/Footer.jsx';
 
 const theme = createTheme(themeOptions);
@@ -18,16 +20,17 @@ function App() {
       <ThemeProvider theme={theme}>
         <Navbar />
 
+        <div style={{ marginTop: "5rem" }} />
+
         <Routes>
           <Route exact path='/cloned-drives-react/' element={<Home />} />
+          <Route exact path='/cloned-drives-react/tune-calculator' element={<Creation />} />
           {/* <Route exact path='/cloned-drives-react/foot' element={<Footer />} /> */}
-          {/* <Route exact path='/404' element={<NoMatch />} />
-          <Route element={<NoMatch />} /> */}
+          <Route exact path='*' element={<NoMatch />} />
+          {/* <Route element={<Footer />} /> */}
         </Routes>
 
-        {/* <Home /> */}
-
-        <Footer />
+        {/* <Footer /> */}
 
       </ThemeProvider>
     </BrowserRouter>

@@ -1,13 +1,13 @@
 import react, { useState, useEffect } from 'react';
 import { useTheme } from '@mui/material/styles';
 import {
-  Card, TextField, Select,
-  MenuItem, Box, Pagination,
+  TextField, Select,
+  MenuItem, Box,
   Stack, Accordion, AccordionSummary,
   Typography, AccordionDetails, Slider,
-  Link, OutlinedInput, InputLabel,
-  Chip, FormControl, Checkbox, ListItemText,
-  Autocomplete, Button, ListSubheader
+  OutlinedInput, InputLabel,
+  FormControl, Checkbox, ListItemText,
+  Autocomplete, ListSubheader
 } from '@mui/material'
 
 import carData from '../data/data.js'
@@ -723,24 +723,24 @@ const CarFilter = ({
       setTopSpeed(newValue);
     }
   }
-    const handleWeightSliderChange = (event, newValue, activeThumb) => {
-      setWeight(newValue);
-      if (!Array.isArray(newValue)) {
-        return;
-      }
+  const handleWeightSliderChange = (event, newValue, activeThumb) => {
+    setWeight(newValue);
+    if (!Array.isArray(newValue)) {
+      return;
+    }
 
-      if (weight[1] - weight[0] < minDistance) {
-        if (activeThumb === 0) {
-          const clamped = Math.min(weight[0], highestWeight - minDistance);
-          setWeight([clamped, clamped + minDistance]);
-        } else {
-          const clamped = Math.max(weight[1], minDistance);
-          setWeight([clamped - minDistance, clamped]);
-        }
+    if (weight[1] - weight[0] < minDistance) {
+      if (activeThumb === 0) {
+        const clamped = Math.min(weight[0], highestWeight - minDistance);
+        setWeight([clamped, clamped + minDistance]);
       } else {
-        setWeight(newValue);
+        const clamped = Math.max(weight[1], minDistance);
+        setWeight([clamped - minDistance, clamped]);
       }
-    };
+    } else {
+      setWeight(newValue);
+    }
+  };
 
   const handle0to60SliderChange = (event, newValue, activeThumb) => {
     setZeroTo60(newValue);
@@ -851,7 +851,7 @@ const CarFilter = ({
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Box sx={{ display: 'flex', justifyContent: "space-around", width: "100%", flexWrap: 'wrap'}}>
+          <Box sx={{ display: 'flex', justifyContent: "space-around", width: "100%", flexWrap: 'wrap' }}>
             <Typography>
               Search
             </Typography>
@@ -872,10 +872,10 @@ const CarFilter = ({
             </Typography>
           </Box>
         </AccordionSummary>
-      <AccordionDetails>
-        <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
-          <TextField sx={{ minWidth: "30%" }} color="secondary" id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
-          {/* {carsSortType[1] === "ascend" ?
+        <AccordionDetails>
+          <Box sx={{ width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+            <TextField sx={{ minWidth: "30%" }} color="secondary" id="standard-basic" label="Search" variant="outlined" value={search} onChange={handleSearch} />
+            {/* {carsSortType[1] === "ascend" ?
             <Button sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "descend"])}>
               <KeyboardArrowDownIcon /> RQ
             </Button>
@@ -883,144 +883,144 @@ const CarFilter = ({
             <Button color="secondary" sx={{ fontSize: "20px" }} onClick={() => setCarsSortType(["RQ", "ascend"])}>
               <KeyboardArrowUpIcon /> RQ
             </Button>} */}
-          <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
-            <Typography sx={{ mr: 1 }}> RQ </Typography>
-            <Slider
-              getAriaLabel={() => 'RQ'}
-              value={rqValue}
-              onChange={handleRQSliderChange}
-              valueLabelDisplay="auto"
-              getAriaValueText={rqSliderValuetext}
-              valueLabelFormat={rqSliderValuetext}
-              disableSwap
-              min={lowestRqValue}
-              max={highestRqValue}
-            />
-          </Stack>
-          <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
-            <TextField placeholder="Min RQ" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setRqValue([e.target.value, rqValue[1]])} value={rqValue[0]} />
-            <TextField placeholder="Max RQ" onChange={(e) => setRqValue([rqValue[0], e.target.value])} value={rqValue[1]} />
-          </Stack>
-        </Box>
-        {/* //? MAKE AND TAGS SELECT */}
-        <Box sx={{ mb: 1, mt: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
-          <Autocomplete
-            limitTags={3}
-            multiple
-            value={carMake}
-            sx={{ width: "100%" }}
-            options={carMakes}
-            autoHighlight
-            onChange={(event, newValue) => {
-              setCarMake(newValue);
-            }}
-            getOptionLabel={(option) => option}
-            renderOption={(props, option) => (
-              <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-                {option}
-              </Box>
-            )}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                label="Make"
-                inputProps={{
-                  ...params.inputProps,
-                  autoComplete: 'new-password', // disable autocomplete and autofill
-                }}
+            <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
+              <Typography sx={{ mr: 1 }}> RQ </Typography>
+              <Slider
+                getAriaLabel={() => 'RQ'}
+                value={rqValue}
+                onChange={handleRQSliderChange}
+                valueLabelDisplay="auto"
+                getAriaValueText={rqSliderValuetext}
+                valueLabelFormat={rqSliderValuetext}
+                disableSwap
+                min={lowestRqValue}
+                max={highestRqValue}
               />
-            )}
-          />
-          <Autocomplete
-            limitTags={3}
-            multiple
-            value={carTag}
-            sx={{ width: "100%" }}
-            options={carTags}
-            autoHighlight
-            onChange={(event, newValue) => {
-              setCarTag(newValue);
-            }}
-            getOptionLabel={(option) => option}
-            renderOption={(props, option) => (
-              <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-                {option}
-              </Box>
-            )}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                label="Tags"
-                inputProps={{
-                  ...params.inputProps,
-                  autoComplete: 'new-password', // disable autocomplete and autofill
-                }}
-              />
-            )}
-          />
-        </Box>
-
-      {/* //? COUNTRY AND TYRE TYPE SELECTS */}
-      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
-
-        <Autocomplete
-          limitTags={4}
-          multiple
-          value={carCountryValue}
-          id="country-select-demo"
-          sx={{ width: "100%" }}
-          options={countries}
-          autoHighlight
-          onChange={(event, newValue) => {
-            setCarCountryValue(newValue);
-          }}
-          getOptionLabel={(option) => option.label}
-          renderOption={(props, option) => (
-            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-              <img
-                loading="lazy"
-                width="20"
-                src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
-                srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
-                alt=""
-              />
-              {option.label} {option.code}
-            </Box>
-          )}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label="Country"
-              inputProps={{
-                ...params.inputProps,
-                autoComplete: 'new-password', // disable autocomplete and autofill
+            </Stack>
+            <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
+              <TextField placeholder="Min RQ" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setRqValue([e.target.value, rqValue[1]])} value={rqValue[0]} />
+              <TextField placeholder="Max RQ" onChange={(e) => setRqValue([rqValue[0], e.target.value])} value={rqValue[1]} />
+            </Stack>
+          </Box>
+          {/* //? MAKE AND TAGS SELECT */}
+          <Box sx={{ mb: 1, mt: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+            <Autocomplete
+              limitTags={3}
+              multiple
+              value={carMake}
+              sx={{ width: "100%" }}
+              options={carMakes}
+              autoHighlight
+              onChange={(event, newValue) => {
+                setCarMake(newValue);
               }}
+              getOptionLabel={(option) => option}
+              renderOption={(props, option) => (
+                <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+                  {option}
+                </Box>
+              )}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="Make"
+                  inputProps={{
+                    ...params.inputProps,
+                    autoComplete: 'new-password', // disable autocomplete and autofill
+                  }}
+                />
+              )}
             />
-          )}
-        />
+            <Autocomplete
+              limitTags={3}
+              multiple
+              value={carTag}
+              sx={{ width: "100%" }}
+              options={carTags}
+              autoHighlight
+              onChange={(event, newValue) => {
+                setCarTag(newValue);
+              }}
+              getOptionLabel={(option) => option}
+              renderOption={(props, option) => (
+                <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+                  {option}
+                </Box>
+              )}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="Tags"
+                  inputProps={{
+                    ...params.inputProps,
+                    autoComplete: 'new-password', // disable autocomplete and autofill
+                  }}
+                />
+              )}
+            />
+          </Box>
 
-        <FormControl sx={{ width: "100%" }}>
-          <InputLabel id="demo-multiple-checkbox-label">Tyre Type</InputLabel>
-          <Select
-            labelId="demo-multiple-checkbox-label"
-            id="demo-multiple-checkbox"
-            multiple
-            value={carTyre}
-            onChange={handleSelectTyreChange}
-            input={<OutlinedInput label="Tyre Type" />}
-            renderValue={(selected) => selected.join(', ')}
-            MenuProps={MenuProps}
-          >
-            {carTyres.sort().map((name) => (
-              <MenuItem key={name} value={name}>
-                <Checkbox color="success" checked={carTyre.indexOf(name) > -1} />
-                <ListItemText primary={name} />
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+          {/* //? COUNTRY AND TYRE TYPE SELECTS */}
+          <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
 
-      </Box>
+            <Autocomplete
+              limitTags={4}
+              multiple
+              value={carCountryValue}
+              id="country-select-demo"
+              sx={{ width: "100%" }}
+              options={countries}
+              autoHighlight
+              onChange={(event, newValue) => {
+                setCarCountryValue(newValue);
+              }}
+              getOptionLabel={(option) => option.label}
+              renderOption={(props, option) => (
+                <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+                  <img
+                    loading="lazy"
+                    width="20"
+                    src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
+                    srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
+                    alt=""
+                  />
+                  {option.label} {option.code}
+                </Box>
+              )}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="Country"
+                  inputProps={{
+                    ...params.inputProps,
+                    autoComplete: 'new-password', // disable autocomplete and autofill
+                  }}
+                />
+              )}
+            />
+
+            <FormControl sx={{ width: "100%" }}>
+              <InputLabel id="demo-multiple-checkbox-label">Tyre Type</InputLabel>
+              <Select
+                labelId="demo-multiple-checkbox-label"
+                id="demo-multiple-checkbox"
+                multiple
+                value={carTyre}
+                onChange={handleSelectTyreChange}
+                input={<OutlinedInput label="Tyre Type" />}
+                renderValue={(selected) => selected.join(', ')}
+                MenuProps={MenuProps}
+              >
+                {carTyres.sort().map((name) => (
+                  <MenuItem key={name} value={name}>
+                    <Checkbox color="success" checked={carTyre.indexOf(name) > -1} />
+                    <ListItemText primary={name} />
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+          </Box>
         </AccordionDetails>
       </Accordion>
 
@@ -1053,130 +1053,130 @@ const CarFilter = ({
           </Box>
         </AccordionSummary>
         <AccordionDetails>
-      <Box sx={{mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
-        <FormControl sx={{ mb: 1, width: "100%" }}>
-          <InputLabel id="demo-multiple-checkbox-label">Drive Type</InputLabel>
-          <Select
-            labelId="demo-multiple-checkbox-label"
-            id="demo-multiple-checkbox"
-            multiple
-            value={carDriveType}
-            onChange={handleSelectDriveTypeChange}
-            input={<OutlinedInput label="Drive Type" />}
-            renderValue={(selected) => selected.join(', ')}
-            MenuProps={MenuProps}
-          >
-            {carDriveTypes.map((name) => (
-              <MenuItem key={name} value={name}>
-                <Checkbox color="success" checked={carDriveType.indexOf(name) > -1} />
-                <ListItemText primary={name} />
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
-          <Typography sx={{ width: "6rem", mr: 1 }}> Top Speed </Typography>
-          <Slider
-            sx={{ mr: 1 }}
-            getAriaLabel={() => 'Top Speed'}
-            value={topSpeed}
-            onChange={handleTPSliderChange}
-            valueLabelDisplay="auto"
-            getAriaValueText={tpSliderValuetext}
-            valueLabelFormat={tpSliderValuetext}
-            disableSwap
-            min={lowestCarSpeed}
-            max={highestCarSpeed}
-          />
-        </Stack>
-      </Box>
+          <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+            <FormControl sx={{ mb: 1, width: "100%" }}>
+              <InputLabel id="demo-multiple-checkbox-label">Drive Type</InputLabel>
+              <Select
+                labelId="demo-multiple-checkbox-label"
+                id="demo-multiple-checkbox"
+                multiple
+                value={carDriveType}
+                onChange={handleSelectDriveTypeChange}
+                input={<OutlinedInput label="Drive Type" />}
+                renderValue={(selected) => selected.join(', ')}
+                MenuProps={MenuProps}
+              >
+                {carDriveTypes.map((name) => (
+                  <MenuItem key={name} value={name}>
+                    <Checkbox color="success" checked={carDriveType.indexOf(name) > -1} />
+                    <ListItemText primary={name} />
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+            <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
+              <Typography sx={{ width: "6rem", mr: 1 }}> Top Speed </Typography>
+              <Slider
+                sx={{ mr: 1 }}
+                getAriaLabel={() => 'Top Speed'}
+                value={topSpeed}
+                onChange={handleTPSliderChange}
+                valueLabelDisplay="auto"
+                getAriaValueText={tpSliderValuetext}
+                valueLabelFormat={tpSliderValuetext}
+                disableSwap
+                min={lowestCarSpeed}
+                max={highestCarSpeed}
+              />
+            </Stack>
+          </Box>
 
-      {/* //? SORT AND 0-60 SLIDER */}
-      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+          {/* //? SORT AND 0-60 SLIDER */}
+          <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
 
-        <FormControl sx={{ width: "100%" }}>
-          <InputLabel htmlFor="grouped-select">Sort</InputLabel>
-          <Select defaultValue={2} value={carsSortType} onChange={(e) => setCarsSortType(e.target.value)} label="Sort">
-            <ListSubheader sx={{ bgcolor: "background.paper2" }} color="primary">RQ Sort</ListSubheader>
-            <MenuItem value={1}>RQ: Ascending order {"<"}</MenuItem>
-            <MenuItem value={2}>RQ: Descending order {">"}</MenuItem>
-            <ListSubheader sx={{ bgcolor: "background.paper2" }}>Top Speed Sort</ListSubheader>
-            <MenuItem value={3}>TP: Ascending order {"<"}</MenuItem>
-            <MenuItem value={4}>TP: Descending order {">"}</MenuItem>
-            <ListSubheader sx={{ bgcolor: "background.paper2" }}>0-60 Sort</ListSubheader>
-            <MenuItem value={5}>0-60: Ascending order {"<"}</MenuItem>
-            <MenuItem value={6}>0-60: Descending order {">"}</MenuItem>
-            <ListSubheader sx={{ bgcolor: "background.paper2" }}>Handling Sort</ListSubheader>
-            <MenuItem value={7}>Handling: Ascending order {"<"}</MenuItem>
-            <MenuItem value={8}>Handling: Descending order {">"}</MenuItem>
-            <ListSubheader sx={{ bgcolor: "background.paper2" }}>Year Sort</ListSubheader>
-            <MenuItem value={9}>Year: Ascending order {"<"}</MenuItem>
-            <MenuItem value={10}>Year: Descending order {">"}</MenuItem>
-            <ListSubheader sx={{ bgcolor: "background.paper2" }}>MRA Sort</ListSubheader>
-            <MenuItem value={11}>MRA: Ascending order {"<"}</MenuItem>
-            <MenuItem value={12}>MRA: Descending order {">"}</MenuItem>
-            <ListSubheader sx={{ bgcolor: "background.paper2" }}>OLA Sort</ListSubheader>
-            <MenuItem value={13}>OLA: Ascending order {"<"}</MenuItem>
-            <MenuItem value={14}>OLA: Descending order {">"}</MenuItem>
-            <ListSubheader sx={{ bgcolor: "background.paper2" }}>Weight Sort</ListSubheader>
-            <MenuItem value={15}>Weight: Ascending order {"<"}</MenuItem>
-            <MenuItem value={16}>Weight: Descending order {">"}</MenuItem>
-          </Select>
-        </FormControl>
-        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
-          <Typography sx={{ width: "3rem", mr: 1 }}> 0-60 </Typography>
-          <Slider
-            sx={{ mr: 1 }}
-            getAriaLabel={() => 'Top Speed'}
-            value={zeroTo60}
-            onChange={handle0to60SliderChange}
-            valueLabelDisplay="auto"
-            getAriaValueText={zero60SliderValuetext}
-            valueLabelFormat={zero60SliderValuetext}
-            disableSwap
-            min={lowest0To60}
-            max={highest0To60}
-          />
-        </Stack>
-        <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
-          <TextField placeholder="Min 0-60" onChange={(e) => setZeroTo60([e.target.value, zeroTo60[1]])} value={zeroTo60[0]} />
-          <TextField placeholder="Max 0-60" onChange={(e) => setZeroTo60([zeroTo60[0], e.target.value])} value={zeroTo60[1]} />
-        </Stack>
-      </Box>
+            <FormControl sx={{ width: "100%" }}>
+              <InputLabel htmlFor="grouped-select">Sort</InputLabel>
+              <Select defaultValue={2} value={carsSortType} onChange={(e) => setCarsSortType(e.target.value)} label="Sort">
+                <ListSubheader sx={{ bgcolor: "background.paper2" }} color="primary">RQ Sort</ListSubheader>
+                <MenuItem value={1}>RQ: Ascending order {"<"}</MenuItem>
+                <MenuItem value={2}>RQ: Descending order {">"}</MenuItem>
+                <ListSubheader sx={{ bgcolor: "background.paper2" }}>Top Speed Sort</ListSubheader>
+                <MenuItem value={3}>TP: Ascending order {"<"}</MenuItem>
+                <MenuItem value={4}>TP: Descending order {">"}</MenuItem>
+                <ListSubheader sx={{ bgcolor: "background.paper2" }}>0-60 Sort</ListSubheader>
+                <MenuItem value={5}>0-60: Ascending order {"<"}</MenuItem>
+                <MenuItem value={6}>0-60: Descending order {">"}</MenuItem>
+                <ListSubheader sx={{ bgcolor: "background.paper2" }}>Handling Sort</ListSubheader>
+                <MenuItem value={7}>Handling: Ascending order {"<"}</MenuItem>
+                <MenuItem value={8}>Handling: Descending order {">"}</MenuItem>
+                <ListSubheader sx={{ bgcolor: "background.paper2" }}>Year Sort</ListSubheader>
+                <MenuItem value={9}>Year: Ascending order {"<"}</MenuItem>
+                <MenuItem value={10}>Year: Descending order {">"}</MenuItem>
+                <ListSubheader sx={{ bgcolor: "background.paper2" }}>MRA Sort</ListSubheader>
+                <MenuItem value={11}>MRA: Ascending order {"<"}</MenuItem>
+                <MenuItem value={12}>MRA: Descending order {">"}</MenuItem>
+                <ListSubheader sx={{ bgcolor: "background.paper2" }}>OLA Sort</ListSubheader>
+                <MenuItem value={13}>OLA: Ascending order {"<"}</MenuItem>
+                <MenuItem value={14}>OLA: Descending order {">"}</MenuItem>
+                <ListSubheader sx={{ bgcolor: "background.paper2" }}>Weight Sort</ListSubheader>
+                <MenuItem value={15}>Weight: Ascending order {"<"}</MenuItem>
+                <MenuItem value={16}>Weight: Descending order {">"}</MenuItem>
+              </Select>
+            </FormControl>
+            <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
+              <Typography sx={{ width: "3rem", mr: 1 }}> 0-60 </Typography>
+              <Slider
+                sx={{ mr: 1 }}
+                getAriaLabel={() => 'Top Speed'}
+                value={zeroTo60}
+                onChange={handle0to60SliderChange}
+                valueLabelDisplay="auto"
+                getAriaValueText={zero60SliderValuetext}
+                valueLabelFormat={zero60SliderValuetext}
+                disableSwap
+                min={lowest0To60}
+                max={highest0To60}
+              />
+            </Stack>
+            <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
+              <TextField placeholder="Min 0-60" onChange={(e) => setZeroTo60([e.target.value, zeroTo60[1]])} value={zeroTo60[0]} />
+              <TextField placeholder="Max 0-60" onChange={(e) => setZeroTo60([zeroTo60[0], e.target.value])} value={zeroTo60[1]} />
+            </Stack>
+          </Box>
 
-      {/* //? HANDLING AND YEAR SLIDERS */}
-      <Box sx={{mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
-        <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
-          <Typography sx={{ width: "5rem", mr: 1 }}> Handling </Typography>
-          <Slider
-            sx={{ mr: 1 }}
-            getAriaLabel={() => 'Top Speed'}
-            value={handling}
-            onChange={handleHandlingSliderChange}
-            valueLabelDisplay="auto"
-            getAriaValueText={handlingSliderValuetext}
-            valueLabelFormat={handlingSliderValuetext}
-            disableSwap
-            min={lowestHandling}
-            max={highestHandling}
-          />
-        </Stack>
-        <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
-          <Typography sx={{ mr: 1 }}> Year </Typography>
-          <Slider
-            sx={{ mr: 1 }}
-            getAriaLabel={() => 'Top Speed'}
-            value={year}
-            onChange={handleYearSliderChange}
-            valueLabelDisplay="auto"
-            getAriaValueText={yearSliderValuetext}
-            valueLabelFormat={yearSliderValuetext}
-            disableSwap
-            min={lowestYear}
-            max={highestYear}
-          />
-        </Stack>
-      </Box>
+          {/* //? HANDLING AND YEAR SLIDERS */}
+          <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+            <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
+              <Typography sx={{ width: "5rem", mr: 1 }}> Handling </Typography>
+              <Slider
+                sx={{ mr: 1 }}
+                getAriaLabel={() => 'Top Speed'}
+                value={handling}
+                onChange={handleHandlingSliderChange}
+                valueLabelDisplay="auto"
+                getAriaValueText={handlingSliderValuetext}
+                valueLabelFormat={handlingSliderValuetext}
+                disableSwap
+                min={lowestHandling}
+                max={highestHandling}
+              />
+            </Stack>
+            <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
+              <Typography sx={{ mr: 1 }}> Year </Typography>
+              <Slider
+                sx={{ mr: 1 }}
+                getAriaLabel={() => 'Top Speed'}
+                value={year}
+                onChange={handleYearSliderChange}
+                valueLabelDisplay="auto"
+                getAriaValueText={yearSliderValuetext}
+                valueLabelFormat={yearSliderValuetext}
+                disableSwap
+                min={lowestYear}
+                max={highestYear}
+              />
+            </Stack>
+          </Box>
         </AccordionDetails>
       </Accordion>
 
@@ -1209,147 +1209,147 @@ const CarFilter = ({
           </Box>
         </AccordionSummary>
         <AccordionDetails>
-      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
-        <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
-          <Typography sx={{ mr: 1 }}> MRA </Typography>
-          <Slider
-            sx={{ mr: 1 }}
-            getAriaLabel={() => 'Top Speed'}
-            value={mra}
-            onChange={handleMraSliderChange}
-            valueLabelDisplay="auto"
-            getAriaValueText={mraSliderValuetext}
-            valueLabelFormat={mraSliderValuetext}
-            disableSwap
-            min={lowestMra}
-            max={highestMra}
-          />
-        </Stack>
-        <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
-          <TextField placeholder="Min MRA" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setMra([e.target.value, mra[1]])} value={mra[0]} />
-          <TextField placeholder="Max MRA" onChange={(e) => setMra([mra[0], e.target.value])} value={mra[1]} />
-        </Stack>
-        <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
-          <Typography sx={{ mr: 1 }}> OLA </Typography>
-          <Slider
-            sx={{ mr: 1 }}
-            getAriaLabel={() => 'Top Speed'}
-            value={ola}
-            onChange={handleOlaSliderChange}
-            valueLabelDisplay="auto"
-            getAriaValueText={olaSliderValuetext}
-            valueLabelFormat={olaSliderValuetext}
-            disableSwap
-            min={lowestOla}
-            max={highestOla}
-          />
-        </Stack>
-        <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
-          <TextField placeholder="Min OLA" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setOla([e.target.value, ola[1]])} value={ola[0]} />
-          <TextField placeholder="Max OLA" onChange={(e) => setOla([ola[0], e.target.value])} value={ola[1]} />
-        </Stack>
-      </Box>
+          <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+            <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
+              <Typography sx={{ mr: 1 }}> MRA </Typography>
+              <Slider
+                sx={{ mr: 1 }}
+                getAriaLabel={() => 'Top Speed'}
+                value={mra}
+                onChange={handleMraSliderChange}
+                valueLabelDisplay="auto"
+                getAriaValueText={mraSliderValuetext}
+                valueLabelFormat={mraSliderValuetext}
+                disableSwap
+                min={lowestMra}
+                max={highestMra}
+              />
+            </Stack>
+            <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
+              <TextField placeholder="Min MRA" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setMra([e.target.value, mra[1]])} value={mra[0]} />
+              <TextField placeholder="Max MRA" onChange={(e) => setMra([mra[0], e.target.value])} value={mra[1]} />
+            </Stack>
+            <Stack direction="row" gap={1} alignItems="center" justifyContent="flex-start" sx={{ width: "100%" }}>
+              <Typography sx={{ mr: 1 }}> OLA </Typography>
+              <Slider
+                sx={{ mr: 1 }}
+                getAriaLabel={() => 'Top Speed'}
+                value={ola}
+                onChange={handleOlaSliderChange}
+                valueLabelDisplay="auto"
+                getAriaValueText={olaSliderValuetext}
+                valueLabelFormat={olaSliderValuetext}
+                disableSwap
+                min={lowestOla}
+                max={highestOla}
+              />
+            </Stack>
+            <Stack direction="row" gap={1} alignItems="center" mt={{ md: 0, xs: -3 }}>
+              <TextField placeholder="Min OLA" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => setOla([e.target.value, ola[1]])} value={ola[0]} />
+              <TextField placeholder="Max OLA" onChange={(e) => setOla([ola[0], e.target.value])} value={ola[1]} />
+            </Stack>
+          </Box>
 
 
-      {/* //? BODYSTYLE AND CREATOR SELECTS */}
-      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+          {/* //? BODYSTYLE AND CREATOR SELECTS */}
+          <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
 
-        <Autocomplete
-          limitTags={3}
-          multiple
-          value={bodyStyle}
-          sx={{ width: "100%" }}
-          options={bodyStyles}
-          autoHighlight
-          onChange={(event, newValue) => {
-            setBodyStyle(newValue);
-          }}
-          getOptionLabel={(option) => option}
-          renderOption={(props, option) => (
-            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-              {option}
-            </Box>
-          )}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label="Body Style"
-              inputProps={{
-                ...params.inputProps,
-                autoComplete: 'new-password', // disable autocomplete and autofill
+            <Autocomplete
+              limitTags={3}
+              multiple
+              value={bodyStyle}
+              sx={{ width: "100%" }}
+              options={bodyStyles}
+              autoHighlight
+              onChange={(event, newValue) => {
+                setBodyStyle(newValue);
               }}
+              getOptionLabel={(option) => option}
+              renderOption={(props, option) => (
+                <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+                  {option}
+                </Box>
+              )}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="Body Style"
+                  inputProps={{
+                    ...params.inputProps,
+                    autoComplete: 'new-password', // disable autocomplete and autofill
+                  }}
+                />
+              )}
             />
-          )}
-        />
 
-        <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
-          <Typography sx={{ width: "5rem" }}> Weight </Typography>
-          <Slider
-            sx={{ mr: 1 }}
-            getAriaLabel={() => 'Weight'}
-            value={weight}
-            onChange={handleWeightSliderChange}
-            valueLabelDisplay="auto"
-            getAriaValueText={weightSliderValuetext}
-            valueLabelFormat={weightSliderValuetext}
-            disableSwap
-            min={lowestWeight}
-            max={highestWeight}
-          />
-        </Stack>
-      </Box>
+            <Stack direction="row" gap={1} alignItems="center" sx={{ width: "100%" }}>
+              <Typography sx={{ width: "5rem" }}> Weight </Typography>
+              <Slider
+                sx={{ mr: 1 }}
+                getAriaLabel={() => 'Weight'}
+                value={weight}
+                onChange={handleWeightSliderChange}
+                valueLabelDisplay="auto"
+                getAriaValueText={weightSliderValuetext}
+                valueLabelFormat={weightSliderValuetext}
+                disableSwap
+                min={lowestWeight}
+                max={highestWeight}
+              />
+            </Stack>
+          </Box>
 
-      {/* //? FUEL TYPE AND GC */}
-      <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
-        <Autocomplete
-          limitTags={3}
-          multiple
-          value={fuelType}
-          sx={{ width: "100%" }}
-          options={carFuelTypes}
-          autoHighlight
-          onChange={(event, newValue) => {
-            setFuelType(newValue);
-          }}
-          getOptionLabel={(option) => option}
-          renderOption={(props, option) => (
-            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-              {option}
-            </Box>
-          )}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label="Fuel Type"
-              inputProps={{
-                ...params.inputProps,
-                autoComplete: 'new-password', // disable autocomplete and autofill
+          {/* //? FUEL TYPE AND GC */}
+          <Box sx={{ mb: 1, width: { xs: "100%", md: "98%" }, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: { xs: "column", md: "row" }, gap: 2 }} >
+            <Autocomplete
+              limitTags={3}
+              multiple
+              value={fuelType}
+              sx={{ width: "100%" }}
+              options={carFuelTypes}
+              autoHighlight
+              onChange={(event, newValue) => {
+                setFuelType(newValue);
               }}
+              getOptionLabel={(option) => option}
+              renderOption={(props, option) => (
+                <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+                  {option}
+                </Box>
+              )}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="Fuel Type"
+                  inputProps={{
+                    ...params.inputProps,
+                    autoComplete: 'new-password', // disable autocomplete and autofill
+                  }}
+                />
+              )}
             />
-          )}
-        />
 
-        <FormControl sx={{ width: "100%" }}>
-          <InputLabel id="demo-multiple-checkbox-label">Ground Clearances</InputLabel>
-          <Select
-            labelId="demo-multiple-checkbox-label"
-            id="demo-multiple-checkbox"
-            multiple
-            value={gc}
-            onChange={handleSelectGcChange}
-            input={<OutlinedInput label="Ground Clearances" />}
-            renderValue={(selected) => selected.join(', ')}
-            MenuProps={MenuProps}
-          >
-            {carGcs.map((name, i) => (
-              <MenuItem key={i} value={name}>
-                <Checkbox color="success" checked={gc.indexOf(name) > -1} />
-                <ListItemText primary={name} />
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </Box>
+            <FormControl sx={{ width: "100%" }}>
+              <InputLabel id="demo-multiple-checkbox-label">Ground Clearances</InputLabel>
+              <Select
+                labelId="demo-multiple-checkbox-label"
+                id="demo-multiple-checkbox"
+                multiple
+                value={gc}
+                onChange={handleSelectGcChange}
+                input={<OutlinedInput label="Ground Clearances" />}
+                renderValue={(selected) => selected.join(', ')}
+                MenuProps={MenuProps}
+              >
+                {carGcs.map((name, i) => (
+                  <MenuItem key={i} value={name}>
+                    <Checkbox color="success" checked={gc.indexOf(name) > -1} />
+                    <ListItemText primary={name} />
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Box>
 
         </AccordionDetails>
       </Accordion>

@@ -15,7 +15,9 @@ import Link from '@mui/material/Link';
 
 import Logo from '../logowhite.png'
 
-const pages = ['Creation', 'Tracks', 'Packs'];
+const pages = ['Tune Calculator',
+  // 'Creation', 'Tracks', 'Packs'
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Navbar = () => {
@@ -38,7 +40,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar  color="success" position="fixed">
+    <AppBar color="success" position="absolute" top="0" left="0">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link href="/" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
@@ -81,12 +83,13 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, width:  "70%" }}>
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, width: "70%" }}>
             <img src={Logo} style={{ width: "20rem" }} />
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
+                href={page.split(" ").join("-").toLowerCase()}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
@@ -98,7 +101,7 @@ const Navbar = () => {
 
           <Box sx={{ display: "flex", gap: "1rem", flexGrow: 0 }}>
 
-            <Tooltip title="Open settings">
+            {/* <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
@@ -124,9 +127,9 @@ const Navbar = () => {
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
             <Tooltip title="Join the Discord server!">
-              <Link id="discordLink" href="https://discord.gg/p3UbVP9BxB" sx={{ display: "flex", justifyContent: "center", alignItems: "center", transition: ".2s" }}>
+              <Link id="discordLink" href="https://discord.gg/p3UbVP9BxB" target="_blank" sx={{ display: "flex", justifyContent: "center", alignItems: "center", transition: ".2s" }}>
                 <img alt="" style={{ width: 40, borderRadius: 50 }} src="src/discord-v2-svgrepo-com.svg" />
               </Link>
             </Tooltip>

@@ -45,10 +45,6 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
     borderRadius: "10px"
   };
 
-  let compressImage
-
-
-
   return (
     <>
       <Box sx={{ display: "flex", flexWrap: "wrap", gap: "0.71rem", justifyContent: "center", backgroundColor: "", padding: "20px" }}>
@@ -87,18 +83,18 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
             } else if (carsSortType === 16) {
               return b.weight - a.weight
             }
-            }
-          ).map((car, i) => (
+          }
+        ).map((car, i) => (
           i >= (numOfCars * page - numOfCars) && i < (numOfCars * page) && (
             <Button key={i} onClick={() => handleOpen(car)} className="carCard">
-              <LazyLoadImage 
-              threshhold={200}
-              effect="blur" 
-              // delayMethod="debounce"
-              src={
-                car.card
-              } 
-              style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />
+              <LazyLoadImage
+                threshhold={200}
+                effect="blur"
+                // delayMethod="debounce"
+                src={
+                  car.card
+                }
+                style={{ width: "15rem", height: "9.35rem", marginBottom: "-5px" }} />
             </Button>
           )))}
       </Box>
@@ -130,7 +126,7 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-              <Typography>Description</Typography>
+                <Typography>Description</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography id="modal-modal-description" sx={{ mt: -1 }}>
@@ -144,13 +140,13 @@ const Cards = ({ filteredCars, page, numOfCars, carsSortType }) => {
 
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Box>
-                {modalCar.isPrize === true ?
+              {modalCar.isPrize === true ?
                 <Typography id="modal-modal-description" sx={{ mt: 0, color: "yellow", display: "flex", alignItems: "center", gap: 0.5 }} variant="h6">
-                    <EmojiEventsIcon /> Prize car
-                  </Typography>
-                  :
-                  <></>
-                }
+                  <EmojiEventsIcon /> Prize car
+                </Typography>
+                :
+                <></>
+              }
               <Typography sx={{ mt: 0 }} variant="h6">
                 {Array.isArray(modalCar.bodyStyle) ? modalCar.bodyStyle.join(" / ") : modalCar.bodyStyle}
               </Typography>
