@@ -26,7 +26,7 @@ function App() {
           <Route exact path='/cloned-drives-react/' element={<Home />} />
           <Route exact path='/cloned-drives-react/tune-calculator' element={<Creation />} />
           {/* <Route exact path='/cloned-drives-react/foot' element={<Footer />} /> */}
-          <Route exact path='*' element={<NoMatch />} />
+          <Route exact path='/cloned-drives-react/*' element={<NoMatch />} />
           {/* <Route element={<Footer />} /> */}
         </Routes>
 
