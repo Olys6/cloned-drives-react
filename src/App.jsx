@@ -23,10 +23,10 @@ function App() {
         <div style={{ marginTop: "5rem" }} />
 
         <Routes>
-          <Route exact path='/cloned-drives-react/' element={<Home />} />
-          <Route exact path='/cloned-drives-react/tune-calculator' element={<Creation />} />
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/tune-calculator' element={<Creation />} />
           {/* <Route exact path='/cloned-drives-react/foot' element={<Footer />} /> */}
-          <Route exact path='/cloned-drives-react/*' element={<NoMatch />} />
+          <Route exact path='*' element={<NoMatch />} />
           {/* <Route element={<Footer />} /> */}
         </Routes>
 

@@ -43,7 +43,7 @@ const Navbar = () => {
     <AppBar color="success" position="absolute" top="0" left="0">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link href="/cloned-drives-react/" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
+          <Link href="/" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
             <img src={Logo} style={{ width: "20rem" }} />
           </Link>
 
@@ -89,7 +89,7 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                href={`/cloned-drives-react/${page.split(" ").join("-").toLowerCase()}/`}
+                href={`/${page.split(" ").join("-").toLowerCase()}`}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
