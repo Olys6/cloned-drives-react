@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   background-color: black;
-  background-image: url("./siteBGDesktop.png") !important;
+  background-image: url("./images/siteBGDesktop.png") !important;
   background-attachment: fixed;
   background-size: cover;
   background-position: left;
@@ -18,6 +18,39 @@
 
 #discordLink:hover {
   transform: scale(1.2)
+}
+
+.fontPageItem {
+  width: 40rem;
+  height: 17rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+}
+
+.fontPageItem:hover {
+  transform: scale(1.05);
+}
+
+.carlist {
+  background-image: url('./images/carlist.png');
+  background-size: cover;
+}
+
+.packlist {
+  background-image: url('./images/packlist.png');
+  background-size: cover;
+}
+
+.tracklist {
+  background-image: url('./images/tracklist.png');
+  background-size: cover;
+}
+
+.bmcarlist {
+  background-image: url('./images/bmcarlist.png');
+  background-size: cover;
 }
 
 .carCard {
@@ -53,7 +86,7 @@
 
 @media screen and (max-width: 1000px) {
   #root {
-    background-image: url("./siteBGMobile.png") !important;
+    background-image: url("./images/siteBGMobile.png") !important;
   }
 
   #searchBox {
