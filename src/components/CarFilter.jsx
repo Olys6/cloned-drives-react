@@ -31,7 +31,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function rqSliderValuetext(value) {
-	return `${value} RQ`;
+	return `${value} CR`;
 }
 
 function tpSliderValuetext(value) {
@@ -79,9 +79,9 @@ const MenuProps = {
 
 const carTags = [];
 function getCarTags() {
-	carData.forEach((car) => {
+	carData.forEach(car => {
 		if (Array.isArray(car.tags) && car.tags.length > 0) {
-			car.tags.forEach((tag) => {
+			car.tags.forEach(tag => {
 				if (!carTags.includes(tag)) {
 					carTags.push(tag);
 				}
@@ -175,7 +175,7 @@ const CarFilter = ({
 	const carGcs = [];
 
 	const getCarOptions = () => {
-		carData.forEach((car) => {
+		carData.forEach(car => {
 			// getting all car countries
 			if (!carCountries.includes(car.country)) {
 				carCountries.push(car.country);
@@ -184,7 +184,7 @@ const CarFilter = ({
 
 			// getting all car makes
 			if (Array.isArray(car.make)) {
-				car.make.forEach((make) => {
+				car.make.forEach(make => {
 					if (!carMakes.includes(make)) {
 						carMakes.push(make);
 					}
@@ -206,7 +206,10 @@ const CarFilter = ({
 			}
 
 			// getting all car tyre types
-			if (!carTyres.includes(car.tyreType) && car.tyreType !== undefined) {
+			if (
+				!carTyres.includes(car.tyreType) &&
+				car.tyreType !== undefined
+			) {
 				carTyres.push(car.tyreType);
 			}
 
@@ -219,13 +222,19 @@ const CarFilter = ({
 			}
 
 			// getting all car fuel types
-			if (!carFuelTypes.includes(car.fuelType) && car.fuelType !== undefined) {
+			if (
+				!carFuelTypes.includes(car.fuelType) &&
+				car.fuelType !== undefined
+			) {
 				carFuelTypes.push(car.fuelType);
 				carFuelTypes.sort();
 			}
 
 			// getting all car gcs
-			if (!carGcs.includes(car.gc) && car.gc !== undefined) {
+			if (
+				!carGcs.includes(car.gc) &&
+				car.gc !== undefined
+			) {
 				carGcs.push(car.gc);
 				carFuelTypes.sort();
 			}
@@ -283,7 +292,11 @@ const CarFilter = ({
 		{ code: 'BJ', label: 'Benin', phone: '229' },
 		{ code: 'BL', label: 'Saint Barthelemy', phone: '590' },
 		{ code: 'BM', label: 'Bermuda', phone: '1-441' },
-		{ code: 'BN', label: 'Brunei Darussalam', phone: '673' },
+		{
+			code: 'BN',
+			label: 'Brunei Darussalam',
+			phone: '673',
+		},
 		{ code: 'BO', label: 'Bolivia', phone: '591' },
 		{ code: 'BR', label: 'Brazil', phone: '55' },
 		{ code: 'BS', label: 'Bahamas', phone: '1-242' },
@@ -385,7 +398,11 @@ const CarFilter = ({
 		{ code: 'GM', label: 'Gambia', phone: '220' },
 		{ code: 'GN', label: 'Guinea', phone: '224' },
 		{ code: 'GP', label: 'Guadeloupe', phone: '590' },
-		{ code: 'GQ', label: 'Equatorial Guinea', phone: '240' },
+		{
+			code: 'GQ',
+			label: 'Equatorial Guinea',
+			phone: '240',
+		},
 		{ code: 'GR', label: 'Greece', phone: '30' },
 		{
 			code: 'GS',
@@ -448,7 +465,11 @@ const CarFilter = ({
 			label: "Korea, Democratic People's Republic of",
 			phone: '850',
 		},
-		{ code: 'KR', label: 'Korea, Republic of', phone: '82' },
+		{
+			code: 'KR',
+			label: 'Korea, Republic of',
+			phone: '82',
+		},
 		{ code: 'KW', label: 'Kuwait', phone: '965' },
 		{ code: 'KY', label: 'Cayman Islands', phone: '1-345' },
 		{ code: 'KZ', label: 'Kazakhstan', phone: '7' },
@@ -653,7 +674,11 @@ const CarFilter = ({
 		},
 		{ code: 'VN', label: 'Vietnam', phone: '84' },
 		{ code: 'VU', label: 'Vanuatu', phone: '678' },
-		{ code: 'WF', label: 'Wallis and Futuna', phone: '681' },
+		{
+			code: 'WF',
+			label: 'Wallis and Futuna',
+			phone: '681',
+		},
 		{ code: 'WS', label: 'Samoa', phone: '685' },
 		{ code: 'XK', label: 'Kosovo', phone: '383' },
 		{ code: 'YE', label: 'Yemen', phone: '967' },
@@ -661,9 +686,11 @@ const CarFilter = ({
 		{ code: 'ZA', label: 'South Africa', phone: '27' },
 		{ code: 'ZM', label: 'Zambia', phone: '260' },
 		{ code: 'ZW', label: 'Zimbabwe', phone: '263' },
-	].filter((country, i) => carCountries.includes(country.code));
+	].filter((country, i) =>
+		carCountries.includes(country.code)
+	);
 
-	const handleSelectTagChange = (event) => {
+	const handleSelectTagChange = event => {
 		const {
 			target: { value },
 		} = event;
@@ -673,7 +700,7 @@ const CarFilter = ({
 		);
 	};
 
-	const handleSelectTyreChange = (event) => {
+	const handleSelectTyreChange = event => {
 		const {
 			target: { value },
 		} = event;
@@ -683,7 +710,7 @@ const CarFilter = ({
 		);
 	};
 
-	const handleSelectDriveTypeChange = (event) => {
+	const handleSelectDriveTypeChange = event => {
 		const {
 			target: { value },
 		} = event;
@@ -693,7 +720,7 @@ const CarFilter = ({
 		);
 	};
 
-	const handleSelectBodyStyleChange = (event) => {
+	const handleSelectBodyStyleChange = event => {
 		const {
 			target: { value },
 		} = event;
@@ -703,7 +730,7 @@ const CarFilter = ({
 		);
 	};
 
-	const handleSelectGcChange = (event) => {
+	const handleSelectGcChange = event => {
 		const {
 			target: { value },
 		} = event;
@@ -713,17 +740,21 @@ const CarFilter = ({
 		);
 	};
 
-	const handleSearch = (event) => {
+	const handleSearch = event => {
 		setSearch(event.target.value);
 		setPage(1);
 	};
 
-	const handleSelectChange = (event) => {
+	const handleSelectChange = event => {
 		setSelect(event.target.value);
 		setPage(1);
 	};
 
-	const handleRQSliderChange = (event, newValue, activeThumb) => {
+	const handleRQSliderChange = (
+		event,
+		newValue,
+		activeThumb
+	) => {
 		setRqValue(newValue);
 		if (!Array.isArray(newValue)) {
 			return;
@@ -731,7 +762,10 @@ const CarFilter = ({
 
 		if (rqValue[1] - rqValue[0] < minDistance) {
 			if (activeThumb === 0) {
-				const clamped = Math.min(rqValue[0], highestRqValue - minDistance);
+				const clamped = Math.min(
+					rqValue[0],
+					highestRqValue - minDistance
+				);
 				setRqValue([clamped, clamped + minDistance]);
 			} else {
 				const clamped = Math.max(rqValue[1], minDistance);
@@ -741,7 +775,11 @@ const CarFilter = ({
 			setRqValue(newValue);
 		}
 	};
-	const handleTPSliderChange = (event, newValue, activeThumb) => {
+	const handleTPSliderChange = (
+		event,
+		newValue,
+		activeThumb
+	) => {
 		setTopSpeed(newValue);
 		if (!Array.isArray(newValue)) {
 			return;
@@ -749,7 +787,10 @@ const CarFilter = ({
 
 		if (topSpeed[1] - topSpeed[0] < minDistance) {
 			if (activeThumb === 0) {
-				const clamped = Math.min(topSpeed[0], highestCarSpeed - minDistance);
+				const clamped = Math.min(
+					topSpeed[0],
+					highestCarSpeed - minDistance
+				);
 				setTopSpeed([clamped, clamped + minDistance]);
 			} else {
 				const clamped = Math.max(topSpeed[1], minDistance);
@@ -759,7 +800,11 @@ const CarFilter = ({
 			setTopSpeed(newValue);
 		}
 	};
-	const handleWeightSliderChange = (event, newValue, activeThumb) => {
+	const handleWeightSliderChange = (
+		event,
+		newValue,
+		activeThumb
+	) => {
 		setWeight(newValue);
 		if (!Array.isArray(newValue)) {
 			return;
@@ -767,7 +812,10 @@ const CarFilter = ({
 
 		if (weight[1] - weight[0] < minDistance) {
 			if (activeThumb === 0) {
-				const clamped = Math.min(weight[0], highestWeight - minDistance);
+				const clamped = Math.min(
+					weight[0],
+					highestWeight - minDistance
+				);
 				setWeight([clamped, clamped + minDistance]);
 			} else {
 				const clamped = Math.max(weight[1], minDistance);
@@ -778,7 +826,11 @@ const CarFilter = ({
 		}
 	};
 
-	const handle0to60SliderChange = (event, newValue, activeThumb) => {
+	const handle0to60SliderChange = (
+		event,
+		newValue,
+		activeThumb
+	) => {
 		setZeroTo60(newValue);
 		if (!Array.isArray(newValue)) {
 			return;
@@ -786,7 +838,10 @@ const CarFilter = ({
 
 		if (zeroTo60[1] - zeroTo60[0] < minDistance) {
 			if (activeThumb === 0) {
-				const clamped = Math.min(zeroTo60[0], highest0To60 - 1);
+				const clamped = Math.min(
+					zeroTo60[0],
+					highest0To60 - 1
+				);
 				setZeroTo60([clamped, clamped + minDistance]);
 			} else {
 				const clamped = Math.max(zeroTo60[1], 1);
@@ -796,7 +851,11 @@ const CarFilter = ({
 			setZeroTo60(newValue);
 		}
 	};
-	const handleHandlingSliderChange = (event, newValue, activeThumb) => {
+	const handleHandlingSliderChange = (
+		event,
+		newValue,
+		activeThumb
+	) => {
 		setHandling(newValue);
 		if (!Array.isArray(newValue)) {
 			return;
@@ -804,7 +863,10 @@ const CarFilter = ({
 
 		if (handling[1] - handling[0] < minDistance) {
 			if (activeThumb === 0) {
-				const clamped = Math.min(handling[0], highestHandling - minDistance);
+				const clamped = Math.min(
+					handling[0],
+					highestHandling - minDistance
+				);
 				setHandling([clamped, clamped + minDistance]);
 			} else {
 				const clamped = Math.max(handling[1], minDistance);
@@ -814,7 +876,11 @@ const CarFilter = ({
 			setHandling(newValue);
 		}
 	};
-	const handleYearSliderChange = (event, newValue, activeThumb) => {
+	const handleYearSliderChange = (
+		event,
+		newValue,
+		activeThumb
+	) => {
 		setYear(newValue);
 		if (!Array.isArray(newValue)) {
 			return;
@@ -822,7 +888,10 @@ const CarFilter = ({
 
 		if (year[1] - year[0] < minDistance) {
 			if (activeThumb === 0) {
-				const clamped = Math.min(year[0], highestYear - minDistance);
+				const clamped = Math.min(
+					year[0],
+					highestYear - minDistance
+				);
 				setYear([clamped, clamped + minDistance]);
 			} else {
 				const clamped = Math.max(year[1], 1);
@@ -832,7 +901,11 @@ const CarFilter = ({
 			setYear(newValue);
 		}
 	};
-	const handleMraSliderChange = (event, newValue, activeThumb) => {
+	const handleMraSliderChange = (
+		event,
+		newValue,
+		activeThumb
+	) => {
 		setMra(newValue);
 		if (!Array.isArray(newValue)) {
 			return;
@@ -840,7 +913,10 @@ const CarFilter = ({
 
 		if (mra[1] - mra[0] < minDistance) {
 			if (activeThumb === 0) {
-				const clamped = Math.min(mra[0], highestMra - minDistance);
+				const clamped = Math.min(
+					mra[0],
+					highestMra - minDistance
+				);
 				setMra([clamped, clamped + minDistance]);
 			} else {
 				const clamped = Math.max(mra[1], 1);
@@ -850,7 +926,11 @@ const CarFilter = ({
 			setMra(newValue);
 		}
 	};
-	const handleOlaSliderChange = (event, newValue, activeThumb) => {
+	const handleOlaSliderChange = (
+		event,
+		newValue,
+		activeThumb
+	) => {
 		setOla(newValue);
 		if (!Array.isArray(newValue)) {
 			return;
@@ -858,7 +938,10 @@ const CarFilter = ({
 
 		if (ola[1] - ola[0] < minDistance) {
 			if (activeThumb === 0) {
-				const clamped = Math.min(ola[0], highestOla - minDistance);
+				const clamped = Math.min(
+					ola[0],
+					highestOla - minDistance
+				);
 				setOla([clamped, clamped + minDistance]);
 			} else {
 				const clamped = Math.max(ola[1], 1);
@@ -873,7 +956,7 @@ const CarFilter = ({
 		// console.log(lowestMra)
 	}, []);
 
-	const handleAccordion = (panel) => (event, isExpanded) => {
+	const handleAccordion = panel => (event, isExpanded) => {
 		setExpanded(isExpanded ? panel : false);
 	};
 
@@ -897,7 +980,7 @@ const CarFilter = ({
 							flexWrap: 'wrap',
 						}}>
 						<Typography>Search</Typography>
-						<Typography>RQ</Typography>
+						<Typography>CR</Typography>
 						<Typography>Make</Typography>
 						<Typography>Tags</Typography>
 						<Typography>Country</Typography>
@@ -936,9 +1019,9 @@ const CarFilter = ({
 							gap={1}
 							alignItems='center'
 							sx={{ width: '100%' }}>
-							<Typography sx={{ mr: 1 }}> RQ </Typography>
+							<Typography sx={{ mr: 1 }}> CR </Typography>
 							<Slider
-								getAriaLabel={() => 'RQ'}
+								getAriaLabel={() => 'CR'}
 								value={rqValue}
 								onChange={handleRQSliderChange}
 								valueLabelDisplay='auto'
@@ -955,14 +1038,21 @@ const CarFilter = ({
 							alignItems='center'
 							mt={{ md: 0, xs: -3 }}>
 							<TextField
-								placeholder='Min RQ'
-								inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-								onChange={(e) => setRqValue([e.target.value, rqValue[1]])}
+								placeholder='Min CR'
+								inputProps={{
+									inputMode: 'numeric',
+									pattern: '[0-9]*',
+								}}
+								onChange={e =>
+									setRqValue([e.target.value, rqValue[1]])
+								}
 								value={rqValue[0]}
 							/>
 							<TextField
-								placeholder='Max RQ'
-								onChange={(e) => setRqValue([rqValue[0], e.target.value])}
+								placeholder='Max CR'
+								onChange={e =>
+									setRqValue([rqValue[0], e.target.value])
+								}
 								value={rqValue[1]}
 							/>
 						</Stack>
@@ -989,16 +1079,18 @@ const CarFilter = ({
 							onChange={(event, newValue) => {
 								setCarMake(newValue);
 							}}
-							getOptionLabel={(option) => option}
+							getOptionLabel={option => option}
 							renderOption={(props, option) => (
 								<Box
 									component='li'
-									sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
+									sx={{
+										'& > img': { mr: 2, flexShrink: 0 },
+									}}
 									{...props}>
 									{option}
 								</Box>
 							)}
-							renderInput={(params) => (
+							renderInput={params => (
 								<TextField
 									{...params}
 									label='Make'
@@ -1019,16 +1111,18 @@ const CarFilter = ({
 							onChange={(event, newValue) => {
 								setCarTag(newValue);
 							}}
-							getOptionLabel={(option) => option}
+							getOptionLabel={option => option}
 							renderOption={(props, option) => (
 								<Box
 									component='li'
-									sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
+									sx={{
+										'& > img': { mr: 2, flexShrink: 0 },
+									}}
 									{...props}>
 									{option}
 								</Box>
 							)}
-							renderInput={(params) => (
+							renderInput={params => (
 								<TextField
 									{...params}
 									label='Tags'
@@ -1063,11 +1157,13 @@ const CarFilter = ({
 							onChange={(event, newValue) => {
 								setCarCountryValue(newValue);
 							}}
-							getOptionLabel={(option) => option.label}
+							getOptionLabel={option => option.label}
 							renderOption={(props, option) => (
 								<Box
 									component='li'
-									sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
+									sx={{
+										'& > img': { mr: 2, flexShrink: 0 },
+									}}
 									{...props}>
 									<img
 										loading='lazy'
@@ -1079,7 +1175,7 @@ const CarFilter = ({
 									{option.label} {option.code}
 								</Box>
 							)}
-							renderInput={(params) => (
+							renderInput={params => (
 								<TextField
 									{...params}
 									label='Country'
@@ -1102,9 +1198,11 @@ const CarFilter = ({
 								value={carTyre}
 								onChange={handleSelectTyreChange}
 								input={<OutlinedInput label='Tyre Type' />}
-								renderValue={(selected) => selected.join(', ')}
+								renderValue={selected =>
+									selected.join(', ')
+								}
 								MenuProps={MenuProps}>
-								{carTyres.sort().map((name) => (
+								{carTyres.sort().map(name => (
 									<MenuItem
 										key={name}
 										value={name}>
@@ -1168,15 +1266,19 @@ const CarFilter = ({
 								value={carDriveType}
 								onChange={handleSelectDriveTypeChange}
 								input={<OutlinedInput label='Drive Type' />}
-								renderValue={(selected) => selected.join(', ')}
+								renderValue={selected =>
+									selected.join(', ')
+								}
 								MenuProps={MenuProps}>
-								{carDriveTypes.map((name) => (
+								{carDriveTypes.map(name => (
 									<MenuItem
 										key={name}
 										value={name}>
 										<Checkbox
 											color='success'
-											checked={carDriveType.indexOf(name) > -1}
+											checked={
+												carDriveType.indexOf(name) > -1
+											}
 										/>
 										<ListItemText primary={name} />
 									</MenuItem>
@@ -1188,7 +1290,10 @@ const CarFilter = ({
 							gap={1}
 							alignItems='center'
 							sx={{ width: '100%' }}>
-							<Typography sx={{ width: '6rem', mr: 1 }}> Top Speed </Typography>
+							<Typography sx={{ width: '6rem', mr: 1 }}>
+								{' '}
+								Top Speed{' '}
+							</Typography>
 							<Slider
 								sx={{ mr: 1 }}
 								getAriaLabel={() => 'Top Speed'}
@@ -1216,54 +1321,97 @@ const CarFilter = ({
 							gap: 2,
 						}}>
 						<FormControl sx={{ width: '100%' }}>
-							<InputLabel htmlFor='grouped-select'>Sort</InputLabel>
+							<InputLabel htmlFor='grouped-select'>
+								Sort
+							</InputLabel>
 							<Select
 								defaultValue={2}
 								value={carsSortType}
-								onChange={(e) => setCarsSortType(e.target.value)}
+								onChange={e =>
+									setCarsSortType(e.target.value)
+								}
 								label='Sort'>
 								<ListSubheader
 									sx={{ bgcolor: 'background.paper2' }}
 									color='primary'>
-									RQ Sort
+									CR Sort
 								</ListSubheader>
-								<MenuItem value={1}>RQ: Ascending order {'<'}</MenuItem>
-								<MenuItem value={2}>RQ: Descending order {'>'}</MenuItem>
-								<ListSubheader sx={{ bgcolor: 'background.paper2' }}>
+								<MenuItem value={1}>
+									CR: Ascending order {'<'}
+								</MenuItem>
+								<MenuItem value={2}>
+									CR: Descending order {'>'}
+								</MenuItem>
+								<ListSubheader
+									sx={{ bgcolor: 'background.paper2' }}>
 									Top Speed Sort
 								</ListSubheader>
-								<MenuItem value={3}>TP: Ascending order {'<'}</MenuItem>
-								<MenuItem value={4}>TP: Descending order {'>'}</MenuItem>
-								<ListSubheader sx={{ bgcolor: 'background.paper2' }}>
+								<MenuItem value={3}>
+									TP: Ascending order {'<'}
+								</MenuItem>
+								<MenuItem value={4}>
+									TP: Descending order {'>'}
+								</MenuItem>
+								<ListSubheader
+									sx={{ bgcolor: 'background.paper2' }}>
 									0-60 Sort
 								</ListSubheader>
-								<MenuItem value={5}>0-60: Ascending order {'<'}</MenuItem>
-								<MenuItem value={6}>0-60: Descending order {'>'}</MenuItem>
-								<ListSubheader sx={{ bgcolor: 'background.paper2' }}>
+								<MenuItem value={5}>
+									0-60: Ascending order {'<'}
+								</MenuItem>
+								<MenuItem value={6}>
+									0-60: Descending order {'>'}
+								</MenuItem>
+								<ListSubheader
+									sx={{ bgcolor: 'background.paper2' }}>
 									Handling Sort
 								</ListSubheader>
-								<MenuItem value={7}>Handling: Ascending order {'<'}</MenuItem>
-								<MenuItem value={8}>Handling: Descending order {'>'}</MenuItem>
-								<ListSubheader sx={{ bgcolor: 'background.paper2' }}>
+								<MenuItem value={7}>
+									Handling: Ascending order {'<'}
+								</MenuItem>
+								<MenuItem value={8}>
+									Handling: Descending order {'>'}
+								</MenuItem>
+								<ListSubheader
+									sx={{ bgcolor: 'background.paper2' }}>
 									Year Sort
 								</ListSubheader>
-								<MenuItem value={9}>Year: Ascending order {'<'}</MenuItem>
-								<MenuItem value={10}>Year: Descending order {'>'}</MenuItem>
-								<ListSubheader sx={{ bgcolor: 'background.paper2' }}>
+								<MenuItem value={9}>
+									Year: Ascending order {'<'}
+								</MenuItem>
+								<MenuItem value={10}>
+									Year: Descending order {'>'}
+								</MenuItem>
+								<ListSubheader
+									sx={{ bgcolor: 'background.paper2' }}>
 									MRA Sort
 								</ListSubheader>
-								<MenuItem value={11}>MRA: Ascending order {'<'}</MenuItem>
-								<MenuItem value={12}>MRA: Descending order {'>'}</MenuItem>
-								<ListSubheader sx={{ bgcolor: 'background.paper2' }}>
+								<MenuItem value={11}>
+									MRA: Ascending order {'<'}
+								</MenuItem>
+								<MenuItem value={12}>
+									MRA: Descending order {'>'}
+								</MenuItem>
+								<ListSubheader
+									sx={{ bgcolor: 'background.paper2' }}>
 									OLA Sort
 								</ListSubheader>
-								<MenuItem value={13}>OLA: Ascending order {'<'}</MenuItem>
-								<MenuItem value={14}>OLA: Descending order {'>'}</MenuItem>
-								<ListSubheader sx={{ bgcolor: 'background.paper2' }}>
+								<MenuItem value={13}>
+									OLA: Ascending order {'<'}
+								</MenuItem>
+								<MenuItem value={14}>
+									OLA: Descending order {'>'}
+								</MenuItem>
+								<ListSubheader
+									sx={{ bgcolor: 'background.paper2' }}>
 									Weight Sort
 								</ListSubheader>
-								<MenuItem value={15}>Weight: Ascending order {'<'}</MenuItem>
-								<MenuItem value={16}>Weight: Descending order {'>'}</MenuItem>
+								<MenuItem value={15}>
+									Weight: Ascending order {'<'}
+								</MenuItem>
+								<MenuItem value={16}>
+									Weight: Descending order {'>'}
+								</MenuItem>
 							</Select>
 						</FormControl>
 						<Stack
@@ -1271,7 +1419,10 @@ const CarFilter = ({
 							gap={1}
 							alignItems='center'
 							sx={{ width: '100%' }}>
-							<Typography sx={{ width: '3rem', mr: 1 }}> 0-60 </Typography>
+							<Typography sx={{ width: '3rem', mr: 1 }}>
+								{' '}
+								0-60{' '}
+							</Typography>
 							<Slider
 								sx={{ mr: 1 }}
 								getAriaLabel={() => 'Top Speed'}
@@ -1292,12 +1443,16 @@ const CarFilter = ({
 							mt={{ md: 0, xs: -3 }}>
 							<TextField
 								placeholder='Min 0-60'
-								onChange={(e) => setZeroTo60([e.target.value, zeroTo60[1]])}
+								onChange={e =>
+									setZeroTo60([e.target.value, zeroTo60[1]])
+								}
 								value={zeroTo60[0]}
 							/>
 							<TextField
 								placeholder='Max 0-60'
-								onChange={(e) => setZeroTo60([zeroTo60[0], e.target.value])}
+								onChange={e =>
+									setZeroTo60([zeroTo60[0], e.target.value])
+								}
 								value={zeroTo60[1]}
 							/>
 						</Stack>
@@ -1320,7 +1475,10 @@ const CarFilter = ({
 							alignItems='center'
 							justifyContent='flex-start'
 							sx={{ width: '100%' }}>
-							<Typography sx={{ width: '5rem', mr: 1 }}> Handling </Typography>
+							<Typography sx={{ width: '5rem', mr: 1 }}>
+								{' '}
+								Handling{' '}
+							</Typography>
 							<Slider
 								sx={{ mr: 1 }}
 								getAriaLabel={() => 'Top Speed'}
@@ -1421,13 +1579,20 @@ const CarFilter = ({
 							mt={{ md: 0, xs: -3 }}>
 							<TextField
 								placeholder='Min MRA'
-								inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-								onChange={(e) => setMra([e.target.value, mra[1]])}
+								inputProps={{
+									inputMode: 'numeric',
+									pattern: '[0-9]*',
+								}}
+								onChange={e =>
+									setMra([e.target.value, mra[1]])
+								}
 								value={mra[0]}
 							/>
 							<TextField
 								placeholder='Max MRA'
-								onChange={(e) => setMra([mra[0], e.target.value])}
+								onChange={e =>
+									setMra([mra[0], e.target.value])
+								}
 								value={mra[1]}
 							/>
 						</Stack>
@@ -1458,13 +1623,20 @@ const CarFilter = ({
 							mt={{ md: 0, xs: -3 }}>
 							<TextField
 								placeholder='Min OLA'
-								inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-								onChange={(e) => setOla([e.target.value, ola[1]])}
+								inputProps={{
+									inputMode: 'numeric',
+									pattern: '[0-9]*',
+								}}
+								onChange={e =>
+									setOla([e.target.value, ola[1]])
+								}
 								value={ola[0]}
 							/>
 							<TextField
 								placeholder='Max OLA'
-								onChange={(e) => setOla([ola[0], e.target.value])}
+								onChange={e =>
+									setOla([ola[0], e.target.value])
+								}
 								value={ola[1]}
 							/>
 						</Stack>
@@ -1491,16 +1663,18 @@ const CarFilter = ({
 							onChange={(event, newValue) => {
 								setBodyStyle(newValue);
 							}}
-							getOptionLabel={(option) => option}
+							getOptionLabel={option => option}
 							renderOption={(props, option) => (
 								<Box
 									component='li'
-									sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
+									sx={{
+										'& > img': { mr: 2, flexShrink: 0 },
+									}}
 									{...props}>
 									{option}
 								</Box>
 							)}
-							renderInput={(params) => (
+							renderInput={params => (
 								<TextField
 									{...params}
 									label='Body Style'
@@ -1517,7 +1691,10 @@ const CarFilter = ({
 							gap={1}
 							alignItems='center'
 							sx={{ width: '100%' }}>
-							<Typography sx={{ width: '5rem' }}> Weight </Typography>
+							<Typography sx={{ width: '5rem' }}>
+								{' '}
+								Weight{' '}
+							</Typography>
 							<Slider
 								sx={{ mr: 1 }}
 								getAriaLabel={() => 'Weight'}
@@ -1554,16 +1731,18 @@ const CarFilter = ({
 							onChange={(event, newValue) => {
 								setFuelType(newValue);
 							}}
-							getOptionLabel={(option) => option}
+							getOptionLabel={option => option}
 							renderOption={(props, option) => (
 								<Box
 									component='li'
-									sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
+									sx={{
+										'& > img': { mr: 2, flexShrink: 0 },
+									}}
 									{...props}>
 									{option}
 								</Box>
 							)}
-							renderInput={(params) => (
+							renderInput={params => (
 								<TextField
 									{...params}
 									label='Fuel Type'
@@ -1585,8 +1764,12 @@ const CarFilter = ({
 								multiple
 								value={gc}
 								onChange={handleSelectGcChange}
-								input={<OutlinedInput label='Ground Clearances' />}
-								renderValue={(selected) => selected.join(', ')}
+								input={
+									<OutlinedInput label='Ground Clearances' />
+								}
+								renderValue={selected =>
+									selected.join(', ')
+								}
 								MenuProps={MenuProps}>
 								{carGcs.map((name, i) => (
 									<MenuItem
@@ -1617,13 +1800,15 @@ const CarFilter = ({
 					gap: 2,
 				}}>
 				<FormControl fullWidth>
-					<InputLabel id='demo-simple-select-label'>Cars per page</InputLabel>
+					<InputLabel id='demo-simple-select-label'>
+						Cars per page
+					</InputLabel>
 					<Select
 						labelId='demo-simple-select-label'
 						id='demo-simple-select'
 						value={numOfCars / 5}
 						label='Cars per page'
-						onChange={(e) => setNumOfCars(e.target.value * 5)}
+						onChange={e => setNumOfCars(e.target.value * 5)}
 						defaultValue={2}>
 						<MenuItem value={1}>5</MenuItem>
 						<MenuItem value={2}>10</MenuItem>
@@ -1643,7 +1828,7 @@ const CarFilter = ({
 					onChange={(event, newValue) => {
 						setCreator(newValue);
 					}}
-					getOptionLabel={(option) => option}
+					getOptionLabel={option => option}
 					renderOption={(props, option) => (
 						<Box
 							component='li'
@@ -1652,7 +1837,7 @@ const CarFilter = ({
 							{option}
 						</Box>
 					)}
-					renderInput={(params) => (
+					renderInput={params => (
 						<TextField
 							{...params}
 							label='Creators'
@@ -1665,13 +1850,15 @@ const CarFilter = ({
 				/>
 
 				<FormControl fullWidth>
-					<InputLabel id='demo-simple-select-label'>Prize cars</InputLabel>
+					<InputLabel id='demo-simple-select-label'>
+						Prize cars
+					</InputLabel>
 					<Select
 						labelId='demo-simple-select-label'
 						id='demo-simple-select'
 						value={prize}
 						label='Prize cars'
-						onChange={(e) => setPrize(e.target.value)}
+						onChange={e => setPrize(e.target.value)}
 						defaultValue={1}>
 						<MenuItem value={1}>All</MenuItem>
 						<MenuItem value={2}>Prize</MenuItem>

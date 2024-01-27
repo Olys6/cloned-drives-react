@@ -28,25 +28,51 @@ let lowestOla = 10000;
 let lowestWeight = 10000;
 
 const getHighestAndLowestValues = () => {
-	carData.forEach((car) => {
-		highestRqValue < car.rq ? (highestRqValue = car.rq) : null;
-		highestCarSpeed < car.topSpeed ? (highestCarSpeed = car.topSpeed) : null;
-		highest0To60 < car['0to60'] ? (highest0To60 = car['0to60']) : null;
-		highestHandling < car.handling ? (highestHandling = car.handling) : null;
-		highestYear < car.modelYear ? (highestYear = car.modelYear) : null;
+	carData.forEach(car => {
+		highestRqValue < car.cr
+			? (highestRqValue = car.cr)
+			: null;
+		highestCarSpeed < car.topSpeed
+			? (highestCarSpeed = car.topSpeed)
+			: null;
+		highest0To60 < car['0to60']
+			? (highest0To60 = car['0to60'])
+			: null;
+		highestHandling < car.handling
+			? (highestHandling = car.handling)
+			: null;
+		highestYear < car.modelYear
+			? (highestYear = car.modelYear)
+			: null;
 		highestMra < car.mra ? (highestMra = car.mra) : null;
 		highestOla < car.ola ? (highestOla = car.ola) : null;
-		highestWeight < car.weight ? (highestWeight = car.weight) : null;
+		highestWeight < car.weight
+			? (highestWeight = car.weight)
+			: null;
 
-		lowestRqValue > car.rq ? (lowestRqValue = car.rq) : null;
-		lowestCarSpeed > car.topSpeed ? (lowestCarSpeed = car.topSpeed) : null;
-		lowest0To60 > car['0to60'] ? (lowest0To60 = car['0to60']) : null;
-		lowestHandling > car.handling ? (lowestHandling = car.handling) : null;
-		lowestYear > car.modelYear ? (lowestYear = car.modelYear) : null;
+		lowestRqValue > car.cr
+			? (lowestRqValue = car.cr)
+			: null;
+		lowestCarSpeed > car.topSpeed
+			? (lowestCarSpeed = car.topSpeed)
+			: null;
+		lowest0To60 > car['0to60']
+			? (lowest0To60 = car['0to60'])
+			: null;
+		lowestHandling > car.handling
+			? (lowestHandling = car.handling)
+			: null;
+		lowestYear > car.modelYear
+			? (lowestYear = car.modelYear)
+			: null;
 		lowestMra > car.mra ? (lowestMra = car.mra) : null;
 		lowestOla > car.ola ? (lowestOla = car.ola) : null;
-		lowestWeight > car.weight ? (lowestWeight = car.weight) : null;
-		lowestWeight > car.weight ? (lowestWeight = car.weight) : null;
+		lowestWeight > car.weight
+			? (lowestWeight = car.weight)
+			: null;
+		lowestWeight > car.weight
+			? (lowestWeight = car.weight)
+			: null;
 	});
 };
 
@@ -56,17 +82,34 @@ const Home = () => {
 	const [search, setSearch] = useState('');
 	const [select, setSelect] = useState('all');
 	const [page, setPage] = useState(1);
-	const [rqValue, setRqValue] = useState([lowestRqValue, highestRqValue]);
+	const [rqValue, setRqValue] = useState([
+		lowestRqValue,
+		highestRqValue,
+	]);
 	const [carsSortType, setCarsSortType] = useState(2);
 	const [carTag, setCarTag] = useState([]);
-	const [carCountryValue, setCarCountryValue] = useState([]);
+	const [carCountryValue, setCarCountryValue] = useState(
+		[]
+	);
 	const [carMake, setCarMake] = useState([]);
 	const [carTyre, setCarTyre] = useState([]);
 	const [carDriveType, setCarDriveType] = useState([]);
-	const [topSpeed, setTopSpeed] = useState([lowestCarSpeed, highestCarSpeed]);
-	const [zeroTo60, setZeroTo60] = useState([lowest0To60, highest0To60]);
-	const [handling, setHandling] = useState([lowestHandling, highestHandling]);
-	const [year, setYear] = useState([lowestYear, highestYear]);
+	const [topSpeed, setTopSpeed] = useState([
+		lowestCarSpeed,
+		highestCarSpeed,
+	]);
+	const [zeroTo60, setZeroTo60] = useState([
+		lowest0To60,
+		highest0To60,
+	]);
+	const [handling, setHandling] = useState([
+		lowestHandling,
+		highestHandling,
+	]);
+	const [year, setYear] = useState([
+		lowestYear,
+		highestYear,
+	]);
 	const [mra, setMra] = useState([lowestMra, highestMra]);
 	const [ola, setOla] = useState([lowestOla, highestOla]);
 	const [bodyStyle, setBodyStyle] = useState([]);
@@ -75,7 +118,10 @@ const Home = () => {
 	const [prize, setPrize] = useState(1);
 	const [fuelType, setFuelType] = useState([]);
 	const [gc, setGc] = useState([]);
-	const [weight, setWeight] = useState([lowestWeight, highestWeight]);
+	const [weight, setWeight] = useState([
+		lowestWeight,
+		highestWeight,
+	]);
 	// { Array.isArray(car.make) ? car.make[0] : car.make }
 	const carTags = [];
 
@@ -87,17 +133,19 @@ const Home = () => {
 
 	const filteredCars = () => {
 		const regexSearch = new RegExp(`\\b${search}`, 'i');
-		return carData.filter((car) => {
+		return carData.filter(car => {
 			return (
-				(regexSearch.exec(Array.isArray(car.make) ? car.make[0] : car.make) ||
+				(regexSearch.exec(
+					Array.isArray(car.make) ? car.make[0] : car.make
+				) ||
 					regexSearch.exec(car.model) ||
 					regexSearch.exec(
 						Array.isArray(car.make)
 							? `${car.make[0]} ${car.model}`
 							: `${car.make} ${car.model}`
 					)) &&
-				car.rq <= rqValue[1] &&
-				car.rq >= rqValue[0] &&
+				car.cr <= rqValue[1] &&
+				car.cr >= rqValue[0] &&
 				car.topSpeed <= topSpeed[1] &&
 				car.topSpeed >= topSpeed[0] &&
 				car['0to60'] <= zeroTo60[1] &&
@@ -113,43 +161,54 @@ const Home = () => {
 				car.weight <= weight[1] &&
 				car.weight >= weight[0] &&
 				(carMake.length > 0
-					? carMake.some((elem) => car.make.includes(elem))
+					? carMake.some(elem => car.make.includes(elem))
 					: true) &&
 				(carTag.length > 0
-					? carTag.some((elem) => car.tags.includes(elem))
+					? carTag.some(elem => car.tags.includes(elem))
 					: true) &&
 				(carCountryValue.length > 0
-					? carCountryValue.some((elem) => elem.code === car.country)
+					? carCountryValue.some(
+							elem => elem.code === car.country
+					  )
 					: true) &&
 				(carTyre.length > 0
-					? carTyre.some((elem) => elem === car.tyreType)
+					? carTyre.some(elem => elem === car.tyreType)
 					: true) &&
 				(carDriveType.length > 0
-					? carDriveType.some((elem) => elem === car.driveType)
+					? carDriveType.some(
+							elem => elem === car.driveType
+					  )
 					: true) &&
 				(bodyStyle.length > 0
-					? bodyStyle.some((elem) => elem === car.bodyStyle)
+					? bodyStyle.some(elem => elem === car.bodyStyle)
 					: true) &&
 				(creator.length > 0
-					? creator.some((elem) => elem === car.creator)
+					? creator.some(elem => elem === car.creator)
 					: true) &&
 				(fuelType.length > 0
-					? fuelType.some((elem) => elem === car.fuelType)
+					? fuelType.some(elem => elem === car.fuelType)
 					: true) &&
-				(gc.length > 0 ? gc.some((elem) => elem === car.gc) : true) &&
-				(prize > 1 ? (prize === 2 ? car.isPrize : car.isPrize === false) : true)
+				(gc.length > 0
+					? gc.some(elem => elem === car.gc)
+					: true) &&
+				(prize > 1
+					? prize === 2
+						? car.isPrize
+						: car.isPrize === false
+					: true)
 			);
 		});
 	};
 
 	useEffect(() => {
 		filteredCars();
-	}, [rqValue]);
+		console.log('CAR DATA =>', filteredCars());
+	}, []);
 
 	const getAllTags = () =>
-		carData.forEach((car) => {
+		carData.forEach(car => {
 			if (Array.isArray(car.tags) && car.tags.length > 0) {
-				car.tags.forEach((tag) => {
+				car.tags.forEach(tag => {
 					if (!carTags.includes(tag)) {
 						carTags.push(tag);
 					}
@@ -243,7 +302,9 @@ const Home = () => {
 						alignItem: 'center',
 					}}
 					size='large'
-					count={Math.ceil(filteredCars().length / numOfCars)}
+					count={Math.ceil(
+						filteredCars().length / numOfCars
+					)}
 					onChange={handlePageChange}
 					page={page}
 					variant='outlined'
