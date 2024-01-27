@@ -1,0 +1,49 @@
+{
+    "carID": "c04958",
+    "cr": 710,
+    "make": "Porsche",
+    "model": "911 Carrera S",
+    "modelYear": 2011,
+    "country": "DE",
+    "topSpeed": 189,
+    "0to60": 4.2,
+    "handling": 88,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1395,
+    "gc": "Low",
+    "seatCount": 4,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 79.31,
+    "ola": 82.4,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 192,
+"3330to60": 4,
+"333Handling": 91,
+
+"666TopSpeed": 195,
+"6660to60": 3.8,
+"666Handling": 94,
+
+"699TopSpeed": 195,
+"6990to60": 3.6,
+"699Handling": 98,
+
+"969TopSpeed": 197,
+"9690to60": 3.8,
+"969Handling": 98,
+
+"996TopSpeed": 197,
+"9960to60": 3.6,
+"996Handling": 94,
+    "creator": "Bnuuy"
+}

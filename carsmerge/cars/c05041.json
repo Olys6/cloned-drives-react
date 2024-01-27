@@ -1,0 +1,49 @@
+{
+    "carID": "c05041",
+    "cr": 740,
+    "make": "Porsche",
+    "model": "934 Turbo RSR",
+    "modelYear": 1976,
+    "country": "DE",
+    "topSpeed": 182,
+    "0to60": 3.9,
+    "handling": 91,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Eurotech Elite","Motorsport","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1090,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Coupe",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 96.54,
+    "ola": 88.88,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 185,
+"3330to60": 3.7,
+"333Handling": 94,
+
+"666TopSpeed": 188,
+"6660to60": 3.5,
+"666Handling": 97,
+
+"699TopSpeed": 188,
+"6990to60": 3.3,
+"699Handling": 101,
+
+"969TopSpeed": 191,
+"9690to60": 3.5,
+"969Handling": 101,
+
+"996TopSpeed": 191,
+"9960to60": 3.3,
+"996Handling": 97,
+    "creator": "Bnuuy"
+}

@@ -1,0 +1,49 @@
+{
+    "carID": "c04987",
+    "cr": 430,
+    "make": "Porsche",
+    "model": "911 GT-S 2.0",
+    "modelYear": 1968,
+    "country": "DE",
+    "topSpeed": 143,
+    "0to60": 6.5,
+    "handling": 75,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite","Motorsport","Unique","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1015,
+    "gc": "Medium",
+    "seatCount": 2,
+    "bodyStyle": "Coupe",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 62.45,
+    "ola": 76.56,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 147,
+"3330to60": 6.2,
+"333Handling": 77,
+
+"666TopSpeed": 150,
+"6660to60": 5.9,
+"666Handling": 80,
+
+"699TopSpeed": 150,
+"6990to60": 5.5,
+"699Handling": 83,
+
+"969TopSpeed": 154,
+"9690to60": 5.9,
+"969Handling": 83,
+
+"996TopSpeed": 154,
+"9960to60": 5.5,
+"996Handling": 80,
+    "creator": "Bnuuy"
+}

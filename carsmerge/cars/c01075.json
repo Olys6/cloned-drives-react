@@ -1,5 +1,6 @@
 {
-    "rq": 67,
+    "carID": "c01075",
+    "cr": 670,
     "make": "Porsche",
     "model": "911 GT3",
     "modelYear": 1999,
@@ -9,10 +10,9 @@
     "handling": 87,
     "driveType": "RWD",
     "tyreType": "Performance",
-    "tags": [
-        "Supercar", "Year of the Rabbit"
-    ],
+    "tags": ["Track Day"],
     "isPrize": false,
+	
     "weight": 1350,
     "gc": "Low",
     "seatCount": 2,
@@ -21,25 +21,29 @@
     "abs": true,
     "enginePos": "Rear",
     "fuelType": "Petrol",
-    "mra": 86.1,
+    "mra": 83.98,
     "ola": 82.41,
-    "description": "This is a harder-edged, faster 911, for the hundreds of racing Porsche enthusiasts around the world.",
-    "card": "https://media.discordapp.net/attachments/819199720249360384/826574496273006602/Porsche911GT3996.png",
-    "333TopSpeed": 191,
-    "3330to60": 4.4,
-    "333Handling": 90,
-    "666TopSpeed": 194,
-    "6660to60": 4.1,
-    "666Handling": 93,
-    "996TopSpeed": 196,
-    "9960to60": 3.9,
-    "996Handling": 93,
-    "969TopSpeed": 196,
-    "9690to60": 4.1,
-    "969Handling": 97,
-    "699TopSpeed": 194,
-    "6990to60": 3.9,
-    "699Handling": 97,
-    "racehud": "https://media.discordapp.net/attachments/995376525119586356/1050774888731918346/911GT399.png",
-    "creator": "Havvy"
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 191,
+"3330to60": 4.4,
+"333Handling": 90,
+
+"666TopSpeed": 194,
+"6660to60": 4.1,
+"666Handling": 93,
+
+"699TopSpeed": 194,
+"6990to60": 3.9,
+"699Handling": 97,
+
+"969TopSpeed": 196,
+"9690to60": 4.1,
+"969Handling": 97,
+
+"996TopSpeed": 196,
+"9960to60": 3.9,
+"996Handling": 93,
+    "creator": "Bnuuy"
 }

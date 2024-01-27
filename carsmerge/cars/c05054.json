@@ -1,0 +1,49 @@
+{
+    "carID": "c05054",
+    "cr": 840,
+    "make": "Porsche",
+    "model": "935/76",
+    "modelYear": 1976,
+    "country": "DE",
+    "topSpeed": 211,
+    "0to60": 3.3,
+    "handling": 93,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Eurotech Elite","Motorsport","Unique","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 970,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Coupe",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 112.89,
+    "ola": 96.54,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 213,
+"3330to60": 3.1,
+"333Handling": 96,
+
+"666TopSpeed": 216,
+"6660to60": 3,
+"666Handling": 99,
+
+"699TopSpeed": 216,
+"6990to60": 2.8,
+"699Handling": 103,
+
+"969TopSpeed": 218,
+"9690to60": 3,
+"969Handling": 103,
+
+"996TopSpeed": 218,
+"9960to60": 2.8,
+"996Handling": 99,
+    "creator": "Bnuuy"
+}

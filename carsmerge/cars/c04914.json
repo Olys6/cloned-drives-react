@@ -1,0 +1,49 @@
+{
+    "carID": "c04914",
+    "cr": 800,
+    "make": "Porsche",
+    "model": "904 Living Legend",
+    "modelYear": 2013,
+    "country": "DE",
+    "topSpeed": 130,
+    "0to60": 3.5,
+    "handling": 94,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite","Concept","Unique","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 900,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 76.59,
+    "ola": 72.5,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 134,
+"3330to60": 3.3,
+"333Handling": 97,
+
+"666TopSpeed": 138,
+"6660to60": 3.1,
+"666Handling": 100,
+
+"699TopSpeed": 138,
+"6990to60": 3,
+"699Handling": 104,
+
+"969TopSpeed": 142,
+"9690to60": 3.1,
+"969Handling": 104,
+
+"996TopSpeed": 142,
+"9960to60": 3,
+"996Handling": 100,
+    "creator": "Bnuuy"
+}

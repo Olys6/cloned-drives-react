@@ -1,0 +1,49 @@
+{
+    "carID": "c05068",
+    "cr": 340,
+    "make": "Porsche",
+    "model": "984 Junior",
+    "modelYear": 1985,
+    "country": "DE",
+    "topSpeed": 137,
+    "0to60": 6.8,
+    "handling": 75,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite","Concept","Unique","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 880,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Convertible",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 64.95,
+    "ola": 77.89,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 141,
+"3330to60": 6.5,
+"333Handling": 77,
+
+"666TopSpeed": 145,
+"6660to60": 6.1,
+"666Handling": 80,
+
+"699TopSpeed": 145,
+"6990to60": 5.8,
+"699Handling": 83,
+
+"969TopSpeed": 148,
+"9690to60": 6.1,
+"969Handling": 83,
+
+"996TopSpeed": 148,
+"9960to60": 5.8,
+"996Handling": 80,
+    "creator": "Bnuuy"
+}

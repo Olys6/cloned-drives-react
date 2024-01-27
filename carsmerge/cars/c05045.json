@@ -1,0 +1,49 @@
+{
+    "carID": "c05045",
+    "cr": 950,
+    "make": "Porsche",
+    "model": "935",
+    "modelYear": 2019,
+    "country": "DE",
+    "topSpeed": 211,
+    "0to60": 2.6,
+    "handling": 97,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Eurotech Elite","Track Day","Unique","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1290,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 109.55,
+    "ola": 77.77,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 213,
+"3330to60": 2.5,
+"333Handling": 100,
+
+"666TopSpeed": 216,
+"6660to60": 2.3,
+"666Handling": 103,
+
+"699TopSpeed": 216,
+"6990to60": 2.2,
+"699Handling": 108,
+
+"969TopSpeed": 218,
+"9690to60": 2.3,
+"969Handling": 108,
+
+"996TopSpeed": 218,
+"9960to60": 2.2,
+"996Handling": 103,
+    "creator": "Bnuuy"
+}

@@ -1,0 +1,49 @@
+{
+    "carID": "c04501",
+    "cr": 236,
+    "make": "Peugeot",
+    "model": "607 2.0 HDi FAP 110",
+    "modelYear": 2004,
+    "country": "FR",
+    "topSpeed": 118,
+    "0to60": 12.9,
+    "handling": 70,
+    "driveType": "FWD",
+    "tyreType": "Standard",
+    "tags": ["Eurotech Elite","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1505,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Sedan",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Diesel",
+    "mra": 44.15,
+    "ola": 57.19,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Peugeot6072.0HDiFAP110(2004).png",
+    "creator": "Crossfire",
+
+    "333TopSpeed": 122, 
+    "3330to60": 12.3, 
+    "333Handling": 72,
+
+    "666TopSpeed": 127, 
+    "6660to60": 11.6, 
+    "666Handling": 75,
+
+    "996TopSpeed": 131, 
+    "9960to60": 11.0, 
+    "996Handling": 75,
+
+    "969TopSpeed": 131, 
+    "9690to60": 11.6, 
+    "969Handling": 78,
+
+    "699TopSpeed": 127, 
+    "6990to60": 11.0, 
+    "699Handling": 78
+}

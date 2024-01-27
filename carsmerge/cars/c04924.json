@@ -1,0 +1,49 @@
+{
+    "carID": "c04924",
+    "cr": 860,
+    "make": "Porsche",
+    "model": "RS Spyder",
+    "modelYear": 2009,
+    "country": "DE",
+    "topSpeed": 197,
+    "0to60": 3.3,
+    "handling": 96,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Eurotech Elite","Motorsport","Unique","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 750,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Open Air",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 99.85,
+    "ola": 77.89,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 200,
+"3330to60": 3.1,
+"333Handling": 99,
+
+"666TopSpeed": 202,
+"6660to60": 3,
+"666Handling": 102,
+
+"699TopSpeed": 202,
+"6990to60": 2.8,
+"699Handling": 107,
+
+"969TopSpeed": 205,
+"9690to60": 3,
+"969Handling": 107,
+
+"996TopSpeed": 205,
+"9960to60": 2.8,
+"996Handling": 102,
+    "creator": "Bnuuy"
+}

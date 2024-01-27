@@ -1,0 +1,49 @@
+{
+    "carID": "c05024",
+    "cr": 860,
+    "make": "Porsche",
+    "model": "911 Turbo S Cabriolet",
+    "modelYear": 2010,
+    "country": "DE",
+    "topSpeed": 196,
+    "0to60": 3.2,
+    "handling": 89,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite", "Supercar","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1660,
+    "gc": "Low",
+    "seatCount": 4,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 87.66,
+    "ola": 86.25,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 199,
+"3330to60": 3,
+"333Handling": 92,
+
+"666TopSpeed": 201,
+"6660to60": 2.9,
+"666Handling": 95,
+
+"699TopSpeed": 201,
+"6990to60": 2.7,
+"699Handling": 99,
+
+"969TopSpeed": 204,
+"9690to60": 2.9,
+"969Handling": 99,
+
+"996TopSpeed": 204,
+"9960to60": 2.7,
+"996Handling": 95,
+    "creator": "Bnuuy"
+}

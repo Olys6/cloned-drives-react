@@ -1,0 +1,13 @@
+{
+    "carID": "c04556",
+    "make": "Lamborghini",
+    "model": "Urus \"Graphite Capsule\"",
+    "modelYear": 2018,
+    "country": "IT",
+    "reference": "c02035",
+    "collection": ["Everything Else"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Crossfire"
+}

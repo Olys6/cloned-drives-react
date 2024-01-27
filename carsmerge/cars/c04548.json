@@ -1,0 +1,13 @@
+{
+    "carID": "c04548",
+    "make": "Bugatti",
+    "model": "Veyron 16.4 Police",
+    "modelYear": 2005,
+    "country": "FR",
+    "reference": "c00226",
+    "collection": ["Rozzers"],
+    "description": "The famous Bugatti Veyron police car serving for Dubai Police.",
+	"active" : true,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Crossfire"
+}

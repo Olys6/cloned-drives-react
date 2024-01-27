@@ -1,0 +1,13 @@
+{
+    "carID": "c04558",
+    "make": ["Mercedes-AMG", "Mercedes-Benz"],
+    "model": "GT 63 S 4MATIC+ F1 Medical Car",
+    "modelYear": 2018,
+    "country": "DE",
+    "reference": "c00832",
+    "collection": ["Rozzers"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Crossfire"
+}

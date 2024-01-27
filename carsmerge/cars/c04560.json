@@ -1,0 +1,13 @@
+{
+    "carID": "c04560",
+    "make": "Morgan",
+    "model": "EV3 \"UK 1909 Edition\"",
+    "modelYear": 2016,
+    "country": "GB",
+    "reference": "c03217",
+    "collection": ["Opening Gambits"],
+    "description": "Was planned to be a rare first edition of the first 19 Morgan EV3's, only if the original car wasn't cancelled.",
+	"active" : true,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Crossfire"
+}

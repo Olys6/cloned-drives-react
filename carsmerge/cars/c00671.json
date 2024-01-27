@@ -1,5 +1,6 @@
 {
-    "rq": 12,
+    "carID": "c00671",
+    "cr": 150,
     "make": "Lamborghini",
     "model": "Urraco P111",
     "modelYear": 1972,
@@ -11,7 +12,7 @@
     "tyreType": "Performance",
     "tags": [],
     "isPrize": false,
-    "weight": 1551,
+    "weight": 1380,
     "gc": "Low",
     "seatCount": 4,
     "bodyStyle": "Coupe",
@@ -22,8 +23,7 @@
     "mra": 61.59,
     "ola": 79.21,
     "description": "Something that most didn't know existed.",
-    "card": "https://media.discordapp.net/attachments/819199720249360384/819383934902730772/urraco.png",
-    "333TopSpeed": 128,
+     "333TopSpeed": 128,
     "3330to60": 9.6,
     "333Handling": 73,
     "666TopSpeed": 132,
@@ -38,6 +38,6 @@
     "699TopSpeed": 132,
     "6990to60": 8.6,
     "699Handling": 79,
-    "racehud": "https://media.discordapp.net/attachments/995376525119586356/1003657556289396746/urraco.jpg",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
     "creator": "Keanny"
 }

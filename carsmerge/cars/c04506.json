@@ -1,0 +1,49 @@
+{
+    "carID": "c04506",
+    "cr": 403,
+    "make": "Peugeot",
+    "model": "607 3.0 V6",
+    "modelYear": 1999,
+    "country": "FR",
+    "topSpeed": 148,
+    "0to60": 7.8,
+    "handling": 72,
+    "driveType": "FWD",
+    "tyreType": "Standard",
+    "tags": ["Eurotech Elite","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1560,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Sedan",
+    "tcs": false,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 63.69,
+    "ola": 79.27,
+    "description": "Peugeot's last take on an executive car.",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Peugeot6073.0V6(1999).png",
+    "creator": "Crossfire",
+
+    "333TopSpeed": 152, 
+    "3330to60": 7.4, 
+    "333Handling": 74,
+
+    "666TopSpeed": 155, 
+    "6660to60": 7.0, 
+    "666Handling": 77,
+
+    "996TopSpeed": 159, 
+    "9960to60": 6.6, 
+    "996Handling": 77,
+
+    "969TopSpeed": 159, 
+    "9690to60": 7.0, 
+    "969Handling": 80,
+
+    "699TopSpeed": 155, 
+    "6990to60": 6.6, 
+    "699Handling": 80
+}

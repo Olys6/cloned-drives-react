@@ -1,0 +1,13 @@
+{
+    "carID": "c04553",
+    "make": "Infiniti",
+    "model": "FX50 S AWD \"Limited Edition\"",
+    "modelYear": 2010,
+    "country": "JP",
+    "reference": "c03201",
+    "collection": ["Everything Else"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Crossfire"
+}

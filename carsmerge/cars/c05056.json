@@ -1,0 +1,49 @@
+{
+    "carID": "c05056",
+    "cr": 950,
+    "make": "Porsche",
+    "model": "935/78 \"Moby Dick\"",
+    "modelYear": 1978,
+    "country": "DE",
+    "topSpeed": 227,
+    "0to60": 2.6,
+    "handling": 96,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Eurotech Elite","Motorsport","Unique","Style Icon","Cloned Drives Beta: Last of"],
+    "isPrize": true,
+	
+    "weight": 1030,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Coupe",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 119.48,
+    "ola": 93.5,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 229,
+"3330to60": 2.5,
+"333Handling": 99,
+
+"666TopSpeed": 232,
+"6660to60": 2.3,
+"666Handling": 102,
+
+"699TopSpeed": 232,
+"6990to60": 2.2,
+"699Handling": 107,
+
+"969TopSpeed": 234,
+"9690to60": 2.3,
+"969Handling": 107,
+
+"996TopSpeed": 234,
+"9960to60": 2.2,
+"996Handling": 102,
+    "creator": "Bnuuy"
+}
