@@ -16,7 +16,6 @@ async function mergeJson() {
             const json = JSON.parse(output)
             
             const entry = {
-                id: file,
                 ...json,
             };
 
