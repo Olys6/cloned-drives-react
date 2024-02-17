@@ -122,17 +122,109 @@ const Cards = ({
 											key={i}
 											onClick={() => handleOpen(car)}
 											className='carCard'>
-											<LazyLoadImage
-												threshhold={200}
-												effect='blur'
-												// delayMethod="debounce"
-												src={car.racehud}
-												style={{
-													width: '15rem',
-													height: '9.35rem',
-													marginBottom: '-5px',
-												}}
-											/>
+											<div style={{ position: 'relative' }}>
+												<LazyLoadImage
+													threshhold={200}
+													effect='blur'
+													// delayMethod="debounce"
+													src={car.racehud}
+													style={{
+														width: '15rem',
+														height: '9.35rem',
+														marginBottom: '-5px',
+													}}
+												/>
+												<span
+													style={{
+														position: 'absolute',
+														top: '42px',
+														left: '3px',
+														width: '20px',
+														borderRadius: '10px',
+														fontFamily: 'Rubik-BoldItalic',
+														// backgroundColor: '#fff',
+														fontSize: '0.5rem',
+													}}>
+													{car.topSpeed}
+												</span>
+												<span
+													style={{
+														position: 'absolute',
+														top: '55px',
+														left: '3px',
+														width: '20px',
+														borderRadius: '10px',
+														fontFamily: 'Rubik-BoldItalic',
+														// backgroundColor: '#fff',
+														fontSize: '0.5rem',
+													}}>
+													{car['0to60']}
+												</span>
+												<span
+													style={{
+														position: 'absolute',
+														top: '67px',
+														left: '3px',
+														width: '20px',
+														borderRadius: '10px',
+														fontFamily: 'Rubik-BoldItalic',
+														// backgroundColor: '#fff',
+														fontSize: '0.5rem',
+													}}>
+													{car.handling}
+												</span>
+												<span
+													style={{
+														position: 'absolute',
+														top: '80px',
+														left: '3px',
+														width: '20px',
+														borderRadius: '10px',
+														fontFamily: 'Rubik-BoldItalic',
+														// backgroundColor: '#fff',
+														fontSize: '0.5rem',
+													}}>
+													{car.driveType}
+												</span>
+												<span
+													style={{
+														position: 'absolute',
+														top: '93px',
+														left: '3px',
+														width: '20px',
+														borderRadius: '10px',
+														fontFamily: 'Rubik-BoldItalic',
+														fontSize: '0.5rem',
+													}}>
+													{(function () {
+														if (
+															car.tyreType === 'Performance'
+														) {
+															return 'PER';
+														} else if (
+															car.tyreType === 'Standard'
+														) {
+															return 'STD';
+														} else if (
+															car.tyreType === 'Off-Road'
+														) {
+															return 'OFF';
+														} else if (
+															car.tyreType === 'All-Surface'
+														) {
+															return 'ALL';
+														} else if (
+															car.tyreType === 'Drag'
+														) {
+															return 'DRG';
+														} else if (
+															car.tyreType === 'Slick'
+														) {
+															return 'SLK';
+														}
+													})()}
+												</span>
+											</div>
 										</Button>
 									)
 							)}
@@ -149,10 +241,63 @@ const Cards = ({
 							{/* <Typography id="modal-modal-title" variant="h4">
                     {modalCar.model}
                   </Typography> */}
-							<LazyLoadImage
-								src={modalCar.racehud}
-								style={{ width: '100%' }}
-							/>
+							<div style={{ position: 'relative' }}>
+								<LazyLoadImage
+									src={modalCar.racehud}
+									style={{ width: '100%' }}
+								/>
+								<span
+									id='car-modal-topspeed'
+									className='car-modal-details'>
+									{modalCar.topSpeed}
+								</span>
+								<span
+									id='car-modal-0to60'
+									className='car-modal-details'>
+									{modalCar['0to60']}
+								</span>
+								<span
+									id='car-modal-handling'
+									className='car-modal-details'>
+									{modalCar.handling}
+								</span>
+								<span
+									id='car-modal-driveType'
+									className='car-modal-details'>
+									{modalCar.driveType}
+								</span>
+								<span
+									id='car-modal-tyreType'
+									className='car-modal-details'>
+									{(function () {
+										if (
+											modalCar.tyreType === 'Performance'
+										) {
+											return 'PER';
+										} else if (
+											modalCar.tyreType === 'Standard'
+										) {
+											return 'STD';
+										} else if (
+											modalCar.tyreType === 'Off-Road'
+										) {
+											return 'OFF';
+										} else if (
+											modalCar.tyreType === 'All-Surface'
+										) {
+											return 'ALL';
+										} else if (
+											modalCar.tyreType === 'Drag'
+										) {
+											return 'DRG';
+										} else if (
+											modalCar.tyreType === 'Slick'
+										) {
+											return 'SLK';
+										}
+									})()}
+								</span>
+							</div>
 							<Box
 								sx={{
 									display: 'flex',

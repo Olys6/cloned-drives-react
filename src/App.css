@@ -93,3 +93,63 @@
     margin-top: 3rem;
   }
 }
+
+.car-modal-details {
+  position: absolute;
+  font-family: Rubik-BoldItalic;
+  font-size: calc(120%);
+}
+
+#car-modal-topspeed {
+  top: 29%;
+  left: 2%;
+}
+
+#car-modal-0to60 {
+  top: 37%;
+  left: 2%;
+}
+
+#car-modal-handling {
+  top: 45%;
+  left: 2%;
+}
+
+#car-modal-driveType {
+  top: 53.5%;
+  left: 1.6%;
+}
+
+#car-modal-tyreType {
+  top: 62%;
+  left: 1.6%;
+}
+
+@media screen and (max-width: 900px) {
+  .car-modal-details {
+    font-size: 3vw;
+  }
+
+  #car-modal-topspeed {
+    top: 30%;
+  }
+
+  #car-modal-0to60 {
+    top: 38%;
+  }
+
+  #car-modal-handling {
+    top: 46.5%;
+    left: 2%;
+  }
+
+  #car-modal-driveType {
+    top: 55%;
+    left: 1.6%;
+  }
+
+  #car-modal-tyreType {
+    top: 63%;
+    left: 2%;
+  }
+}
