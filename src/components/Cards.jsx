@@ -225,6 +225,16 @@ const Cards = ({
 													})()}
 												</span>
 											</div>
+											<p
+												style={{
+													padding: 0,
+													margin: 0,
+													marginTop: 6,
+													fontFamily: 'Rubik-BoldItalic',
+													fontSize: '0.8rem',
+												}}>
+												{car.model}
+											</p>
 										</Button>
 									)
 							)}
