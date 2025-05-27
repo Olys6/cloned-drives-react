@@ -1,0 +1,18 @@
+{
+	"trackName": "Ouninpohja Track Stage (Rainy Gravel)",
+	"weather": "Rainy",
+	"surface": "Gravel",
+	"speedbumps": 8,
+	"humps": 0,
+	"background": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Arts/Temp.png",
+	"map": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Maps/Temp.png",
+	
+	"specsDistr": {
+		"topSpeed": 1.5,
+		"0to60": 35,
+		"handling": 100,
+		"weight": 0,
+		"mra": 50,
+		"ola": 5
+	}
+}

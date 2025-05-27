@@ -1,6 +1,6 @@
 {
     "carID": "c00735",
-    "cr": 620,
+    "cr": 622,
     "make": "Lotus",
     "model": "Elise R",
     "modelYear": 2006,
@@ -11,7 +11,7 @@
     "driveType": "RWD",
     "tyreType": "Performance",
     "tags": [
-        "The Royal Collection"
+        "The Royal Collection","Track Day"
     ],
     "isPrize": false,
     "weight": 914,
@@ -40,6 +40,6 @@
     "699TopSpeed": 155,
     "6990to60": 4.3,
     "699Handling": 100,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/LotusEliseR(2006).png",
     "creator": "Tom"
 }

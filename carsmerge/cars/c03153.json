@@ -1,6 +1,6 @@
 {
     "carID": "c03153",
-    "cr": 1080,
+    "cr": 1077,
     "make": ["SUZUKISPORT", "Suzuki"],
     "model": "Twin Engine Escudo",
     "modelYear": 1994,
@@ -11,7 +11,7 @@
     "driveType": "4WD",
     "tyreType": "Off-Road",
     "tags": ["The Amplification of Asia","Unique","Tuner","Motorsport","Oddity"],
-    "isPrize": true,
+    "isPrize": false,
 	
     "weight": 922,
     "gc": "Low",
@@ -24,7 +24,7 @@
     "mra": 89.28,
     "ola": 100,
     "description": "",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/SUZUKISPORTTwinEngineEscudo(1994).png",
     "creator": "Bnuuy",
 
 "333TopSpeed": 126,

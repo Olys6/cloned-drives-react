@@ -1,0 +1,18 @@
+{
+	"trackName": "River Crossing Downstream (Sunny)",
+	"weather": "Sunny",
+	"surface": "Dirt",
+	"speedbumps": 5,
+	"humps": 15,
+	"background": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Arts/Temp.png",
+	"map": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Maps/Temp.png",
+	
+	"specsDistr": {
+		"topSpeed": 5,
+		"0to60": 100,
+		"handling": 40,
+		"weight": 0,
+		"mra": 5,
+		"ola": 30
+	}
+}

@@ -1,6 +1,6 @@
 {
     "carID": "c02172",
-    "cr": 650,
+    "cr": 651,
     "make": "Lotus",
     "model": "Evora S",
     "modelYear": 2012,
@@ -11,7 +11,7 @@
     "driveType": "RWD",
     "tyreType": "Performance",
     "tags": [
-        "Grand Tourer","Oceanic View"
+        "Track Day","Oceanic View"
     ],
     "isPrize": false,
     "weight": 1438,
@@ -40,6 +40,6 @@
     "699TopSpeed": 178,
     "6990to60": 4.0,
     "699Handling": 98,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/LotusEvoraS(2012).png",
     "creator": "McNuggets"
 }

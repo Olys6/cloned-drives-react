@@ -1,6 +1,6 @@
 {
     "carID": "c02284",
-    "cr": 940,
+    "cr": 935,
     "make": "Porsche",
     "model": "99X Electric",
     "modelYear": 2019,
@@ -11,7 +11,7 @@
     "driveType": "RWD",
     "tyreType": "Performance",
     "tags": ["Motorsport", "Unique", "Eco-Friendly"],
-    "isPrize": true,
+    "isPrize": false,
 	
     "weight": 900,
     "gc": "Low",
@@ -24,7 +24,7 @@
     "mra": 100,
     "ola": 88.88,
     "description": "Porsches top end Formula E",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Porsche99XElectric(2019).png",
     "creator": "Bnuuy",
 
     "333TopSpeed": 177, 

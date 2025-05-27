@@ -1,6 +1,6 @@
 {
     "carID": "c01659",
-    "cr": 1100,
+    "cr": 1095,
     "make": "Mitsubishi",
     "model": "Lancer Evolution IX Rally Car",
     "modelYear": 2005,
@@ -11,7 +11,7 @@
     "driveType": "4WD",
     "tyreType": "Off-Road",
     "tags": ["Motorsport","The Japanese Odyssey"],
-    "isPrize": true,
+    "isPrize": false,
     "weight": 1300,
     "gc": "Medium",
     "seatCount": 2,
@@ -38,6 +38,6 @@
     "699TopSpeed": 162,
     "6990to60": 2.8,
     "699Handling": 101,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/MitsubishiLancerEvolutionIXRallyCar(2005).png",
     "creator": "Bnuuy"
 }

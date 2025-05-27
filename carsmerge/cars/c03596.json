@@ -1,6 +1,6 @@
 {
     "carID": "c03596",
-    "cr": 10,
+    "cr": 1,
     "make": "Volkswagen",
     "model": "Golf CitySTROMer RWE Energie Racing",
     "modelYear": 1986,
@@ -11,7 +11,7 @@
     "driveType": "FWD",
     "tyreType": "Performance",
     "tags": ["Eco-Friendly","Unique","Motorsport","Endless Summer","The Tyrol Tour: Remix"],
-    "isPrize": true,
+    "isPrize": false,
 
 
     "weight": 1375,
@@ -27,7 +27,7 @@
     "description": "Top racer in the Grand Prix Formula E.",
 
 
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/VolkswagenGolfCitySTROMerRWEEnergieRacing(19869.png",
     "creator": "Andu",
 
     

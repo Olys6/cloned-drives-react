@@ -1,0 +1,18 @@
+{
+	"trackName": "Beach Slalom (Sand)",
+	"weather": "Sunny",
+	"surface": "Sand",
+	"speedbumps": 0,
+	"humps": 0,
+	"background": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Arts/Temp.png",
+	"map": "https://file.garden/ZmdgDS5GsALKuOXo/T/Slalom.png",
+	
+	"specsDistr": {
+		"topSpeed": 0,
+		"0to60": 20,
+		"handling": 100,
+		"weight": 60,
+		"mra": 0,
+		"ola": 10
+	}
+}

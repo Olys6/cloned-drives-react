@@ -5,9 +5,9 @@
     "modelYear": 2018,
     "country": "GB",
     "reference": "c00080",
-    "collection": ["Fancypants"],
+    "collection": ["BMC1: The Originals"],
     "description": "Free watch at least.",
-	"active" : true,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(bm)/0in/AstonMartinDBSSuperleggeraTAGEdition(2019).png",
     "creator": "Bnuuy"
 }

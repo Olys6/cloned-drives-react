@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link';
+import DiscordLogo from '../images/discord-v2-svgrepo-com.svg';
 
 import Logo from '../images/logowhite.png';
 
@@ -113,51 +114,56 @@ const Navbar = () => {
 					</Box>
 
 					<Box sx={{ display: 'flex', gap: '1rem', flexGrow: 0 }}>
-						{/* <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
-						<Tooltip title='Join the Discord server!'>
-							<Link
-								id='discordLink'
-								href='https://discord.gg/p3UbVP9BxB'
-								target='_blank'
-								sx={{
-									display: 'flex',
-									justifyContent: 'center',
-									alignItems: 'center',
-									transition: '.2s',
-								}}>
-								<img
-									alt=''
-									style={{ width: 40, borderRadius: 50 }}
-									src='src/discord-v2-svgrepo-com.svg'
-								/>
-							</Link>
-						</Tooltip>
+						{/*<Tooltip title="Open settings">
+  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+    <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+  </IconButton>
+</Tooltip>
+<Menu
+  sx={{ mt: '45px' }}
+  id="menu-appbar"
+  anchorEl={anchorElUser}
+  anchorOrigin={{
+    vertical: 'top',
+    horizontal: 'right',
+  }}
+  keepMounted
+  transformOrigin={{
+    vertical: 'top',
+    horizontal: 'right',
+  }}
+  open={Boolean(anchorElUser)}
+  onClose={handleCloseUserMenu}
+>
+  {settings.map((setting) => (
+    <MenuItem key={setting} onClick={handleCloseUserMenu}>
+      <Typography textAlign="center">{setting}</Typography>
+    </MenuItem>
+  ))}
+		</Menu>*/}
+		<Tooltip title="Join the Discord server!">
+  <Link
+    id="discordLink"
+    href="https://discord.gg/p3UbVP9BxB"
+    target="_blank"
+    sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      transition: 'transform 0.2s ease, filter 0.2s ease',
+      '&:hover': {
+        transform: 'scale(1.1)',
+        filter: 'brightness(1.2)',
+      },
+    }}
+  >
+<img
+  src={DiscordLogo}
+  alt="Discord Logo"
+  style={{ width: 40, borderRadius: 50 }}
+/>
+  </Link>
+</Tooltip>
 					</Box>
 				</Toolbar>
 			</Container>

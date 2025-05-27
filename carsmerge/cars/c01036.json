@@ -15,7 +15,7 @@
     "weight": 1432,
     "gc": "Medium",
     "seatCount": 7,
-    "bodyStyle": "Commercial",
+    "bodyStyle": "Other",
     "tcs": false,
     "abs": false,
     "enginePos": "Front",
@@ -38,6 +38,6 @@
     "699TopSpeed": 105,
     "6990to60": 11.9,
     "699Handling": 68,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/PlymouthVoyagerLE(1984).png",
     "creator": "Andu"
 }

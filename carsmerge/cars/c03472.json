@@ -5,9 +5,9 @@
     "modelYear": 2020,
     "country": "JP",
     "reference": "c00696",
-    "collection": ["Concepts"],
+    "collection": ["BMC2: Clr_s Around The World"],
     "description": "Weird somewhat cool wrap.",
-	"active" : true,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/LexusLC500ConvertiblePrototype.png",
     "creator": "Crossfire"
 }

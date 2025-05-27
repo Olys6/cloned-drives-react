@@ -1,6 +1,6 @@
 {
     "carID": "c03758",
-    "cr": 700,
+    "cr": 703,
     "make": ["DC Design", "Noble"],
     "model": "Go",
     "modelYear": 2004,
@@ -10,7 +10,7 @@
     "handling": 87,
     "driveType": "RWD",
     "tyreType": "Performance",
-    "tags": ["Endless Summer","Unique","Tuner","Rest of The World","The Rest of the Best: 2023","Tuner"],
+    "tags": ["Endless Summer","Unique","Tuner","Rest of The World","The Rest of the Best: 2023"],
     "isPrize": false,
 	
     "weight": 1000,
@@ -24,7 +24,7 @@
     "mra": 72.72,
     "ola": 90,
     "description": "",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/DCDesignGo(2004).png",
     "creator": "Bnuuy",
 
 "333TopSpeed": 168,

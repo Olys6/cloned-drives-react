@@ -1,0 +1,18 @@
+{
+	"trackName": "Odawara Pikes Peak Sector 3 (MF Ghost)",
+	"weather": "Sunny",
+	"surface": "Asphalt",
+	"speedbumps": 0,
+	"humps": 0,
+	"background": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Arts/Temp.png",
+	"map": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Maps/Temp.png",
+	
+	"specsDistr": {
+		"topSpeed": 0,
+		"0to60": 0,
+		"handling": 100,
+		"weight": 25,
+		"mra": 0,
+		"ola": 30
+	}
+}

@@ -1,6 +1,6 @@
 {
     "carID": "c04635",
-    "cr": 600,
+    "cr": 602,
     "make": "Volkswagen",
     "model": "Scirocco Bi-Motor 280/4",
     "modelYear": 1984,
@@ -11,7 +11,7 @@
     "driveType": "4WD",
     "tyreType": "Performance",
     "tags": ["Eurotech Elite", "Hot Hatch", "Unique","Cloned Drives Beta: Last of"],
-    "isPrize": true,
+    "isPrize": false,
 
 
     "weight": 1068,
@@ -27,7 +27,7 @@
     "description": "2 Engines, a wide bodykit, and the unfortunate existence of the Audi quattro.",
 
 
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/VolkswagenSciroccoBi-Motor2804(1984).png",
     "creator": "Andu",
  
     "333TopSpeed": 168,

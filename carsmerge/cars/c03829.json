@@ -1,6 +1,6 @@
 {
     "carID": "c03829",
-    "cr": 630,
+    "cr": 632,
     "make": "Mercedes-Benz",
     "model": "W196",
     "modelYear": 1954,
@@ -11,7 +11,7 @@
     "driveType": "RWD",
     "tyreType": "Performance",
     "tags": ["Endless Summer","Motorsport","Unique","Innovative","The Midlands Cruise"],
-    "isPrize": true,
+    "isPrize": false,
 	
     "weight": 835,
     "gc": "Low",
@@ -24,7 +24,7 @@
     "mra": 88.88,
     "ola": 100,
     "description": "",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/Mercedes-BenzW196(1954).png",
     "creator": "Bnuuy",
 
 "333TopSpeed": 189,

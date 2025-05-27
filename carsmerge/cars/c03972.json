@@ -1,6 +1,6 @@
 {
     "carID": "c03972",
-    "cr": 880,
+    "cr": 881,
     "make": "Ford",
     "model": "Mustang Cobra Jet Twin Turbo Concept",
     "modelYear": 2012,
@@ -11,7 +11,7 @@
     "driveType": "RWD",
     "tyreType": "Drag",
     "tags": ["Endless Summer","Motorsport","Unique","The Americas Assault","Muscle Car","Concept"],
-    "isPrize": true,
+    "isPrize": false,
 	
     "weight": 1734,
     "gc": "Low",
@@ -24,7 +24,7 @@
     "mra": 91.52,
     "ola": 97.1,
     "description": "",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/FordMustangCobraJetTwinTurboConcept(2012).png",
     "creator": "Preston",
 
 "333TopSpeed": 212,

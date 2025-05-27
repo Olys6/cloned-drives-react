@@ -1,0 +1,18 @@
+{
+	"trackName": "(TT) The 100/6 killer (Onroad)",
+	"weather": "TT",
+	"surface": "OnRoad",
+	"speedbumps": 0,
+	"humps": 0,
+	"background": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Arts/Temp.png",
+	"map": "https://file.garden/ZmdgDS5GsALKuOXo/T/100-6.png",
+	
+	"specsDistr": {
+		"topSpeed": 100,
+		"0to60": 100,
+		"handling": 100,
+		"weight": 100,
+		"mra": 100,
+		"ola": 100
+	}
+}

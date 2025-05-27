@@ -1,0 +1,18 @@
+{
+	"trackName": "2019 Mexico City E-Prix (Sunny)",
+	"weather": "Sunny",
+	"surface": "Asphalt",
+	"speedbumps": 0,
+	"humps": 0,
+	"background": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Arts/Temp.png",
+	"map": "https://file.garden/ZmdgDS5GsALKuOXo/T/2019MexicoE-Prix.png",
+	
+	"specsDistr": {
+		"topSpeed": 0,
+		"0to60": 65,
+		"handling": 80,
+		"weight": 12,
+		"mra": 35,
+		"ola": 10
+	}
+}

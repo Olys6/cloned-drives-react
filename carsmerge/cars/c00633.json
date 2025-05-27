@@ -1,6 +1,6 @@
 {
     "carID": "c00633",
-    "cr": 780,
+    "cr": 782,
     "make": "Koenigsegg",
     "model": "CC8S",
     "modelYear": 2001,
@@ -11,7 +11,7 @@
     "driveType": "RWD",
     "tyreType": "Performance",
     "tags": ["Unique","Innovative","Rest of The World","Supercar"],
-    "isPrize": true,
+    "isPrize": false,
     "weight": 1175,
     "gc": "Low",
     "seatCount": 2,
@@ -38,6 +38,6 @@
     "699TopSpeed": 245,
     "6990to60": 3.3,
     "699Handling": 99,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/KoenigseggCC8S(2001).png",
     "creator": "Aqo"
 }

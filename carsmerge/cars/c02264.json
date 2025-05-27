@@ -5,9 +5,9 @@
     "modelYear": 1999,
     "country": "JP",
     "reference": "c00074",
-    "collection": ["Stylized Bodies"],
-    "active" : true,
+    "collection": ["BMC1: The Originals"],
+    "active" : false,
     "description": "placeholder desc",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/WALDDB7.png",
     "creator": "Bnuuy"
 }

@@ -1,6 +1,6 @@
 {
     "carID": "c01164",
-    "cr": 880,
+    "cr": 879,
     "make": "Saleen",
     "model": "S7 Twin Turbo",
     "modelYear": 2005,
@@ -11,15 +11,15 @@
     "driveType": "RWD",
     "tyreType": "Performance",
     "tags": [
-        "Supercar","OG"
+        "Supercar","OG","Tradable"
     ],
     "isPrize": true,
     "weight": 1247,
     "gc": "Low",
     "seatCount": 2,
     "bodyStyle": "Coupe",
-    "tcs": false,
-    "abs": false,
+    "tcs": true,
+    "abs": true,
     "enginePos": "Middle",
     "fuelType": "Petrol",
     "mra": 115.29,
@@ -40,6 +40,6 @@
     "699TopSpeed": 253,
     "6990to60": 2.8,
     "699Handling": 101,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/SaleenS7TwinTurbo(2005).png",
     "creator": "Havvy"
 }

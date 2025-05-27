@@ -5,9 +5,9 @@
     "modelYear": 2016,
     "country": "DE",
     "reference": "c01358",
-    "collection": ["Summer 2023"],
+    "collection": ["Summer Collection 2023"],
     "description": "Welcome to summer!",
-	"active" : true,
+	"active" : false,
     "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
     "creator": "DodgeDemon"
 }

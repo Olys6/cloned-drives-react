@@ -5,9 +5,9 @@
     "modelYear": 2018,
     "country": "JP",
     "reference": "c00531",
-    "collection": ["Everything Else"],
-    "active" : true,
-    "description": "None.",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
-    "creator": "Spence"
+    "collection": ["BMC1: The Originals"],
+    "active" : false,
+    "description": "May be replaced in future because might have different stats? who knows...i dont xD",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/HondaCiviTypeRLimitedEdition.png",
+    "creator": "Bnuuy"
 }

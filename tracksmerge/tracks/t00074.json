@@ -1,0 +1,18 @@
+{
+	"trackName": "Pikes Peak (Gravel)",
+	"weather": "Sunny",
+	"surface": "Gravel",
+	"speedbumps": 0,
+	"humps": 0,
+	"background": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Arts/Temp.png",
+	"map": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Maps/Temp.png",
+	
+	"specsDistr": {
+		"topSpeed": 7.5,
+		"0to60": 100,
+		"handling": 100,
+		"weight": 0,
+		"mra": 65,
+		"ola": 15
+	}
+}

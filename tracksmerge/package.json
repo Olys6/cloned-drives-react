@@ -1,0 +1,11 @@
+{
+  "name": "tracksmerge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tracksmerge.js",
+  "scripts": {
+    "start": "node tracksmerge.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

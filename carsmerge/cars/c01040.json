@@ -1,6 +1,6 @@
 {
     "carID": "c01040",
-    "cr": 570,
+    "cr": 569,
     "make": "Polaris",
     "model": "RZR XP 1000 EPS",
     "modelYear": 2015,
@@ -11,7 +11,7 @@
     "driveType": "4WD",
     "tyreType": "Off-Road",
     "tags": [],
-    "isPrize": true,
+    "isPrize": false,
     "weight": 695,
     "gc": "High",
     "seatCount": 2,
@@ -38,6 +38,6 @@
     "699TopSpeed": 110,
     "6990to60": 6.5,
     "699Handling": 81,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/PolarisRZRXP1000EPS(2015).png",
     "creator": "Spence"
 }

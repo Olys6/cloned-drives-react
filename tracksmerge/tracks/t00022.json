@@ -1,0 +1,18 @@
+{
+	"trackName": "City Streets Medium (Snowy)",
+	"weather": "Sunny",
+	"surface": "Snow",
+	"speedbumps": 4,
+	"humps": 0,
+	"background": "https://file.garden/ZmdgDS5GsALKuOXo/TB/csmSnow.png",
+	"map": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Maps/Temp.png",
+	
+	"specsDistr": {
+		"topSpeed": 0,
+		"0to60": 80,
+		"handling": 85,
+		"weight": 0,
+		"mra": 10,
+		"ola": 15
+	}
+}

@@ -2,7 +2,7 @@
     "carID": "c03417",
     "cr": 777,
     "make": ["M-Sport", "Fiat"],
-    "model": "Panda \"Pandamonium\"",
+    "model": "\"Pandamonium\"",
     "modelYear": 2021,
     "country": "GB",
     "topSpeed": 120,
@@ -10,7 +10,7 @@
     "handling": 90,
     "driveType": "4WD",
     "tyreType": "Performance",
-    "tags": ["The Tyrol Tour: Remix", "Hot Hatch", "Tuner", "Unique"],
+    "tags": ["The Tyrol Tour: Remix", "Hot Hatch", "Tuner", "Unique","Track Day"],
     "isPrize": false,
 
 

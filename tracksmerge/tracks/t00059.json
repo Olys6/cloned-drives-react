@@ -1,0 +1,18 @@
+{
+	"trackName": "Hill Climb (Snowy)",
+	"weather": "Sunny",
+	"surface": "Snow",
+	"speedbumps": 0,
+	"humps": 2,
+	"background": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Arts/Temp.png",
+	"map": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Maps/Temp.png",
+	
+	"specsDistr": {
+		"topSpeed": 1,
+		"0to60": 90,
+		"handling": 0,
+		"weight": 5,
+		"mra": 75,
+		"ola": 10
+	}
+}

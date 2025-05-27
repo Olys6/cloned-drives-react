@@ -1,0 +1,18 @@
+{
+	"trackName": "1 Mile Drag (Rainy)",
+	"weather": "Rainy",
+	"surface": "Drag",
+	"speedbumps": 0,
+	"humps": 0,
+	"background": "https://file.garden/ZmdgDS5GsALKuOXo/TB/1milerainy.jpg",
+	"map": "https://file.garden/ZmdgDS5GsALKuOXo/T/1Mile.png",
+	
+	"specsDistr": {
+		"topSpeed": 50,
+		"0to60": 100,
+		"handling": 0,
+		"weight": 0,
+		"mra": 100,
+		"ola": 0
+	}
+}

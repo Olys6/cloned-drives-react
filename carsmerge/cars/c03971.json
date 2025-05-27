@@ -1,6 +1,6 @@
 {
     "carID": "c03971",
-    "cr": 840,
+    "cr": 858,
     "make": "Ford",
     "model": "Mustang Cobra Jet FR500",
     "modelYear": 2012,
@@ -11,7 +11,7 @@
     "driveType": "RWD",
     "tyreType": "Drag",
     "tags": ["Endless Summer","Motorsport","Unique","The Americas Assault","Muscle Car"],
-    "isPrize": true,
+    "isPrize": false,
 	
     "weight": 1480,
     "gc": "Low",
@@ -24,7 +24,7 @@
     "mra": 80,
     "ola": 80,
     "description": "",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/FordMustangCobraJetFR500(2012).png",
     "creator": "Bnuuy",
 
 "333TopSpeed": 153,

@@ -1,10 +1,7 @@
 {
     "carID": "c00576",
-    "cr": 470,
-    "make": [
-        "Irmscher",
-        "Opel"
-    ],
+    "cr": 467,
+    "make": ["Irmscher","Opel"],
     "model": "Insignia 2.0T AWD",
     "modelYear": 2009,
     "country": "DE",
@@ -43,6 +40,6 @@
     "699TopSpeed": 165,
     "6990to60": 5.4,
     "699Handling": 91,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/IrmscherInsignia20TAWD(2009).png",
     "creator": "Connor"
 }

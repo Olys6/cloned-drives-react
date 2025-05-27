@@ -11,7 +11,7 @@
     "driveType": "4WD",
     "tyreType": "Performance",
     "tags": ["Hypercar","Ultra Expensive","Track Day","Unique"],
-    "isPrize": true,
+    "isPrize": false,
     "weight": 1946,
     "gc": "Low",
     "seatCount": 2,
@@ -38,6 +38,6 @@
     "699TopSpeed": 222,
     "6990to60": 1.9,
     "699Handling": 105,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/BugattiChironPurSport(2020).png",
     "creator": "Bnuuy"
 }

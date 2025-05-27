@@ -1,6 +1,6 @@
 {  
     "carID": "c02748",
-    "cr": 690,
+    "cr": 691,
     "make": "Audi",
     "model": "S6",
     "modelYear": 2014,
@@ -34,10 +34,10 @@
     "996Handling": 87,
     "969TopSpeed": 165,
     "9690to60": 3.6,
-    "969Handling": 81,
+    "969Handling": 91,
     "699TopSpeed": 162,
     "6990to60": 3.4,
     "699Handling": 91,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/AudiS6(2014).png",
     "creator": "Lemon"
 }

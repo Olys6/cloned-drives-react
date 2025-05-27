@@ -5,9 +5,9 @@
     "modelYear": 2015,
     "country": "FR",
     "reference": "c02641",
-    "collection": ["Everything Else"],
+    "collection": ["BMC2: Clr_s Around The World"],
     "description": "",
-	"active" : true,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/RenaultKadjar1.6dCI4x4Hypnotic(2016).png",
     "creator": "Lemon"
 }

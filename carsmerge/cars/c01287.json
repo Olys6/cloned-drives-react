@@ -1,6 +1,6 @@
 {
     "carID": "c01287",
-    "cr": 200,
+    "cr": 207,
     "make": "Tesla",
     "model": "Semi",
     "modelYear": 2021,
@@ -18,7 +18,7 @@
     "weight": 11340,
     "gc": "Low",
     "seatCount": 1,
-    "bodyStyle": "Commercial",
+    "bodyStyle": "Other",
     "tcs": true,
     "abs": true,
     "enginePos": "Front",
@@ -41,6 +41,6 @@
     "699TopSpeed": 77,
     "6990to60": 4.3,
     "699Handling": 48,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/TeslaSemi(2021).png",
     "creator": "DodgeDemon"
 }

@@ -1,0 +1,18 @@
+{
+	"trackName": "Bernese Alps (Sunny)",
+	"weather": "Sunny",
+	"surface": "Asphalt",
+	"speedbumps": 0,
+	"humps": 0,
+	"background": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Arts/Temp.png",
+	"map": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Maps/Temp.png",
+	
+	"specsDistr": {
+		"topSpeed": 45,
+		"0to60": 60,
+		"handling": 70,
+		"weight": 0,
+		"mra": 85,
+		"ola": 0
+	}
+}

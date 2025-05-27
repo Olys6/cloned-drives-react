@@ -1,6 +1,6 @@
 {
     "carID": "c01638",
-    "cr": 600,
+    "cr": 602,
     "make": "Mitsubishi",
     "model": "Lancer Evolution I GSR",
     "modelYear": 1992,
@@ -11,7 +11,7 @@
     "driveType": "4WD",
     "tyreType": "Performance",
     "tags": ["Street Racer","Innovative","The Japanese Odyssey"],
-    "isPrize": true,
+    "isPrize": false,
     "weight": 1240,
     "gc": "Medium",
     "seatCount": 5,
@@ -38,6 +38,6 @@
     "699TopSpeed": 121,
     "6990to60": 4.3,
     "699Handling": 85,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/MitsubishiLancerEvolutionIGSR(1992).png",
     "creator": "Bnuuy"
 }

@@ -1,6 +1,6 @@
 {
     "carID": "c01400",
-    "cr": 330,
+    "cr": 334,
     "make": "Volkswagen",
     "model": "Touareg 2.5 R5 TDI",
     "modelYear": 2003,
@@ -22,8 +22,8 @@
     "fuelType": "Diesel",
     "mra": 55.01,
     "ola": 52.89,
-    "description": "It's the one with the affordable diesel engine and diesel is definitely the sensible way to go. Card by Andu",
-     "333TopSpeed": 120,
+    "description": "It's the one with the affordable diesel engine and diesel is definitely the sensible way to go.",
+    "333TopSpeed": 120,
     "3330to60": 11.5,
     "333Handling": 69,
     "666TopSpeed": 124,
@@ -38,6 +38,6 @@
     "699TopSpeed": 124,
     "6990to60": 10.3,
     "699Handling": 74,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
-    "creator": ""
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/VolkswagenTouareg2.5R5TDI(2003).png",
+    "creator": "Andu"
 }

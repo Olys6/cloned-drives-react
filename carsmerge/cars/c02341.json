@@ -1,13 +1,13 @@
 {
     "carID": "c02341",
-    "make": ["Mallet", "Pontiac"],
+    "make": ["Mallett", "Pontiac"],
     "model": "V8 Solstice \"Pitbull\"",
     "modelYear": 2006,
     "country": "US",
     "reference": "c02245",
-    "collection": ["Stylized Bodies"],
-    "active" : true,
+    "collection": ["BMC1: The Originals"],
+    "active" : false,
     "description": "A badass widebody kit for the Mallet Solstice, produced by the Mallet brand itself.",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/MallettV8SolsticePitbull.png",
     "creator": "Biszkoptowiec"
 }

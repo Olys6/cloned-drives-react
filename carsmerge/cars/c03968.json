@@ -1,6 +1,6 @@
 {
     "carID": "c03968",
-    "cr": 970,
+    "cr": 965,
     "make": "Ford",
     "model": "Mustang Cobra Jet 1400",
     "modelYear": 2020,
@@ -11,7 +11,7 @@
     "driveType": "RWD",
     "tyreType": "Drag",
     "tags": ["Endless Summer","Motorsport","Unique","The Americas Assault","Muscle Car","Eco-Friendly"],
-    "isPrize": true,
+    "isPrize": false,
 	
     "weight": 1800,
     "gc": "Low",
@@ -24,7 +24,7 @@
     "mra": 81.11,
     "ola": 100,
     "description": "",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/FordMustangCobraJet1400(2020).png",
     "creator": "Bnuuy",
 
 "333TopSpeed": 217,

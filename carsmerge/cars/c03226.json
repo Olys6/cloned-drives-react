@@ -1,6 +1,6 @@
 {
     "carID": "c03226",
-    "cr": 280,
+    "cr": 350,
     "make": ["Oettinger", "Volkswagen"],
     "model": "Golf GTI 16S",
     "modelYear": 1981,
@@ -15,7 +15,7 @@
 
 
     "weight": 900,
-    "gc": "Low",
+    "gc": "Medium",
     "seatCount":5,
     "bodyStyle": "Hatchback",
     "tcs": false,
@@ -27,7 +27,7 @@
     "description": "Add a little bit of spice. And a turbo.",
 
 
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/OettingerGolfGTI16S(1981).png",
     "creator": "Andu",
 
     "333TopSpeed": 132,

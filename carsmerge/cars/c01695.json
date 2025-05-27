@@ -1,6 +1,6 @@
 {
     "carID": "c01695",
-    "cr": 1090,
+    "cr": 1086,
     "make": "Mitsubishi",
     "model": "Lancer Evolution X Rally Car",
     "modelYear": 2008,
@@ -11,7 +11,7 @@
     "driveType": "4WD",
     "tyreType": "Off-Road",
     "tags": ["Motorsport","The Japanese Odyssey"],
-    "isPrize": true,
+    "isPrize": false,
     "weight": 1400,
     "gc": "Medium",
     "seatCount": 2,
@@ -38,6 +38,6 @@
     "699TopSpeed": 157,
     "6990to60": 2.9,
     "699Handling": 102,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/MitsubishiLancerEvolutionXRallyCar(2008).png",
     "creator": "Bnuuy"
 }

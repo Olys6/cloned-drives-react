@@ -1,6 +1,6 @@
 {
     "carID": "c02148",
-    "cr": 560,
+    "cr": 561,
     "make": "Hongqi",
     "model": "E-HS3 AWD",
     "modelYear": 2019,
@@ -19,7 +19,7 @@
     "tcs": true,
     "abs": true,
     "enginePos": "Mixed",
-    "fuelType": "Petrol",
+    "fuelType": "Electric",
     "mra": 45,
     "ola": 71.55,
     "description": "I broke Mao Zedong's house, I'm going to the gulag.",
@@ -38,6 +38,6 @@
     "699TopSpeed": 110,
     "6990to60": 4.9,
     "699Handling": 87,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/HongqiEHS3AWD(2019).png",
     "creator": "Keanny"
 }

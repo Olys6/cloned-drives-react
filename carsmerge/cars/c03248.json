@@ -1,8 +1,8 @@
 {  
     "carID": "c03248",
-    "cr": 1000,
+    "cr": 999,
     "make": "Ferrari",
-    "model": "SF90 Spider Assetto Fiorano",
+    "model": "SF90 Assetto Fiorano Spider",
     "modelYear": 2019,
     "country": "IT",
     "topSpeed": 211,
@@ -38,6 +38,6 @@
     "699TopSpeed": 216,
     "6990to60": 2.0,
     "699Handling": 105,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/FerrariSF90SpiderAFS(2019).png",
     "creator": "Lemon"
 }

@@ -1,0 +1,18 @@
+{
+	"trackName": "Bilster Berg (Sunny)",
+	"weather": "Sunny",
+	"surface": "Track",
+	"speedbumps": 0,
+	"humps": 0,
+	"background": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Arts/Temp.png",
+	"map": "https://file.garden/ZmdgDS5GsALKuOXo/T/bilsterberg.png",
+
+	"specsDistr": {
+		"topSpeed": 45,
+		"0to60": 40,
+		"handling": 75,
+		"weight": 0,
+		"mra": 50,
+		"ola": 5
+	}
+}

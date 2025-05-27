@@ -1,9 +1,10 @@
 {
     "carID": "c04350",
-    "cr": 640,
+    "cr": 635,
     "make": "Audi",
     "model": "Q7 3.0 TDI quattro S line",
     "modelYear": 2015,
+	"country": "DE",
     "topSpeed": 146,
     "0to60": 6.3,
     "handling": 77,
@@ -24,7 +25,7 @@
     "mra": 60.57,
     "ola": 73.01,
     "description": "This also probably the most popular variant, long live TDI.",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/AudiQ730TDIquattroSline(2015).png",
     "creator": "Connor",
 
     "333TopSpeed": 150,

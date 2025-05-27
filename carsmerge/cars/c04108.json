@@ -1,6 +1,6 @@
 {
     "carID": "c04108",
-    "cr": 860,
+    "cr": 861,
     "make": "Volkswagen",
     "model": "Golf Kit Car",
     "modelYear": 1998,
@@ -15,8 +15,8 @@
 
 
     "weight": 980,
-    "gc": "Low",
-    "seatCount":5,
+    "gc": "Medium",
+    "seatCount": 2,
     "bodyStyle": "Hatchback",
     "tcs": false,
     "abs": false,
@@ -27,7 +27,7 @@
     "description": "A worthy entry to the Volkswagen rally hall of fame.",
 
 
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/VolkswagenGolfKitCar(1998).png",
     "creator": "Andu",
 
     "333TopSpeed": 129,

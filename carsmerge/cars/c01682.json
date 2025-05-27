@@ -1,6 +1,6 @@
 {
     "carID": "c01682",
-    "cr": 1040,
+    "cr": 1038,
     "make": "Mitsubishi",
     "model": "Lancer Evolution VII WRC",
     "modelYear": 2001,
@@ -11,7 +11,7 @@
     "driveType": "4WD",
     "tyreType": "Off-Road",
     "tags": ["Motorsport","Unique","The Japanese Odyssey"],
-    "isPrize": true,
+    "isPrize": false,
     "weight": 1230,
     "gc": "Medium",
     "seatCount": 2,
@@ -38,6 +38,6 @@
     "699TopSpeed": 157,
     "6990to60": 3.1,
     "699Handling": 100,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/MitsubishiLancerEvolutionVIIWRC(2001).png",
     "creator": "Bnuuy"
 }

@@ -3,6 +3,7 @@
     "cr": 690,
     "make": "Audi",
     "model": "Q7 3.0 TFSI quattro S line",
+	"country": "DE",
     "modelYear": 2015,
     "topSpeed": 155,
     "0to60": 5.8,
@@ -24,7 +25,7 @@
     "mra": 63.04,
     "ola": 75.86,
     "description": "Second generation was smaller than first in almost all aspects but that made it better.",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/AudiQ730TFSIquattroSline(2015).png",
     "creator": "Connor",
 
     "333TopSpeed": 158,

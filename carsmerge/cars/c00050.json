@@ -1,10 +1,7 @@
 {
     "carID": "c00050",
-    "cr": 950,
-    "make": [
-        "Apollo",
-        "Gumpert"
-    ],
+    "cr": 953,
+    "make": ["Apollo","Gumpert"],
     "model": "Intensa Emozione",
     "modelYear": 2019,
     "country": "DE",
@@ -13,11 +10,7 @@
     "handling": 98,
     "driveType": "RWD",
     "tyreType": "Performance",
-    "tags": [
-        "Track Day",
-        "Hypercar",
-        "Ultra Expensive","OG"
-    ],
+	"tags": ["Track Day","Hypercar","Ultra Expensive","OG"],
     "isPrize": true,
     "weight": 1250,
     "gc": "Low",
@@ -45,6 +38,6 @@
     "699TopSpeed": 213,
     "6990to60": 2.3,
     "699Handling": 109,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/ApolloIntensaEmozione(2019).png",
     "creator": "DodgeDemon"
 }

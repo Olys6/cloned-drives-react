@@ -1,6 +1,6 @@
 {
     "carID": "c03827",
-    "cr": 590,
+    "cr": 586,
     "make": ["Mansory","Mercedes-AMG", "Mercedes-Benz"],
     "model": "Xtreme 6x6",
     "modelYear": 2014,
@@ -11,7 +11,7 @@
     "driveType": "AWD",
     "tyreType": "Off-Road",
     "tags": ["Endless Summer","Unique","Ultra Expensive","Extreme Juggernaut","The Tyrol Tour: Remix","Tuner"],
-    "isPrize": true,
+    "isPrize": false,
 	
     "weight": 4290,
     "gc": "High",
@@ -24,7 +24,7 @@
     "mra": 85.17,
     "ola": 65,
     "description": "",
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/MansoryXtreme6x6(2014).png",
     "creator": "Bnuuy",
 
 "333TopSpeed": 120,

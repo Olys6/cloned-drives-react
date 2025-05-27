@@ -1,11 +1,11 @@
 {
     "carID": "c00837",
-    "cr": 720,
+    "cr": 721,
     "make": [
-        "Mercedes-AMG",
-        "Mercedes-Benz"
+        "Mercedes-Benz",
+        "Mercedes-AMG"
     ],
-    "model": "SL 65",
+    "model": "SL 65 AMG",
     "modelYear": 2004,
     "country": "DE",
     "topSpeed": 155,
@@ -41,6 +41,6 @@
     "699TopSpeed": 162,
     "6990to60": 3.4,
     "699Handling": 92,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/MercedesBenzSL65AMG(2004).png",
     "creator": "Havvy"
 }

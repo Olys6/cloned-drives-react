@@ -1,6 +1,6 @@
 {
     "carID": "c02144",
-    "cr": 680,
+    "cr": 682,
     "make": ["G-Power","BMW"],
     "model": "M6 Hurricane CS",
     "modelYear": 2009,
@@ -11,7 +11,7 @@
     "driveType": "RWD",
     "tyreType": "Performance",
     "tags": ["Tuner","Unique"],
-    "isPrize": true,
+    "isPrize": false,
     "weight": 1687,
     "gc": "Low",
     "seatCount": 4,
@@ -38,6 +38,6 @@
     "699TopSpeed": 233,
     "6990to60": 3.6,
     "699Handling": 89,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/GPowerM6HurricaneCS(2009).png",
     "creator": "Bnuuy"
 }

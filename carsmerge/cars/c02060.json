@@ -16,11 +16,11 @@
         "Oddity",
         "Motorsport"
     ],
-    "isPrize": true,
+    "isPrize": false,
     "weight": 890,
     "gc": "Low",
     "seatCount": 2,
-    "bodyStyle": "Commercial",
+    "bodyStyle": "Other",
     "tcs": false,
     "abs": false,
     "enginePos": "Middle",

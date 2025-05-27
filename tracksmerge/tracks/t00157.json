@@ -1,0 +1,18 @@
+{
+	"trackName": "Ouninpohja Track Stage (Gravel)",
+	"weather": "Sunny",
+	"surface": "Gravel",
+	"speedbumps": 8,
+	"humps": 0,
+	"background": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Arts/Temp.png",
+	"map": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Maps/Temp.png",
+	
+	"specsDistr": {
+		"topSpeed": 10,
+		"0to60": 30,
+		"handling": 95,
+		"weight": 0,
+		"mra": 60,
+		"ola": 2.5
+	}
+}

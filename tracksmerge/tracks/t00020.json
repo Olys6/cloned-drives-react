@@ -1,0 +1,18 @@
+{
+	"trackName": "City Streets Medium (Ice)",
+	"weather": "Sunny",
+	"surface": "Ice",
+	"speedbumps": 4,
+	"humps": 0,
+	"background": "https://file.garden/ZmdgDS5GsALKuOXo/TB/csmIce.png",
+	"map": "https://file.garden/ZSrBMiDRyR84aPJp/Track%20Maps/Temp.png",
+	
+	"specsDistr": {
+		"topSpeed": 0,
+		"0to60": 80,
+		"handling": 85,
+		"weight": 0,
+		"mra": 5,
+		"ola": 30
+	}
+}
