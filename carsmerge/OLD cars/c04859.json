@@ -1,0 +1,49 @@
+{
+    "carID": "c04859",
+    "cr": 940,
+    "make": ["Porsche-March", "Porsche"],
+    "model": "90P",
+    "modelYear": 1990,
+    "country": "DE",
+    "topSpeed": 220,
+    "0to60": 3.0,
+    "handling": 100,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Eurotech Elite","Motorsport","Ultra Expensive","Unique","Cloned Drives Beta: Last of"],
+    "isPrize": true,
+	
+    "weight": 700,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Open Air",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 107.99,
+    "ola": 73.85,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 222,
+"3330to60": 2.8,
+"333Handling": 103,
+
+"666TopSpeed": 225,
+"6660to60": 2.7,
+"666Handling": 107,
+
+"699TopSpeed": 225,
+"6990to60": 2.5,
+"699Handling": 111,
+
+"969TopSpeed": 227,
+"9690to60": 2.7,
+"969Handling": 111,
+
+"996TopSpeed": 227,
+"9960to60": 2.5,
+"996Handling": 107,
+    "creator": "Bnuuy"
+}

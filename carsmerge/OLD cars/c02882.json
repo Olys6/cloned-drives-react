@@ -1,0 +1,13 @@
+{
+    "carID": "c02882",
+    "make": "BMW",
+    "model": "118d \"Individual Edition\"",
+    "modelYear": 2019,
+    "country": "DE",
+    "reference": "c00150",
+    "collection": ["The Tyrol Tour BM Collection"],
+    "description": "None",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/BMW118dindividualEdition.png",
+    "creator": "Crossfire"
+}

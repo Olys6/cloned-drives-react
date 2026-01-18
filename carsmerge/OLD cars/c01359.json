@@ -1,0 +1,49 @@
+{
+    "carID": "c01359",
+    "cr": 499,
+    "make": "Volkswagen",
+    "model": "Beetle GSR",
+    "modelYear": 2014,
+    "country": "DE",
+    "topSpeed": 142,
+    "0to60": 6.4,
+    "handling": 82,
+    "driveType": "FWD",
+    "tyreType": "Performance",
+    "tags": [
+        "Hot Hatch"
+    ],
+    "isPrize": false,
+    "weight": 1432,
+    "gc": "Medium",
+    "seatCount": 4,
+    "bodyStyle": "Hatchback",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 66.55,
+    "ola": 71.55,
+    "description": "More fun than a GTI. Sillier, too.",
+"333TopSpeed": 146,
+"3330to60": 6.1,
+"333Handling": 85,
+
+"666TopSpeed": 149,
+"6660to60": 5.8,
+"666Handling": 87,
+
+"699TopSpeed": 149,
+"6990to60": 5.4,
+"699Handling": 91,
+
+"969TopSpeed": 153,
+"9690to60": 5.8,
+"969Handling": 91,
+
+"996TopSpeed": 153,
+"9960to60": 5.4,
+"996Handling": 87,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/VolkswagenBeetleGSR(2014).png",
+    "creator": "Andu"
+}

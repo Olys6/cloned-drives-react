@@ -1,0 +1,49 @@
+{
+    "carID": "c03061",
+    "cr": 485,
+    "make": "Porsche",
+    "model": "928 S4 Clubsport",
+    "modelYear": 1988,
+    "country": "DE",
+    "topSpeed": 170,
+    "0to60": 5.4,
+    "handling": 76,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["The Tyrol Tour"],
+    "isPrize": false,
+    
+    "weight": 1515,
+    "gc": "Low",
+    "seatCount": 4,
+    "bodyStyle": "Coupe",
+    "tcs": false,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 65.05,
+    "ola": 79.21,
+    "description": "Even the 928 couldn't escape the Clubsport treatment.",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/Porsche928S4Clubsport(1988).png",
+    "creator": "c6",
+
+    "333TopSpeed": 173,
+    "3330to60": 5.1,
+    "333Handling": 79,
+
+    "666TopSpeed": 176,
+    "6660to60": 4.9,
+    "666Handling": 81,
+
+    "996TopSpeed": 179,
+    "9960to60": 4.6,
+    "996Handling": 81,
+
+    "969TopSpeed": 179,
+    "9690to60": 4.9,
+    "969Handling": 84,
+
+    "699TopSpeed": 176,
+    "6990to60": 4.6,
+    "699Handling": 84
+}

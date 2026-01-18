@@ -1,0 +1,49 @@
+{
+    "carID": "c03415",
+    "cr": 639,
+    "make": "Maserati",
+    "model": "GranTurismo S",
+    "modelYear": 2011,
+    "country": "IT",
+    "topSpeed": 185,
+    "0to60": 4.7,
+    "handling": 87,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Grand Tourer","The Tyrol Tour: Remix"],
+    "isPrize": false,
+	
+    "weight": 1870,
+    "gc": "Low",
+    "seatCount": 4,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 73.9,
+    "ola": 77.54,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/MaseratiGranTurismoS(2011).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 188, 
+"3330to60": 4.5, 
+"333Handling": 90,
+
+"666TopSpeed": 191, 
+"6660to60": 4.2, 
+"666Handling": 93,
+
+"699TopSpeed": 191, 
+"6990to60": 4.0, 
+"699Handling": 97,
+
+"969TopSpeed": 193, 
+"9690to60": 4.2, 
+"969Handling": 97,
+
+"996TopSpeed": 193, 
+"9960to60": 4.0, 
+"996Handling": 93
+}

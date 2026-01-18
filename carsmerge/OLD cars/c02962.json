@@ -1,0 +1,49 @@
+{
+    "carID": "c02962",
+    "cr": 849,
+    "make": "Lamborghini",
+    "model": "Gallardo LP570-4 Superleggera",
+    "modelYear": 2010,
+    "country": "IT",
+    "topSpeed": 202,
+    "0to60": 3.3,
+    "handling": 88,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": ["Track Day","Supercar","The Tyrol Tour"],
+    "isPrize": false,
+	
+    "weight": 1520,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 85.07,
+    "ola": 83.66,
+    "description": "The Lightweight baby lambo.",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/LamborghiniGallardoLP570-4Superleggera(2010).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 205, 
+"3330to60": 3.1, 
+"333Handling": 91,
+
+"666TopSpeed": 207, 
+"6660to60": 3.0, 
+"666Handling": 94,
+
+"699TopSpeed": 207, 
+"6990to60": 2.8, 
+"699Handling": 98,
+
+"969TopSpeed": 210, 
+"9690to60": 3.0, 
+"969Handling": 98,
+
+"996TopSpeed": 210, 
+"9960to60": 2.8, 
+"996Handling": 94
+}

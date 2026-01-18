@@ -1,0 +1,49 @@
+{
+    "carID": "c04929",
+    "cr": 826,
+    "make": ["Schuppan","Porsche"],
+    "model": "962CR",
+    "modelYear": 1992,
+    "country": "GB",
+    "topSpeed": 220,
+    "0to60": 3.6,
+    "handling": 92,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite","Track Day","Unique","Ultra Expensive","Tuner","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1050,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Coupe",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 102.56,
+    "ola": 91.22,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Schuppan962CR(1992).png",
+
+"333TopSpeed": 222,
+"3330to60": 3.4,
+"333Handling": 95,
+
+"666TopSpeed": 225,
+"6660to60": 3.2,
+"666Handling": 98,
+
+"699TopSpeed": 225,
+"6990to60": 3.1,
+"699Handling": 102,
+
+"969TopSpeed": 227,
+"9690to60": 3.2,
+"969Handling": 102,
+
+"996TopSpeed": 227,
+"9960to60": 3.1,
+"996Handling": 98,
+    "creator": "Bnuuy"
+}

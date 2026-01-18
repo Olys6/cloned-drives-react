@@ -1,0 +1,13 @@
+{
+    "carID": "c03142",
+    "make": "Infiniti",
+    "model": "Q60 Red Sport 400 \"Neiman Marcus\"",
+    "modelYear": 2017,
+    "country": "JP",
+    "reference": "c00573",
+    "collection": ["BMC2: Clr_s Around The World"],
+    "description": "None",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Crossfire"
+}

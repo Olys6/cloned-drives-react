@@ -62,6 +62,10 @@ function weightSliderValuetext(value) {
 	return `${value} KG`;
 }
 
+function seatSliderValuetext(value) {
+	return `${value} Seats`;
+}
+
 const minDistance = 0;
 
 const maxRQ = 125;
@@ -160,6 +164,13 @@ const CarFilter = ({
 	carsSortType,
 	carTag,
 	setCarTag,
+	// New filter props
+	seatCount,
+	setSeatCount,
+	lowestSeatCount,
+	highestSeatCount,
+	enginePos,
+	setEnginePos,
 }) => {
 	const [expanded, setExpanded] = useState(false);
 
@@ -173,6 +184,7 @@ const CarFilter = ({
 	const carDriveTypes = [];
 	const carFuelTypes = [];
 	const carGcs = [];
+	const carEnginePosOptions = [];
 
 	const getCarOptions = () => {
 		carData.forEach(car => {
@@ -237,6 +249,15 @@ const CarFilter = ({
 			) {
 				carGcs.push(car.gc);
 				carFuelTypes.sort();
+			}
+
+			// getting all engine positions
+			if (
+				!carEnginePosOptions.includes(car.enginePos) &&
+				car.enginePos !== undefined
+			) {
+				carEnginePosOptions.push(car.enginePos);
+				carEnginePosOptions.sort();
 			}
 		});
 	};
@@ -950,6 +971,41 @@ const CarFilter = ({
 		} else {
 			setOla(newValue);
 		}
+	};
+
+	const handleSeatCountSliderChange = (
+		event,
+		newValue,
+		activeThumb
+	) => {
+		setSeatCount(newValue);
+		if (!Array.isArray(newValue)) {
+			return;
+		}
+
+		if (seatCount[1] - seatCount[0] < minDistance) {
+			if (activeThumb === 0) {
+				const clamped = Math.min(
+					seatCount[0],
+					highestSeatCount - minDistance
+				);
+				setSeatCount([clamped, clamped + minDistance]);
+			} else {
+				const clamped = Math.max(seatCount[1], minDistance);
+				setSeatCount([clamped - minDistance, clamped]);
+			}
+		} else {
+			setSeatCount(newValue);
+		}
+	};
+
+	const handleSelectEnginePosChange = event => {
+		const {
+			target: { value },
+		} = event;
+		setEnginePos(
+			typeof value === 'string' ? value.split(',') : value
+		);
 	};
 
 	useEffect(() => {
@@ -1778,6 +1834,73 @@ const CarFilter = ({
 										<Checkbox
 											color='success'
 											checked={gc.indexOf(name) > -1}
+										/>
+										<ListItemText primary={name} />
+									</MenuItem>
+								))}
+							</Select>
+						</FormControl>
+					</Box>
+
+					{/* //? SEAT COUNT AND ENGINE POSITION */}
+					<Box
+						sx={{
+							mb: 1,
+							width: { xs: '100%', md: '98%' },
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'flex-start',
+							flexDirection: { xs: 'column', md: 'row' },
+							gap: 2,
+						}}>
+						<Stack
+							direction='row'
+							gap={1}
+							alignItems='center'
+							sx={{ width: '100%' }}>
+							<Typography sx={{ width: '5rem' }}>
+								Seats
+							</Typography>
+							<Slider
+								sx={{ mr: 1 }}
+								getAriaLabel={() => 'Seat Count'}
+								value={seatCount}
+								onChange={handleSeatCountSliderChange}
+								valueLabelDisplay='auto'
+								getAriaValueText={seatSliderValuetext}
+								valueLabelFormat={seatSliderValuetext}
+								disableSwap
+								min={lowestSeatCount}
+								max={highestSeatCount}
+								step={1}
+								marks
+							/>
+						</Stack>
+
+						<FormControl sx={{ width: '100%' }}>
+							<InputLabel id='engine-pos-label'>
+								Engine Position
+							</InputLabel>
+							<Select
+								labelId='engine-pos-label'
+								id='engine-pos-select'
+								multiple
+								value={enginePos}
+								onChange={handleSelectEnginePosChange}
+								input={
+									<OutlinedInput label='Engine Position' />
+								}
+								renderValue={selected =>
+									selected.join(', ')
+								}
+								MenuProps={MenuProps}>
+								{carEnginePosOptions.map((name, i) => (
+									<MenuItem
+										key={i}
+										value={name}>
+										<Checkbox
+											color='success'
+											checked={enginePos.indexOf(name) > -1}
 										/>
 										<ListItemText primary={name} />
 									</MenuItem>

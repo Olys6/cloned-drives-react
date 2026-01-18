@@ -1,0 +1,13 @@
+{
+    "carID": "c02326",
+    "make": "Honda",
+    "model": "Civic Type R Limited Edition",
+    "modelYear": 2018,
+    "country": "JP",
+    "reference": "c00531",
+    "collection": ["BMC1: The Originals"],
+    "active" : false,
+    "description": "May be replaced in future because might have different stats? who knows...i dont xD",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/HondaCiviTypeRLimitedEdition.png",
+    "creator": "Bnuuy"
+}

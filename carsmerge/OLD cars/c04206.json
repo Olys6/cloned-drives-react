@@ -1,0 +1,49 @@
+{
+    "carID": "c04206",
+    "cr": 792,
+    "make": "Maserati",
+    "model": "Grecale Modena",
+    "modelYear": 2022,
+    "country": "IT",
+    "topSpeed": 149,
+    "0to60": 5.1,
+    "handling": 81,
+    "driveType": "4WD",
+    "tyreType": "All-Surface",
+    "tags": ["Eurotech Elite"],
+    "isPrize": false,
+	
+    "weight": 1820,
+    "gc": "High",
+    "seatCount": 5,
+    "bodyStyle": "SUV",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 64.93,
+    "ola": 76.20,
+    "description": "Sportier approach to the Grecale with cosmetic changes and a horsepower boost.",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/MaseratiGrecaleModena(2022).png",
+    "creator": "Crossfire",
+
+    "333TopSpeed": 152, 
+    "3330to60": 4.8, 
+    "333Handling": 84,
+
+    "666TopSpeed": 156, 
+    "6660to60": 4.6, 
+    "666Handling": 86,
+
+    "996TopSpeed": 159, 
+    "9960to60": 4.3, 
+    "996Handling": 86,
+
+    "969TopSpeed": 159, 
+    "9690to60": 4.6, 
+    "969Handling": 90,
+
+    "699TopSpeed": 156, 
+    "6990to60": 4.3, 
+    "699Handling": 90
+}

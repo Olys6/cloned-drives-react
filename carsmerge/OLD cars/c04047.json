@@ -1,0 +1,13 @@
+{
+    "carID": "c04047",
+    "make": "Koenigsegg",
+    "model": "Regera Ghost Package (S23)",
+    "modelYear": 2018,
+    "country": "SE",
+    "reference": "c00641",
+    "collection": ["Summer Collection 2023"],
+    "description": "Welcome to summer!",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(bm)/0in/Regera(S23).png",
+    "creator": "DodgeDemon"
+}

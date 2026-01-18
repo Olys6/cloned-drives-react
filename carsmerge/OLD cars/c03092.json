@@ -1,0 +1,13 @@
+{
+    "carID": "c03092",
+    "make": "Volkswagen",
+    "model": "street up! 1.0 MPI",
+    "modelYear": 2011,
+    "country": "DE",
+    "reference": "c01413",
+    "collection": ["The Tyrol Tour BM Collection"],
+    "description": "What a street style car.",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Crossfire"
+}

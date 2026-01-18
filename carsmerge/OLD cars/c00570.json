@@ -1,0 +1,49 @@
+{
+    "carID": "c00570",
+    "cr": 719,
+    "make": "Infiniti",
+    "model": "Q50 Red Sport 400 AWD",
+    "modelYear": 2017,
+    "country": "JP",
+    "topSpeed": 155,
+    "0to60": 4.6,
+    "handling": 84,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": [
+        "Super Sedan"
+    ],
+    "isPrize": false,
+    "weight": 1811,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Sedan",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 69.72,
+    "ola": 75,
+    "description": "",
+"333TopSpeed": 158,
+"3330to60": 4.4,
+"333Handling": 87,
+
+"666TopSpeed": 162,
+"6660to60": 4.1,
+"666Handling": 90,
+
+"699TopSpeed": 162,
+"6990to60": 3.9,
+"699Handling": 93,
+
+"969TopSpeed": 165,
+"9690to60": 4.1,
+"969Handling": 93,
+
+"996TopSpeed": 165,
+"9960to60": 3.9,
+"996Handling": 90,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/InfinitiQ50RedSport400AWD(2017).png",
+    "creator": "Bnuuy"
+}

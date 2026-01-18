@@ -1,0 +1,13 @@
+{
+    "carID": "c02915",
+    "make": "Aston Martin",
+    "model": "DB11 V8 (W22)",
+    "modelYear": 2017,
+    "country": "GB",
+    "reference": "c00062",
+    "collection": ["Winter Collection 2022"],
+    "description": "Happy Holidays from the CD team.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/AstonMartinDB11(W22).png",
+    "creator": "Bnuuy"
+}

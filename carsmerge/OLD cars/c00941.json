@@ -1,0 +1,50 @@
+{
+    "carID": "c00941",
+    "cr": 926,
+    "make": "Nissan",
+    "model": "GT-R Nismo",
+    "modelYear": 2014,
+    "country": "JP",
+    "topSpeed": 197,
+    "0to60": 2.7,
+    "handling": 92,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": ["Street Racer", "Track Day", "Supercar", "OG"],
+    "isPrize": false,
+    
+    "weight": 1720,
+    "gc": "Low",
+    "seatCount": 4,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 75.86,
+    "ola": 75,
+    "description": "Nismo finally gets its hands on the R35 to create the most hardcore GT-R since the Spec V. With turbochargers and aerodynamics inspired from the GT3 race car, this was the most expressive R35 yet and closer to its racing roots than ever before.",
+ 
+"333TopSpeed": 200,
+"3330to60": 2.6,
+"333Handling": 95,
+
+"666TopSpeed": 202,
+"6660to60": 2.4,
+"666Handling": 98,
+
+"699TopSpeed": 202,
+"6990to60": 2.3,
+"699Handling": 102,
+
+"969TopSpeed": 205,
+"9690to60": 2.4,
+"969Handling": 102,
+
+"996TopSpeed": 205,
+"9960to60": 2.3,
+"996Handling": 98,
+
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/NissanGTRNismo(2014).png",
+    "creator": "Bnuuy"
+}

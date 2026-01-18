@@ -1,0 +1,49 @@
+{
+    "carID": "c04526",
+    "cr": 384,
+    "make": "Peugeot",
+    "model": "5008 1.2 PureTech 130",
+    "modelYear": 2017,
+    "country": "FR",
+    "topSpeed": 117,
+    "0to60": 10.3,
+    "handling": 73,
+    "driveType": "FWD",
+    "tyreType": "All-Surface",
+    "tags": ["Eurotech Elite","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1335,
+    "gc": "High",
+    "seatCount": 7,
+    "bodyStyle": "SUV",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 43.71,
+    "ola": 70.24,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Peugeot50081.2PureTech130(2017).png",
+    "creator": "Crossfire",
+
+    "333TopSpeed": 121,
+    "3330to60": 9.8,
+    "333Handling": 75,
+
+    "666TopSpeed": 126,
+    "6660to60": 9.3,
+    "666Handling": 78,
+
+    "699TopSpeed": 126,
+    "6990to60": 8.8,
+    "699Handling": 81,
+
+    "969TopSpeed": 130,
+    "9690to60": 9.3,
+    "969Handling": 81,
+
+    "996TopSpeed": 130,
+    "9960to60": 8.8,
+    "996Handling": 78
+}

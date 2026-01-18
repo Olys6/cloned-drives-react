@@ -1,0 +1,13 @@
+{
+    "carID": "c02263",
+    "make": "Fisker",
+    "model": "Latigo CS",
+    "modelYear": 2005,
+    "country": "US",
+    "reference": "c00193",
+    "collection": ["BMC1: The Originals"],
+    "active" : false,
+    "description": "placeholder desc",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/FiskerLatigoCS.png",
+    "creator": "Bnuuy"
+}

@@ -1,0 +1,13 @@
+{
+    "carID": "c03034",
+    "make": "McLaren",
+    "model": "P1 (W22)",
+    "modelYear": 2013,
+    "country": "GB",
+    "reference": "c00809",
+    "collection": ["Winter Collection 2022"],
+    "description": "Happy Holidays from the CD team.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/McLarenP1(W22).png",
+    "creator": "Bnuuy"
+}

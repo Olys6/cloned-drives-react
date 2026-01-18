@@ -1,0 +1,13 @@
+{
+    "carID": "c02847",
+    "make": "Citroen",
+    "model": "DS3 1.6 THP 155 \"DSport Pink\"",
+    "modelYear": 2010,
+    "country": "FR",
+    "reference": "c02679",
+    "collection": ["BMC1: The Originals"],
+    "description": "None",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/CitroenDS3DSportPink.png",
+    "creator": "Crossfire"
+}

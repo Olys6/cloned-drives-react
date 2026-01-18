@@ -11,6 +11,12 @@ import Creation from './components/Creation.jsx';
 import NoMatch from './components/NoMatch.jsx';
 import Footer from './components/Footer.jsx';
 import FrontPage from './components/FrontPage';
+import TrackList from './components/TrackList';
+import PackList from './components/PackList';
+import BMCarList from './components/BMCarList';
+import PackSimulator from './components/PackSimulator';
+import RaceSimulator from './components/RaceSimulator';
+import CDClicker from './components/CDClicker';
 
 const theme = createTheme(themeOptions);
 
@@ -37,6 +43,36 @@ function App() {
 						exact
 						path='/tune-calculator'
 						element={<Creation />}
+					/>
+					<Route
+						exact
+						path='/tracks'
+						element={<TrackList />}
+					/>
+					<Route
+						exact
+						path='/packs'
+						element={<PackList />}
+					/>
+					<Route
+						exact
+						path='/bm-cars'
+						element={<BMCarList />}
+					/>
+					<Route
+						exact
+						path='/pack-simulator'
+						element={<PackSimulator />}
+					/>
+					<Route
+						exact
+						path='/race-simulator'
+						element={<RaceSimulator />}
+					/>
+					<Route
+						exact
+						path='/clicker'
+						element={<CDClicker />}
 					/>
 					{/* <Route exact path='/cloned-drives-react/foot' element={<Footer />} /> */}
 					<Route

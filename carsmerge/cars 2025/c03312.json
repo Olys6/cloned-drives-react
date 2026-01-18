@@ -1,0 +1,14 @@
+{
+    "carID": "c03312",
+    "make": "BMW",
+    "model": "2002 Turbo Cutaway",
+    "modelYear": 1973,
+    "country": "DE",
+    "reference": "c00151",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/BMW2002TurboCutaway.png",
+    "creator": "Crossfire",
+    "hiddenTag": [""]
+}

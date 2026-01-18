@@ -1,0 +1,14 @@
+{
+    "carID": "c03323",
+    "make": "Honda",
+    "model": "Beat Cutaway",
+    "modelYear": 1991,
+    "country": "JP",
+    "reference": "c01540",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/HondaBeatCutaway.png",
+    "creator": "Bnuuy",
+    "hiddenTag": [""]
+}

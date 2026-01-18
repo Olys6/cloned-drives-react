@@ -1,0 +1,13 @@
+{
+    "carID": "c04053",
+    "make": "Porsche",
+    "model": "718 Boxster S (S23)",
+    "modelYear": 2017,
+    "country": "DE",
+    "reference": "c01447",
+    "collection": ["Summer Collection 2023"],
+    "description": "Welcome to summer!",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "DodgeDemon"
+}

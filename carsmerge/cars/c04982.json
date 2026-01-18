@@ -20,7 +20,7 @@
     "tcs": true,
     "abs": true,
     "enginePos": "Rear",
-    "fuelType": "Petrol",
+    "fuelType": "Hybrid",
     "mra": 100,
     "ola": 87.5,
     "description": "",
@@ -45,5 +45,6 @@
 "996TopSpeed": 210,
 "9960to60": 2.3,
 "996Handling": 109,
-    "creator": "Bnuuy"
+    "creator": "Bnuuy",
+    "hiddenTag": [""]
 }

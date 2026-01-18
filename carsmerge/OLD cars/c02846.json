@@ -1,0 +1,13 @@
+{
+    "carID": "c02846",
+    "make": "Chevrolet",
+    "model": "SSR NASCAR Pace Car",
+    "modelYear": 2005,
+    "country": "US",
+    "reference": "c00300",
+    "collection": ["BMC1: The Originals"],
+    "description": "Must be one of the coolest liveries ever put on a car.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/ChevroletSSRNascarPaceCar(2005).png",
+    "creator": "Crossfire"
+}

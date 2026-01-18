@@ -1,0 +1,49 @@
+{
+    "carID": "c04578",
+    "cr": 1039,
+    "make": "Porsche",
+    "model": "9R3 LMP2000",
+    "modelYear": 2000,
+    "country": "DE",
+    "topSpeed": 210,
+    "0to60": 2.8,
+    "handling": 108,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Eurotech Elite","Motorsport","Unique","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 930,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Open Air",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 109.56,
+    "ola": 80,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Porsche9R3LMP2000(2000).png",
+
+"333TopSpeed": 212,
+"3330to60": 2.7,
+"333Handling": 112,
+
+"666TopSpeed": 215,
+"6660to60": 2.5,
+"666Handling": 115,
+
+"699TopSpeed": 215,
+"6990to60": 2.4,
+"699Handling": 120,
+
+"969TopSpeed": 217,
+"9690to60": 2.5,
+"969Handling": 120,
+
+"996TopSpeed": 217,
+"9960to60": 2.4,
+"996Handling": 115,
+    "creator": "Bnuuy"
+}

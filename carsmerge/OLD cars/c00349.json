@@ -1,0 +1,49 @@
+{
+    "carID": "c00349",
+    "cr": 518,
+    "make": "Dodge",
+    "model": "Challenger R/T",
+    "modelYear": 2009,
+    "country": "US",
+    "topSpeed": 142,
+    "0to60": 5.4,
+    "handling": 73,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": [
+        "Muscle Car"
+    ],
+    "isPrize": false,
+    "weight": 1830,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 72.39,
+    "ola": 76.28,
+    "description": "The mid-trim boxy boi.",
+"333TopSpeed": 146,
+"3330to60": 5.1,
+"333Handling": 75,
+
+"666TopSpeed": 149,
+"6660to60": 4.9,
+"666Handling": 78,
+
+"699TopSpeed": 149,
+"6990to60": 4.6,
+"699Handling": 81,
+
+"969TopSpeed": 153,
+"9690to60": 4.9,
+"969Handling": 81,
+
+"996TopSpeed": 153,
+"9960to60": 4.6,
+"996Handling": 78,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/DodgeChallengerRT2009.png",
+    "creator": "DodgeDemon"
+}

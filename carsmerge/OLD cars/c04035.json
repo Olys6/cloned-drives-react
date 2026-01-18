@@ -1,0 +1,49 @@
+{
+    "carID": "c04035",
+    "cr": 350,
+    "make": "Volvo",
+    "model": "850 Estate 2.5 20v",
+    "modelYear": 1993,
+    "country": "SE",
+    "topSpeed": 131,
+    "0to60": 8.9,
+    "handling": 72,
+    "driveType": "FWD",
+    "tyreType": "Standard",
+    "tags": ["Endless Summer", "The Rest of the Best: 2023", "Rest of The World"],
+    "isPrize": false,
+	
+    "weight": 1418,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Wagon",
+    "tcs": false,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 55.43,
+    "ola": 68.69,
+    "description": "https://www.youtube.com/watch?v=iMFtucxGoNg&t=67s",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Volvo850Estate2.520v(1993).png",
+    "creator": "Crossfire",
+
+    "333TopSpeed": 135, 
+    "3330to60": 8.5, 
+    "333Handling": 74,
+
+    "666TopSpeed": 139, 
+    "6660to60": 8.0, 
+    "666Handling": 77,
+
+    "996TopSpeed": 143, 
+    "9960to60": 7.6, 
+    "996Handling": 77,
+
+    "969TopSpeed": 143, 
+    "9690to60": 8.0, 
+    "969Handling": 80,
+
+    "699TopSpeed": 139, 
+    "6990to60": 7.6, 
+    "699Handling": 80
+}

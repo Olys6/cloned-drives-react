@@ -1,0 +1,13 @@
+{
+    "carID": "c03335",
+    "make": "Mercedes-Benz",
+    "model": "300 SL Cutaway",
+    "modelYear": 1954,
+    "country": "DE",
+    "reference": "c00846",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/Mercedes-Benz300SLCutaway.png",
+    "creator": "Crossfire"
+}

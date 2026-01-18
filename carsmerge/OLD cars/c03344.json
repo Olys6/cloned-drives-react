@@ -1,0 +1,13 @@
+{
+    "carID": "c03344",
+    "make": "Toyota",
+    "model": "Corolla Sprinter Trueno GT Apex Cutaway",
+    "modelYear": 1985,
+    "country": "JP",
+    "reference": "c01305",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/ToyotaCorollaSprinterGTApexCutaway.png",
+    "creator": "Crossfire"
+}

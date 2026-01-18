@@ -1,0 +1,13 @@
+{
+    "carID": "c03476",
+    "make": "Tata",
+    "model": "Nano \"Stop Indians Ahead\" Concept by SICIS",
+    "modelYear": 2008,
+    "country": "IN",
+    "reference": "c02838",
+    "collection": ["BMC2: Clr_s Around The World"],
+    "description": "Whole car covered with mosaic. What an effort.",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Crossfire"
+}

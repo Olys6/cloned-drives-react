@@ -1,0 +1,13 @@
+{
+    "carID": "c02703",
+    "make": "Ford",
+    "model": "Mustang Shelby GT500 (H22)",
+    "modelYear": 2013,
+    "country": "US",
+    "reference": "c02021",
+    "collection": ["Halloween Collection 2022"],
+    "description": "Trick or Treat.",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(bm)/0in/FordMustangShelbyGT500(H22)(2013).png",
+    "creator": "Lemon"
+}

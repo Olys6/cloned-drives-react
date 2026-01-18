@@ -1,0 +1,13 @@
+{
+    "carID": "c02265",
+    "make": "Lotus",
+    "model": "Elise Heritage Type 23",
+    "modelYear": 2001,
+    "country": "GB",
+    "reference": "c00730",
+    "collection": ["BMC1: The Originals"],
+    "active" : false,
+    "description": "placeholder desc",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/LotusEliseHeritageType23.png",
+    "creator": "Tom"
+}

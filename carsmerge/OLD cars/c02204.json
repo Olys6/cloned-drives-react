@@ -1,0 +1,51 @@
+{
+    "carID": "c02204",
+    "cr": 822,
+    "make": "Lotus",
+    "model": "Exige Sport 420 \"Final Edition\"",
+    "modelYear": 2021,
+    "country": "GB",
+    "topSpeed": 179,
+    "0to60": 3.5,
+    "handling": 93,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": [
+        "Track Day",
+        "Eargasm"
+    ],
+    "isPrize": true,
+    "weight": 1180,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 79.55,
+    "ola": 68.57,
+    "description": "",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/LotusExigeSport420FinalEdition(2021).png",
+    "creator": "Tom",
+
+    "333TopSpeed": 182,
+    "3330to60": 3.3,
+    "333Handling": 96,
+
+    "666TopSpeed": 185,
+    "6660to60": 3.2,
+    "666Handling": 99,
+
+    "996TopSpeed": 188,
+    "9960to60": 3.0,
+    "996Handling": 99,
+
+    "969TopSpeed": 188,
+    "9690to60": 3.2,
+    "969Handling": 103,
+
+    "699TopSpeed": 185,
+    "6990to60": 3.0,
+    "699Handling": 103
+}

@@ -1,0 +1,49 @@
+{
+    "carID": "c01069",
+    "cr": 552,
+    "make": "Porsche",
+    "model": "911 Carrera RS 2.7 Touring",
+    "modelYear": 1973,
+    "country": "DE",
+    "topSpeed": 152,
+    "0to60": 5.5,
+    "handling": 76,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Track Day"],
+    "isPrize": false,
+	
+    "weight": 993,
+    "gc": "Medium",
+    "seatCount": 4,
+    "bodyStyle": "Coupe",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 74.67,
+    "ola": 71.43,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Porsche911CarreraRS2.7T(1973).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 155,
+"3330to60": 5.2,
+"333Handling": 79,
+
+"666TopSpeed": 159,
+"6660to60": 5,
+"666Handling": 81,
+
+"699TopSpeed": 159,
+"6990to60": 4.7,
+"699Handling": 84,
+
+"969TopSpeed": 162,
+"9690to60": 5,
+"969Handling": 84,
+
+"996TopSpeed": 162,
+"9960to60": 4.7,
+"996Handling": 81
+}

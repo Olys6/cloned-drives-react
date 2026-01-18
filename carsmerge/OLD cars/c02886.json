@@ -1,0 +1,13 @@
+{
+    "carID": "c02886",
+    "make": "BMW",
+    "model": "M4 Concept Iconic Lights",
+    "modelYear": 2014,
+    "country": "DE",
+    "reference": "c00185",
+    "collection": ["The Tyrol Tour BM Collection"],
+    "description": "None",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/BMWM4ConceptIconicLights.png",
+    "creator": "Crossfire"
+}

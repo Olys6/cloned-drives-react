@@ -1,0 +1,49 @@
+{
+    "carID": "c04733",
+    "cr": 401,
+    "make": "Porsche",
+    "model": "911 SC Targa",
+    "modelYear": 1977,
+    "country": "DE",
+    "topSpeed": 140,
+    "0to60": 6.6,
+    "handling": 73,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite","Street Racer","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1180,
+    "gc": "Medium",
+    "seatCount": 4,
+    "bodyStyle": "Convertible",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 50.23,
+    "ola": 67.85,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Porsche911SCTarga(1977).png",
+
+"333TopSpeed": 144,
+"3330to60": 6.3,
+"333Handling": 75,
+
+"666TopSpeed": 147,
+"6660to60": 5.9,
+"666Handling": 78,
+
+"699TopSpeed": 147,
+"6990to60": 5.6,
+"699Handling": 81,
+
+"969TopSpeed": 151,
+"9690to60": 5.9,
+"969Handling": 81,
+
+"996TopSpeed": 151,
+"9960to60": 5.6,
+"996Handling": 78,
+    "creator": "Bnuuy"
+}

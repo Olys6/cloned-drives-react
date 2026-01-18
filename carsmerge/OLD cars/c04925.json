@@ -1,0 +1,49 @@
+{
+    "carID": "c04925",
+    "cr": 1044,
+    "make": "Porsche",
+    "model": "RS Spyder Evo #7 Penske Racing",
+    "modelYear": 2007,
+    "country": "DE",
+    "topSpeed": 210,
+    "0to60": 2.9,
+    "handling": 110,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Eurotech Elite","Motorsport","Unique","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 775,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Open Air",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 105.96,
+    "ola": 81.25,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/PorscheRSSpyderEvo(2007).png",
+
+"333TopSpeed": 212,
+"3330to60": 2.8,
+"333Handling": 114,
+
+"666TopSpeed": 215,
+"6660to60": 2.6,
+"666Handling": 117,
+
+"699TopSpeed": 215,
+"6990to60": 2.5,
+"699Handling": 122,
+
+"969TopSpeed": 217,
+"9690to60": 2.6,
+"969Handling": 122,
+
+"996TopSpeed": 217,
+"9960to60": 2.5,
+"996Handling": 117,
+    "creator": "Bnuuy"
+}

@@ -1,0 +1,13 @@
+{
+    "carID": "c03316",
+    "make": "Bugatti",
+    "model": "EB112 Cutaway",
+    "modelYear": 1993,
+    "country": "FR",
+    "reference": "c00223",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/BugattiEB112Cutaway.png",
+    "creator": "Crossfire"
+}

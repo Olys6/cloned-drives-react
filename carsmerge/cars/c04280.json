@@ -19,7 +19,7 @@
     "bodyStyle": "Coupe",
     "tcs": true,
     "abs": true,
-    "enginePos": "Rear",
+    "enginePos": "Middle",
     "fuelType": "Petrol",
     "mra": 122.59,
     "ola": 98.88,
@@ -45,5 +45,6 @@
 "996TopSpeed": 231,
 "9960to60": 2.5,
 "996Handling": 98,
-    "creator": "Bnuuy"
+    "creator": "Bnuuy",
+    "hiddenTag": [""]
 }

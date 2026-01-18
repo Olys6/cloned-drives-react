@@ -1,0 +1,49 @@
+{
+    "carID": "c03749",
+    "cr": 841,
+    "make": "Aston Martin",
+    "model": "DBS 770 Ultimate",
+    "modelYear": 2023,
+    "country": "GB",
+    "topSpeed": 211,
+    "0to60": 3.2,
+    "handling": 92,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Endless Summer","Grand Tourer","The Midlands Cruise"],
+    "isPrize": false,
+	
+    "weight": 1845,
+    "gc": "Low",
+    "seatCount": 4,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 95,
+    "ola": 95.84,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/AstonMartinDBS770Ultimate(2023).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 213,
+"3330to60": 3,
+"333Handling": 95,
+
+"666TopSpeed": 216,
+"6660to60": 2.9,
+"666Handling": 98,
+
+"699TopSpeed": 216,
+"6990to60": 2.7,
+"699Handling": 102,
+
+"969TopSpeed": 218,
+"9690to60": 2.9,
+"969Handling": 102,
+
+"996TopSpeed": 218,
+"9960to60": 2.7,
+"996Handling": 98
+}

@@ -1,0 +1,49 @@
+{
+    "carID": "c03751",
+    "cr": 617,
+    "make": "Alfa Romeo",
+    "model": "Stelvio 2.2 TD Q4 (210)",
+    "modelYear": 2023,
+    "country": "IT",
+    "topSpeed": 134,
+    "0to60": 6.6,
+    "handling": 78,
+    "driveType": "4WD",
+    "tyreType": "All-Surface",
+    "tags": ["Endless Summer", "The Tyrol Tour: Remix"],
+    "isPrize": false,
+	
+    "weight": 1745,
+    "gc": "High",
+    "seatCount": 5,
+    "bodyStyle": "SUV",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Diesel",
+    "mra": 56.44,
+    "ola": 68.53,
+    "description": "Alfa's SUV with a diesel heart.",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/AlfaRomeoStelvio2.2TDQ4(210)(2023).png",
+    "creator": "Crossfire",
+
+    "333TopSpeed": 138, 
+    "3330to60": 6.3, 
+    "333Handling": 81,
+
+    "666TopSpeed": 142, 
+    "6660to60": 5.9, 
+    "666Handling": 83,
+
+    "996TopSpeed": 146, 
+    "9960to60": 5.6, 
+    "996Handling": 83,
+
+    "969TopSpeed": 146, 
+    "9690to60": 5.9, 
+    "969Handling": 87,
+
+    "699TopSpeed": 142, 
+    "6990to60": 5.6, 
+    "699Handling": 87
+}

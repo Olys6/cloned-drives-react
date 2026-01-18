@@ -19,7 +19,7 @@
     "tcs": true,
     "abs": true,
     "enginePos": "Front",
-    "fuelType": "Petrol",
+    "fuelType": "Diesel",
     "mra": 47.78,
     "ola": 65.97,
     "description": "None.",
@@ -39,5 +39,6 @@
     "6990to60": 8.2,
     "699Handling": 78,
     "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/MazdaCX722MZRCDHighLine(2009).png",
-    "creator": "Connor"
+    "creator": "Connor",
+    "hiddenTag": [""]
 }

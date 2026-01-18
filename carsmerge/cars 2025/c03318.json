@@ -1,0 +1,14 @@
+{
+    "carID": "c03318",
+    "make": "Chevrolet",
+    "model": "Bolt Cutaway",
+    "modelYear": 2016,
+    "country": "US",
+    "reference": "c00251",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/ChevroletBoltCutaway.png",
+    "creator": "Crossfire",
+    "hiddenTag": [""]
+}

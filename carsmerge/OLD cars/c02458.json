@@ -1,0 +1,49 @@
+{
+    "carID": "c02458",
+    "cr": 839,
+    "make": "Porsche",
+    "model": "911 Targa 4 GTS",
+    "modelYear": 2021,
+    "country": "DE",
+    "topSpeed": 191,
+    "0to60": 3.4,
+    "handling": 90,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": ["Supercar"],
+    "isPrize": false,
+	
+    "weight": 1650,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Convertible",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 80.1,
+    "ola": 83.66,
+    "description": "None.",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Porsche911Targa4GTS(2021).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 194, 
+"3330to60": 3.2, 
+"333Handling": 93,
+
+"666TopSpeed": 196, 
+"6660to60": 3.1, 
+"666Handling": 96,
+
+"699TopSpeed": 196, 
+"6990to60": 2.9, 
+"699Handling": 100,
+
+"969TopSpeed": 199, 
+"9690to60": 3.1, 
+"969Handling": 100,
+
+"996TopSpeed": 199, 
+"9960to60": 2.9, 
+"996Handling": 96
+}

@@ -1,0 +1,13 @@
+{
+    "carID": "c02917",
+    "make": "Mitsubishi",
+    "model": "Lancer Evolution IX MR (W22)",
+    "modelYear": 2005,
+    "country": "JP",
+    "reference": "c01656",
+    "collection": ["Winter Collection 2022"],
+    "description": "Happy Holidays from the CD team.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/MitsubishiEvo(W22).png",
+    "creator": "Bnuuy"
+}

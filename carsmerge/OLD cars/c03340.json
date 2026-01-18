@@ -1,0 +1,13 @@
+{
+    "carID": "c03340",
+    "make": "Prince",
+    "model": "R380-I Cutaway",
+    "modelYear": 1965,
+    "country": "JP",
+    "reference": "c01814",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/PrinceR380-Icutaway.png",
+    "creator": "Crossfire"
+}

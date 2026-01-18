@@ -1,0 +1,14 @@
+{
+    "carID": "c03321",
+    "make": "Ford",
+    "model": "Focus Electric Cutaway",
+    "modelYear": 2011,
+    "country": "US",
+    "reference": "c00449",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Crossfire",
+    "hiddenTag": [""]
+}

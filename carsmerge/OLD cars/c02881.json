@@ -1,0 +1,13 @@
+{
+    "carID": "c02881",
+    "make": "Volkswagen",
+    "model": "Beetle 1100 (W22)",
+    "modelYear": 1953,
+    "country": "DE",
+    "reference": "c01356",
+    "collection": ["Winter Collection 2022"],
+    "description": "Happy Holidays from the CD team.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/VolkswagenBeetle1100(W22).png",
+    "creator": "Bnuuy"
+}

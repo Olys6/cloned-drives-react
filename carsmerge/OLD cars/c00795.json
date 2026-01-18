@@ -1,0 +1,50 @@
+{
+    "carID": "c00795",
+    "cr": 895,
+    "make": "McLaren",
+    "model": "675LT Spider",
+    "modelYear": 2016,
+    "country": "GB",
+    "topSpeed": 203,
+    "0to60": 2.8,
+    "handling": 92,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": [
+        "Supercar",
+        "The Royal Collection","Track Day"
+    ],
+    "isPrize": false,
+    "weight": 1368,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Convertible",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 98.5,
+    "ola": 87.94,
+    "description": "None.",
+"333TopSpeed": 206,
+"3330to60": 2.7,
+"333Handling": 95,
+
+"666TopSpeed": 208,
+"6660to60": 2.5,
+"666Handling": 98,
+
+"699TopSpeed": 208,
+"6990to60": 2.4,
+"699Handling": 102,
+
+"969TopSpeed": 211,
+"9690to60": 2.5,
+"969Handling": 102,
+
+"996TopSpeed": 211,
+"9960to60": 2.4,
+"996Handling": 98,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/McLaren675LTSpider(2016).png",
+    "creator": "Bnuuy"
+}

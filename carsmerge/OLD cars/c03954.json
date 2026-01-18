@@ -1,0 +1,49 @@
+{
+    "carID": "c03954",
+    "cr": 525,
+    "make": "Ford",
+    "model": "Bronco 2.3 2-Door",
+    "modelYear": 2021,
+    "country": "US",
+    "topSpeed": 106,
+    "0to60": 7.5,
+    "handling": 64,
+    "driveType": "4WD",
+    "tyreType": "Off-Road",
+    "tags": ["Endless Summer", "Extreme Juggernaut", "The Americas Assault"],
+    "isPrize": false,
+	
+    "weight": 2100,
+    "gc": "High",
+    "seatCount": 4,
+    "bodyStyle": "Convertible",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 51.72,
+    "ola": 58.41,
+    "description": "The bucking Bronco's wild return after a 25 year hiatus.",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/FordBronco2.32-Door(2021).png",
+    "creator": "DodgeDemon",
+
+"333TopSpeed": 111,
+"3330to60": 7.1,
+"333Handling": 66,
+
+"666TopSpeed": 116,
+"6660to60": 6.8,
+"666Handling": 68,
+
+"699TopSpeed": 116,
+"6990to60": 6.4,
+"699Handling": 71,
+
+"969TopSpeed": 121,
+"9690to60": 6.8,
+"969Handling": 71,
+
+"996TopSpeed": 121,
+"9960to60": 6.4,
+"996Handling": 68
+}

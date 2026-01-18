@@ -1,0 +1,49 @@
+{
+    "carID": "c02269",
+    "cr": 725,
+    "make": "Audi",
+    "model": "RS 5 Coupe (Dynamic Plus Package)",
+    "modelYear": 2012,
+    "country": "DE",
+    "topSpeed": 176,
+    "0to60": 4.2,
+    "handling": 87,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": [],
+    "isPrize": false,
+
+    "weight": 1790,
+    "gc": "Low",
+    "seatCount": 5,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 73.68,
+    "ola": 76.19,
+    "description": "(Package that makes you go faster)",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/AudiRS5Coupe(DynamicPluspackage)(2012).png",
+    "creator": "Lemon",
+
+    "333TopSpeed": 179,
+    "3330to60": 4.0,
+    "333Handling": 90,
+
+    "666TopSpeed": 182,
+    "6660to60": 3.8,
+    "666Handling": 93,
+
+    "996TopSpeed": 185,
+    "9960to60": 3.6,
+    "996Handling": 93,
+
+    "969TopSpeed": 185,
+    "9690to60": 3.8,
+    "969Handling": 97,
+
+    "699TopSpeed": 182,
+    "6990to60": 3.6,
+    "699Handling": 97
+}

@@ -1,0 +1,11 @@
+{
+  "name": "packsmerge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "packsmerge.js",
+  "scripts": {
+    "start": "node packsmerge.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

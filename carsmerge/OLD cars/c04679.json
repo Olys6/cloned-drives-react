@@ -1,0 +1,49 @@
+{
+    "carID": "c04679",
+    "cr": 668,
+    "make": "Porsche",
+    "model": "911 Carrera 4",
+    "modelYear": 2006,
+    "country": "DE",
+    "topSpeed": 174,
+    "0to60": 4.7,
+    "handling": 85,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1450,
+    "gc": "Low",
+    "seatCount": 4,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 72.15,
+    "ola": 80,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Porsche911Carrera4(2006).png",
+
+"333TopSpeed": 177,
+"3330to60": 4.5,
+"333Handling": 88,
+
+"666TopSpeed": 180,
+"6660to60": 4.2,
+"666Handling": 91,
+
+"699TopSpeed": 180,
+"6990to60": 4,
+"699Handling": 94,
+
+"969TopSpeed": 183,
+"9690to60": 4.2,
+"969Handling": 94,
+
+"996TopSpeed": 183,
+"9960to60": 4,
+"996Handling": 91,
+    "creator": "Bnuuy"
+}

@@ -1,0 +1,50 @@
+{
+    "carID": "c01219",
+    "cr": 760,
+    "make": "Subaru",
+    "model": "Impreza WRX STI Spec C",
+    "modelYear": 2009,
+    "country": "JP",
+    "topSpeed": 155,
+    "0to60": 4.5,
+    "handling": 87,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": [
+        "Street Racer",
+        "Hot Hatch","Oceanic View"
+    ],
+    "isPrize": false,
+    "weight": 1430,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Hatchback",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 71.22,
+    "ola": 76.74,
+    "description": "A lighter, more powerful Hatchback STI.",
+"333TopSpeed": 158,
+"3330to60": 4.3,
+"333Handling": 90,
+
+"666TopSpeed": 162,
+"6660to60": 4,
+"666Handling": 93,
+
+"699TopSpeed": 162,
+"6990to60": 3.8,
+"699Handling": 97,
+
+"969TopSpeed": 165,
+"9690to60": 4,
+"969Handling": 97,
+
+"996TopSpeed": 165,
+"9960to60": 3.8,
+"996Handling": 93,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/SubaruImprezaWRXSTISpecC(2009).png",
+    "creator": "Bnuuy"
+}

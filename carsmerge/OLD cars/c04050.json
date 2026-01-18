@@ -1,0 +1,13 @@
+{
+    "carID": "c04050",
+    "make": "Mazda",
+    "model": "MX-5 Roadster (S23)",
+    "modelYear": 2006,
+    "country": "JP",
+    "reference": "c00770",
+    "collection": ["Summer Collection 2023"],
+    "description": "Welcome to summer!",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "DodgeDemon"
+}

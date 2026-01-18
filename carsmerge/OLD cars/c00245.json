@@ -1,0 +1,49 @@
+{
+    "carID": "c00245",
+    "cr": 830,
+    "make": "Caterham",
+    "model": "Seven CSR 260",
+    "modelYear": 2004,
+    "country": "GB",
+    "topSpeed": 155,
+    "0to60": 3.1,
+    "handling": 92,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": [
+        "Track Day","OG"
+    ],
+    "isPrize": false,
+    "weight": 575,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Convertible",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 67.8,
+    "ola": 88.94,
+    "description": "The most pimped up Caterham for its time.",
+"333TopSpeed": 158,
+"3330to60": 2.9,
+"333Handling": 95,
+
+"666TopSpeed": 162,
+"6660to60": 2.8,
+"666Handling": 98,
+
+"699TopSpeed": 162,
+"6990to60": 2.6,
+"699Handling": 102,
+
+"969TopSpeed": 165,
+"9690to60": 2.8,
+"969Handling": 102,
+
+"996TopSpeed": 165,
+"9960to60": 2.6,
+"996Handling": 98,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/CaterhamSevenCSR260(2004).png",
+    "creator": "DodgeDemon"
+}

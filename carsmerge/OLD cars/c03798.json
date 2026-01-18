@@ -1,0 +1,49 @@
+{
+    "carID": "c03798",
+    "cr": 481,
+    "make": "Bentley",
+    "model": "Mulsanne Grand Limousine",
+    "modelYear": 2016,
+    "country": "GB",
+    "topSpeed": 184,
+    "0to60": 5.6,
+    "handling": 70,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Endless Summer","The Midlands Cruise"],
+    "isPrize": false,
+	
+    "weight": 2910,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Sedan",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 65,
+    "ola": 84.14,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/BentleyMulsanneGrandLimousine(2016).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 187,
+"3330to60": 5.3,
+"333Handling": 72,
+
+"666TopSpeed": 190,
+"6660to60": 5,
+"666Handling": 75,
+
+"699TopSpeed": 190,
+"6990to60": 4.8,
+"699Handling": 78,
+
+"969TopSpeed": 192,
+"9690to60": 5,
+"969Handling": 78,
+
+"996TopSpeed": 192,
+"9960to60": 4.8,
+"996Handling": 75
+}

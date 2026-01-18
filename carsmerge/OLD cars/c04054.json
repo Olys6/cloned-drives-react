@@ -1,0 +1,13 @@
+{
+    "carID": "c04054",
+    "make": "Rolls-Royce",
+    "model": "Dawn (S23)",
+    "modelYear": 2016,
+    "country": "GB",
+    "reference": "c02570",
+    "collection": ["Summer Collection 2023"],
+    "description": "Welcome to summer!",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "DodgeDemon"
+}

@@ -1,0 +1,13 @@
+{
+    "carID": "c02920",
+    "make": "Ford",
+    "model": "F-150 SVT Raptor 6.2 (W22)",
+    "modelYear": 2010,
+    "country": "US",
+    "reference": "c00439",
+    "collection": ["Winter Collection 2022"],
+    "description": "Happy Holidays from the CD team.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/FordRaptor(W22).png",
+    "creator": "Bnuuy"
+}

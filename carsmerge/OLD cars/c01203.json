@@ -1,0 +1,48 @@
+{
+    "carID": "c01203",
+    "cr": 570,
+    "make": "Subaru",
+    "model": "Impreza WRX",
+    "modelYear": 2000,
+    "country": "JP",
+    "topSpeed": 143,
+    "0to60": 5.8,
+    "handling": 81,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": ["Street Racer"],
+    "isPrize": false,
+
+    "weight": 1399,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Sedan",
+    "tcs": false,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 51.82,
+    "ola": 74.22,
+    "description": "The first introduction of the Subaru’s WRX performance variant in the United States.",
+"333TopSpeed": 147,
+"3330to60": 5.5,
+"333Handling": 84,
+
+"666TopSpeed": 150,
+"6660to60": 5.2,
+"666Handling": 86,
+
+"699TopSpeed": 150,
+"6990to60": 4.9,
+"699Handling": 90,
+
+"969TopSpeed": 154,
+"9690to60": 5.2,
+"969Handling": 90,
+
+"996TopSpeed": 154,
+"9960to60": 4.9,
+"996Handling": 86,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/SubaruImprezaWRX(2000).png",
+    "creator": "Bnuuy"
+}

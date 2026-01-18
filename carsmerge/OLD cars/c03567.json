@@ -1,0 +1,49 @@
+{
+    "carID": "c03567",
+    "cr": 616,
+    "make": ["Ram", "Dodge"],
+    "model": "1500 Sport R/T",
+    "modelYear": 2013,
+    "country": "US",
+    "topSpeed": 108,
+    "0to60": 5.4,
+    "handling": 70,
+    "driveType": "RWD",
+    "tyreType": "All-Surface",
+    "tags": ["The Americas Assault"],
+    "isPrize": false,
+	
+    "weight": 2190,
+    "gc": "High",
+    "seatCount": 2,
+    "bodyStyle": "Pickup",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 59.34,
+    "ola": 66.67,
+    "description": "One of the last in a dying breed.",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/Ram1500SportRT(2013).png",
+    "creator": "DodgeDemon",
+
+"333TopSpeed": 113,
+"3330to60": 5.1,
+"333Handling": 72,
+
+"666TopSpeed": 118,
+"6660to60": 4.9,
+"666Handling": 75,
+
+"699TopSpeed": 118,
+"6990to60": 4.6,
+"699Handling": 78,
+
+"969TopSpeed": 122,
+"9690to60": 4.9,
+"969Handling": 78,
+
+"996TopSpeed": 122,
+"9960to60": 4.6,
+"996Handling": 75
+}

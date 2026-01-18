@@ -1,0 +1,49 @@
+{
+    "carID": "c03785",
+    "cr": 1667,
+    "make": "Alfa Romeo",
+    "model": "4C Spider (BOSS)",
+    "modelYear": 2023,
+    "country": "IT",
+    "topSpeed": 160,
+    "0to60": 4.4,
+    "handling": 99,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Endless Summer","BOSS"],
+    "isPrize": true,
+	
+    "weight": 830,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Convertible",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 63.7,
+    "ola": 74.42,
+    "description": "Part of the Endless Summer Boss Collection 1!",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(boss)/AlfaRomeo4CSpider(BOSS).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 163,
+"3330to60": 4.2,
+"333Handling": 102,
+
+"666TopSpeed": 167,
+"6660to60": 4,
+"666Handling": 106,
+
+"699TopSpeed": 167,
+"6990to60": 3.8,
+"699Handling": 110,
+
+"969TopSpeed": 170,
+"9690to60": 4,
+"969Handling": 110,
+
+"996TopSpeed": 170,
+"9960to60": 3.8,
+"996Handling": 106
+}

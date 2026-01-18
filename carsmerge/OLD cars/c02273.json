@@ -1,0 +1,49 @@
+{
+    "carID": "c02273",
+    "cr": 776,
+    "make": "Audi",
+    "model": "TT Sportback Concept",
+    "modelYear": 2014,
+    "country": "DE",
+    "topSpeed": 155,
+    "0to60": 3.7,
+    "handling": 89,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": ["Concept", "Unique"],
+    "isPrize": false,
+
+    "weight": 1640,
+    "gc": "Low",
+    "seatCount": 4,
+    "bodyStyle": "Sedan",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 72.55,
+    "ola": 81.08,
+    "description": "None.",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/AudiTTSportbackconcept(2014).png",
+    "creator": "Lemon",
+
+    "333TopSpeed": 158,
+    "3330to60": 3.5,
+    "333Handling": 92,
+
+    "666TopSpeed": 162,
+    "6660to60": 3.3,
+    "666Handling": 95,
+
+    "996TopSpeed": 165,
+    "9960to60": 3.1,
+    "996Handling": 95,
+
+    "969TopSpeed": 165,
+    "9690to60": 3.3,
+    "969Handling": 99,
+
+    "699TopSpeed": 162,
+    "6990to60": 3.1,
+    "699Handling": 99
+}

@@ -1,0 +1,49 @@
+{
+    "carID": "c02973",
+    "cr": 933,
+    "make": "Lamborghini",
+    "model": "Huracan LP620-2 Super Trofeo #89 Cordel Racing",
+    "modelYear": 2014,
+    "country": "IT",
+    "topSpeed": 188,
+    "0to60": 3.0,
+    "handling": 99,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Track Day","The Tyrol Tour"],
+    "isPrize": false,
+	
+    "weight": 1270,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 100,
+    "ola": 93.1,
+    "description": "",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/LamborghiniHuracanLP6202SuperTrofeo(2014).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 191,
+"3330to60": 2.8,
+"333Handling": 102,
+
+"666TopSpeed": 194,
+"6660to60": 2.7,
+"666Handling": 106,
+
+"699TopSpeed": 194,
+"6990to60": 2.5,
+"699Handling": 110,
+
+"969TopSpeed": 196,
+"9690to60": 2.7,
+"969Handling": 110,
+
+"996TopSpeed": 196,
+"9960to60": 2.5,
+"996Handling": 106
+}

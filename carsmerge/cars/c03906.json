@@ -19,7 +19,7 @@
     "bodyStyle": "Open Air",
     "tcs": false,
     "abs": false,
-    "enginePos": "Rear",
+    "enginePos": "Middle",
     "fuelType": "Petrol",
     "mra": 114.29,
     "ola": 102.69,
@@ -45,5 +45,6 @@
 
 "996TopSpeed": 244,
 "9960to60": 1.9,
-"996Handling": 110
+"996Handling": 110,
+    "hiddenTag": [""]
 }

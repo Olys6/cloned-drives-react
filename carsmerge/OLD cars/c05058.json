@@ -1,0 +1,49 @@
+{
+    "carID": "c05058",
+    "cr": 870,
+    "make": "Porsche",
+    "model": "936/76 Spyder",
+    "modelYear": 1976,
+    "country": "DE",
+    "topSpeed": 217,
+    "0to60": 3.3,
+    "handling": 96,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Eurotech Elite","Motorsport","Unique","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 700,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Open Air",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 110.1,
+    "ola": 93.69,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 219,
+"3330to60": 3.1,
+"333Handling": 99,
+
+"666TopSpeed": 222,
+"6660to60": 3,
+"666Handling": 102,
+
+"699TopSpeed": 222,
+"6990to60": 2.8,
+"699Handling": 107,
+
+"969TopSpeed": 224,
+"9690to60": 3,
+"969Handling": 107,
+
+"996TopSpeed": 224,
+"9960to60": 2.8,
+"996Handling": 102,
+    "creator": "Bnuuy"
+}

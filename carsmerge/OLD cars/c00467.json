@@ -1,0 +1,49 @@
+{
+    "carID": "c00467",
+    "cr": 899,
+    "make": "Ford",
+    "model": "GT GT3 #43 Matech Concept",
+    "modelYear": 2007,
+    "country": "CH",
+    "topSpeed": 181,
+    "0to60": 3.4,
+    "handling": 101,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Motorsport", "Rest of The World"],
+    "isPrize": false,
+	
+    "weight": 1290,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 100,
+    "ola": 97.85,
+    "description": "",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/FordGTGT3(2007).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 184,
+"3330to60": 3.2,
+"333Handling": 104,
+
+"666TopSpeed": 187,
+"6660to60": 3.1,
+"666Handling": 108,
+
+"699TopSpeed": 187,
+"6990to60": 2.9,
+"699Handling": 112,
+
+"969TopSpeed": 190,
+"9690to60": 3.1,
+"969Handling": 112,
+
+"996TopSpeed": 190,
+"9960to60": 2.9,
+"996Handling": 108
+}

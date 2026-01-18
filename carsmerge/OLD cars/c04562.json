@@ -1,0 +1,13 @@
+{
+    "carID": "c04562",
+    "make": "Volvo",
+    "model": "850 Estate Turbo \"Platinum Edition\"",
+    "modelYear": 1994,
+    "country": "SE",
+    "reference": "c04038",
+    "collection": ["The Last of Beta BM Collection"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/Volvo850EstateTurboPlatinumEdition.png",
+    "creator": "Crossfire"
+}

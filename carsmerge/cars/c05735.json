@@ -10,7 +10,7 @@
     "handling": 101,
     "driveType": "RWD",
     "tyreType": "Slick",
-    "tags": ["CD Contenders","Motorsport","Tuner","Unique"],
+    "tags": ["CD Contenders","Motorsport","Tuner","Unique","Rest of The World"],
     "isPrize": false,
     "weight": 970,
     "gc": "Low",
@@ -43,5 +43,6 @@
 "9960to60": 2.6,
 "996Handling": 108,
     "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/XINGMobilityMissG(2016).png",
-    "creator": "Bnuuy"
+    "creator": "Bnuuy",
+    "hiddenTag": [""]
 }

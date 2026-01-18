@@ -1,0 +1,13 @@
+{
+    "carID": "c02947",
+    "make": "BMW",
+    "model": "i3s (W22)",
+    "modelYear": 2017,
+    "country": "DE",
+    "reference": "c00172",
+    "collection": ["Winter Collection 2022"],
+    "description": "Happy Holidays from the CD team.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/BMWi3s(W22).png",
+    "creator": "Bnuuy"
+}

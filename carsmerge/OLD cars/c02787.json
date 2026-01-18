@@ -1,0 +1,49 @@
+{
+    "carID": "c02787",
+    "cr": 628,
+    "make": "Italdesign",
+    "model": "Giugiaro Clipper",
+    "modelYear": 2014,
+    "country": "IT",
+    "topSpeed": 127,
+    "0to60": 5.9,
+    "handling": 77,
+    "driveType": "4WD",
+    "tyreType": "All-Surface",
+    "tags": ["Concept", "Unique", "Eco-Friendly","Visionary Road"],
+    "isPrize": false,
+	
+    "weight": 1800,
+    "gc": "Medium",
+    "seatCount": 6,
+    "bodyStyle": "SUV",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Mixed",
+    "fuelType": "Electric",
+    "mra": 57.28,
+    "ola": 74.58,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/ItaldesignGiugiaroClipper(2014).png",
+    "creator": "Keanny",
+
+"333TopSpeed": 131, 
+"3330to60": 5.6, 
+"333Handling": 80,
+
+"666TopSpeed": 135, 
+"6660to60": 5.3, 
+"666Handling": 82,
+
+"699TopSpeed": 135, 
+"6990to60": 5.0, 
+"699Handling": 85,
+
+"969TopSpeed": 139, 
+"9690to60": 5.3, 
+"969Handling": 85,
+
+"996TopSpeed": 139, 
+"9960to60": 5.0, 
+"996Handling": 82
+}

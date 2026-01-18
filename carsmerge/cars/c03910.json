@@ -19,12 +19,12 @@
     "bodyStyle": "Open Air",
     "tcs": false,
     "abs": false,
-    "enginePos": "Rear",
+    "enginePos": "Middle",
     "fuelType": "Petrol",
     "mra": 126.66,
     "ola": 100,
     "description": "1500ps, 852kg thats like almost 2xpower-to-weight ratio...so fast that it effectively killed Can-Am due to safety.",
-    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/Porsche917-30CanAmSpyderTurbopanzer(1973).png",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/Porsche917-30CanAmSpyderTurbopanzer(1973).png",
     "creator": "Bnuuy",
 
 "333TopSpeed": 259,
@@ -45,5 +45,6 @@
 
 "996TopSpeed": 263,
 "9960to60": 1.6,
-"996Handling": 112
+"996Handling": 112,
+    "hiddenTag": [""]
 }

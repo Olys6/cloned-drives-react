@@ -1,0 +1,49 @@
+{
+    "carID": "c03719",
+    "cr": 247,
+    "make": "Nissan",
+    "model": "Skyline 1800 Sporty (C10)",
+    "modelYear": 1971,
+    "country": "JP",
+    "topSpeed": 103,
+    "0to60": 10.3,
+    "handling": 67,
+    "driveType": "RWD",
+    "tyreType": "Standard",
+    "tags": ["Endless Summer","The Amplification of Asia"],
+    "isPrize": false,
+	
+    "weight": 965,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Sedan",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 26.14,
+    "ola": 64.07,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/NissanSkyline1800Sporty(C10)(1971).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 108,
+"3330to60": 9.8,
+"333Handling": 69,
+
+"666TopSpeed": 113,
+"6660to60": 9.3,
+"666Handling": 71,
+
+"699TopSpeed": 113,
+"6990to60": 8.8,
+"699Handling": 74,
+
+"969TopSpeed": 118,
+"9690to60": 9.3,
+"969Handling": 74,
+
+"996TopSpeed": 118,
+"9960to60": 8.8,
+"996Handling": 71
+}

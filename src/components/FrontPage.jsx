@@ -17,7 +17,7 @@ const FrontPage = () => {
 					alignItems: 'center',
 					flexWrap: 'wrap',
 					gap: '1.5rem',
-					marginTop: 18,
+					marginTop: 10,
 				}}>
 				<Link
 					href='/home'
@@ -38,25 +38,7 @@ const FrontPage = () => {
 					</Typography>
 				</Link>
 				<Link
-					href='/work-in-progress'
-					className='packlist fontPageItem'
-					sx={{
-						borderRadius: 15,
-						textDecoration: 'none',
-					}}>
-					<Typography
-						variant='h2'
-						sx={{
-							color: 'white',
-							fontWeight: 'bold',
-							textShadow:
-								'1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black',
-						}}>
-						PACKLIST
-					</Typography>
-				</Link>
-				<Link
-					href='/work-in-progress'
+					href='/tracks'
 					className='tracklist fontPageItem'
 					sx={{
 						borderRadius: 15,
@@ -74,7 +56,25 @@ const FrontPage = () => {
 					</Typography>
 				</Link>
 				<Link
-					href='/work-in-progress'
+					href='/packs'
+					className='packlist fontPageItem'
+					sx={{
+						borderRadius: 15,
+						textDecoration: 'none',
+					}}>
+					<Typography
+						variant='h2'
+						sx={{
+							color: 'white',
+							fontWeight: 'bold',
+							textShadow:
+								'1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black',
+						}}>
+						PACKLIST
+					</Typography>
+				</Link>
+				<Link
+					href='/bm-cars'
 					className='bmcarlist fontPageItem'
 					sx={{
 						borderRadius: 15,
@@ -88,7 +88,61 @@ const FrontPage = () => {
 							textShadow:
 								'1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black',
 						}}>
-						BLACK MARKET CARLIST
+						BLACK MARKET
+					</Typography>
+				</Link>
+				<Link
+					href='/pack-simulator'
+					className='packsim fontPageItem'
+					sx={{
+						borderRadius: 15,
+						textDecoration: 'none',
+					}}>
+					<Typography
+						variant='h2'
+						sx={{
+							color: 'white',
+							fontWeight: 'bold',
+							textShadow:
+								'1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black',
+						}}>
+						PACK SIM
+					</Typography>
+				</Link>
+				<Link
+					href='/race-simulator'
+					className='racesim fontPageItem'
+					sx={{
+						borderRadius: 15,
+						textDecoration: 'none',
+					}}>
+					<Typography
+						variant='h2'
+						sx={{
+							color: 'white',
+							fontWeight: 'bold',
+							textShadow:
+								'1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black',
+						}}>
+						RACE SIM
+					</Typography>
+				</Link>
+				<Link
+					href='/clicker'
+					className='clicker fontPageItem'
+					sx={{
+						borderRadius: 15,
+						textDecoration: 'none',
+					}}>
+					<Typography
+						variant='h2'
+						sx={{
+							color: 'white',
+							fontWeight: 'bold',
+							textShadow:
+								'1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black',
+						}}>
+						CLICKER
 					</Typography>
 				</Link>
 			</Box>

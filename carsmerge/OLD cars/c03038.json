@@ -1,0 +1,49 @@
+{
+    "carID": "c03038",
+    "cr": 955,
+    "make": "Pagani",
+    "model": "Zonda Fantasma EVO",
+    "modelYear": 2017,
+    "country": "IT",
+    "topSpeed": 225,
+    "0to60": 2.6,
+    "handling": 94,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Ultra Expensive","Unique","The Tyrol Tour"],
+    "isPrize": false,
+	
+    "weight": 1200,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 113.65,
+    "ola": 90,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/PaganiZondaFantasmaEVO(2017).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 227,
+"3330to60": 2.5,
+"333Handling": 97,
+
+"666TopSpeed": 230,
+"6660to60": 2.3,
+"666Handling": 100,
+
+"699TopSpeed": 230,
+"6990to60": 2.2,
+"699Handling": 104,
+
+"969TopSpeed": 232,
+"9690to60": 2.3,
+"969Handling": 104,
+
+"996TopSpeed": 232,
+"9960to60": 2.2,
+"996Handling": 100
+}

@@ -1,0 +1,52 @@
+{
+    "carID": "c04632",
+    "cr": 477,
+    "make": "Volkswagen",
+    "model": "Scirocco 2.0 TSI",
+    "modelYear": 2014,
+    "country": "DE",
+    "topSpeed": 145,
+    "0to60": 6.8,
+    "handling": 82,
+    "driveType": "FWD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite", "Hot Hatch","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+
+
+    "weight": 1298,
+    "gc": "Medium",
+    "seatCount":4,
+    "bodyStyle": "Hatchback",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 73.77,
+    "ola": 74.07,
+    "description": "Three letters away from being special.",
+
+
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/VolkswagenScirocco2.0TSI(2014).png",
+    "creator": "Andu",
+    
+    "333TopSpeed": 149,
+    "3330to60": 6.5,
+    "333Handling": 85,
+    
+    "666TopSpeed": 152,
+    "6660to60": 6.1,
+    "666Handling": 87,
+    
+    "699TopSpeed": 152,
+    "6990to60": 5.8,
+    "699Handling": 91,
+    
+    "969TopSpeed": 156,
+    "9690to60": 6.1,
+    "969Handling": 91,
+    
+    "996TopSpeed": 156,
+    "9960to60": 5.8,
+    "996Handling": 87
+}

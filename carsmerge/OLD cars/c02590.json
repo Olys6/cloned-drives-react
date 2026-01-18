@@ -1,0 +1,50 @@
+{
+    "carID": "c02590",
+    "cr": 537,
+    "make": "Infiniti",
+    "model": "QX56 4WD",
+    "modelYear": 2011,
+    "country": "JP",
+    "topSpeed": 133,
+    "0to60": 6.5,
+    "handling": 66,
+    "driveType": "4WD",
+    "tyreType": "All-Surface",
+    "tags": ["Year of the Rabbit"],
+    "isPrize": false,
+
+    "weight": 2654,
+    "gc": "High",
+    "seatCount": 8,
+    "bodyStyle": "SUV",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 57.06,
+    "ola": 71.13,
+    "description": "The Infiniti QX goes on Patrol and comes back a proper luxury machine.",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/InfinitiQX564WD(2011).png",
+    "creator": "Andu",
+
+    "333TopSpeed": 137,
+    "3330to60": 6.2,
+    "333Handling": 68,
+
+    "666TopSpeed": 141,
+    "6660to60": 5.9, 
+    "666Handling": 70,
+
+    "996TopSpeed": 145,
+    "9960to60": 5.5,
+    "996Handling": 70,
+
+    "969TopSpeed": 145,
+    "9690to60": 5.9,
+    "969Handling": 73,
+
+    "699TopSpeed": 141,
+    "6990to60": 5.5,
+    "699Handling": 73
+    
+}

@@ -1,0 +1,13 @@
+{
+    "carID": "c03314",
+    "make": "Ford",
+    "model": "Mustang Boss 302 Cutaway",
+    "modelYear": 1970,
+    "country": "US",
+    "reference": "c00471",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Wrenaissance"
+}

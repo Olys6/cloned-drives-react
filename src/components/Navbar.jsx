@@ -7,46 +7,45 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link';
+import Tooltip from '@mui/material/Tooltip';
 import DiscordLogo from '../images/discord-v2-svgrepo-com.svg';
 
 import Logo from '../images/logowhite.png';
 
+// Navigation items
 const pages = [
-	'Tune Calculator',
-	// 'Creation', 'Tracks', 'Packs'
+	{ name: 'Cars', path: '/home' },
+	{ name: 'Tracks', path: '/tracks' },
+	{ name: 'Packs', path: '/packs' },
+	{ name: 'BM Cars', path: '/bm-cars' },
+	{ name: 'Pack Sim', path: '/pack-simulator' },
+	{ name: 'Race Sim', path: '/race-simulator' },
+	{ name: 'Clicker', path: '/clicker' },
+	{ name: 'Tune Calc', path: '/tune-calculator' },
 ];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Navbar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
-	const [anchorElUser, setAnchorElUser] = React.useState(null);
 
 	const handleOpenNavMenu = (event) => {
 		setAnchorElNav(event.currentTarget);
-	};
-	const handleOpenUserMenu = (event) => {
-		setAnchorElUser(event.currentTarget);
 	};
 
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null);
 	};
 
-	const handleCloseUserMenu = () => {
-		setAnchorElUser(null);
-	};
-
 	return (
 		<AppBar
-			color='success'
-			position='absolute'
-			top='0'
-			left='0'>
+			position='fixed'
+			sx={{
+				backgroundColor: '#1a1a1a',
+				borderBottom: '1px solid #333',
+			}}
+		>
 			<Container maxWidth='xl'>
 				<Toolbar disableGutters>
 					<Link
@@ -54,14 +53,16 @@ const Navbar = () => {
 						sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
 						<img
 							src={Logo}
-							style={{ width: '20rem' }}
+							style={{ width: '14rem' }}
+							alt="Cloned Drives Logo"
 						/>
 					</Link>
 
+					{/* Mobile menu */}
 					<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
 						<IconButton
 							size='large'
-							aria-label='account of current user'
+							aria-label='navigation menu'
 							aria-controls='menu-appbar'
 							aria-haspopup='true'
 							onClick={handleOpenNavMenu}
@@ -87,87 +88,80 @@ const Navbar = () => {
 							}}>
 							{pages.map((page) => (
 								<MenuItem
-									key={page}
-									onClick={handleCloseNavMenu}>
-									<Typography textAlign='center'>{page}</Typography>
+									key={page.name}
+									onClick={handleCloseNavMenu}
+									component="a"
+									href={page.path}>
+									<Typography textAlign='center'>{page.name}</Typography>
 								</MenuItem>
 							))}
 						</Menu>
 					</Box>
+
+					{/* Mobile logo */}
 					<Box
-						sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, width: '70%' }}>
-						<img
-							src={Logo}
-							style={{ width: '20rem' }}
-						/>
+						sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, flexGrow: 1 }}>
+						<Link href='/'>
+							<img
+								src={Logo}
+								style={{ width: '12rem' }}
+								alt="Cloned Drives Logo"
+							/>
+						</Link>
 					</Box>
-					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+
+					{/* Desktop menu */}
+					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, ml: 2 }}>
 						{pages.map((page) => (
 							<Button
-								href={`/${page.split(' ').join('-').toLowerCase()}`}
-								key={page}
+								href={page.path}
+								key={page.name}
 								onClick={handleCloseNavMenu}
-								sx={{ my: 2, color: 'white', display: 'block' }}>
-								{page}
+								sx={{ 
+									my: 2, 
+									color: 'white', 
+									display: 'block',
+									fontSize: '0.8rem',
+									px: 1.2,
+									'&:hover': {
+										backgroundColor: 'rgba(255,255,255,0.1)',
+									},
+								}}>
+								{page.name}
 							</Button>
 						))}
 					</Box>
 
+					{/* Discord link */}
 					<Box sx={{ display: 'flex', gap: '1rem', flexGrow: 0 }}>
-						{/*<Tooltip title="Open settings">
-  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-    <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-  </IconButton>
-</Tooltip>
-<Menu
-  sx={{ mt: '45px' }}
-  id="menu-appbar"
-  anchorEl={anchorElUser}
-  anchorOrigin={{
-    vertical: 'top',
-    horizontal: 'right',
-  }}
-  keepMounted
-  transformOrigin={{
-    vertical: 'top',
-    horizontal: 'right',
-  }}
-  open={Boolean(anchorElUser)}
-  onClose={handleCloseUserMenu}
->
-  {settings.map((setting) => (
-    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-      <Typography textAlign="center">{setting}</Typography>
-    </MenuItem>
-  ))}
-		</Menu>*/}
-		<Tooltip title="Join the Discord server!">
-  <Link
-    id="discordLink"
-    href="https://discord.gg/p3UbVP9BxB"
-    target="_blank"
-    sx={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      transition: 'transform 0.2s ease, filter 0.2s ease',
-      '&:hover': {
-        transform: 'scale(1.1)',
-        filter: 'brightness(1.2)',
-      },
-    }}
-  >
-<img
-  src={DiscordLogo}
-  alt="Discord Logo"
-  style={{ width: 40, borderRadius: 50 }}
-/>
-  </Link>
-</Tooltip>
+						<Tooltip title="Join the Discord server!">
+							<Link
+								id="discordLink"
+								href="https://discord.gg/p3UbVP9BxB"
+								target="_blank"
+								sx={{
+									display: 'flex',
+									justifyContent: 'center',
+									alignItems: 'center',
+									transition: 'transform 0.2s ease, filter 0.2s ease',
+									'&:hover': {
+										transform: 'scale(1.1)',
+										filter: 'brightness(1.2)',
+									},
+								}}
+							>
+								<img
+									src={DiscordLogo}
+									alt="Discord Logo"
+									style={{ width: 36, borderRadius: 50 }}
+								/>
+							</Link>
+						</Tooltip>
 					</Box>
 				</Toolbar>
 			</Container>
 		</AppBar>
 	);
 };
+
 export default Navbar;

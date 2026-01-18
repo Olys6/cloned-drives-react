@@ -1,0 +1,13 @@
+{
+    "carID": "c03063",
+    "make": "Porsche",
+    "model": "Taycan 4S Art Car by Richard Phillips",
+    "modelYear": 2020,
+    "country": "DE",
+    "reference": "c02821",
+    "collection": ["The Tyrol Tour BM Collection"],
+    "description": "Beautiful.",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(bm)/0in/PorscheTaycan4SArtCarbyRichardPhillips.png",
+    "creator": "Crossfire"
+}

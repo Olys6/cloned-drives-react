@@ -1,0 +1,13 @@
+{
+    "carID": "c02943",
+    "make": "Austin",
+    "model": "FX4 Taxi (W22)",
+    "modelYear": 1962,
+    "country": "GB",
+    "reference": "c00127",
+    "collection": ["Winter Collection 2022"],
+    "description": "Happy Holidays from the CD team.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/AustinFX4(W22).png",
+    "creator": "Bnuuy"
+}

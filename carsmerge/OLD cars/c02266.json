@@ -1,0 +1,13 @@
+{
+    "carID": "c02266",
+    "make": "Lotus",
+    "model": "Elise Heritage Type 49",
+    "modelYear": 2001,
+    "country": "GB",
+    "reference": "c00730",
+    "collection": ["BMC1: The Originals"],
+    "active" : false,
+    "description": "placeholder desc",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/LotusEliseHeritageType49.png",
+    "creator": "Tom"
+}

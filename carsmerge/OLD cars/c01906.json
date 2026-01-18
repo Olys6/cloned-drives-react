@@ -1,0 +1,49 @@
+{
+    "carID": "c01906",
+    "cr": 377,
+    "make": "Toyota",
+    "model": "Land Cruiser 4.7i V8 32V VX",
+    "modelYear": 1998,
+    "country": "JP",
+    "topSpeed": 110,
+    "0to60": 9.3,
+    "handling": 65,
+    "driveType": "4WD",
+    "tyreType": "All-Surface",
+    "tags": [
+        "The Japanese Odyssey"
+    ],
+    "isPrize": false,
+    "weight": 2193,
+    "gc": "High",
+    "seatCount": 7,
+    "bodyStyle": "SUV",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 35.65,
+    "ola": 63.78,
+    "description": "One of the most loved SUVs of all time.",
+"333TopSpeed": 115,
+"3330to60": 8.8,
+"333Handling": 67,
+
+"666TopSpeed": 119,
+"6660to60": 8.4,
+"666Handling": 69,
+
+"699TopSpeed": 119,
+"6990to60": 7.9,
+"699Handling": 72,
+
+"969TopSpeed": 124,
+"9690to60": 8.4,
+"969Handling": 72,
+
+"996TopSpeed": 124,
+"9960to60": 7.9,
+"996Handling": 69,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/ToyotaLandCruiser4.7iV832VVX(1998).png",
+    "creator": "AK1"
+}

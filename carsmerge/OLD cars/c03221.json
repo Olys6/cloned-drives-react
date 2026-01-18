@@ -1,0 +1,49 @@
+{
+    "carID": "c03221",
+    "cr": 903,
+    "make": "Ferrari",
+    "model": "P4/5 by Pininfarina",
+    "modelYear": 2006,
+    "country": "IT",
+    "topSpeed": 233,
+    "0to60": 2.9,
+    "handling": 91,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["The Tyrol Tour: Remix","Unique","Ultra Expensive","Concept","Supercar"],
+    "isPrize": true,
+	
+    "weight": 1200,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 100,
+    "ola": 90,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/FerrariP4-5byPininfarina(2006).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 235,
+"3330to60": 2.8,
+"333Handling": 94,
+
+"666TopSpeed": 237,
+"6660to60": 2.6,
+"666Handling": 97,
+
+"699TopSpeed": 237,
+"6990to60": 2.5,
+"699Handling": 101,
+
+"969TopSpeed": 240,
+"9690to60": 2.6,
+"969Handling": 101,
+
+"996TopSpeed": 240,
+"9960to60": 2.5,
+"996Handling": 97
+}

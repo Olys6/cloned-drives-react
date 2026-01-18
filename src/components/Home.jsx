@@ -17,6 +17,7 @@ let highestYear = 0;
 let highestMra = 0;
 let highestOla = 0;
 let highestWeight = 0;
+let highestSeatCount = 0;
 
 let lowestRqValue = 10000;
 let lowestCarSpeed = 10000;
@@ -26,6 +27,7 @@ let lowestYear = 10000;
 let lowestMra = 10000;
 let lowestOla = 10000;
 let lowestWeight = 10000;
+let lowestSeatCount = 10000;
 
 const getHighestAndLowestValues = () => {
 	carData.forEach(car => {
@@ -49,6 +51,9 @@ const getHighestAndLowestValues = () => {
 		highestWeight < car.weight
 			? (highestWeight = car.weight)
 			: null;
+		if (car.seatCount && highestSeatCount < car.seatCount) {
+			highestSeatCount = car.seatCount;
+		}
 
 		lowestRqValue > car.cr
 			? (lowestRqValue = car.cr)
@@ -70,9 +75,9 @@ const getHighestAndLowestValues = () => {
 		lowestWeight > car.weight
 			? (lowestWeight = car.weight)
 			: null;
-		lowestWeight > car.weight
-			? (lowestWeight = car.weight)
-			: null;
+		if (car.seatCount && lowestSeatCount > car.seatCount) {
+			lowestSeatCount = car.seatCount;
+		}
 	});
 };
 
@@ -122,10 +127,14 @@ const Home = () => {
 		lowestWeight,
 		highestWeight,
 	]);
-	// { Array.isArray(car.make) ? car.make[0] : car.make }
-	const carTags = [];
+	// New filters
+	const [seatCount, setSeatCount] = useState([
+		lowestSeatCount,
+		highestSeatCount,
+	]);
+	const [enginePos, setEnginePos] = useState([]);
 
-	// const smallCarData = carData.map((car, i) => (i < 20 ? car : <></>))
+	const carTags = [];
 
 	const handlePageChange = (event, value) => {
 		setPage(value);
@@ -160,6 +169,14 @@ const Home = () => {
 				car.ola >= ola[0] &&
 				car.weight <= weight[1] &&
 				car.weight >= weight[0] &&
+				// Seat count filter
+				(car.seatCount
+					? car.seatCount >= seatCount[0] && car.seatCount <= seatCount[1]
+					: true) &&
+				// Engine position filter
+				(enginePos.length > 0
+					? enginePos.some(elem => elem === car.enginePos)
+					: true) &&
 				(carMake.length > 0
 					? carMake.some(elem => car.make.includes(elem))
 					: true) &&
@@ -218,7 +235,6 @@ const Home = () => {
 
 	useEffect(() => {
 		getAllTags();
-		// console.log("CAR TAGS --->", carTags)
 	}, []);
 
 	return (
@@ -284,6 +300,13 @@ const Home = () => {
 				setRqValue={setRqValue}
 				rqValue={rqValue}
 				setPage={setPage}
+				// New filter props
+				seatCount={seatCount}
+				setSeatCount={setSeatCount}
+				lowestSeatCount={lowestSeatCount}
+				highestSeatCount={highestSeatCount}
+				enginePos={enginePos}
+				setEnginePos={setEnginePos}
 			/>
 
 			<Cards

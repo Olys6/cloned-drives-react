@@ -1,0 +1,50 @@
+{
+    "carID": "c00957",
+    "cr": 640,
+    "make": "Nissan",
+    "model": "Skyline GT-R V-Spec Export (R33)",
+    "modelYear": 1997,
+    "country": "JP",
+    "topSpeed": 155,
+    "0to60": 5.4,
+    "handling": 84,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": [
+        "Street Racer",
+        "Silver Screen"
+    ],
+    "isPrize": false,
+    "weight": 1633,
+    "gc": "Medium",
+    "seatCount": 4,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 63.91,
+    "ola": 77.69,
+    "description": "When that speed limiter hits.",
+"333TopSpeed": 158,
+"3330to60": 5.1,
+"333Handling": 87,
+
+"666TopSpeed": 162,
+"6660to60": 4.9,
+"666Handling": 90,
+
+"699TopSpeed": 162,
+"6990to60": 4.6,
+"699Handling": 93,
+
+"969TopSpeed": 165,
+"9690to60": 4.9,
+"969Handling": 93,
+
+"996TopSpeed": 165,
+"9960to60": 4.6,
+"996Handling": 90,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/NissanSkylineGTRVSpecExport(R33)(1997).png",
+    "creator": "Bnuuy"
+}

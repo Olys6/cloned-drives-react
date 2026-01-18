@@ -1,0 +1,13 @@
+{
+    "carID": "c03477",
+    "make": "Toyota",
+    "model": "Aygo 1.0 VVT-i \"CoolRed\"",
+    "modelYear": 2008,
+    "country": "JP",
+    "reference": "c01868",
+    "collection": ["BMC2: Clr_s Around The World"],
+    "description": "Candy apple.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/ToyotaAygoCoolRed.png",
+    "creator": "Crossfire"
+}

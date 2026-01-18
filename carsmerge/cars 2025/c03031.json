@@ -1,0 +1,14 @@
+{
+    "carID": "c03031",
+    "make": "Opel",
+    "model": "Manta GT/E \"Black Magic\"",
+    "modelYear": 1974,
+    "country": "DE",
+    "reference": "c01009",
+    "collection": ["The Tyrol Tour BM Collection"],
+    "description": "Black panther of its time.",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Crossfire",
+    "hiddenTag": [""]
+}

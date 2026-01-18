@@ -1,0 +1,14 @@
+{
+    "carID": "c03311",
+    "make": "Audi",
+    "model": "A8 4.2 quattro Cutaway",
+    "modelYear": 2002,
+    "country": "DE",
+    "reference": "c02615",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(bm)/0in/AudiA84.2quattroCutaway.png",
+    "creator": "Crossfire",
+    "hiddenTag": [""]
+}

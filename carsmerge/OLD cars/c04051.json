@@ -1,0 +1,13 @@
+{
+    "carID": "c04051",
+    "make": "McLaren",
+    "model": "650S (S23)",
+    "modelYear": 2014,
+    "country": "GB",
+    "reference": "c00791",
+    "collection": ["Summer Collection 2023"],
+    "description": "Welcome to summer!",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "DodgeDemon"
+}

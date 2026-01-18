@@ -1,0 +1,13 @@
+{
+    "carID": "c02262",
+    "make": "Jaguar",
+    "model": "Mark II 3.8 Police",
+    "modelYear": 1959,
+    "country": "GB",
+    "reference": "c01440",
+    "collection": ["BMC1: The Originals"],
+    "active" : false,
+    "description": "placeholder desc",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/JaguarMarkII3.8Police.png",
+    "creator": "Exist"
+}

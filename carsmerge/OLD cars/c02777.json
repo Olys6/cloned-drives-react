@@ -1,0 +1,49 @@
+{
+    "carID": "c02777",
+    "cr": 267,
+    "make": "Honda",
+    "model": "FCV Concept",
+    "modelYear": 2014,
+    "country": "JP",
+    "topSpeed": 124,
+    "0to60": 10.1,
+    "handling": 70,
+    "driveType": "RWD",
+    "tyreType": "Standard",
+    "tags": ["Eco-Friendly"],
+    "isPrize": false,
+	
+    "weight": 1900,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Sedan",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Alternative",
+    "mra": 46.6,
+    "ola": 76.92,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/HondaFCVConcept(2014).png",
+    "creator": "Keanny",
+
+"333TopSpeed": 128,
+"3330to60": 9.6,
+"333Handling": 72,
+
+"666TopSpeed": 132,
+"6660to60": 9.1,
+"666Handling": 75,
+
+"699TopSpeed": 132,
+"6990to60": 8.6,
+"699Handling": 78,
+
+"969TopSpeed": 137,
+"9690to60": 9.1,
+"969Handling": 78,
+
+"996TopSpeed": 137,
+"9960to60": 8.6,
+"996Handling": 75
+}

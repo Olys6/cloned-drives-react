@@ -1,0 +1,49 @@
+{
+    "carID": "c00019",
+    "cr": 570,
+    "make": "Acura",
+    "model": "RDX A-Spec SH-AWD",
+    "modelYear": 2019,
+    "country": "US",
+    "topSpeed": 113,
+    "0to60": 6.5,
+    "handling": 73,
+    "driveType": "4WD",
+    "tyreType": "All-Surface",
+    "tags": [],
+    "isPrize": false,
+	
+    "weight": 1813,
+    "gc": "High",
+    "seatCount": 5,
+    "bodyStyle": "SUV",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 56.03,
+    "ola": 76.92,
+    "description": "If you have to buy a RDX, get this one. Good looking and fast, for a change.",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/AcuraRDXA-SpecSH-AWD(2019).png",
+    "creator": "Based",
+
+"333TopSpeed": 118, 
+"3330to60": 6.2, 
+"333Handling": 75,
+
+"666TopSpeed": 122, 
+"6660to60": 5.9, 
+"666Handling": 78,
+
+"699TopSpeed": 122, 
+"6990to60": 5.5, 
+"699Handling": 81,
+
+"969TopSpeed": 127, 
+"9690to60": 5.9, 
+"969Handling": 81,
+
+"996TopSpeed": 127, 
+"9960to60": 5.5, 
+"996Handling": 78
+}

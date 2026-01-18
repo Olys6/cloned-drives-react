@@ -1,0 +1,49 @@
+{
+    "carID": "c04196",
+    "cr": 463,
+    "make": "Lamborghini",
+    "model": "Islero GTX",
+    "modelYear": 1975,
+    "country": "IT",
+    "topSpeed": 169,
+    "0to60": 5.7,
+    "handling": 76,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite","Motorsport","Unique"],
+    "isPrize": false,
+	
+    "weight": 1240,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Coupe",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 87.67,
+    "ola": 91.25,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/LamborghiniIsleroGTX(1975).png",
+
+"333TopSpeed": 172,
+"3330to60": 5.4,
+"333Handling": 79,
+
+"666TopSpeed": 175,
+"6660to60": 5.1,
+"666Handling": 81,
+
+"699TopSpeed": 175,
+"6990to60": 4.8,
+"699Handling": 84,
+
+"969TopSpeed": 178,
+"9690to60": 5.1,
+"969Handling": 84,
+
+"996TopSpeed": 178,
+"9960to60": 4.8,
+"996Handling": 81,
+    "creator": "Bnuuy"
+}

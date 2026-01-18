@@ -1,0 +1,13 @@
+{
+    "carID": "c04544",
+    "make": "Alfa Romeo",
+    "model": "Giulia ErreErre Fuoriserie",
+    "modelYear": 2016,
+    "country": "IT",
+    "reference": "c00034",
+    "collection": ["The Last of Beta BM Collection"],
+    "description": "Throwback to the original Giulia from the 60s, and a proof that boxy retro designs does not fit a car with curvy and smooth lines.",
+	"active" : true,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(bm)/0in/AlfaRomeoGiuliaErreErreFuoriserie.png",
+    "creator": "Crossfire"
+}

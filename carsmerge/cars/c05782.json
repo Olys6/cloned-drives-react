@@ -1,5 +1,5 @@
 {
-    "carID": "5782",
+    "carID": "c05782",
     "cr": 625,
     "make": "Wiesmann",
     "model": "Roadster MF3",
@@ -39,5 +39,6 @@
     "9960to60": 4.0,
     "996Handling": 92,
     "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/WiesmannRoadsterMF3(1995).png",
-    "creator": "Crossfire"
+    "creator": "Crossfire",
+    "hiddenTag": [""]
 }

@@ -1,0 +1,13 @@
+{
+    "carID": "c02919",
+    "make": "Ferrari",
+    "model": "F40 (W22)",
+    "modelYear": 1989,
+    "country": "IT",
+    "reference": "c00397",
+    "collection": ["Winter Collection 2022"],
+    "description": "Happy Holidays from the CD team.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/FerrariF40(W22).png",
+    "creator": "Bnuuy"
+}

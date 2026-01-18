@@ -1,0 +1,49 @@
+{
+    "carID": "c02670",
+    "cr": 674,
+    "make": "Alfa Romeo",
+    "model": "8C Competizione Concept",
+    "modelYear": 2003,
+    "country": "IT",
+    "topSpeed": 186,
+    "0to60": 4.4,
+    "handling": 88,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Concept", "Unique"],
+    "isPrize": false,
+	
+    "weight": 1500,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 61.97,
+    "ola": 90.9,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/AlfaRomeo8CCompetizioneConcept(2003).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 189, 
+"3330to60": 4.2, 
+"333Handling": 91,
+
+"666TopSpeed": 192, 
+"6660to60": 4.0, 
+"666Handling": 94,
+
+"699TopSpeed": 192, 
+"6990to60": 3.7, 
+"699Handling": 98,
+
+"969TopSpeed": 194, 
+"9690to60": 4.0, 
+"969Handling": 98,
+
+"996TopSpeed": 194, 
+"9960to60": 3.7, 
+"996Handling": 94
+}

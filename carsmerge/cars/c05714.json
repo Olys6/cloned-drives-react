@@ -10,7 +10,7 @@
     "handling": 72,
     "driveType": "FWD",
     "tyreType": "Standard",
-    "tags": ["CD Chasers"],
+    "tags": ["CD Chasers","Rest of The World"],
     "isPrize": false,
     "weight": 1140,
     "gc": "Medium",
@@ -45,5 +45,6 @@
 "996Handling": 77,
 
     "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/VolkswagenSpaceCross1.6MPI(2015).png",
-    "creator": "Andu"
+    "creator": "Andu",
+    "hiddenTag": [""]
 }

@@ -1,0 +1,49 @@
+{
+    "carID": "c01207",
+    "cr": 638,
+    "make": "Subaru",
+    "model": "Impreza WRX",
+    "modelYear": 2008,
+    "country": "JP",
+    "topSpeed": 144,
+    "0to60": 5.4,
+    "handling": 84,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": [
+        "Street Racer"
+    ],
+    "isPrize": false,
+    "weight": 1453,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Sedan",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 63.41,
+    "ola": 77.64,
+    "description": "2008's WRX was so slow that Subaru buffed the WRX for the next year, so much so that even at one point faster than the STI.",
+"333TopSpeed": 148,
+"3330to60": 5.1,
+"333Handling": 87,
+
+"666TopSpeed": 151,
+"6660to60": 4.9,
+"666Handling": 90,
+
+"699TopSpeed": 151,
+"6990to60": 4.6,
+"699Handling": 93,
+
+"969TopSpeed": 155,
+"9690to60": 4.9,
+"969Handling": 93,
+
+"996TopSpeed": 155,
+"9960to60": 4.6,
+"996Handling": 90,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/SubaruImprezaWRX(2008).png",
+    "creator": "Bnuuy"
+}

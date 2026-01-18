@@ -1,0 +1,49 @@
+{
+    "carID": "c04577",
+    "cr": 870,
+    "make": ["Kremer-Porsche","Porsche"],
+    "model": "935/77A K2",
+    "modelYear": 1977,
+    "country": "DE",
+    "topSpeed": 212,
+    "0to60": 3.1,
+    "handling": 94,
+    "driveType": "RWD",
+    "tyreType": "Slick",
+    "tags": ["Eurotech Elite","Motorsport","Unique","Tuner","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 995,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Coupe",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 115,
+    "ola": 94.91,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+
+"333TopSpeed": 214,
+"3330to60": 2.9,
+"333Handling": 97,
+
+"666TopSpeed": 217,
+"6660to60": 2.8,
+"666Handling": 100,
+
+"699TopSpeed": 217,
+"6990to60": 2.6,
+"699Handling": 104,
+
+"969TopSpeed": 219,
+"9690to60": 2.8,
+"969Handling": 104,
+
+"996TopSpeed": 219,
+"9960to60": 2.6,
+"996Handling": 100,
+    "creator": "Bnuuy"
+}

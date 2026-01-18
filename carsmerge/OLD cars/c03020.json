@@ -1,0 +1,13 @@
+{
+    "carID": "c03020",
+    "make": "Mercedes-Benz",
+    "model": "G 500 \"Blazing\"",
+    "modelYear": 2018,
+    "country": "DE",
+    "reference": "c02797",
+    "collection": ["The Tyrol Tour BM Collection"],
+    "description": "None",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Crossfire"
+}

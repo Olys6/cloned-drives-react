@@ -1,0 +1,13 @@
+{
+    "carID": "c04552",
+    "make": "Fiat",
+    "model": "(500C)RED Hybrid",
+    "modelYear": 2020,
+    "country": "IT",
+    "reference": "c03200",
+    "collection": ["The Last of Beta BM Collection"],
+    "description": "Very (red) indeed",
+	"active" : true,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/Fiat500CREDHybrid.png",
+    "creator": "Crossfire"
+}

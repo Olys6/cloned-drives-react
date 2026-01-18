@@ -1,0 +1,13 @@
+{
+    "carID": "c04055",
+    "make": "Volkswagen",
+    "model": "Beetle Dune (S23)",
+    "modelYear": 2016,
+    "country": "DE",
+    "reference": "c01358",
+    "collection": ["Summer Collection 2023"],
+    "description": "Welcome to summer!",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "DodgeDemon"
+}

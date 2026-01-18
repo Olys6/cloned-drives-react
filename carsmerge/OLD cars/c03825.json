@@ -1,0 +1,49 @@
+{
+    "carID": "c03825",
+    "cr": 324,
+    "make": "Lamborghini",
+    "model": "Flying Star II",
+    "modelYear": 1966,
+    "country": "IT",
+    "topSpeed": 155,
+    "0to60": 6.6,
+    "handling": 70,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Endless Summer","Unique","Concept","The Tyrol Tour: Remix","Grand Tourer"],
+    "isPrize": false,
+	
+    "weight": 1300,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Wagon",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 70.7,
+    "ola": 75.63,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/LamborghiniFlyingStarII(1966).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 158,
+"3330to60": 6.3,
+"333Handling": 72,
+
+"666TopSpeed": 162,
+"6660to60": 5.9,
+"666Handling": 75,
+
+"699TopSpeed": 162,
+"6990to60": 5.6,
+"699Handling": 78,
+
+"969TopSpeed": 165,
+"9690to60": 5.9,
+"969Handling": 78,
+
+"996TopSpeed": 165,
+"9960to60": 5.6,
+"996Handling": 75
+}

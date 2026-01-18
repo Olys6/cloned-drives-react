@@ -8,6 +8,7 @@
     "collection": ["The Tyrol Tour BM Collection"],
     "description": "None",
 	"active" : false,
-    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
-    "creator": "Crossfire"
+    "racehud": "https://file.garden/aFBkIPmb4DlYDcyR/Cars/1BM/0in/Fiat124SpiderEuropa.png",
+    "creator": "Crossfire",
+    "hiddenTag": [""]
 }

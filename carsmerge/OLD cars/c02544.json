@@ -1,0 +1,13 @@
+{
+    "carID": "c02544",
+    "make": "Lamborghini",
+    "model": "Aventador LP740-4 S Art Car by Skyler Grey",
+    "modelYear": 2017,
+    "country": "IT",
+    "reference": "c02331",
+    "collection": ["BMC1: The Originals"],
+    "description": "None.",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(bm)/0in/LamborghiniAventadorSSkylerGrey(2011).png",
+    "creator": "Bnuuy"
+}

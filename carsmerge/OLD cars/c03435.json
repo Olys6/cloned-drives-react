@@ -1,0 +1,50 @@
+{
+    "carID": "c03435",
+    "cr": 68,
+    "make": "NSU",
+    "model": "Prinz 1000 L",
+    "modelYear": 1964,
+    "country": "DE",
+    "topSpeed": 84,
+    "0to60": 18.3,
+    "handling": 57,
+    "driveType": "RWD",
+    "tyreType": "Standard",
+    "tags": ["The Tyrol Tour: Remix"],
+    "isPrize": false,
+
+
+    "weight": 640,
+    "gc": "Medium",
+    "seatCount": 4,
+    "bodyStyle": "Coupe",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 12.22,
+    "ola": 63.38,
+    "description": "",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/NSUPrinz1000L(1964).png",
+    "creator": "Connor",
+
+    "333TopSpeed": 90,
+    "3330to60": 17.4,
+    "333Handling": 59,
+
+    "666TopSpeed": 96,
+    "6660to60": 16.5, 
+    "666Handling": 61,
+
+    "996TopSpeed": 103,
+    "9960to60": 15.6,
+    "996Handling": 61,
+
+    "969TopSpeed": 103,
+    "9690to60": 16.5,
+    "969Handling": 63,
+
+    "699TopSpeed": 96,
+    "6990to60": 15.6,
+    "699Handling": 63
+}

@@ -1,0 +1,13 @@
+{
+    "carID": "c02700",
+    "make": "Chrysler",
+    "model": "Pacifica eHybrid Platinum (H22)",
+    "modelYear": 2017,
+    "country": "US",
+    "reference": "c00313",
+    "collection": ["Halloween Collection 2022"],
+    "description": "Trick or Treat.",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(bm)/0in/ChryslerPacificaeHybridPlatinum(H22)(2017).png",
+    "creator": "Lemon"
+}

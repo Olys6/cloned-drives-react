@@ -1,0 +1,49 @@
+{
+    "carID": "c03194",
+    "cr": 472,
+    "make": "Chrysler",
+    "model": "Crossfire Concept",
+    "modelYear": 2001,
+    "country": "US",
+    "topSpeed": 148,
+    "0to60": 5.8,
+    "handling": 82,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["The Americas Assault", "Concept", "Unique"],
+    "isPrize": false,
+	
+    "weight": 1315,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 56.86,
+    "ola": 89.65,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/ChryslerCrossfireConcept(2001).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 152,
+"3330to60": 5.5,
+"333Handling": 85,
+
+"666TopSpeed": 155,
+"6660to60": 5.2,
+"666Handling": 87,
+
+"699TopSpeed": 155,
+"6990to60": 4.9,
+"699Handling": 91,
+
+"969TopSpeed": 159,
+"9690to60": 5.2,
+"969Handling": 91,
+
+"996TopSpeed": 159,
+"9960to60": 4.9,
+"996Handling": 87
+}

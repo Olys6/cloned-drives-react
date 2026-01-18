@@ -1,0 +1,13 @@
+{
+    "carID": "c02713",
+    "make": "Peugeot",
+    "model": "e-208 GT Halloween by Garage Italia (H22)",
+    "modelYear": 2020,
+    "country": "FR",
+    "reference": "c02708",
+    "collection": ["Halloween Collection 2022"],
+    "description": "Trick or Treat.",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(bm)/0in/Peugeote208GTHalloweenbyGarageItalia(H22)(2020).png",
+    "creator": "Lemon"
+}

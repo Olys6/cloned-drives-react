@@ -1,0 +1,13 @@
+{
+    "carID": "c03091",
+    "make": "Pontiac",
+    "model": "Firebird Trans Am (W22)",
+    "modelYear": 1977,
+    "country": "US",
+    "reference": "c01045",
+    "collection": ["Winter Collection 2022"],
+    "description": "Happy Holidays from the CD team.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/PontiacTransAm(W22).png",
+    "creator": "Bnuuy"
+}

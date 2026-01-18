@@ -1,0 +1,50 @@
+{
+    "carID": "c00519",
+    "cr": 523,
+    "make": "Honda",
+    "model": "Accord Coupe V6 HFP",
+    "modelYear": 2011,
+    "country": "JP",
+    "topSpeed": 130,
+    "0to60": 5.7,
+    "handling": 77,
+    "driveType": "FWD",
+    "tyreType": "Performance",
+    "tags": [
+        "Sleeper",
+        "Street Racer", "Year of the Rabbit","Oceanic View"
+    ],
+    "isPrize": false,
+    "weight": 1544,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 74.03,
+    "ola": 80.7,
+    "description": "Just a spoonful of sportiness makes the Accord much better! the Accord much better!",
+"333TopSpeed": 134,
+"3330to60": 5.4,
+"333Handling": 80,
+
+"666TopSpeed": 138,
+"6660to60": 5.1,
+"666Handling": 82,
+
+"699TopSpeed": 138,
+"6990to60": 4.8,
+"699Handling": 85,
+
+"969TopSpeed": 142,
+"9690to60": 5.1,
+"969Handling": 85,
+
+"996TopSpeed": 142,
+"9960to60": 4.8,
+"996Handling": 82,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/HondaAccordCoupeV6HFP(2011).png",
+    "creator": "McNuggets"
+}

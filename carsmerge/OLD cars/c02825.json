@@ -1,0 +1,50 @@
+{
+    "carID": "c02825",
+    "cr": 831,
+    "make": "Porsche",
+    "model": "Taycan GTS Sport Turismo",
+    "modelYear": 2021,
+    "country": "DE",
+    "topSpeed": 155,
+    "0to60": 3.5,
+    "handling": 88,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": ["Eco-Friendly"],
+    "isPrize": false,
+
+    "weight": 2310,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Wagon",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Mixed",
+    "fuelType": "Electric",
+    "mra": 76.09,
+    "ola": 85.71,
+    "description": "Thick.",
+
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/PorscheTaycanGTSSportTurismo(2021).png",
+    "creator": "Connor",
+
+"333TopSpeed": 158,
+"3330to60": 3.3,
+"333Handling": 91,
+
+"666TopSpeed": 162,
+"6660to60": 3.1,
+"666Handling": 94,
+
+"699TopSpeed": 162,
+"6990to60": 3,
+"699Handling": 98,
+
+"969TopSpeed": 165,
+"9690to60": 3.1,
+"969Handling": 98,
+
+"996TopSpeed": 165,
+"9960to60": 3,
+"996Handling": 94
+}

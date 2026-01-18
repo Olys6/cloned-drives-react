@@ -1,0 +1,13 @@
+{
+    "carID": "c03033",
+    "make": "Opel",
+    "model": "Insignia Country Tourer 2.0T 4x4 (W22)",
+    "modelYear": 2017,
+    "country": "DE",
+    "reference": "c00996",
+    "collection": ["Winter Collection 2022"],
+    "description": "Happy Holidays from the CD team.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/OpelInsigniaCountryTourer(W22).png",
+    "creator": "Bnuuy"
+}

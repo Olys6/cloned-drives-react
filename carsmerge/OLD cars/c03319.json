@@ -1,0 +1,13 @@
+{
+    "carID": "c03319",
+    "make": "Chevrolet",
+    "model": "Corvette Stingray Z51 Cutaway",
+    "modelYear": 2013,
+    "country": "US",
+    "reference": "c00274",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "Wrenaissance"
+}

@@ -1,0 +1,49 @@
+{
+    "carID": "c03137",
+    "cr": 351,
+    "make": "Dodge",
+    "model": "Dart GT 2.4",
+    "modelYear": 2014,
+    "country": "US",
+    "topSpeed": 127,
+    "0to60": 8.1,
+    "handling": 77,
+    "driveType": "FWD",
+    "tyreType": "Standard",
+    "tags": ["The Americas Assault"],
+    "isPrize": false,
+    
+    "weight": 1494,
+    "gc": "Low",
+    "seatCount": 5,
+    "bodyStyle": "Sedan",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 59.12,
+    "ola": 66.67,
+    "description": "One letter short, Dodge attempts to take on the GTI.",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/DodgeDartGTT2.4(2014).png",
+    "creator": "Biszkoptowiec",
+
+    "333TopSpeed": 131,
+    "3330to60": 7.7,
+    "333Handling": 80,
+
+    "666TopSpeed": 135,
+    "6660to60": 7.3,
+    "666Handling": 82,
+
+    "996TopSpeed": 139,
+    "9960to60": 6.9,
+    "996Handling": 82,
+
+    "969TopSpeed": 139,
+    "9690to60": 7.3,
+    "969Handling": 85,
+
+    "699TopSpeed": 135,
+    "6990to60": 6.9,
+    "699Handling": 85
+}

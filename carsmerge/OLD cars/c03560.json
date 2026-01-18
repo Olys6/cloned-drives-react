@@ -1,0 +1,49 @@
+{
+    "carID": "c03560",
+    "cr": 182,
+    "make": "Chery",
+    "model": "Fulwin ES",
+    "modelYear": 2002,
+    "country": "CN",
+    "topSpeed": 99,
+    "0to60": 13.4,
+    "handling": 65,
+    "driveType": "FWD",
+    "tyreType": "Standard",
+    "tags": ["The Amplification of Asia","Rest of The World"],
+    "isPrize": false,
+	
+    "weight": 1050,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Sedan",
+    "tcs": false,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 9.88,
+    "ola": 67.06,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/CheryFulwinES(2002).png",
+    "creator": "Keanny",
+
+"333TopSpeed": 104,
+"3330to60": 12.7,
+"333Handling": 67,
+
+"666TopSpeed": 110,
+"6660to60": 12.1,
+"666Handling": 69,
+
+"699TopSpeed": 110,
+"6990to60": 11.4,
+"699Handling": 72,
+
+"969TopSpeed": 115,
+"9690to60": 12.1,
+"969Handling": 72,
+
+"996TopSpeed": 115,
+"9960to60": 11.4,
+"996Handling": 69
+}

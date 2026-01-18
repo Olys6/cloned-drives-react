@@ -1,0 +1,49 @@
+{
+    "carID": "c01368",
+    "cr": 489,
+    "make": "Volkswagen",
+    "model": "Golf GTI",
+    "modelYear": 2009,
+    "country": "DE",
+    "topSpeed": 148,
+    "0to60": 6.5,
+    "handling": 81,
+    "driveType": "FWD",
+    "tyreType": "Performance",
+    "tags": [
+        "Hot Hatch"
+    ],
+    "isPrize": false,
+    "weight": 1387,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Hatchback",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 72.88,
+    "ola": 77.52,
+    "description": "A continuation of strong form.",
+   "333TopSpeed": 152,
+"3330to60": 6.2,
+"333Handling": 84,
+
+"666TopSpeed": 155,
+"6660to60": 5.9,
+"666Handling": 86,
+
+"699TopSpeed": 155,
+"6990to60": 5.5,
+"699Handling": 90,
+
+"969TopSpeed": 159,
+"9690to60": 5.9,
+"969Handling": 90,
+
+"996TopSpeed": 159,
+"9960to60": 5.5,
+"996Handling": 86,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/VolkswagenGolfGTI(2009).png",
+    "creator": "Andu"
+}

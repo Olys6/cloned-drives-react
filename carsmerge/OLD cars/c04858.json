@@ -1,0 +1,49 @@
+{
+    "carID": "c04858",
+    "cr": 774,
+    "make": "Porsche",
+    "model": "Vision Spyder Roadster",
+    "modelYear": 2019,
+    "country": "DE",
+    "topSpeed": 188,
+    "0to60": 3.9,
+    "handling": 92,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite","Concept","Unique","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+	
+    "weight": 1090,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Open Air",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 77.5,
+    "ola": 85.12,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/PorscheVisionSpyderRoadster(2019).png",
+
+"333TopSpeed": 191,
+"3330to60": 3.7,
+"333Handling": 95,
+
+"666TopSpeed": 194,
+"6660to60": 3.5,
+"666Handling": 98,
+
+"699TopSpeed": 194,
+"6990to60": 3.3,
+"699Handling": 102,
+
+"969TopSpeed": 196,
+"9690to60": 3.5,
+"969Handling": 102,
+
+"996TopSpeed": 196,
+"9960to60": 3.3,
+"996Handling": 98,
+    "creator": "Bnuuy"
+}

@@ -1,0 +1,13 @@
+{
+    "carID": "c02918",
+    "make": "Ferrari",
+    "model": "F8 Tributo (W22)",
+    "modelYear": 2019,
+    "country": "IT",
+    "reference": "c00398",
+    "collection": ["Winter Collection 2022"],
+    "description": "Happy Holidays from the CD team.",
+	"active" : false,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/FerrariF8Tributo(W22).png",
+    "creator": "Bnuuy"
+}

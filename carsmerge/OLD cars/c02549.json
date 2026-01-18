@@ -1,0 +1,49 @@
+{
+    "carID": "c02549",
+    "cr": 746,
+    "make": "Peugeot",
+    "model": "308 Racing Cup",
+    "modelYear": 2016,
+    "country": "FR",
+    "topSpeed": 155,
+    "0to60": 4.7,
+    "handling": 100,
+    "driveType": "FWD",
+    "tyreType": "Slick",
+    "tags": ["Motorsport"],
+    "isPrize": false,
+	
+    "weight": 1100,
+    "gc": "Low",
+    "seatCount": 1,
+    "bodyStyle": "Hatchback",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 80.19,
+    "ola": 86.66,
+    "description": "None.",
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/Peugeot308RacingCup(2016).png",
+    "creator": "Crossfire",
+
+"333TopSpeed": 158,
+"3330to60": 4.5,
+"333Handling": 103,
+
+"666TopSpeed": 162,
+"6660to60": 4.2,
+"666Handling": 107,
+
+"699TopSpeed": 162,
+"6990to60": 4,
+"699Handling": 111,
+
+"969TopSpeed": 165,
+"9690to60": 4.2,
+"969Handling": 111,
+
+"996TopSpeed": 165,
+"9960to60": 4,
+"996Handling": 107
+}

@@ -10,7 +10,7 @@
     "handling": 99,
     "driveType": "4WD",
     "tyreType": "Slick",
-    "tags": ["CD Contenders","Motorsport","Eco-Friendly","Unique","Innovative"],
+    "tags": ["CD Contenders","Motorsport","Eco-Friendly","Unique","Innovative","Rest of The World"],
     "isPrize": false,
     "weight": 1300,
     "gc": "Low",
@@ -43,5 +43,6 @@
 "9960to60": 2.5,
 "996Handling": 106,
     "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/XINGMobilityMissE(2017).png",
-    "creator": "Bnuuy"
+    "creator": "Bnuuy",
+    "hiddenTag": [""]
 }

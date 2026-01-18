@@ -1,0 +1,13 @@
+{
+    "carID": "c02259",
+    "make": "Aston Martin",
+    "model": "Cygnet Concept",
+    "modelYear": 2011,
+    "country": "GB",
+    "reference": "c00058",
+    "collection": ["BMC1: The Originals"],
+    "active" : false,
+    "description": "placeholder desc",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(bm)/0in/AstonMartinCygnetConcept.png",
+    "creator": "Bnuuy"
+}

@@ -1,0 +1,13 @@
+{
+    "carID": "c04049",
+    "make": "Land Rover",
+    "model": "Defender 110 D240 (S23)",
+    "modelYear": 2020,
+    "country": "GB",
+    "reference": "c03884",
+    "collection": ["Summer Collection 2023"],
+    "description": "Welcome to summer!",
+	"active" : false,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Placeholder.png",
+    "creator": "DodgeDemon"
+}

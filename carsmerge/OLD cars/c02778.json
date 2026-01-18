@@ -1,0 +1,50 @@
+{
+    "carID": "c02778",
+    "cr": 391,
+    "make": "Honda",
+    "model": "Accord LX",
+    "modelYear": 2003,
+    "country": "JP",
+    "topSpeed": 128,
+    "0to60": 7.8,
+    "handling": 71,
+    "driveType": "FWD",
+    "tyreType": "Standard",
+    "tags": [],
+    "isPrize": false,
+
+    "weight": 1410,
+    "gc": "Medium",
+    "seatCount": 5,
+    "bodyStyle": "Sedan",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 49.52,
+    "ola": 67.1,
+    "description": "Nothing screams good deal like a base model Honda!",
+
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/HondaAccordLX(2003).png",
+    "creator": "McNuggets",
+
+"333TopSpeed": 132,
+"3330to60": 7.4,
+"333Handling": 73,
+
+"666TopSpeed": 136,
+"6660to60": 7,
+"666Handling": 76,
+
+"699TopSpeed": 136,
+"6990to60": 6.6,
+"699Handling": 79,
+
+"969TopSpeed": 140,
+"9690to60": 7,
+"969Handling": 79,
+
+"996TopSpeed": 140,
+"9960to60": 6.6,
+"996Handling": 76
+}

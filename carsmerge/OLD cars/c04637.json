@@ -1,0 +1,52 @@
+{
+    "carID": "c04637",
+    "cr": 205,
+    "make": "Volkswagen",
+    "model": "Scirocco GTI",
+    "modelYear": 1982,
+    "country": "DE",
+    "topSpeed": 118,
+    "0to60": 9.3,
+    "handling": 72,
+    "driveType": "FWD",
+    "tyreType": "Performance",
+    "tags": ["Eurotech Elite", "Hot Hatch","Cloned Drives Beta: Last of"],
+    "isPrize": false,
+
+
+    "weight": 895,
+    "gc": "Low",
+    "seatCount":4,
+    "bodyStyle": "Hatchback",
+    "tcs": false,
+    "abs": false,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 49.73,
+    "ola": 68.92,
+    "description": "GTI. Are you red-y for it?",
+
+
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/VolkswagenSciroccoGTI(1982).png",
+    "creator": "Andu",
+ 
+    "333TopSpeed": 122,
+    "3330to60": 8.8,
+    "333Handling": 74,
+    
+    "666TopSpeed": 127,
+    "6660to60": 8.4,
+    "666Handling": 77,
+    
+    "699TopSpeed": 127,
+    "6990to60": 7.9,
+    "699Handling": 80,
+    
+    "969TopSpeed": 131,
+    "9690to60": 8.4,
+    "969Handling": 80,
+    
+    "996TopSpeed": 131,
+    "9960to60": 7.9,
+    "996Handling": 77
+}

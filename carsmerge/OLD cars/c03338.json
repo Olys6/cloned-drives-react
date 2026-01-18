@@ -1,0 +1,13 @@
+{
+    "carID": "c03338",
+    "make": "Pontiac",
+    "model": "Solstice Cutaway",
+    "modelYear": 2006,
+    "country": "US",
+    "reference": "c02246",
+    "collection": ["The Cutaway Collection 1"],
+    "description": "None",
+	"active" : true,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/bm/0in/PontiacSolsticeCutaway.png",
+    "creator": "Crossfire"
+}

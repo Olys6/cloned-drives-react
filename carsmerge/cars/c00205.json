@@ -2,7 +2,7 @@
     "carID": "c00205",
     "cr": 823,
     "make": "BMW",
-    "model": "X7 M50i",
+    "model": "X7 M50i xDrive",
     "modelYear": 2019,
     "country": "DE",
     "topSpeed": 155,
@@ -45,5 +45,6 @@
 "996Handling": 81,
 
     "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/BMWX7M50ixDrive(2019).png",
-    "creator": "Connor"
+    "creator": "Connor",
+    "hiddenTag": [""]
 }

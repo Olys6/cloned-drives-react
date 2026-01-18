@@ -1,0 +1,50 @@
+{
+    "carID": "c00781",
+    "cr": 798,
+    "make": "McLaren",
+    "model": "540C",
+    "modelYear": 2015,
+    "country": "GB",
+    "topSpeed": 199,
+    "0to60": 3.4,
+    "handling": 88,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": [
+        "The Royal Collection",
+        "Supercar"
+    ],
+    "isPrize": false,
+    "weight": 1450,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 84.85,
+    "ola": 85.71,
+    "description": "",
+"333TopSpeed": 202,
+"3330to60": 3.2,
+"333Handling": 91,
+
+"666TopSpeed": 204,
+"6660to60": 3.1,
+"666Handling": 94,
+
+"699TopSpeed": 204,
+"6990to60": 2.9,
+"699Handling": 98,
+
+"969TopSpeed": 207,
+"9690to60": 3.1,
+"969Handling": 98,
+
+"996TopSpeed": 207,
+"9960to60": 2.9,
+"996Handling": 94,
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/McLaren540C(2015).png",
+    "creator": "Bnuuy"
+}

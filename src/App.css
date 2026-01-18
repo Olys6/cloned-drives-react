@@ -53,6 +53,19 @@
   background-size: cover;
 }
 
+.packsim {
+  background-image: url('./images/packsim.png');
+  background-size: cover;
+}
+
+.racesim {
+  background-image: url('./images/racesim.png');
+  background-size: cover;
+}
+.clicker {
+  background-image: url('./images/clicker.png');
+  background-size: cover;
+}
 .carCard {
   background: rgba(255, 255, 255, 0.25) !important;
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */

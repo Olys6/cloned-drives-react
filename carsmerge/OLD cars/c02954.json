@@ -1,0 +1,49 @@
+{
+    "carID": "c02954",
+    "cr": 702,
+    "make": "Lamborghini",
+    "model": "Gallardo LP550-2 Spyder",
+    "modelYear": 2011,
+    "country": "IT",
+    "topSpeed": 199,
+    "0to60": 4.0,
+    "handling": 84,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": ["Supercar","The Tyrol Tour","Oceanic View"],
+    "isPrize": false,
+	
+    "weight": 1600,
+    "gc": "Low",
+    "seatCount": 2,
+    "bodyStyle": "Convertible",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Middle",
+    "fuelType": "Petrol",
+    "mra": 80,
+    "ola": 90,
+    "description": "",
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/LamborghiniGallardoLP550-2Spyder(2011).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 202,
+"3330to60": 3.8,
+"333Handling": 87,
+
+"666TopSpeed": 204,
+"6660to60": 3.6,
+"666Handling": 90,
+
+"699TopSpeed": 204,
+"6990to60": 3.4,
+"699Handling": 93,
+
+"969TopSpeed": 207,
+"9690to60": 3.6,
+"969Handling": 93,
+
+"996TopSpeed": 207,
+"9960to60": 3.4,
+"996Handling": 90
+}

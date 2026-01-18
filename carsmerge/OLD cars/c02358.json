@@ -1,0 +1,50 @@
+{
+    "carID": "c02358",
+    "cr": 913,
+    "make": "Porsche",
+    "model": "911 Turbo Cabriolet",
+    "modelYear": 2020,
+    "country": "DE",
+    "topSpeed": 198,
+    "0to60": 2.8,
+    "handling": 91,
+    "driveType": "4WD",
+    "tyreType": "Performance",
+    "tags": ["Supercar"],
+    "isPrize": false,
+
+    "weight": 1710,
+    "gc": "Low",
+    "seatCount": 4,
+    "bodyStyle": "Convertible",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Rear",
+    "fuelType": "Petrol",
+    "mra": 85,
+    "ola": 79.03,
+    "description": "None.",
+
+    "racehud": "https://file.garden/ZSrBMiDRyR84aPJp/Cards(normal)/0in/Porsche911TurboCabriolet(2020).png",
+    "creator": "Bnuuy",
+
+"333TopSpeed": 201, 
+"3330to60": 2.7, 
+"333Handling": 94,
+
+"666TopSpeed": 203, 
+"6660to60": 2.5, 
+"666Handling": 97,
+
+"699TopSpeed": 203, 
+"6990to60": 2.4, 
+"699Handling": 101,
+
+"969TopSpeed": 206, 
+"9690to60": 2.5, 
+"969Handling": 101,
+
+"996TopSpeed": 206, 
+"9960to60": 2.4, 
+"996Handling": 97
+}

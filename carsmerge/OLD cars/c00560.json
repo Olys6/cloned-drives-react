@@ -1,0 +1,49 @@
+{
+    "carID": "c00560",
+    "cr": 520,
+    "make": "Hyundai",
+    "model": "Genesis Coupe 3.8 R-Spec",
+    "modelYear": 2010,
+    "country": "KR",
+    "topSpeed": 152,
+    "0to60": 6.0,
+    "handling": 81,
+    "driveType": "RWD",
+    "tyreType": "Performance",
+    "tags": [
+        "Rest of The World"
+    ],
+    "isPrize": false,
+    "weight": 1537,
+    "gc": "Medium",
+    "seatCount": 4,
+    "bodyStyle": "Coupe",
+    "tcs": true,
+    "abs": true,
+    "enginePos": "Front",
+    "fuelType": "Petrol",
+    "mra": 67.11,
+    "ola": 82.5,
+    "description": "Second gen of the surprisingly great Hyundai.",
+"333TopSpeed": 155,
+"3330to60": 5.7,
+"333Handling": 84,
+
+"666TopSpeed": 159,
+"6660to60": 5.4,
+"666Handling": 86,
+
+"699TopSpeed": 159,
+"6990to60": 5.1,
+"699Handling": 90,
+
+"969TopSpeed": 162,
+"9690to60": 5.4,
+"969Handling": 90,
+
+"996TopSpeed": 162,
+"9960to60": 5.1,
+"996Handling": 86,
+    "racehud": "https://file.garden/ZmdgDS5GsALKuOXo/Cards/0in/HyundaiGenesisCoupe3.8RSpec(2010).png",
+    "creator": "Bnuuy"
+}
