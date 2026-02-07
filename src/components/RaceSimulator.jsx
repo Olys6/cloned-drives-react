@@ -22,232 +22,24 @@ import {
 import trackData from '../data/trackData.js';
 import carData from '../data/data.js';
 
+// Race engine
+import { evaluateRace, getRaceAdvantages, getCarStats, hasUpgrade } from '../utils/raceEngine';
+
+// Shared components
+import CarDetailModal from './CarDetailModal';
+
+// Lazy loading
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+// Image helpers
+import { getThumbnailUrl } from '../utils/imageUtils';
+
 // Icons
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SearchIcon from '@mui/icons-material/Search';
 import SpeedIcon from '@mui/icons-material/Speed';
 import ClearIcon from '@mui/icons-material/Clear';
-
-// ========== RACE CONSTANTS ==========
-const driveHierarchy = ["AWD", "4WD", "FWD", "RWD"];
-const gcHierarchy = ["High", "Medium", "Low"];
-
-const weatherVars = {
-	"Sunny Drag": {
-		drivePen: 0, absPen: 0, tcsPen: 1,
-		tyrePen: { "Standard": 0, "Performance": 0, "All-Surface": 0, "Off-Road": 0, "Slick": 0, "Drag": -7.5 }
-	},
-	"Rainy Drag": {
-		drivePen: 2, absPen: 0, tcsPen: 1,
-		tyrePen: { "Standard": 0, "Performance": 0, "All-Surface": 0, "Off-Road": 0, "Slick": 20, "Drag": 70 }
-	},
-	"Sunny Track": {
-		drivePen: 0, absPen: 0, tcsPen: 0,
-		tyrePen: { "Standard": 0, "Performance": 0, "All-Surface": 0, "Off-Road": 0, "Slick": -16, "Drag": 9 }
-	},
-	"Rainy Track": {
-		drivePen: 4, absPen: 1, tcsPen: 1,
-		tyrePen: { "Standard": 0, "Performance": 11, "All-Surface": 5, "Off-Road": 50, "Slick": 40, "Drag": 120 }
-	},
-	"Sunny Asphalt": {
-		drivePen: 0, absPen: 0, tcsPen: 0,
-		tyrePen: { "Standard": 0, "Performance": 0, "All-Surface": 0, "Off-Road": 0, "Slick": 0, "Drag": 5 }
-	},
-	"Rainy Asphalt": {
-		drivePen: 4, absPen: 1, tcsPen: 1,
-		tyrePen: { "Standard": 0, "Performance": 11, "All-Surface": 5, "Off-Road": 40, "Slick": 50, "Drag": 100 }
-	},
-	"Sunny Gravel": {
-		drivePen: 2, absPen: 0, tcsPen: 0,
-		tyrePen: { "Standard": 0, "Performance": 17.5, "All-Surface": -4, "Off-Road": -4.5, "Slick": 40, "Drag": 100 }
-	},
-	"Rainy Gravel": {
-		drivePen: 5.5, absPen: 1.25, tcsPen: 1.25,
-		tyrePen: { "Standard": 0, "Performance": 17.5, "All-Surface": -5.5, "Off-Road": -7.5, "Slick": 42.5, "Drag": 200 }
-	},
-	"Sunny Sand": {
-		drivePen: 5.5, absPen: -1.25, tcsPen: -1.25,
-		tyrePen: { "Standard": 0, "Performance": 50.5, "All-Surface": -15.5, "Off-Road": -20.5, "Slick": 80.5, "Drag": 500 }
-	},
-	"Sunny Dirt": {
-		drivePen: 7, absPen: 1.75, tcsPen: 1.75,
-		tyrePen: { "Standard": 0, "Performance": 20, "All-Surface": -25, "Off-Road": -33, "Slick": 65, "Drag": 500 }
-	},
-	"Rainy Dirt": {
-		drivePen: 8.5, absPen: 2.5, tcsPen: 2.5,
-		tyrePen: { "Standard": 0, "Performance": 30, "All-Surface": -40, "Off-Road": -60, "Slick": 130, "Drag": 500 }
-	},
-	"Sunny Snow": {
-		drivePen: 12, absPen: 3, tcsPen: 3,
-		tyrePen: { "Standard": 0, "Performance": 75, "All-Surface": -20, "Off-Road": -45, "Slick": 425, "Drag": 700 }
-	},
-	"Sunny Ice": {
-		drivePen: 17, absPen: 4.25, tcsPen: 4.25,
-		tyrePen: { "Standard": 0, "Performance": 125, "All-Surface": -65, "Off-Road": -100, "Slick": 875, "Drag": 900 }
-	},
-	"TT OffRoad": {
-		drivePen: 0, absPen: 0, tcsPen: 0,
-		tyrePen: { "Standard": 0, "Performance": 100, "All-Surface": -75, "Off-Road": -100, "Slick": 400, "Drag": 700 }
-	},
-	"TT OnRoad": {
-		drivePen: 0, absPen: 0, tcsPen: 0,
-		tyrePen: { "Standard": 0, "Performance": 0, "All-Surface": 0, "Off-Road": 0, "Slick": 0, "Drag": 0 }
-	},
-};
-
-// Check if car has specific upgrade (flat property format: 333TopSpeed, 3330to60, etc.)
-const hasUpgrade = (car, upgrade) => {
-	if (!car) return false;
-	if (upgrade === "000") return true;
-	// Check if the upgrade properties exist (e.g., "333TopSpeed")
-	return car[`${upgrade}TopSpeed`] !== undefined;
-};
-
-// Get car stats for selected upgrade
-const getCarStats = (car, upgrade) => {
-	if (!car) return null;
-
-	let topSpeed, accel, handling;
-
-	if (upgrade === "000") {
-		topSpeed = car.topSpeed;
-		accel = car["0to60"];
-		handling = car.handling;
-	} else {
-		// Flat property format: 333TopSpeed, 3330to60, 333Handling
-		topSpeed = car[`${upgrade}TopSpeed`] ?? car.topSpeed;
-		accel = car[`${upgrade}0to60`] ?? car["0to60"];
-		handling = car[`${upgrade}Handling`] ?? car.handling;
-	}
-
-	return {
-		topSpeed,
-		accel,
-		handling,
-		weight: car.weight,
-		mra: car.mra,
-		ola: car.ola,
-		gc: car.gc,
-		driveType: car.driveType,
-		tyreType: car.tyreType,
-		abs: car.abs ? 1 : 0,
-		tcs: car.tcs ? 1 : 0,
-	};
-};
-
-// ========== RACE CALCULATION ==========
-const evalScore = (player, opponent, track) => {
-	const weatherKey = track.surface?.startsWith("TT") ? track.surface : `${track.weather} ${track.surface}`;
-	const vars = weatherVars[weatherKey] || weatherVars["Sunny Asphalt"];
-	const { tcsPen, absPen, drivePen, tyrePen } = vars;
-
-	let score = 0;
-
-	// Base stats calculation
-	score += (player.topSpeed - opponent.topSpeed) / 4.2 * ((track.specsDistr?.topSpeed || 0) / 100);
-	score += (opponent.accel - player.accel) * 15 * ((track.specsDistr?.["0to60"] || 0) / 100);
-	score += (player.handling - opponent.handling) * ((track.specsDistr?.handling || 0) / 100);
-	score += (opponent.weight - player.weight) / 50 * ((track.specsDistr?.weight || 0) / 100);
-	score += (player.mra - opponent.mra) / 10 * ((track.specsDistr?.mra || 0) / 100);
-	score += (opponent.ola - player.ola) / 10 * ((track.specsDistr?.ola || 0) / 100);
-
-	// GC penalties
-	if (player.gc?.toLowerCase() === "low") {
-		score -= ((track.speedbumps || 0) * 10);
-	}
-	if (opponent.gc?.toLowerCase() === "low") {
-		score += ((track.speedbumps || 0) * 10);
-	}
-	score += (gcHierarchy.indexOf(opponent.gc) - gcHierarchy.indexOf(player.gc)) * (track.humps || 0) * 10;
-
-	// Drive & tyre penalties
-	score += (driveHierarchy.indexOf(opponent.driveType) - driveHierarchy.indexOf(player.driveType)) * drivePen;
-	score += ((tyrePen[opponent.tyreType] || 0) - (tyrePen[player.tyreType] || 0));
-
-	// ABS/TCS
-	if ((track.specsDistr?.handling || 0) > 0) {
-		score += (player.abs - opponent.abs) * absPen;
-	}
-	score += (player.tcs - opponent.tcs) * tcsPen;
-
-	// Special cases for MPH tracks
-	if (track.trackName && track.trackName.includes("MPH")) {
-		const parts = track.trackName.match(/(\d+)-(\d+)/);
-		if (parts) {
-			const startMPH = parseInt(parts[1]);
-			const endMPH = parseInt(parts[2]);
-
-			if ((opponent.topSpeed < startMPH && player.topSpeed >= startMPH) ||
-				(opponent.topSpeed < endMPH && player.topSpeed >= endMPH)) {
-				return 250;
-			} else if ((opponent.topSpeed >= startMPH && player.topSpeed < startMPH) ||
-				(opponent.topSpeed >= endMPH && player.topSpeed < endMPH)) {
-				return -250;
-			} else if (opponent.topSpeed < endMPH && player.topSpeed < endMPH) {
-				return player.topSpeed - opponent.topSpeed;
-			}
-		}
-	}
-
-	return Math.round((score + Number.EPSILON) * 100) / 100;
-};
-
-// Get advantages for the winner
-const getAdvantages = (player, opponent, track, playerWon) => {
-	const advantages = [];
-	const weatherKey = track.surface?.startsWith("TT") ? track.surface : `${track.weather} ${track.surface}`;
-	const vars = weatherVars[weatherKey] || weatherVars["Sunny Asphalt"];
-	const { tyrePen } = vars;
-
-	if ((track.specsDistr?.topSpeed || 0) > 0) {
-		const diff = playerWon ? player.topSpeed - opponent.topSpeed : opponent.topSpeed - player.topSpeed;
-		if (diff > 0) advantages.push("Higher top speed");
-	}
-	if ((track.specsDistr?.["0to60"] || 0) > 0) {
-		const diff = playerWon ? opponent.accel - player.accel : player.accel - opponent.accel;
-		if (diff > 0) advantages.push("Lower 0-60");
-	}
-	if ((track.specsDistr?.handling || 0) > 0) {
-		const diff = playerWon ? player.handling - opponent.handling : opponent.handling - player.handling;
-		if (diff > 0) advantages.push("Better handling");
-	}
-	if ((track.specsDistr?.weight || 0) > 0) {
-		const diff = playerWon ? opponent.weight - player.weight : player.weight - opponent.weight;
-		if (diff > 0) advantages.push("Lower weight");
-	}
-	if ((track.specsDistr?.mra || 0) > 0) {
-		const diff = playerWon ? player.mra - opponent.mra : opponent.mra - player.mra;
-		if (diff > 0) advantages.push("Better MRA");
-	}
-	if ((track.specsDistr?.ola || 0) > 0) {
-		const diff = playerWon ? opponent.ola - player.ola : player.ola - opponent.ola;
-		if (diff > 0) advantages.push("Better OLA");
-	}
-
-	if ((track.humps || 0) > 0 || (track.speedbumps || 0) > 0) {
-		const playerGC = gcHierarchy.indexOf(player.gc);
-		const oppGC = gcHierarchy.indexOf(opponent.gc);
-		if ((playerWon && playerGC < oppGC) || (!playerWon && oppGC < playerGC)) {
-			advantages.push("Higher ground clearance");
-		}
-	}
-
-	if (!["Asphalt", "Drag", "Track"].includes(track.surface) || track.weather === "Rainy") {
-		const playerDrive = driveHierarchy.indexOf(player.driveType);
-		const oppDrive = driveHierarchy.indexOf(opponent.driveType);
-		if ((playerWon && playerDrive < oppDrive) || (!playerWon && oppDrive < playerDrive)) {
-			advantages.push("Better drive system");
-		}
-
-		const playerTyre = tyrePen[player.tyreType] || 0;
-		const oppTyre = tyrePen[opponent.tyreType] || 0;
-		if ((playerWon && playerTyre < oppTyre) || (!playerWon && oppTyre < playerTyre)) {
-			advantages.push("Better tyres");
-		}
-	}
-
-	return advantages.length > 0 ? advantages : ["Marginal overall advantage"];
-};
 
 // Filter out BM cars
 const raceCars = carData.filter(car => !car.reference);
@@ -268,6 +60,10 @@ const RaceSimulator = () => {
 	const [searchQuery, setSearchQuery] = useState('');
 	const [activeSlot, setActiveSlot] = useState(1);
 	const [page, setPage] = useState(1);
+
+	// Car detail modal state
+	const [modalCar, setModalCar] = useState(null);
+	const [modalOpen, setModalOpen] = useState(false);
 
 	// Filter cars
 	const filteredCars = useMemo(() => {
@@ -305,6 +101,19 @@ const RaceSimulator = () => {
 		setRaceResult(null);
 	};
 
+	const handleCardClick = (car) => {
+		setModalCar(car);
+		setModalOpen(true);
+	};
+
+	const handleUseFromModal = () => {
+		if (modalCar) {
+			handleCarSelect(modalCar);
+			setModalOpen(false);
+			setModalCar(null);
+		}
+	};
+
 	const runRace = () => {
 		if (!selectedTrack || !car1 || !car2) return;
 
@@ -313,9 +122,9 @@ const RaceSimulator = () => {
 
 		if (!player || !opponent) return;
 
-		const score = evalScore(player, opponent, selectedTrack);
+		const score = evaluateRace(player, opponent, selectedTrack);
 		const playerWon = score > 0;
-		const advantages = getAdvantages(player, opponent, selectedTrack, playerWon);
+		const advantages = getRaceAdvantages(player, opponent, selectedTrack, playerWon);
 
 		setRaceResult({
 			score,
@@ -386,7 +195,7 @@ const RaceSimulator = () => {
 						{stats && (
 							<Box sx={{ fontSize: '0.7rem' }}>
 								<StatRow label="Top Speed" value={stats.topSpeed} />
-								<StatRow label="0-60" value={stats.accel} />
+								<StatRow label="0-60" value={stats["0to60"]} />
 								<StatRow label="Handling" value={stats.handling} />
 								<StatRow label="Weight" value={`${stats.weight} kg`} />
 								<StatRow label="Drivetrain" value={stats.driveType} />
@@ -394,7 +203,7 @@ const RaceSimulator = () => {
 								<StatRow label="Ground Clearance" value={stats.gc} />
 								<StatRow label="MRA" value={stats.mra} />
 								<StatRow label="OLA" value={stats.ola} />
-								<StatRow label="TCS / ABS" value={`${car.tcs ? '✓' : '✗'} / ${car.abs ? '✓' : '✗'}`} />
+								<StatRow label="TCS / ABS" value={`${car.tcs ? "Yes" : "No"} / ${car.abs ? "Yes" : "No"}`} />
 							</Box>
 						)}
 						
@@ -614,57 +423,79 @@ const RaceSimulator = () => {
 					</Typography>
 				</Box>
 
-				{/* Car Grid */}
+				{/* Car Grid - matching Home/Cards.jsx style */}
 				<Box sx={{
 					display: 'flex',
 					flexWrap: 'wrap',
-					gap: 1,
+					gap: '0.71rem',
 					justifyContent: 'center',
 					mb: 2,
 				}}>
 					{paginatedCars.map((car) => (
 						<Button
 							key={car.carID}
-							onClick={() => handleCarSelect(car)}
+							onClick={() => handleCardClick(car)}
+							className="carCard"
 							sx={{
-								p: 0.5,
-								borderRadius: 1,
-								border: `2px solid ${
-									car1?.carID === car.carID ? '#4caf50' :
-									car2?.carID === car.carID ? '#f44336' : 'transparent'
-								}`,
-								backgroundColor: 'rgba(0,0,0,0.3)',
-								'&:hover': {
-									backgroundColor: activeSlot === 1 ? 'rgba(76, 175, 80, 0.2)' : 'rgba(244, 67, 54, 0.2)',
-								},
-								flexDirection: 'column',
-								minWidth: 140,
-								maxWidth: 140,
+								border: car1?.carID === car.carID
+									? '2px solid #4caf50 !important'
+									: car2?.carID === car.carID
+										? '2px solid #f44336 !important'
+										: undefined,
 							}}
 						>
-							<img
-								src={car.racehud}
-								alt=""
-								style={{ width: 130, height: 80, objectFit: 'cover', borderRadius: 4 }}
-								loading="lazy"
-							/>
-							<Typography variant="caption" sx={{
-								color: '#fff',
-								fontWeight: 'bold',
-								fontSize: '0.65rem',
-								lineHeight: 1.2,
-								mt: 0.5,
+							<div style={{ position: 'relative' }}>
+								<LazyLoadImage
+									threshold={200}
+									effect="blur"
+									src={getThumbnailUrl(car.racehud, 240, 70)}
+									placeholderSrc={getThumbnailUrl(car.racehud, 60, 30)}
+									style={{
+										width: '15rem',
+										height: '9.35rem',
+										marginBottom: '-5px',
+										objectFit: 'cover',
+									}}
+								/>
+								{[
+									{ value: car.topSpeed, top: '42px' },
+									{ value: car['0to60'], top: '55px' },
+									{ value: car.handling, top: '67px' },
+									{ value: car.driveType, top: '80px' },
+									{ value: { Performance: 'PER', Standard: 'STD', 'Off-Road': 'OFF', 'All-Surface': 'ALL', Drag: 'DRG', Slick: 'SLK' }[car.tyreType] || '', top: '93px' },
+								].map((stat, i) => (
+									<span
+										key={i}
+										style={{
+											position: 'absolute',
+											top: stat.top,
+											left: '3px',
+											width: '20px',
+											borderRadius: '10px',
+											fontFamily: 'Rubik-BoldItalic',
+											fontSize: '0.5rem',
+										}}>
+										{stat.value}
+									</span>
+								))}
+							</div>
+							<p style={{
+								padding: 0,
+								margin: 0,
+								marginTop: 6,
+								fontFamily: 'Rubik-BoldItalic',
+								fontSize: '0.7rem',
+								maxWidth: '15rem',
 								textAlign: 'center',
-								width: '100%',
 								overflow: 'hidden',
-								textOverflow: 'ellipsis',
-								whiteSpace: 'nowrap',
+								display: '-webkit-box',
+								WebkitLineClamp: 2,
+								WebkitBoxOrient: 'vertical',
+								lineHeight: '1.2',
 							}}>
-								{car.model}
-							</Typography>
-							<Typography variant="caption" sx={{ color: 'text.secondary', fontSize: '0.6rem' }}>
-								CR {car.cr} • {car.driveType} • {car.tyreType}
-							</Typography>
+								{Array.isArray(car.make) ? car.make[0] : car.make}{' '}
+								{car.model} ({car.modelYear})
+							</p>
 						</Button>
 					))}
 				</Box>
@@ -673,17 +504,49 @@ const RaceSimulator = () => {
 				{totalPages > 1 && (
 					<Stack>
 						<Pagination
-							sx={{ display: 'flex', justifyContent: 'center' }}
+							sx={{
+								display: 'flex',
+								justifyContent: 'center',
+								'& .MuiPaginationItem-root': {
+									color: 'white',
+									borderColor: 'rgba(255,255,255,0.3)',
+								},
+							}}
 							count={totalPages}
 							page={page}
 							onChange={(e, value) => setPage(value)}
 							variant="outlined"
-							color="primary"
+							shape="rounded"
 							size="small"
 						/>
 					</Stack>
 				)}
 			</Paper>
+
+			{/* Car Detail Modal with "Use" button */}
+			<CarDetailModal
+				car={modalCar}
+				open={modalOpen}
+				onClose={() => { setModalOpen(false); setModalCar(null); }}
+				accentColor={activeSlot === 1 ? '#4caf50' : '#f44336'}
+				actionButton={
+					<Button
+						variant="contained"
+						fullWidth
+						onClick={handleUseFromModal}
+						sx={{
+							backgroundColor: activeSlot === 1 ? '#4caf50' : '#f44336',
+							fontWeight: 'bold',
+							fontFamily: 'Rubik-BoldItalic',
+							'&:hover': {
+								backgroundColor: activeSlot === 1 ? '#388e3c' : '#d32f2f',
+							},
+						}}
+					>
+						Use as {activeSlot === 1 ? 'Car 1 (You)' : 'Car 2 (Opponent)'}
+					</Button>
+				}
+			/>
 		</Box>
 	);
 };

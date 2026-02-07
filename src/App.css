@@ -20,6 +20,7 @@
   transform: scale(1.2)
 }
 
+/* Legacy class - kept for backwards compatibility */
 .fontPageItem {
   width: 40rem;
   height: 17rem;
@@ -33,6 +34,17 @@
   transform: scale(1.05);
 }
 
+/* New responsive front page item class */
+.frontPageItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Background images for nav cards */
 .carlist {
   background-image: url('./images/carlist.png');
   background-size: cover;
@@ -62,10 +74,38 @@
   background-image: url('./images/racesim.png');
   background-size: cover;
 }
+
 .clicker {
   background-image: url('./images/clicker.png');
   background-size: cover;
 }
+
+/* Higher-Lower game card on front page */
+.higherlower {
+  background: linear-gradient(135deg, 
+    #4caf50 0%,    /* Green (Higher) */
+    #2196f3 25%,   /* Blue */
+    #9c27b0 50%,   /* Purple */
+    #f44336 75%,   /* Red (Lower) */
+    #ff9800 100%   /* Orange */
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+}
+
+/* Animated gradient effect for Higher-Lower */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .carCard {
   background: rgba(255, 255, 255, 0.25) !important;
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
@@ -97,6 +137,14 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 10px;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+  #root {
+    padding: 1rem;
+    background-image: url("./images/siteBGMobile.png") !important;
+  }
 }
 
 @media screen and (max-width: 1000px) {

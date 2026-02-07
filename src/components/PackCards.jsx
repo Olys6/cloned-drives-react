@@ -18,6 +18,9 @@ import {
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
+// Image optimization utilities
+import { getThumbnailUrl, getMediumUrl, getPlaceholderUrl } from './imageUtils';
+
 // Icons
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import StyleIcon from '@mui/icons-material/Style';
@@ -166,7 +169,8 @@ const PackCards = ({
 								<LazyLoadImage
 									threshold={200}
 									effect="blur"
-									src={pack.pack}
+									src={getThumbnailUrl(pack.pack, 200, 75)}
+									placeholderSrc={getPlaceholderUrl(pack.pack)}
 									style={{
 										width: '200px',
 										height: '200px',
@@ -237,7 +241,7 @@ const PackCards = ({
 						<Box sx={{ display: 'flex', gap: 2, flexDirection: { xs: 'column', md: 'row' } }}>
 							<Box sx={{ display: 'flex', justifyContent: 'center' }}>
 								<LazyLoadImage
-									src={modalPack.pack}
+									src={getMediumUrl(modalPack.pack, 200, 85)}
 									style={{ 
 										width: '180px', 
 										height: '180px', 

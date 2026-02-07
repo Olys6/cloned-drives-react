@@ -11,6 +11,9 @@ import {
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
+// Image optimization utilities
+import { getThumbnailUrl, getMediumUrl, getPlaceholderUrl } from './imageUtils';
+
 // Icons for stats
 import SpeedIcon from '@mui/icons-material/Speed';
 import TimerIcon from '@mui/icons-material/Timer';
@@ -152,7 +155,8 @@ const TrackCards = ({
 								<LazyLoadImage
 									threshold={200}
 									effect="blur"
-									src={track.background}
+									src={getThumbnailUrl(track.background, 280, 70)}
+									placeholderSrc={getPlaceholderUrl(track.background)}
 									style={{
 										width: '280px',
 										height: '158px',
@@ -256,7 +260,7 @@ const TrackCards = ({
 						{/* Track Image */}
 						<Box sx={{ position: 'relative' }}>
 							<LazyLoadImage
-								src={modalTrack.background}
+								src={getMediumUrl(modalTrack.background, 600, 85)}
 								style={{ width: '100%', borderRadius: '8px' }}
 							/>
 							{/* Map thumbnail overlay if exists */}
@@ -272,7 +276,7 @@ const TrackCards = ({
 									}}
 								>
 									<LazyLoadImage
-										src={modalTrack.map}
+										src={getThumbnailUrl(modalTrack.map, 80, 70)}
 										style={{ width: '80px', height: '80px', objectFit: 'cover' }}
 									/>
 								</Box>
